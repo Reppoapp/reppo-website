@@ -1,0 +1,209 @@
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { addToWaitlist } from '../lib/supabase'
+
+const FinalCTA = () => {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState('idle') // idle, loading, success, error
+  const [message, setMessage] = useState('')
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return re.test(email)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    
+    if (!email.trim()) {
+      setStatus('error')
+      setMessage('Please enter your email address')
+      return
+    }
+    
+    if (!validateEmail(email)) {
+      setStatus('error')
+      setMessage('Please enter a valid email address')
+      return
+    }
+
+    setStatus('loading')
+    setMessage('')
+
+    try {
+      const result = await addToWaitlist(email)
+      
+      if (result.success) {
+        setStatus('success')
+        setMessage("You're on the list 💪")
+        setEmail('')
+      } else {
+        setStatus('error')
+        if (result.error && result.error.includes('duplicate')) {
+          setMessage("You're already on the list! We'll be in touch soon 🔥")
+        } else {
+          setMessage('Something went wrong. Please try again.')
+        }
+      }
+    } catch (error) {
+      setStatus('error')
+      setMessage('Something went wrong. Please try again.')
+    }
+  }
+
+  return (
+    <section id="waitlist" className="section-padding relative overflow-hidden bg-gradient-to-b from-gray-900 to-background">
+      {/* Seamless Gradient Transition from Previous Section */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gray-900 via-gray-900/70 to-transparent pointer-events-none"></div>
+      
+      {/* Enhanced Background with Soft Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-background"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#FF3B30]/20 to-[#2979FF]/10"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          {/* Header */}
+          <div className="mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Be among the first to{' '}
+              <span className="gradient-text">claim your Reppo.</span>
+            </h2>
+            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              The fitness app you post on — not just track with. Built for streaks, check-ins, PRs, and flex-worthy milestones.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-gray-400 text-sm">
+              <span className="flex items-center">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Early access perks
+              </span>
+              <span className="flex items-center">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Premium features free
+              </span>
+              <span className="flex items-center">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Beta testing invitation
+              </span>
+            </div>
+          </div>
+          
+          {/* Waitlist Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="max-w-md mx-auto"
+          >
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="relative">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className={`w-full px-6 py-4 bg-white/10 backdrop-blur-sm border rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ${
+                    status === 'error' && message.includes('email') 
+                      ? 'border-red-500/50 focus:ring-red-500' 
+                      : 'border-white/20'
+                  } ${status === 'loading' ? 'opacity-75' : ''}`}
+                  disabled={status === 'loading'}
+                />
+              </div>
+              
+              <motion.button
+                type="submit"
+                disabled={status === 'loading' || status === 'success'}
+                whileHover={{ 
+                  scale: (status === 'loading' || status === 'success') ? 1 : 1.05,
+                  boxShadow: (status === 'loading' || status === 'success') 
+                    ? "0 10px 25px rgba(0, 0, 0, 0.3)" 
+                    : "0 20px 40px rgba(255, 59, 48, 0.4)"
+                }}
+                whileTap={{ scale: (status === 'loading' || status === 'success') ? 1 : 0.95 }}
+                className={`w-full bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 py-4 shadow-md transition-all duration-300 text-lg relative overflow-hidden ${
+                  status === 'loading' || status === 'success' 
+                    ? 'opacity-75 cursor-not-allowed' 
+                    : 'hover:shadow-xl hover:shadow-primary/30 hover:from-[#FF3B30] hover:to-[#2979FF] transform hover:-translate-y-0.5'
+                }`}
+              >
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#FF4444] to-[#3399FF] opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <span className="relative z-10">
+                  {status === 'loading' ? (
+                    <div className="flex items-center justify-center">
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                      Joining...
+                    </div>
+                  ) : status === 'success' ? (
+                    <div className="flex items-center justify-center">
+                      <span className="mr-2">🎉</span>
+                      Welcome to Reppo!
+                    </div>
+                  ) : (
+                    'Join Waitlist'
+                  )}
+                </span>
+              </motion.button>
+            </form>
+            
+            {/* Status Messages */}
+            {message && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`mt-4 p-4 rounded-xl border ${
+                  status === 'success'
+                    ? 'bg-green-500/10 border-green-500/20 text-green-300'
+                    : 'bg-red-500/10 border-red-500/20 text-red-300'
+                }`}
+              >
+                <div className="flex items-center justify-center">
+                  <span className="mr-2">
+                    {status === 'success' ? '🎉' : '⚠️'}
+                  </span>
+                  {message}
+                </div>
+              </motion.div>
+            )}
+            
+            <p className="text-sm text-gray-500 mt-4">
+              No spam, just updates. Unsubscribe anytime.
+            </p>
+          </motion.div>
+          
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
+          >
+            <div className="text-center">
+              <div className="text-3xl font-bold gradient-text mb-2">500+</div>
+              <div className="text-gray-400">Beta testers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold gradient-text mb-2">10k+</div>
+              <div className="text-gray-400">Waitlist members</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold gradient-text mb-2">Q2 2024</div>
+              <div className="text-gray-400">Launch date</div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+export default FinalCTA 
