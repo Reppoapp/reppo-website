@@ -10,17 +10,17 @@ const StepCard = ({ number, title, description, icon, delay = 0, isLast = false 
       viewport={{ once: true }}
       className="relative"
     >
-      <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center px-4 sm:px-0">
         {/* Step number */}
-        <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-6 relative z-10">
+        <div className="w-14 sm:w-16 h-14 sm:h-16 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl mb-4 sm:mb-6 relative z-10">
           {number}
         </div>
         
         {/* Icon */}
-        <div className="text-5xl sm:text-6xl mb-6 opacity-80">{icon}</div>
+        <div className="text-4xl sm:text-5xl lg:text-6xl mb-4 sm:mb-6 opacity-80">{icon}</div>
         
         {/* Content */}
-        <h3 className="text-xl sm:text-2xl font-bold mb-4 gradient-text">{title}</h3>
+        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 gradient-text">{title}</h3>
         <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-xs mx-auto">{description}</p>
       </div>
       
@@ -31,7 +31,7 @@ const StepCard = ({ number, title, description, icon, delay = 0, isLast = false 
       
       {/* Mobile divider line (visible only on mobile between steps) */}
       {!isLast && (
-        <div className="lg:hidden mt-8 mb-8 w-24 h-0.5 bg-gradient-to-r from-primary to-accent opacity-30 mx-auto"></div>
+        <div className="lg:hidden mt-6 sm:mt-8 mb-6 sm:mb-8 w-20 sm:w-24 h-0.5 bg-gradient-to-r from-primary to-accent opacity-30 mx-auto"></div>
       )}
     </motion.div>
   )
@@ -60,9 +60,9 @@ const HowItWorks = () => {
   ]
 
   return (
-    <section className="section-padding bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 relative">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 relative">
       {/* Seamless Gradient Transition from Previous Section */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gray-800 via-gray-900/70 to-transparent pointer-events-none"></div>
+      <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-gray-800 via-gray-900/70 to-transparent pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -72,16 +72,16 @@ const HowItWorks = () => {
           viewport={{ once: true }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
             <span className="gradient-text">Train Hard. Log It. Share It.</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
             Three simple steps to transform your fitness journey from private struggle to public inspiration.
           </p>
         </motion.div>
         
         {/* Mobile: flex-col with gap-8, Desktop: grid-cols-3 */}
-        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-8 lg:gap-8 relative">
+        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-8 relative">
           {steps.map((step, index) => (
             <StepCard
               key={index}
@@ -92,20 +92,20 @@ const HowItWorks = () => {
           ))}
         </div>
         
-        {/* Bottom CTA */}
+        {/* Bottom CTA - Mobile Optimized */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mt-12 sm:mt-16"
+          className="text-center mt-12 sm:mt-16 px-4 sm:px-0"
         >
           <p className="text-base sm:text-lg text-gray-400 mb-6">
             Ready to turn your workouts into wins?
           </p>
           <button 
             onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 sm:px-8 py-3 shadow-md hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+            className="w-full sm:w-auto bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 shadow-md hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 min-h-[48px] text-base sm:text-lg"
           >
             Start Your Journey
           </button>
@@ -113,7 +113,7 @@ const HowItWorks = () => {
       </div>
       
       {/* Seamless Gradient Transition to Next Section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-gray-900/50 to-background pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-transparent via-gray-900/50 to-background pointer-events-none"></div>
     </section>
   )
 }

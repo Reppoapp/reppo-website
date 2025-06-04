@@ -52,9 +52,9 @@ const FinalCTA = () => {
   }
 
   return (
-    <section id="waitlist" className="section-padding relative overflow-hidden bg-gradient-to-b from-gray-900 to-background">
+    <section id="waitlist" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-to-b from-gray-900 to-background">
       {/* Seamless Gradient Transition from Previous Section */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gray-900 via-gray-900/70 to-transparent pointer-events-none"></div>
+      <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-gray-900 via-gray-900/70 to-transparent pointer-events-none"></div>
       
       {/* Enhanced Background with Soft Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-background"></div>
@@ -68,38 +68,38 @@ const FinalCTA = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          {/* Header */}
-          <div className="mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          {/* Header - Mobile Optimized */}
+          <div className="mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-4 sm:px-0">
               Be among the first to{' '}
               <span className="gradient-text">claim your Reppo.</span>
             </h2>
-            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
               The fitness app you post on — not just track with. Built for streaks, check-ins, PRs, and flex-worthy milestones.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-gray-400 text-sm">
-              <span className="flex items-center">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 text-gray-400 text-sm px-4 sm:px-0">
+              <span className="flex items-center justify-center sm:justify-start">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2 flex-shrink-0"></span>
                 Early access perks
               </span>
-              <span className="flex items-center">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              <span className="flex items-center justify-center sm:justify-start">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2 flex-shrink-0"></span>
                 Premium features free
               </span>
-              <span className="flex items-center">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              <span className="flex items-center justify-center sm:justify-start">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2 flex-shrink-0"></span>
                 Beta testing invitation
               </span>
             </div>
           </div>
           
-          {/* Waitlist Form */}
+          {/* Waitlist Form - Mobile Optimized */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="max-w-md mx-auto"
+            className="max-w-md mx-auto px-4 sm:px-0"
           >
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative">
@@ -108,7 +108,7 @@ const FinalCTA = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className={`w-full px-6 py-4 bg-white/10 backdrop-blur-sm border rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ${
+                  className={`w-full px-6 py-4 bg-white/10 backdrop-blur-sm border rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 min-h-[48px] text-base ${
                     status === 'error' && message.includes('email') 
                       ? 'border-red-500/50 focus:ring-red-500' 
                       : 'border-white/20'
@@ -127,7 +127,7 @@ const FinalCTA = () => {
                     : "0 20px 40px rgba(255, 59, 48, 0.4)"
                 }}
                 whileTap={{ scale: (status === 'loading' || status === 'success') ? 1 : 0.95 }}
-                className={`w-full bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 py-4 shadow-md transition-all duration-300 text-lg relative overflow-hidden ${
+                className={`w-full bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 py-4 shadow-md transition-all duration-300 text-base sm:text-lg relative overflow-hidden min-h-[48px] ${
                   status === 'loading' || status === 'success' 
                     ? 'opacity-75 cursor-not-allowed' 
                     : 'hover:shadow-xl hover:shadow-primary/30 hover:from-[#FF3B30] hover:to-[#2979FF] transform hover:-translate-y-0.5'
@@ -154,7 +154,7 @@ const FinalCTA = () => {
               </motion.button>
             </form>
             
-            {/* Status Messages */}
+            {/* Status Messages - Mobile Optimized */}
             {message && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -165,7 +165,7 @@ const FinalCTA = () => {
                     : 'bg-red-500/10 border-red-500/20 text-red-300'
                 }`}
               >
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center text-sm sm:text-base">
                   <span className="mr-2">
                     {status === 'success' ? '🎉' : '⚠️'}
                   </span>
@@ -179,25 +179,25 @@ const FinalCTA = () => {
             </p>
           </motion.div>
           
-          {/* Stats */}
+          {/* Stats - Mobile Optimized */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
-            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
+            className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto px-4 sm:px-0"
           >
-            <div className="text-center">
-              <div className="text-3xl font-bold gradient-text mb-2">500+</div>
-              <div className="text-gray-400">Beta testers</div>
+            <div className="text-center p-4 sm:p-0">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">500+</div>
+              <div className="text-gray-400 text-sm sm:text-base">Beta testers</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold gradient-text mb-2">10k+</div>
-              <div className="text-gray-400">Waitlist members</div>
+            <div className="text-center p-4 sm:p-0">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">10k+</div>
+              <div className="text-gray-400 text-sm sm:text-base">Waitlist members</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold gradient-text mb-2">Q3 2025</div>
-              <div className="text-gray-400">Launch date</div>
+            <div className="text-center p-4 sm:p-0">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">Q3 2025</div>
+              <div className="text-gray-400 text-sm sm:text-base">Launch date</div>
             </div>
           </motion.div>
         </motion.div>
