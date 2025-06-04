@@ -196,7 +196,7 @@ const FinalCTA = () => {
               <div className="text-gray-400">Waitlist members</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold gradient-text mb-2">Q2 2024</div>
+              <div className="text-3xl font-bold gradient-text mb-2">Q3 2025</div>
               <div className="text-gray-400">Launch date</div>
             </div>
           </motion.div>
