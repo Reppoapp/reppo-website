@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 const StepCard = ({ number, title, description, icon, delay = 0, isLast = false }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -30 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay }}
-      viewport={{ once: true }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: delay * 0.1 }}
+      viewport={{ once: true, margin: "-100px" }}
       className="relative"
     >
       <div className="flex flex-col items-center text-center px-4 sm:px-0">
@@ -68,8 +68,8 @@ const HowItWorks = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
@@ -86,7 +86,7 @@ const HowItWorks = () => {
             <StepCard
               key={index}
               {...step}
-              delay={index * 0.2}
+              delay={index}
               isLast={index === steps.length - 1}
             />
           ))}
@@ -96,8 +96,8 @@ const HowItWorks = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mt-12 sm:mt-16 px-4 sm:px-0"
         >
           <p className="text-base sm:text-lg text-gray-400 mb-6">

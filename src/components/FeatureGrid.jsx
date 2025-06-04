@@ -2,43 +2,18 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const FeatureCard = ({ title, description, icon, delay = 0 }) => {
-  // Animation variants for icon pop-in effect
-  const iconVariants = {
-    hidden: { 
-      opacity: 0, 
-      scale: 0.5 
-    },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        delay: delay + 0.3,
-        ease: [0.25, 0.46, 0.45, 0.94],
-        type: "spring",
-        stiffness: 100
-      }
-    }
-  }
-
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4, delay: delay * 0.05 }}
+      viewport={{ once: true, margin: "-100px" }}
       className="group shadow-md border border-white/5 rounded-xl bg-black/30 backdrop-blur p-6 sm:p-8 hover:scale-[1.03] hover:-translate-y-1 hover:border-white/10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 cursor-pointer"
     >
-      {/* Animated Icon */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={iconVariants}
-        viewport={{ once: true, margin: "-50px" }}
-        className="text-4xl sm:text-5xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300"
-      >
+      {/* Simplified Icon Animation */}
+      <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
         {icon}
-      </motion.div>
+      </div>
       
       <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 gradient-text group-hover:text-white transition-colors duration-300">
         {title}
@@ -96,8 +71,8 @@ const FeatureGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
@@ -115,7 +90,7 @@ const FeatureGrid = () => {
             <FeatureCard
               key={index}
               {...feature}
-              delay={index * 0.15}
+              delay={index}
             />
           ))}
         </div>
@@ -124,8 +99,8 @@ const FeatureGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mt-12 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg backdrop-blur-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 mx-4 sm:mx-0"
         >
           <h3 className="text-xl sm:text-2xl font-bold mb-4 gradient-text">

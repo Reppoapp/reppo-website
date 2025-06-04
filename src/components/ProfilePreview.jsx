@@ -6,8 +6,8 @@ const StatCard = ({ title, value, icon, delay = 0 }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: delay * 0.05 }}
+      viewport={{ once: true, margin: "-100px" }}
       whileHover={{ scale: 1.05, y: -4 }}
       className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center hover:bg-white/15 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-xl"
     >
@@ -23,8 +23,8 @@ const ChallengeCard = ({ delay = 0 }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay }}
+      viewport={{ once: true, margin: "-100px" }}
       whileHover={{ scale: 1.02, y: -4 }}
       className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-white/15 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-xl"
     >
@@ -93,10 +93,10 @@ const ProfilePreview = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 px-4 sm:px-0">
@@ -108,12 +108,12 @@ const ProfilePreview = () => {
         {/* Two-Column Layout - Mobile Optimized */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
           
-          {/* Left Column - iPhone with Profile Dashboard - Mobile Optimized */}
+          {/* Left Column - iPhone with Profile Dashboard - Simplified Animation */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, x: -40 }}
-            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true, margin: "-100px" }}
             className="flex justify-center order-2 lg:order-1 mb-8 lg:mb-0"
           >
             {/* iPhone Frame - Responsive Sizing */}
@@ -230,12 +230,12 @@ const ProfilePreview = () => {
             </div>
           </motion.div>
           
-          {/* Right Column - Text Content - Mobile Optimized */}
+          {/* Right Column - Text Content - Optimized Animation */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px" }}
             className="space-y-6 sm:space-y-8 text-center lg:text-left order-1 lg:order-2 px-4 sm:px-0"
           >
             <div>
@@ -248,13 +248,13 @@ const ProfilePreview = () => {
               </p>
             </div>
             
-            {/* Feature highlights - Mobile Optimized */}
+            {/* Feature highlights - Simplified Animation */}
             <div className="space-y-4 sm:space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="flex items-start space-x-3 sm:space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <div className="flex-shrink-0 w-8 sm:w-10 h-8 sm:h-10 bg-gradient-primary rounded-full flex items-center justify-center text-base sm:text-lg shadow-lg">
@@ -269,8 +269,8 @@ const ProfilePreview = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.15 }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="flex items-start space-x-3 sm:space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <div className="flex-shrink-0 w-8 sm:w-10 h-8 sm:h-10 bg-gradient-primary rounded-full flex items-center justify-center text-base sm:text-lg shadow-lg">
@@ -285,8 +285,8 @@ const ProfilePreview = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="flex items-start space-x-3 sm:space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <div className="flex-shrink-0 w-8 sm:w-10 h-8 sm:h-10 bg-gradient-primary rounded-full flex items-center justify-center text-base sm:text-lg shadow-lg">
@@ -299,12 +299,12 @@ const ProfilePreview = () => {
               </motion.div>
             </div>
             
-            {/* CTA Button - Mobile Optimized */}
+            {/* CTA Button - Simplified Animation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <button 
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}

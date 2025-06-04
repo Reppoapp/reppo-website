@@ -6,18 +6,18 @@ const HeroSection = () => {
     document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  // Animation variants for smooth entrances
+  // Simplified animation variants for better performance
   const fadeInUp = {
     initial: { 
       opacity: 0, 
-      y: 30 
+      y: 20 
     },
     animate: { 
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        duration: 0.5,
+        ease: "easeOut"
       }
     }
   }
@@ -41,12 +41,11 @@ const HeroSection = () => {
           {/* Left Column - Hero Text Content */}
           <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
             
-            {/* Main Headline - Mobile Optimized */}
+            {/* Main Headline - Optimized Animation */}
             <motion.div
               initial="initial"
               animate="animate"
               variants={fadeInUp}
-              transition={{ delay: 0 }}
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight">
                 <span className="block text-white mb-1 sm:mb-2">Track Reps.</span>
@@ -55,12 +54,17 @@ const HeroSection = () => {
               </h1>
             </motion.div>
             
-            {/* Supporting Subheading - Mobile Optimized */}
+            {/* Supporting Subheading - Faster Animation */}
             <motion.div
               initial="initial"
               animate="animate"
-              variants={fadeInUp}
-              transition={{ delay: 0.2 }}
+              variants={{
+                ...fadeInUp,
+                animate: {
+                  ...fadeInUp.animate,
+                  transition: { duration: 0.5, delay: 0.1, ease: "easeOut" }
+                }
+              }}
             >
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0 px-2 lg:px-0">
                 Reppo helps you stay accountable and compete with friends — 
@@ -68,12 +72,17 @@ const HeroSection = () => {
               </p>
             </motion.div>
             
-            {/* Call-to-Action Button - Mobile Optimized */}
+            {/* Call-to-Action Button - Snappier Animation */}
             <motion.div
               initial="initial"
               animate="animate"
-              variants={fadeInUp}
-              transition={{ delay: 0.4 }}
+              variants={{
+                ...fadeInUp,
+                animate: {
+                  ...fadeInUp.animate,
+                  transition: { duration: 0.5, delay: 0.2, ease: "easeOut" }
+                }
+              }}
               className="flex justify-center lg:justify-start px-4 lg:px-0"
             >
               <motion.button
@@ -90,12 +99,17 @@ const HeroSection = () => {
               </motion.button>
             </motion.div>
             
-            {/* Trust Indicators - Mobile Optimized */}
+            {/* Trust Indicators - Simplified Animation */}
             <motion.div
               initial="initial"
               animate="animate"
-              variants={fadeInUp}
-              transition={{ delay: 0.6 }}
+              variants={{
+                ...fadeInUp,
+                animate: {
+                  ...fadeInUp.animate,
+                  transition: { duration: 0.5, delay: 0.3, ease: "easeOut" }
+                }
+              }}
               className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start items-center gap-3 sm:gap-6 pt-6 lg:pt-8 px-4 lg:px-0"
             >
               <div className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm rounded-full px-4 py-2 border border-white/10 min-h-[36px]">
@@ -113,26 +127,13 @@ const HeroSection = () => {
             </motion.div>
           </div>
           
-          {/* Right Column - App Mockup/Visual - Mobile Optimized */}
+          {/* Right Column - App Mockup/Visual - Optimized Animation */}
           <motion.div
-            initial="initial"
-            animate="animate"
-            variants={{
-              initial: { 
-                opacity: 0, 
-                y: 40,
-                scale: 0.9
-              },
-              animate: { 
-                opacity: 1, 
-                y: 0,
-                scale: 1,
-                transition: {
-                  duration: 0.8,
-                  delay: 0.8,
-                  ease: [0.25, 0.46, 0.45, 0.94]
-                }
-              }
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ 
+              opacity: 1, 
+              scale: 1,
+              transition: { duration: 0.6, delay: 0.2, ease: "easeOut" }
             }}
             className="relative flex justify-center order-1 lg:order-2 mb-8 lg:mb-0"
           >
@@ -201,12 +202,12 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Floating Elements Around Phone - Mobile Optimized */}
+              {/* Floating Elements Around Phone - Simplified Animation */}
               <motion.div 
                 className="absolute -top-6 sm:-top-8 -left-6 sm:-left-8 w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full animate-float blur-xl"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 0.6, scale: 1 }}
-                transition={{ delay: 1.2, duration: 0.8 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
               ></motion.div>
               
               <motion.div 
@@ -214,7 +215,7 @@ const HeroSection = () => {
                 style={{ animationDelay: '1s' }}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 0.7, scale: 1 }}
-                transition={{ delay: 1.4, duration: 0.8 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
               ></motion.div>
               
               <motion.div 
@@ -222,7 +223,7 @@ const HeroSection = () => {
                 style={{ animationDelay: '2s' }}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 0.4, scale: 1 }}
-                transition={{ delay: 1.6, duration: 0.8 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
               ></motion.div>
               
               {/* Enhanced Glow Effect */}

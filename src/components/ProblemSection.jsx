@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 const ProblemCard = ({ title, problem, solution, delay = 0 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: delay * 0.1 }}
+      viewport={{ once: true, margin: "-100px" }}
       className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 card-hover"
     >
       <h3 className="text-lg sm:text-xl font-bold mb-4 gradient-text">{title}</h3>
@@ -53,8 +53,8 @@ const ProblemSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
@@ -72,7 +72,7 @@ const ProblemSection = () => {
             <ProblemCard
               key={index}
               {...problem}
-              delay={index * 0.2}
+              delay={index}
             />
           ))}
         </div>

@@ -7,10 +7,10 @@ const MilestoneCard = ({ quarter, title, description, icon, index, totalItems, d
   return (
     <div className="relative flex-1 min-w-0">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay }}
-        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.4, delay: delay * 0.05 }}
+        viewport={{ once: true, margin: "-100px" }}
         className="relative group"
       >
         {/* Horizontal connecting line */}
@@ -96,10 +96,10 @@ const RoadmapSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header - Mobile Optimized */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white px-4 sm:px-0">
@@ -121,7 +121,7 @@ const RoadmapSection = () => {
                 {...milestone}
                 index={index}
                 totalItems={milestones.length}
-                delay={index * 0.15}
+                delay={index}
               />
             ))}
           </div>
@@ -131,10 +131,10 @@ const RoadmapSection = () => {
             {milestones.map((milestone, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="relative"
               >
                 {/* Mobile vertical connecting line */}
@@ -177,10 +177,10 @@ const RoadmapSection = () => {
         
         {/* Bottom Text - Mobile Optimized */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mt-12 sm:mt-16 px-4 sm:px-0"
         >
           <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">

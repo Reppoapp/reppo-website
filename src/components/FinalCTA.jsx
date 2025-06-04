@@ -64,8 +64,8 @@ const FinalCTA = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center"
         >
           {/* Header - Mobile Optimized */}
@@ -93,12 +93,12 @@ const FinalCTA = () => {
             </div>
           </div>
           
-          {/* Waitlist Form - Mobile Optimized */}
+          {/* Waitlist Form - Optimized Animation */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            viewport={{ once: true, margin: "-100px" }}
             className="max-w-md mx-auto px-4 sm:px-0"
           >
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -159,6 +159,7 @@ const FinalCTA = () => {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
                 className={`mt-4 p-4 rounded-xl border ${
                   status === 'success'
                     ? 'bg-green-500/10 border-green-500/20 text-green-300'
@@ -179,12 +180,12 @@ const FinalCTA = () => {
             </p>
           </motion.div>
           
-          {/* Stats - Mobile Optimized */}
+          {/* Stats - Optimized Animation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px" }}
             className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto px-4 sm:px-0"
           >
             <div className="text-center p-4 sm:p-0">
