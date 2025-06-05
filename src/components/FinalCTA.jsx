@@ -71,24 +71,28 @@ const FinalCTA = () => {
           {/* Header - Mobile Optimized */}
           <div className="mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-4 sm:px-0">
-              Be among the first to{' '}
-              <span className="gradient-text">claim your Reppo.</span>
+              <span className="gradient-text">Earn Your Spot in the Reppo Era.</span>
             </h2>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
-              The fitness app you post on — not just track with. Built for streaks, check-ins, PRs, and flex-worthy milestones.
+              Track your grind. Build your streak. Unlock merch. Reppo is for athletes who don't just train — they{' '}
+              <span className="gradient-text font-semibold">earn it.</span>
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 text-gray-400 text-sm px-4 sm:px-0">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 text-gray-300 text-sm sm:text-base px-4 sm:px-0">
               <span className="flex items-center justify-center sm:justify-start">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2 flex-shrink-0"></span>
-                Early access perks
+                <span className="text-green-400 mr-2 flex-shrink-0">✅</span>
+                Early access to the App
               </span>
               <span className="flex items-center justify-center sm:justify-start">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2 flex-shrink-0"></span>
-                Premium features free
+                <span className="text-green-400 mr-2 flex-shrink-0">✅</span>
+                Free premium features for first users
               </span>
               <span className="flex items-center justify-center sm:justify-start">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2 flex-shrink-0"></span>
-                Beta testing invitation
+                <span className="text-green-400 mr-2 flex-shrink-0">✅</span>
+                Exclusive merch & badge drops
+              </span>
+              <span className="flex items-center justify-center sm:justify-start">
+                <span className="text-green-400 mr-2 flex-shrink-0">✅</span>
+                Beta-only rewards before public launch
               </span>
             </div>
           </div>
@@ -148,7 +152,7 @@ const FinalCTA = () => {
                       Welcome to Reppo!
                     </div>
                   ) : (
-                    'Join Waitlist'
+                    'Join the Waitlist — Claim Early Access'
                   )}
                 </span>
               </motion.button>
@@ -190,15 +194,15 @@ const FinalCTA = () => {
           >
             <div className="text-center p-4 sm:p-0">
               <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">500+</div>
-              <div className="text-gray-400 text-sm sm:text-base">Beta testers</div>
+              <div className="text-gray-400 text-sm sm:text-base">Beta Athletes In Training</div>
             </div>
             <div className="text-center p-4 sm:p-0">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">10k+</div>
-              <div className="text-gray-400 text-sm sm:text-base">Waitlist members</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">10,000+</div>
+              <div className="text-gray-400 text-sm sm:text-base">Already Signed Up</div>
             </div>
             <div className="text-center p-4 sm:p-0">
               <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">Q3 2025</div>
-              <div className="text-gray-400 text-sm sm:text-base">Launch date</div>
+              <div className="text-gray-400 text-sm sm:text-base">Launching</div>
             </div>
           </motion.div>
         </motion.div>
