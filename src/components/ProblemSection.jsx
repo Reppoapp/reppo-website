@@ -28,19 +28,19 @@ const ProblemCard = ({ title, problem, solution, delay = 0 }) => {
 const ProblemSection = () => {
   const problems = [
     {
-      title: "Tracking apps are boring",
-      problem: "Where's the hype? Where's the community?",
-      solution: "Every rep becomes a story worth sharing with your fitness community."
+      title: "Tracking apps don't hype you up.",
+      problem: "You log your workout and it disappears.",
+      solution: "Every session adds to your streak, your level, and your legacy."
     },
     {
-      title: "Social media isn't built for lifters",
-      problem: "Your posts get lost in the noise.",
-      solution: "A dedicated space where your PRs and progress get the attention they deserve."
+      title: "Social media's not made for athletes.",
+      problem: "Your PRs get buried under memes and meal pics.",
+      solution: "Join communities built around what you do — and get the credit you've earned."
     },
     {
-      title: "Your progress needs a home",
-      problem: "Streaks, PRs, and wins deserve to be seen.",
-      solution: "Build your fitness legacy and inspire others on their journey."
+      title: "Your progress deserves to be seen.",
+      problem: "Streaks and big wins vanish without recognition.",
+      solution: "Track your grind. Earn badges. Inspire the next one in your lane."
     }
   ]
 
@@ -58,12 +58,11 @@ const ProblemSection = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
-            Your PRs deserve more than{' '}
-            <span className="gradient-text">buried gym notes.</span>
+            Your Progress Deserves a{' '}
+            <span className="gradient-text">Platform — Not a Scroll Past.</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
-            Traditional fitness apps treat your achievements like data points. 
-            We treat them like victories worth celebrating.
+            Most fitness apps treat your work like data. Reppo turns every win into something worth showing off — and sharing with your people.
           </p>
         </motion.div>
         
