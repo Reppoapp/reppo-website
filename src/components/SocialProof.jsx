@@ -36,33 +36,33 @@ const TestimonialCard = ({ quote, name, role, avatar, delay = 0 }) => {
 const SocialProof = () => {
   const testimonials = [
     {
-      quote: "Reppo helped me stay consistent for the first time. The streak tracking is addictive in the best way possible.",
+      quote: "For the first time, I actually stayed consistent. Reppo's streak system made showing up feel like winning.",
       name: "Sarah Chen",
-      role: "Fitness Enthusiast",
+      role: "Marathon Runner",
       avatar: "💪"
     },
     {
-      quote: "Logging workouts is finally fun again. I actually look forward to updating my progress every day.",
+      quote: "Reppo made logging fun again. I actually look forward to tracking — it's like gamifying my progress.",
       name: "Mike Rodriguez",
       role: "Personal Trainer",
       avatar: "🏋️"
     },
     {
-      quote: "The rep streak feature is my favorite part. It turned my fitness journey into a game I want to win.",
+      quote: "I used to lose steam fast. Now I'm chasing streaks — and it actually feels like a game I want to win.",
       name: "Emma Davis",
-      role: "Student Athlete",
+      role: "CrossFit Athlete",
       avatar: "🔥"
     },
     {
-      quote: "Finally, an app that gets it. My workouts aren't just data anymore – they're part of my story.",
+      quote: "Reppo finally gets it. My workouts aren't just numbers anymore — they're part of my identity.",
       name: "Alex Thompson",
-      role: "Marathon Runner",
+      role: "Hybrid Athlete",
       avatar: "🏃"
     },
     {
-      quote: "The social aspect changed everything. Seeing my friends' progress motivates me to push harder.",
+      quote: "Reppo's social feed changed everything. My friends' progress pushes me to show up harder every day.",
       name: "Jordan Kim",
-      role: "CrossFit Athlete",
+      role: "Powerlifter",
       avatar: "🎯"
     }
   ]
@@ -86,11 +86,11 @@ const SocialProof = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Loved by{' '}
-            <span className="gradient-text">fitness enthusiasts</span>
+            Trusted by Athletes.{' '}
+            <span className="gradient-text">Built for Consistency.</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-            Join thousands who've transformed their fitness journey with Reppo.
+            From marathoners to CrossFitters, Reppo is helping real people stay consistent, level up, and own their progress.
           </p>
         </motion.div>
         
@@ -115,8 +115,8 @@ const SocialProof = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">10k+</div>
-              <div className="text-xs sm:text-sm text-gray-400">Beta Users</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">10,000+</div>
+              <div className="text-xs sm:text-sm text-gray-400">Early Athletes</div>
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">1M+</div>
@@ -124,11 +124,11 @@ const SocialProof = () => {
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">95%</div>
-              <div className="text-xs sm:text-sm text-gray-400">Love Rate</div>
+              <div className="text-xs sm:text-sm text-gray-400">User Satisfaction</div>
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">60+</div>
-              <div className="text-xs sm:text-sm text-gray-400">Day Streaks</div>
+              <div className="text-xs sm:text-sm text-gray-400">Day Streak Achievers</div>
             </div>
           </div>
         </motion.div>
