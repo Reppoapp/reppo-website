@@ -57,25 +57,31 @@ const RoadmapSection = () => {
     {
       quarter: "Q3 2025",
       title: "Reppo Launch (iOS)",
-      description: "Daily check-ins, streaks, and progress logging. Your fitness journey starts here.",
+      description: "Daily logging, streak tracking, and profile badges go live. Reppo officially hits the App Store.",
       icon: "🚀"
     },
     {
       quarter: "Q4 2025", 
-      title: "Social Feed + Comments",
-      description: "React to workouts, cheer on friends, and comment. Turn gym sessions into social victories.",
+      title: "Community Feed + Positive Reactions",
+      description: "Celebrate your people. Hype posts, react with custom emojis, and post your daily grind in the no-noise Reppo feed.",
       icon: "💬"
     },
     {
       quarter: "Q1 2026",
-      title: "Group Challenges",
-      description: "Join monthly team fitness battles. Compete with friends and climb the ranks together.",
+      title: "Group Challenges & Teams",
+      description: "Squad up. Join team fitness battles, compete for leaderboard glory, and earn exclusive team-based streak rewards.",
       icon: "🏆"
     },
     {
       quarter: "Q2 2026",
-      title: "Pro Mode & Analytics",
-      description: "Built-in plans, macros, and performance stats. Advanced analytics for serious athletes.",
+      title: "Badge-Gated Merch Drops",
+      description: "Earn it, then wear it. Unlock exclusive merch tied to your achievements — like a Marathon Finisher hoodie or a 315 Bench Club shirt.",
+      icon: "👕"
+    },
+    {
+      quarter: "Q3 2026",
+      title: "Pro Mode + Athlete Analytics",
+      description: "Advanced stats, macros, recovery insights, and training tools. Built for hybrid athletes chasing elite results.",
       icon: "📊"
     }
   ]
@@ -103,11 +109,11 @@ const RoadmapSection = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white px-4 sm:px-0">
-            📍 What's Coming to{' '}
-            <span className="gradient-text">Reppo</span>
+            What's Next for{' '}
+            <span className="gradient-text">Reppo: Progress, Community, and Exclusive Rewards</span>
           </h2>
           <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
-            We're building fast — here's a preview of what's ahead.
+            Every update unlocks a new way to rep your identity — from daily streaks to badge-only merch. Here's what's coming.
           </p>
         </motion.div>
         
@@ -175,7 +181,7 @@ const RoadmapSection = () => {
           </div>
         </div>
         
-        {/* Bottom Text - Mobile Optimized */}
+        {/* Bottom CTA - Enhanced */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -183,9 +189,19 @@ const RoadmapSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mt-12 sm:mt-16 px-4 sm:px-0"
         >
-          <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
-            Ready to be part of the journey? Join our waitlist for early access to each milestone.
-          </p>
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg backdrop-blur-sm p-6 sm:p-8 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mb-6 leading-relaxed">
+              Reppo isn't just where you track your grind — it's where your grind gets{' '}
+              <span className="gradient-text font-semibold">noticed, rewarded, and repped.</span>{' '}
+              Join now for early access and milestone-based drops.
+            </p>
+            <button 
+              onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+              className="w-full sm:w-auto bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 shadow-md hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 text-base sm:text-lg min-h-[48px]"
+            >
+              Join for Early Access & Exclusive Drops
+            </button>
+          </div>
         </motion.div>
       </div>
       
