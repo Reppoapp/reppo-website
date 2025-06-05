@@ -100,9 +100,11 @@ const ProfilePreview = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 px-4 sm:px-0">
-            This could be{' '}
-            <span className="gradient-text">your profile</span> 👇
+            <span className="gradient-text">Your Profile. Your Progress. Your Proof.</span>
           </h2>
+          <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
+            Every workout builds more than muscle — it builds your identity. Reppo makes your progress visible, meaningful, and unignorable.
+          </p>
         </motion.div>
         
         {/* Two-Column Layout - Mobile Optimized */}
@@ -238,15 +240,6 @@ const ProfilePreview = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="space-y-6 sm:space-y-8 text-center lg:text-left order-1 lg:order-2 px-4 sm:px-0"
           >
-            <div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-                This is your{' '}
-                <span className="gradient-text">training identity.</span>
-              </h3>
-              <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6">
-                Every rep, every PR, every day you show up—it all becomes part of your story.
-              </p>
-            </div>
             
             {/* Feature highlights - Simplified Animation */}
             <div className="space-y-4 sm:space-y-6">
@@ -261,8 +254,8 @@ const ProfilePreview = () => {
                   📊
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-2 text-base sm:text-lg">Personal Dashboard</h4>
-                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">Track your reps, streaks, and challenge progress in one beautiful interface.</p>
+                  <h4 className="text-white font-bold mb-2 text-base sm:text-lg">Your Training, Visualized</h4>
+                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">See your streaks, reps, and achievements all in one place — designed to keep you coming back stronger.</p>
                 </div>
               </motion.div>
               
@@ -277,8 +270,8 @@ const ProfilePreview = () => {
                   🏆
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-2 text-base sm:text-lg">Challenge Competitions</h4>
-                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">Join community challenges and see how you rank against thousands of other athletes.</p>
+                  <h4 className="text-white font-bold mb-2 text-base sm:text-lg">Compete with the Best</h4>
+                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">Join challenges, climb leaderboards, and earn badges that actually mean something.</p>
                 </div>
               </motion.div>
               
@@ -293,8 +286,8 @@ const ProfilePreview = () => {
                   🔥
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-2 text-base sm:text-lg">Social Recognition</h4>
-                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">Get celebrated for your achievements and inspire others on their fitness journey.</p>
+                  <h4 className="text-white font-bold mb-2 text-base sm:text-lg">Recognition That Counts</h4>
+                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">Earn props for your consistency, not your clout. Let your grind speak — and get noticed for it.</p>
                 </div>
               </motion.div>
             </div>
@@ -310,7 +303,7 @@ const ProfilePreview = () => {
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
                 className="w-full sm:w-auto bg-gradient-to-r from-[#FF3B30] via-[#FF6B30] to-[#2979FF] text-white font-bold rounded-full px-8 sm:px-10 py-4 shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 text-base sm:text-lg min-h-[48px]"
               >
-                Create Your Profile
+                Start Your Fitness Story
               </button>
             </motion.div>
           </motion.div>
