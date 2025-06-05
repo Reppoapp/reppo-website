@@ -41,20 +41,20 @@ const HowItWorks = () => {
   const steps = [
     {
       number: 1,
-      title: "Log your reps",
-      description: "Quick, easy tracking of your workouts, sets, and personal records. No complicated forms.",
+      title: "Log with Purpose",
+      description: "Track every session, set, and PR — no clutter, just clean rep logging that builds your fitness identity.",
       icon: "💪"
     },
     {
       number: 2,
-      title: "Build your streak",
-      description: "Watch your consistency grow. Every workout counts towards your fitness journey.",
+      title: "Stack Your Streak",
+      description: "Stay consistent, earn streaks, and level up. Every workout pushes your progress — and unlocks your next badge.",
       icon: "🔥"
     },
     {
       number: 3,
-      title: "Rep your journey",
-      description: "Share your wins, celebrate milestones, and inspire your fitness community.",
+      title: "Rep Your Identity",
+      description: "Share wins, show off badges, and inspire your people. Every rep becomes part of your legacy.",
       icon: "🏆"
     }
   ]
@@ -73,10 +73,10 @@ const HowItWorks = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
-            <span className="gradient-text">Train Hard. Log It. Share It.</span>
+            <span className="gradient-text">Train Loud. Track Proud. Earn It.</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
-            Three simple steps to transform your fitness journey from private struggle to public inspiration.
+            From logging reps to earning badges — Reppo makes your fitness journey feel seen, celebrated, and socially powerful.
           </p>
         </motion.div>
         
@@ -101,13 +101,13 @@ const HowItWorks = () => {
           className="text-center mt-12 sm:mt-16 px-4 sm:px-0"
         >
           <p className="text-base sm:text-lg text-gray-400 mb-6">
-            Ready to turn your workouts into wins?
+            Ready to make your fitness journey count?
           </p>
           <button 
             onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 shadow-md hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 min-h-[48px] text-base sm:text-lg"
           >
-            Start Your Journey
+            Join Reppo – Start Building Your Streak
           </button>
         </motion.div>
       </div>
