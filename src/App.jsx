@@ -20,7 +20,7 @@ function App() {
 
   return (
     <SmoothScroll>
-      <div className="min-h-screen bg-background text-white overflow-x-hidden">
+      <div className="min-h-screen bg-background text-text-primary overflow-x-hidden">
         {/* Full Screen Loader */}
         {!isLoaded && <FullScreenLoader onComplete={handleLoadingComplete} />}
         
@@ -82,13 +82,13 @@ function App() {
                   className="h-12 w-auto"
                 />
               </div>
-              <p className="text-white/60 mb-4 sm:mb-6 text-sm sm:text-base">Own Your Reps. Share Your Grind.</p>
-              <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-white/60 text-sm sm:text-base">
-                <a href="#" className="hover:text-white transition-colors">Privacy</a>
-                <a href="#" className="hover:text-white transition-colors">Terms</a>
-                <a href="#" className="hover:text-white transition-colors">Contact</a>
+              <p className="text-text-secondary mb-4 sm:mb-6 text-sm sm:text-base">Own Your Reps. Share Your Grind.</p>
+              <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-text-secondary text-sm sm:text-base">
+                <a href="#" className="hover:text-secondary transition-colors">Privacy</a>
+                <a href="#" className="hover:text-secondary transition-colors">Terms</a>
+                <a href="#" className="hover:text-secondary transition-colors">Contact</a>
               </div>
-              <p className="text-white/60 text-xs sm:text-sm mt-4 sm:mt-6">
+              <p className="text-text-secondary text-xs sm:text-sm mt-4 sm:mt-6">
                 © 2024 Reppo. All rights reserved.
               </p>
             </div>

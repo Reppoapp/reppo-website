@@ -52,13 +52,13 @@ const FinalCTA = () => {
   }
 
   return (
-    <section id="waitlist" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-to-b from-gray-900 to-background">
+    <section id="waitlist" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-to-b from-card-bg to-background">
       {/* Seamless Gradient Transition from Previous Section */}
-      <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-gray-900 via-gray-900/70 to-transparent pointer-events-none"></div>
+      <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-card-bg via-card-bg/70 to-transparent pointer-events-none"></div>
       
       {/* Enhanced Background with Soft Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-background"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#FF3B30]/20 to-[#2979FF]/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-card-bg to-background"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/10"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -73,11 +73,11 @@ const FinalCTA = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-4 sm:px-0">
               <span className="gradient-text">Earn Your Spot in the Reppo Era.</span>
             </h2>
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
+            <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
               Track your grind. Build your streak. Unlock merch. Reppo is for athletes who don't just train — they{' '}
               <span className="gradient-text font-semibold">earn it.</span>
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 text-gray-300 text-sm sm:text-base px-4 sm:px-0">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 text-text-secondary text-sm sm:text-base px-4 sm:px-0">
               <span className="flex items-center justify-center sm:justify-start">
                 <span className="text-green-400 mr-2 flex-shrink-0">✅</span>
                 Early access to the App
@@ -112,7 +112,7 @@ const FinalCTA = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className={`w-full px-6 py-4 bg-white/10 backdrop-blur-sm border rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 min-h-[48px] text-base ${
+                  className={`w-full px-6 py-4 bg-card-bg/50 backdrop-blur-sm border rounded-full text-text-primary placeholder-text-secondary/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 min-h-[48px] text-base ${
                     status === 'error' && message.includes('email') 
                       ? 'border-red-500/50 focus:ring-red-500' 
                       : 'border-white/20'
@@ -131,14 +131,14 @@ const FinalCTA = () => {
                     : "0 20px 40px rgba(255, 59, 48, 0.4)"
                 }}
                 whileTap={{ scale: (status === 'loading' || status === 'success') ? 1 : 0.95 }}
-                className={`w-full bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 py-4 shadow-md transition-all duration-300 text-base sm:text-lg relative overflow-hidden min-h-[48px] ${
+                className={`w-full bg-gradient-primary text-white font-semibold rounded-full px-6 py-4 shadow-md transition-all duration-300 text-base sm:text-lg relative overflow-hidden min-h-[48px] ${
                   status === 'loading' || status === 'success' 
                     ? 'opacity-75 cursor-not-allowed' 
                     : 'hover:shadow-xl hover:shadow-primary/30 hover:from-[#FF3B30] hover:to-[#2979FF] transform hover:-translate-y-0.5'
                 }`}
               >
                 {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FF4444] to-[#3399FF] opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <span className="relative z-10">
                   {status === 'loading' ? (
@@ -179,7 +179,7 @@ const FinalCTA = () => {
               </motion.div>
             )}
             
-            <p className="text-sm text-gray-500 mt-4">
+            <p className="text-sm text-text-secondary/60 mt-4">
               No spam, just updates. Unsubscribe anytime.
             </p>
           </motion.div>
@@ -194,15 +194,15 @@ const FinalCTA = () => {
           >
             <div className="text-center p-4 sm:p-0">
               <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">500+</div>
-              <div className="text-gray-400 text-sm sm:text-base">Beta Athletes In Training</div>
+              <div className="text-text-secondary text-sm sm:text-base">Beta Athletes In Training</div>
             </div>
             <div className="text-center p-4 sm:p-0">
               <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">10,000+</div>
-              <div className="text-gray-400 text-sm sm:text-base">Already Signed Up</div>
+              <div className="text-text-secondary text-sm sm:text-base">Already Signed Up</div>
             </div>
             <div className="text-center p-4 sm:p-0">
               <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">Q3 2025</div>
-              <div className="text-gray-400 text-sm sm:text-base">Launching</div>
+              <div className="text-text-secondary text-sm sm:text-base">Launching</div>
             </div>
           </motion.div>
         </motion.div>

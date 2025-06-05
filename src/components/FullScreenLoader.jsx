@@ -21,9 +21,7 @@ const FullScreenLoader = ({ onComplete }) => {
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed inset-0 z-[100] flex items-center justify-center"
-      style={{
-        background: 'linear-gradient(135deg, #FF3B30 0%, #2979FF 100%)'
-      }}
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-gradient-primary"
     >
       {/* Animated background overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/20"></div>

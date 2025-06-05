@@ -23,15 +23,15 @@ const HeroSection = () => {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20 pb-12 px-4">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-card-bg to-background pt-20 pb-12 px-4">
       {/* Enhanced Background Elements with Subtle Gradients */}
       <div className="absolute inset-0">
         {/* Main gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10"></div>
         
         {/* Geometric background shapes for visual depth */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full opacity-20 blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-tl from-accent/15 to-primary/15 rounded-full opacity-25 blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-radial-coral rounded-full opacity-30 blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-radial-blue rounded-full opacity-25 blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
         <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-white/5 to-primary/10 rounded-full opacity-30 blur-2xl animate-float" style={{ animationDelay: '6s' }}></div>
       </div>
       
@@ -48,7 +48,7 @@ const HeroSection = () => {
               variants={fadeInUp}
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight">
-                <span className="block text-white mb-2">Where Fitness</span>
+                <span className="block text-text-primary mb-2">Where Fitness</span>
                 <span className="block gradient-text">Meets Identity.</span>
               </h1>
             </motion.div>
@@ -65,9 +65,9 @@ const HeroSection = () => {
                 }
               }}
             >
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0 px-2 lg:px-0">
+              <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0 px-2 lg:px-0">
                 Reppo is the social fitness platform where{' '}
-                <span className="text-white font-semibold">hybrid athletes, runners, lifters, and movement lovers</span>{' '}
+                <span className="text-text-primary font-semibold">hybrid athletes, runners, lifters, and movement lovers</span>{' '}
                 connect, track progress, and level up — one rep at a time.{' '}
                 <span className="gradient-text font-semibold">No comments. Just community, streaks, and real recognition.</span>
               </p>
@@ -113,7 +113,7 @@ const HeroSection = () => {
               }}
               className="text-center lg:text-left"
             >
-              <p className="text-gray-400 text-base sm:text-lg font-medium">
+              <p className="text-text-secondary text-base sm:text-lg font-medium">
                 <span className="gradient-text font-semibold">Get in early.</span> Earn exclusive founder badges and merch.
               </p>
             </motion.div>
@@ -134,52 +134,52 @@ const HeroSection = () => {
             <div className="relative">
               
               {/* Main Profile Card - Identity-Focused */}
-              <div className="relative w-[320px] sm:w-[380px] bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/10">
+              <div className="relative w-[320px] sm:w-[380px] bg-gradient-to-b from-card-bg to-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/10">
                 
                 {/* Profile Header */}
                 <div className="text-center mb-6">
                   {/* Profile Photo with Status */}
                   <div className="relative w-20 h-20 mx-auto mb-4">
                     <div className="absolute inset-0 bg-gradient-to-tr from-[#FF3B30] via-[#FF6B30] to-[#2979FF] rounded-full p-1 shadow-lg">
-                      <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center text-3xl shadow-inner relative overflow-hidden">
+                      <div className="w-full h-full bg-gradient-to-br from-card-bg to-background rounded-full flex items-center justify-center text-3xl shadow-inner relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
                         <span className="relative z-10">💪</span>
                       </div>
                     </div>
                     {/* Active status indicator */}
-                    <div className="absolute bottom-0 right-0 w-6 h-6 bg-green-500 rounded-full border-4 border-gray-800 shadow-lg">
+                    <div className="absolute bottom-0 right-0 w-6 h-6 bg-green-500 rounded-full border-4 border-background shadow-lg">
                       <div className="w-full h-full bg-green-400 rounded-full animate-pulse"></div>
                     </div>
                   </div>
                   
                   {/* User Identity */}
-                  <h3 className="text-xl font-black text-white mb-1">Jordan "The Hybrid" Chen</h3>
-                  <p className="text-sm text-gray-400 mb-2">@hybridathlete</p>
+                  <h3 className="text-xl font-black text-text-primary mb-1">Jordan "The Hybrid" Chen</h3>
+                  <p className="text-sm text-text-secondary mb-2">@hybridathlete</p>
                   
                   {/* Identity Tags */}
                   <div className="flex flex-wrap justify-center gap-2 mb-4">
-                    <span className="px-3 py-1 bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 rounded-full text-xs font-semibold text-white">
+                    <span className="px-3 py-1 bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-full text-xs font-semibold text-text-primary">
                       🏃‍♂️ Runner
                     </span>
-                    <span className="px-3 py-1 bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 rounded-full text-xs font-semibold text-white">
+                    <span className="px-3 py-1 bg-gradient-to-r from-secondary/20 to-primary/20 border border-secondary/30 rounded-full text-xs font-semibold text-text-primary">
                       🏋️‍♂️ Lifter
                     </span>
-                    <span className="px-3 py-1 bg-gradient-to-r from-primary/20 to-white/20 border border-white/30 rounded-full text-xs font-semibold text-white">
+                    <span className="px-3 py-1 bg-gradient-to-r from-primary/20 to-white/20 border border-white/30 rounded-full text-xs font-semibold text-text-primary">
                       🤸‍♂️ Movement
                     </span>
                   </div>
                 </div>
                 
                 {/* Current Streak - Prominent Display */}
-                <div className="bg-gradient-to-r from-primary/20 to-accent/20 border border-white/20 rounded-xl p-4 mb-6 text-center">
+                <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-white/20 rounded-xl p-4 mb-6 text-center">
                   <div className="text-3xl mb-2">🔥</div>
-                  <div className="text-2xl font-black text-white mb-1">47 Day Streak</div>
-                  <div className="text-sm text-gray-300">Current motivation level: Unstoppable</div>
+                  <div className="text-2xl font-black text-text-primary mb-1">47 Day Streak</div>
+                  <div className="text-sm text-text-secondary">Current motivation level: Unstoppable</div>
                 </div>
                 
                 {/* Achievement Badges */}
                 <div className="mb-6">
-                  <h4 className="text-sm font-bold text-white mb-3 text-center">Recent Achievements</h4>
+                  <h4 className="text-sm font-bold text-text-primary mb-3 text-center">Recent Achievements</h4>
                   <div className="grid grid-cols-3 gap-3">
                     <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-lg p-3 text-center">
                       <div className="text-2xl mb-1">🏆</div>
