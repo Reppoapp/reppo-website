@@ -61,9 +61,13 @@ const FullScreenLoader = ({ onComplete }) => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-black text-white mb-4 tracking-tight">
-            Reppo
-          </h1>
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/Reppo-Logo.png" 
+              alt="Reppo Logo" 
+              className="h-24 sm:h-32 md:h-40 w-auto brightness-0 invert contrast-200"
+            />
+          </div>
           <p className="text-xl sm:text-2xl text-white/90 font-medium">
             Own Your Reps. Share Your Grind.
           </p>

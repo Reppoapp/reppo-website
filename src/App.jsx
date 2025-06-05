@@ -34,7 +34,11 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
-                <h1 className="text-2xl font-bold gradient-text">Reppo</h1>
+                <img 
+                  src="/Reppo-Logo.png" 
+                  alt="Reppo Logo" 
+                  className="h-8 w-auto brightness-0 invert contrast-200 hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <button 
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
@@ -71,7 +75,13 @@ function App() {
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h3 className="text-xl sm:text-2xl font-bold gradient-text mb-3 sm:mb-4">Reppo</h3>
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <img 
+                  src="/Reppo-Logo.png" 
+                  alt="Reppo Logo" 
+                  className="h-12 w-auto brightness-0 invert contrast-200"
+                />
+              </div>
               <p className="text-white/60 mb-4 sm:mb-6 text-sm sm:text-base">Own Your Reps. Share Your Grind.</p>
               <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-white/60 text-sm sm:text-base">
                 <a href="#" className="hover:text-white transition-colors">Privacy</a>
