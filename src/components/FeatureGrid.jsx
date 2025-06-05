@@ -31,33 +31,33 @@ const FeatureCard = ({ title, description, icon, delay = 0 }) => {
 const FeatureGrid = () => {
   const features = [
     {
-      title: "Rep tracking that matters",
-      description: "Log sets, reps, weights, and PRs with intuitive tracking designed for real workouts.",
+      title: "Track With Purpose",
+      description: "No more spreadsheets. Log sets, reps, and PRs with ease — and turn every session into progress you can see.",
       icon: "📊"
     },
     {
-      title: "Social fitness feed",
-      description: "Follow friends, celebrate their wins, and get motivated by a community that gets it.",
+      title: "Your Fit Circle, Not a Follower Count",
+      description: "Follow your people, react to their grind, and build real fitness momentum together — no comments, no noise.",
       icon: "🤝"
     },
     {
-      title: "Milestone celebrations",
-      description: "Hit a new PR? Reached a streak goal? We'll make sure the world knows about your victory.",
+      title: "Real Recognition, Earned",
+      description: "Crush a PR or streak? Get the badge and the hype. Your progress gets the spotlight it deserves.",
       icon: "🎉"
     },
     {
-      title: "Streak tracking",
-      description: "Build momentum with visual streak counters that turn consistency into a game you want to win.",
+      title: "Make Consistency Competitive",
+      description: "Turn your training streak into a game. Compete with friends. Hit your stride. Keep it going.",
       icon: "🔥"
     },
     {
-      title: "Shareable profile",
-      description: "Your fitness journey deserves a home. Showcase your progress with a profile worth sharing.",
+      title: "Your Identity, On Display",
+      description: "Powerlifter? Runner? Hybrid athlete? Showcase your style and your story with a profile built for athletes.",
       icon: "📱"
     },
     {
-      title: "Progress insights",
-      description: "Smart analytics that help you understand your patterns and optimize your training.",
+      title: "Train Smarter, Climb Higher",
+      description: "Understand your patterns, level up your effort, and optimize your training with clean, visual insights.",
       icon: "📈"
     }
   ]
@@ -76,11 +76,11 @@ const FeatureGrid = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
-            Built for the way{' '}
-            <span className="gradient-text">you actually train</span>
+            Built for Athletes Who Want{' '}
+            <span className="gradient-text">More Than Just Stats.</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
-            Every feature designed with one goal: turning your fitness journey into content worth sharing.
+            Every feature in Reppo helps turn your workouts into wins, your reps into recognition, and your streaks into a story worth sharing.
           </p>
         </motion.div>
         
@@ -104,17 +104,16 @@ const FeatureGrid = () => {
           className="text-center mt-12 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg backdrop-blur-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 mx-4 sm:mx-0"
         >
           <h3 className="text-xl sm:text-2xl font-bold mb-4 gradient-text">
-            More than an app. It's your fitness story.
+            Reppo isn't just an app. It's your fitness identity.
           </h3>
           <p className="text-sm sm:text-base text-gray-300 mb-6 max-w-2xl mx-auto">
-            Reppo isn't just another fitness tracker. It's where your sweat becomes social currency, 
-            your consistency becomes content, and your progress becomes inspiration for others.
+            It's where your sweat becomes social currency. Your reps earn recognition. And your discipline turns into legacy.
           </p>
           <button 
             onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 shadow-md hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 text-sm sm:text-base min-h-[48px]"
           >
-            Be Part of the Story
+            Join the Movement – Be Part of the Story
           </button>
         </motion.div>
       </div>
