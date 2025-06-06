@@ -36,34 +36,34 @@ const TestimonialCard = ({ quote, name, role, avatar, delay = 0 }) => {
 const SocialProof = () => {
   const testimonials = [
     {
-      quote: "For the first time, I actually stayed consistent. Reppo's streak system made showing up feel like winning.",
-      name: "Sarah Chen",
-      role: "Marathon Runner",
+      quote: "Finally, a place where my 200-day streak actually means something. The exclusive merch drop for verified members is insane.",
+      name: "Marcus Chen",
+      role: "Verified Powerlifter",
       avatar: "💪"
     },
     {
-      quote: "Reppo made logging fun again. I actually look forward to tracking — it's like gamifying my progress.",
-      name: "Mike Rodriguez",
-      role: "Personal Trainer",
-      avatar: "🏋️"
-    },
-    {
-      quote: "I used to lose steam fast. Now I'm chasing streaks — and it actually feels like a game I want to win.",
-      name: "Emma Davis",
-      role: "CrossFit Athlete",
-      avatar: "🔥"
-    },
-    {
-      quote: "Reppo finally gets it. My workouts aren't just numbers anymore — they're part of my identity.",
-      name: "Alex Thompson",
-      role: "Hybrid Athlete",
+      quote: "I earned my marathon badge and immediately got access to the elite runners group. These people actually get it.",
+      name: "Sarah Rodriguez", 
+      role: "Elite Distance Runner",
       avatar: "🏃"
     },
     {
-      quote: "Reppo's social feed changed everything. My friends' progress pushes me to show up harder every day.",
-      name: "Jordan Kim",
-      role: "Powerlifter",
-      avatar: "🎯"
+      quote: "The badge system is addictive. I'm chasing achievements I never knew I wanted just to unlock the next level of access.",
+      name: "Jake Thompson",
+      role: "Hybrid Athlete",
+      avatar: "🔥"
+    },
+    {
+      quote: "My bench badge got me into the powerlifter-only group. Being around verified lifters who've actually earned their place hits different.",
+      name: "Maria Santos",
+      role: "Verified Lifter", 
+      avatar: "🏋️"
+    },
+    {
+      quote: "Level 47 and counting. The higher I climb, the more exclusive perks I unlock. It's like a fitness status symbol.",
+      name: "David Kim",
+      role: "Elite Member",
+      avatar: "👑"
     }
   ]
 
@@ -86,11 +86,11 @@ const SocialProof = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Trusted by Athletes.{' '}
-            <span className="gradient-text">Built for Consistency.</span>
+            Verified Members Only.{' '}
+            <span className="gradient-text">Exclusive Access Earned.</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-3xl mx-auto px-4">
-            From marathoners to CrossFitters, Reppo is helping real people stay consistent, level up, and own their progress.
+            These aren't just users — they're verified athletes who've earned their badges, unlocked exclusive perks, and claimed their place in the elite community.
           </p>
         </motion.div>
         
@@ -115,20 +115,20 @@ const SocialProof = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">10,000+</div>
-              <div className="text-xs sm:text-sm text-text-secondary">Early Athletes</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">500+</div>
+              <div className="text-xs sm:text-sm text-text-secondary">Verified Elite Members</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">1M+</div>
-              <div className="text-xs sm:text-sm text-text-secondary">Reps Logged</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">150+</div>
+              <div className="text-xs sm:text-sm text-text-secondary">Exclusive Badges Earned</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">95%</div>
-              <div className="text-xs sm:text-sm text-text-secondary">User Satisfaction</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">100%</div>
+              <div className="text-xs sm:text-sm text-text-secondary">Badge-Verified Members</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">60+</div>
-              <div className="text-xs sm:text-sm text-text-secondary">Day Streak Achievers</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">$50K+</div>
+              <div className="text-xs sm:text-sm text-text-secondary">Exclusive Merch Sales</div>
             </div>
           </div>
         </motion.div>

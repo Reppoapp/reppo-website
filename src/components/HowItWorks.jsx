@@ -41,20 +41,20 @@ const HowItWorks = () => {
   const steps = [
     {
       number: 1,
-      title: "Log with Purpose",
-      description: "Track every session, set, and PR — no clutter, just clean rep logging that builds your fitness identity.",
-      icon: "💪"
+      title: "Choose Your Identity",
+      description: "Powerlifter? Hybrid Athlete? Runner? Pick your lane and join verified communities where your specific grind gets recognized.",
+      icon: "🎯"
     },
     {
       number: 2,
-      title: "Stack Your Streak",
-      description: "Stay consistent, earn streaks, and level up. Every workout pushes your progress — and unlocks your next badge.",
+      title: "Post Daily, Build Status",
+      description: "One post per day. Build your streak. Every consecutive day logged increases your level and unlocks exclusive member privileges.",
       icon: "🔥"
     },
     {
       number: 3,
-      title: "Rep Your Identity",
-      description: "Share wins, show off badges, and inspire your people. Every rep becomes part of your legacy.",
+      title: "Earn Exclusive Access",
+      description: "Hit benchmarks, earn verified badges, unlock member-only merch. Show the world you've earned your place among the elite.",
       icon: "🏆"
     }
   ]
@@ -73,10 +73,10 @@ const HowItWorks = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
-            <span className="gradient-text">Train Loud. Track Proud. Earn It.</span>
+            <span className="gradient-text">Earn Your Way to the Top.</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-3xl mx-auto px-4 sm:px-0">
-            From logging reps to earning badges — Reppo makes your fitness journey feel seen, celebrated, and socially powerful.
+            This isn't about following — it's about earning. Every badge unlocked, every level gained, every streak built proves you belong with the dedicated few.
           </p>
         </motion.div>
         
@@ -101,13 +101,13 @@ const HowItWorks = () => {
           className="text-center mt-12 sm:mt-16 px-4 sm:px-0"
         >
           <p className="text-base sm:text-lg text-text-secondary mb-6">
-            Ready to make your fitness journey count?
+            Ready to start earning your place in the elite club?
           </p>
           <button 
             onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto bg-gradient-primary text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 shadow-md hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 min-h-[48px] text-base sm:text-lg"
           >
-            Join Reppo – Start Building Your Streak
+            Secure Early Access — Join Now
           </button>
         </motion.div>
       </div>

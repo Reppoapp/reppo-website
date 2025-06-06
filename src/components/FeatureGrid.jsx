@@ -31,34 +31,34 @@ const FeatureCard = ({ title, description, icon, delay = 0 }) => {
 const FeatureGrid = () => {
   const features = [
     {
-      title: "Track With Purpose",
-      description: "No more spreadsheets. Log sets, reps, and PRs with ease — and turn every session into progress you can see.",
-      icon: "📊"
-    },
-    {
-      title: "Your Fit Circle, Not a Follower Count",
-      description: "Follow your people, react to their grind, and build real fitness momentum together — no comments, no noise.",
-      icon: "🤝"
-    },
-    {
-      title: "Real Recognition, Earned",
-      description: "Crush a PR or streak? Get the badge and the hype. Your progress gets the spotlight it deserves.",
-      icon: "🎉"
-    },
-    {
-      title: "Make Consistency Competitive",
-      description: "Turn your training streak into a game. Compete with friends. Hit your stride. Keep it going.",
+      title: "Earn Your Spot Daily",
+      description: "Post once a day. Build your streak. Every session logged proves you belong in communities where consistency actually counts.",
       icon: "🔥"
     },
     {
-      title: "Your Identity, On Display",
-      description: "Powerlifter? Runner? Hybrid athlete? Showcase your style and your story with a profile built for athletes.",
-      icon: "📱"
+      title: "Badge-Locked Communities",
+      description: "Marathon finisher? Powerlifter? Only verified athletes with earned badges get access to exclusive communities and member-only perks.",
+      icon: "🏆"
     },
     {
-      title: "Train Smarter, Climb Higher",
-      description: "Understand your patterns, level up your effort, and optimize your training with clean, visual insights.",
+      title: "Achievements That Actually Matter",
+      description: "Hit 315 on bench? Run a sub-3:30 marathon? Earn verified badges that unlock exclusive merch only other achievers can buy.",
+      icon: "🎯"
+    },
+    {
+      title: "Your Identity, Verified",
+      description: "Choose your lane: Hybrid Athlete, Powerlifter, Runner, Pilates Queen. Join location-based groups with people who get your grind.",
+      icon: "👥"
+    },
+    {
+      title: "Level Up Your Status",
+      description: "More reps = higher level. Higher level = more respect. Climb the ranks and earn your place among the dedicated few.",
       icon: "📈"
+    },
+    {
+      title: "Only Positive Energy",
+      description: "No toxic comments. No trolls. Just likes and positive emojis from people who respect the work. Pure motivation, zero negativity.",
+      icon: "✨"
     }
   ]
 
@@ -76,11 +76,11 @@ const FeatureGrid = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
-            Built for Athletes Who Want{' '}
-            <span className="gradient-text">More Than Just Stats.</span>
+            Where Your Grind{' '}
+            <span className="gradient-text">Earns You Access.</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
-            Every feature in Reppo helps turn your workouts into wins, your reps into recognition, and your streaks into a story worth sharing.
+            This isn't another fitness app. This is where real athletes earn their place, unlock exclusive access, and get the recognition they've worked for.
           </p>
         </motion.div>
         
@@ -104,16 +104,16 @@ const FeatureGrid = () => {
           className="text-center mt-12 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl sm:rounded-3xl border border-white/10 shadow-lg backdrop-blur-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 mx-4 sm:mx-0"
         >
           <h3 className="text-xl sm:text-2xl font-bold mb-4 gradient-text">
-            Reppo isn't just an app. It's your fitness identity.
+            Ready to join the exclusive club?
           </h3>
           <p className="text-sm sm:text-base text-gray-300 mb-6 max-w-2xl mx-auto">
-            It's where your sweat becomes social currency. Your reps earn recognition. And your discipline turns into legacy.
+            Reppo membership isn't bought. It's earned. One rep, one day, one achievement at a time.
           </p>
           <button 
             onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto bg-gradient-to-r from-[#FF3B30] to-[#2979FF] text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 shadow-md hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 text-sm sm:text-base min-h-[48px]"
           >
-            Join the Movement – Be Part of the Story
+            Claim Your Spot — Join the Waitlist
           </button>
         </motion.div>
       </div>

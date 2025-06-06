@@ -71,28 +71,28 @@ const FinalCTA = () => {
           {/* Header - Mobile Optimized */}
           <div className="mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-4 sm:px-0">
-              <span className="gradient-text">Earn Your Spot in the Reppo Era.</span>
+              <span className="gradient-text">Only 1,000 Founder Spots Available.</span>
             </h2>
             <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
-              Track your grind. Build your streak. Unlock merch. Reppo is for athletes who don't just train — they{' '}
-              <span className="gradient-text font-semibold">earn it.</span>
+              Miss this launch and you'll never get founder status. No exceptions. No second chances.{' '}
+              <span className="gradient-text font-semibold">The exclusive perks? Gone forever.</span>
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 text-text-secondary text-sm sm:text-base px-4 sm:px-0">
               <span className="flex items-center justify-center sm:justify-start">
-                <span className="text-green-400 mr-2 flex-shrink-0">✅</span>
-                Early access to the App
+                <span className="text-yellow-400 mr-2 flex-shrink-0">👑</span>
+                Exclusive founder badge (limited to 1,000)
               </span>
               <span className="flex items-center justify-center sm:justify-start">
-                <span className="text-green-400 mr-2 flex-shrink-0">✅</span>
-                Free premium features for first users
+                <span className="text-yellow-400 mr-2 flex-shrink-0">🏆</span>
+                Founder-only merch drops (forever)
               </span>
               <span className="flex items-center justify-center sm:justify-start">
-                <span className="text-green-400 mr-2 flex-shrink-0">✅</span>
-                Exclusive merch & badge drops
+                <span className="text-yellow-400 mr-2 flex-shrink-0">🔥</span>
+                Free premium access (lifetime)
               </span>
               <span className="flex items-center justify-center sm:justify-start">
-                <span className="text-green-400 mr-2 flex-shrink-0">✅</span>
-                Beta-only rewards before public launch
+                <span className="text-yellow-400 mr-2 flex-shrink-0">💎</span>
+                VIP community access before anyone else
               </span>
             </div>
           </div>
@@ -152,7 +152,7 @@ const FinalCTA = () => {
                       Welcome to Reppo!
                     </div>
                   ) : (
-                    'Join the Waitlist — Claim Early Access'
+                    'Secure Your Founder Badge — Limited Time'
                   )}
                 </span>
               </motion.button>
@@ -193,16 +193,16 @@ const FinalCTA = () => {
             className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto px-4 sm:px-0"
           >
             <div className="text-center p-4 sm:p-0">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">500+</div>
-              <div className="text-text-secondary text-sm sm:text-base">Beta Athletes In Training</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">127</div>
+              <div className="text-text-secondary text-sm sm:text-base">Founder Spots Remaining</div>
             </div>
             <div className="text-center p-4 sm:p-0">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">10,000+</div>
-              <div className="text-text-secondary text-sm sm:text-base">Already Signed Up</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">873</div>
+              <div className="text-text-secondary text-sm sm:text-base">Spots Already Claimed</div>
             </div>
             <div className="text-center p-4 sm:p-0">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">Q3 2025</div>
-              <div className="text-text-secondary text-sm sm:text-base">Launching</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">Forever</div>
+              <div className="text-text-secondary text-sm sm:text-base">Exclusive Access</div>
             </div>
           </motion.div>
         </motion.div>

@@ -66,10 +66,10 @@ const HeroSection = () => {
               }}
             >
               <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0 px-2 lg:px-0">
-                Reppo is the social fitness platform where{' '}
-                <span className="text-text-primary font-semibold">hybrid athletes, runners, lifters, and movement lovers</span>{' '}
-                connect, track progress, and level up — one rep at a time.{' '}
-                <span className="gradient-text font-semibold">No comments. Just community, streaks, and real recognition.</span>
+                The exclusive fitness platform where{' '}
+                <span className="text-text-primary font-semibold">verified athletes earn badges, unlock member-only merch, and build status</span>{' '}
+                through daily consistency.{' '}
+                <span className="gradient-text font-semibold">No followers. No comments. Just earned respect.</span>
               </p>
             </motion.div>
             
@@ -114,7 +114,7 @@ const HeroSection = () => {
               className="text-center lg:text-left"
             >
               <p className="text-text-secondary text-base sm:text-lg font-medium">
-                <span className="gradient-text font-semibold">Get in early.</span> Earn exclusive founder badges and merch.
+                <span className="gradient-text font-semibold">Only 127 founder spots left.</span> Secure exclusive badges and member-only perks.
               </p>
             </motion.div>
             

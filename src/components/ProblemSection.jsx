@@ -28,19 +28,19 @@ const ProblemCard = ({ title, problem, solution, delay = 0 }) => {
 const ProblemSection = () => {
   const problems = [
     {
-      title: "Tracking apps don't hype you up.",
-      problem: "You log your workout and it disappears.",
-      solution: "Every session adds to your streak, your level, and your legacy."
+      title: "Your PRs disappear into the void.",
+      problem: "Hit a new bench max? Log it and... crickets. Your biggest wins get buried in apps that treat achievements like data points.",
+      solution: "Every PR, every streak, every grind session earns you badges, levels, and recognition that actually matters."
     },
     {
-      title: "Social media's not made for athletes.",
-      problem: "Your PRs get buried under memes and meal pics.",
-      solution: "Join communities built around what you do — and get the credit you've earned."
+      title: "Social media doesn't get athletes.",
+      problem: "Instagram buries your gym session under influencer ads. TikTok wants you dancing, not deadlifting. You're invisible.",
+      solution: "Join communities built for YOUR identity. Powerlifters with powerlifters. Runners with runners. Where your grind gets the hype it deserves."
     },
     {
-      title: "Your progress deserves to be seen.",
-      problem: "Streaks and big wins vanish without recognition.",
-      solution: "Track your grind. Earn badges. Inspire the next one in your lane."
+      title: "No one sees the work you put in.",
+      problem: "47-day streak? Personal record? Marathon finish? The people who matter most never see the work that defines you.",
+      solution: "Earn exclusive badges, unlock member-only merch, and build a profile that proves you've earned your place."
     }
   ]
 
@@ -58,11 +58,11 @@ const ProblemSection = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
-            Your Progress Deserves a{' '}
-            <span className="gradient-text">Platform — Not a Scroll Past.</span>
+            Your Work Deserves More Than{' '}
+            <span className="gradient-text">Being Ignored.</span>
           </h2>
           <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto px-4 sm:px-0">
-            Most fitness apps treat your work like data. Reppo turns every win into something worth showing off — and sharing with your people.
+            Every rep you grind. Every streak you build. Every PR you crush. Right now, it's invisible to the people who would actually appreciate it. <span className="gradient-text font-semibold">That changes today.</span>
           </p>
         </motion.div>
         
