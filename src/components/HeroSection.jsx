@@ -69,7 +69,7 @@ const HeroSection = () => {
                 The exclusive fitness platform where{' '}
                 <span className="text-text-primary font-semibold">verified athletes earn badges, unlock member-only merch, and build status</span>{' '}
                 through daily consistency.{' '}
-                <span className="gradient-text font-semibold">No followers. No comments. Just earned respect.</span>
+                <span className="gradient-text font-semibold">Real connections. Real progress. Real respect.</span>
               </p>
             </motion.div>
             
