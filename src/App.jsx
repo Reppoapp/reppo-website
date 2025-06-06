@@ -124,7 +124,7 @@ function App() {
                 <a href="#" className="hover:text-secondary transition-colors">Contact</a>
               </div>
               <p className="text-text-secondary text-xs sm:text-sm mt-4 sm:mt-6">
-                © 2024 Reppo. All rights reserved.
+                © 2025 Reppo. All rights reserved.
               </p>
             </div>
           </div>
