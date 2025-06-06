@@ -48,8 +48,8 @@ const HeroSection = () => {
               variants={fadeInUp}
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight">
-                <span className="block text-text-primary mb-2">Where Fitness</span>
-                <span className="block gradient-text">Meets Identity.</span>
+                <span className="block text-text-primary mb-2">You Show Up,</span>
+                <span className="block gradient-text">Reppo Shows You.</span>
               </h1>
             </motion.div>
             
