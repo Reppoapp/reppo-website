@@ -65,7 +65,7 @@ const FullScreenLoader = ({ onComplete }) => {
             <img 
               src="/Reppo-Logo.png" 
               alt="Reppo Logo" 
-              className="h-24 sm:h-32 md:h-40 w-auto"
+              className="h-24 sm:h-32 md:h-40 w-auto logo-gradient"
             />
           </div>
           <p className="text-xl sm:text-2xl text-text-secondary font-medium">

@@ -50,4 +50,27 @@
   .card-secondary {
     @apply bg-background/50 backdrop-blur-sm border border-white/10 rounded-xl p-6;
   }
+  
+  /* Logo gradient effect */
+  .logo-gradient {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .logo-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #FF3B30 0%, #2979FF 100%);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+  
+  .logo-gradient img {
+    filter: brightness(1.1) contrast(1.1);
+  }
 } 

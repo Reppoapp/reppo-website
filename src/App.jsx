@@ -37,7 +37,7 @@ function App() {
                 <img 
                   src="/Reppo-Logo.png" 
                   alt="Reppo Logo" 
-                  className="h-8 w-auto hover:scale-105 transition-transform duration-300"
+                  className="h-8 w-auto hover:scale-105 transition-transform duration-300 logo-gradient"
                 />
               </div>
               <button 
@@ -79,7 +79,7 @@ function App() {
                 <img 
                   src="/Reppo-Logo.png" 
                   alt="Reppo Logo" 
-                  className="h-12 w-auto"
+                  className="h-12 w-auto logo-gradient"
                 />
               </div>
               <p className="text-text-secondary mb-4 sm:mb-6 text-sm sm:text-base">Own Your Reps. Share Your Grind.</p>
