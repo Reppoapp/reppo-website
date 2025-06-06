@@ -43,6 +43,29 @@ function App() {
                   Reppo
                 </span>
               </div>
+              
+              {/* Navigation Menu */}
+              <nav className="hidden md:flex items-center space-x-8">
+                <button 
+                  onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-white hover:text-primary transition-colors duration-300 font-medium"
+                >
+                  Features
+                </button>
+                <button 
+                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-white hover:text-primary transition-colors duration-300 font-medium"
+                >
+                  How It Works
+                </button>
+                <button 
+                  onClick={() => document.getElementById('roadmap')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-white hover:text-primary transition-colors duration-300 font-medium"
+                >
+                  Roadmap
+                </button>
+              </nav>
+
               <button 
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-primary text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
@@ -61,11 +84,17 @@ function App() {
         >
           <HeroSection />
           <ProblemSection />
-          <HowItWorks />
-          <FeatureGrid />
+          <div id="how-it-works">
+            <HowItWorks />
+          </div>
+          <div id="features">
+            <FeatureGrid />
+          </div>
           <ProfilePreview />
           <SocialProof />
-          <RoadmapSection />
+          <div id="roadmap">
+            <RoadmapSection />
+          </div>
           <FinalCTA />
         </motion.main>
 
