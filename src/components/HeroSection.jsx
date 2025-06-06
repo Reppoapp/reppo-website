@@ -120,7 +120,7 @@ const HeroSection = () => {
             
           </div>
           
-          {/* Right Column - User Profile Mockup with Identity Elements */}
+          {/* Right Column - iPhone with Website Preview */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ 
@@ -130,95 +130,116 @@ const HeroSection = () => {
             }}
             className="relative flex justify-center order-1 lg:order-2 mb-8 lg:mb-0"
           >
-            {/* Profile Identity Mockup Container */}
+            {/* iPhone Container */}
             <div className="relative">
+              {/* iPhone PNG Background */}
+              <img 
+                src="/reppo-phone.png" 
+                alt="iPhone mockup" 
+                className="w-[280px] sm:w-[320px] h-auto relative z-10"
+              />
               
-              {/* Main Profile Card - Identity-Focused */}
-              <div className="relative w-[320px] sm:w-[380px] bg-gradient-to-b from-card-bg to-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/10">
-                
-                {/* Profile Header */}
-                <div className="text-center mb-6">
-                  {/* Profile Photo with Status */}
-                  <div className="relative w-20 h-20 mx-auto mb-4">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[#FF3B30] via-[#FF6B30] to-[#2979FF] rounded-full p-1 shadow-lg">
-                      <div className="w-full h-full bg-gradient-to-br from-card-bg to-background rounded-full flex items-center justify-center text-3xl shadow-inner relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
-                        <span className="relative z-10">💪</span>
+              {/* Website Content Overlay on Phone Screen */}
+              <div className="absolute top-[12%] left-[8%] right-[8%] bottom-[15%] rounded-[2rem] overflow-hidden bg-background">
+                {/* Mini Website Content */}
+                <div className="w-full h-full bg-background text-white scale-[0.3] origin-top-left transform-gpu">
+                  {/* Mini Navigation */}
+                  <div className="bg-background/80 backdrop-blur-md border-b border-white/10 p-4 flex items-center justify-between">
+                    <img src="/Reppo-Logo.png" alt="Reppo Logo" className="h-6 w-auto" />
+                    <button className="bg-gradient-primary text-white font-semibold px-4 py-2 rounded-full text-sm">
+                      Join Waitlist
+                    </button>
+                  </div>
+                  
+                  {/* Mini Hero Section */}
+                  <div className="p-8 text-center">
+                    <h1 className="text-4xl font-black leading-tight mb-4">
+                      <span className="block text-text-primary">Where Fitness</span>
+                      <span className="block gradient-text">Meets Identity.</span>
+                    </h1>
+                    <p className="text-text-secondary text-lg mb-6 max-w-lg mx-auto">
+                      Reppo is the social fitness platform where{' '}
+                      <span className="text-text-primary font-semibold">hybrid athletes, runners, lifters, and movement lovers</span>{' '}
+                      connect, track progress, and level up.
+                    </p>
+                    <button className="bg-gradient-primary text-white font-bold px-8 py-4 rounded-full">
+                      Join the Waitlist – Get Early Access
+                    </button>
+                  </div>
+                  
+                  {/* Mini Problem Section */}
+                  <div className="bg-card-bg/50 p-8">
+                    <h2 className="text-3xl font-bold text-center mb-8">
+                      Your Progress Deserves a{' '}
+                      <span className="gradient-text">Platform — Not a Scroll Past.</span>
+                    </h2>
+                    <div className="grid grid-cols-3 gap-6">
+                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-4">
+                        <h3 className="text-lg font-bold gradient-text mb-2">Tracking apps don't hype you up.</h3>
+                        <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-2 mb-2">
+                          <p className="text-red-300 text-xs">❌ The Problem</p>
+                          <p className="text-text-secondary text-xs">You log your workout and it disappears.</p>
+                        </div>
+                        <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-2">
+                          <p className="text-green-300 text-xs">✅ With Reppo</p>
+                          <p className="text-text-secondary text-xs">Every session adds to your streak, your level, and your legacy.</p>
+                        </div>
+                      </div>
+                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-4">
+                        <h3 className="text-lg font-bold gradient-text mb-2">Social media's not made for athletes.</h3>
+                        <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-2 mb-2">
+                          <p className="text-red-300 text-xs">❌ The Problem</p>
+                          <p className="text-text-secondary text-xs">Your PRs get buried under memes and meal pics.</p>
+                        </div>
+                        <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-2">
+                          <p className="text-green-300 text-xs">✅ With Reppo</p>
+                          <p className="text-text-secondary text-xs">Join communities built around what you do — and get the credit you've earned.</p>
+                        </div>
+                      </div>
+                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-4">
+                        <h3 className="text-lg font-bold gradient-text mb-2">Your progress deserves to be seen.</h3>
+                        <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-2 mb-2">
+                          <p className="text-red-300 text-xs">❌ The Problem</p>
+                          <p className="text-text-secondary text-xs">Streaks and big wins vanish without recognition.</p>
+                        </div>
+                        <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-2">
+                          <p className="text-green-300 text-xs">✅ With Reppo</p>
+                          <p className="text-text-secondary text-xs">Track your grind. Earn badges. Inspire the next one in your lane.</p>
+                        </div>
                       </div>
                     </div>
-                    {/* Active status indicator */}
-                    <div className="absolute bottom-0 right-0 w-6 h-6 bg-green-500 rounded-full border-4 border-background shadow-lg">
-                      <div className="w-full h-full bg-green-400 rounded-full animate-pulse"></div>
-                    </div>
                   </div>
                   
-                  {/* User Identity */}
-                  <h3 className="text-xl font-black text-text-primary mb-1">Jordan "The Hybrid" Chen</h3>
-                  <p className="text-sm text-text-secondary mb-2">@hybridathlete</p>
-                  
-                  {/* Identity Tags */}
-                  <div className="flex flex-wrap justify-center gap-2 mb-4">
-                    <span className="px-3 py-1 bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-full text-xs font-semibold text-text-primary">
-                      🏃‍♂️ Runner
-                    </span>
-                    <span className="px-3 py-1 bg-gradient-to-r from-secondary/20 to-primary/20 border border-secondary/30 rounded-full text-xs font-semibold text-text-primary">
-                      🏋️‍♂️ Lifter
-                    </span>
-                    <span className="px-3 py-1 bg-gradient-to-r from-primary/20 to-white/20 border border-white/30 rounded-full text-xs font-semibold text-text-primary">
-                      🤸‍♂️ Movement
-                    </span>
-                  </div>
-                </div>
-                
-                {/* Current Streak - Prominent Display */}
-                <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-white/20 rounded-xl p-4 mb-6 text-center">
-                  <div className="text-3xl mb-2">🔥</div>
-                  <div className="text-2xl font-black text-text-primary mb-1">47 Day Streak</div>
-                  <div className="text-sm text-text-secondary">Current motivation level: Unstoppable</div>
-                </div>
-                
-                {/* Achievement Badges */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-bold text-text-primary mb-3 text-center">Recent Achievements</h4>
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-lg p-3 text-center">
-                      <div className="text-2xl mb-1">🏆</div>
-                      <div className="text-xs font-bold text-yellow-400">Founder</div>
-                    </div>
-                    <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-lg p-3 text-center">
-                      <div className="text-2xl mb-1">⚡</div>
-                      <div className="text-xs font-bold text-purple-400">30-Day</div>
-                    </div>
-                    <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 border border-green-500/30 rounded-lg p-3 text-center">
-                      <div className="text-2xl mb-1">🎯</div>
-                      <div className="text-xs font-bold text-green-400">Consistent</div>
+                  {/* Mini How It Works */}
+                  <div className="p-8 text-center">
+                    <h2 className="text-3xl font-bold mb-8">
+                      <span className="gradient-text">Train Loud. Track Proud. Earn It.</span>
+                    </h2>
+                    <div className="grid grid-cols-3 gap-6">
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-lg mb-4 mx-auto">1</div>
+                        <div className="text-4xl mb-4">💪</div>
+                        <h3 className="text-lg font-bold gradient-text mb-2">Log with Purpose</h3>
+                        <p className="text-text-secondary text-sm">Track every session, set, and PR — no clutter, just clean rep logging.</p>
+                      </div>
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-lg mb-4 mx-auto">2</div>
+                        <div className="text-4xl mb-4">🔥</div>
+                        <h3 className="text-lg font-bold gradient-text mb-2">Stack Your Streak</h3>
+                        <p className="text-text-secondary text-sm">Stay consistent, earn streaks, and level up. Every workout pushes your progress.</p>
+                      </div>
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-lg mb-4 mx-auto">3</div>
+                        <div className="text-4xl mb-4">🏆</div>
+                        <h3 className="text-lg font-bold gradient-text mb-2">Rep Your Identity</h3>
+                        <p className="text-text-secondary text-sm">Share wins, show off badges, and inspire your people.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                {/* Community Recognition */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
-                  <div className="flex items-center justify-center space-x-4 mb-2">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-white">2.1k</div>
-                      <div className="text-xs text-gray-400">Followers</div>
-                    </div>
-                    <div className="w-px h-8 bg-white/20"></div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-white">847</div>
-                      <div className="text-xs text-gray-400">Following</div>
-                    </div>
-                    <div className="w-px h-8 bg-white/20"></div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold gradient-text">Top 5%</div>
-                      <div className="text-xs text-gray-400">This Month</div>
-                    </div>
-                  </div>
-                </div>
-                
               </div>
               
-              {/* Floating Achievement Badges Around Profile */}
+              {/* Floating Elements */}
               <motion.div 
                 className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-r from-yellow-500/30 to-orange-500/30 rounded-xl backdrop-blur-sm border border-yellow-500/20 flex items-center justify-center text-2xl animate-float"
                 initial={{ opacity: 0, scale: 0 }}
@@ -229,7 +250,7 @@ const HeroSection = () => {
               </motion.div>
               
               <motion.div 
-                className="absolute -bottom-4 -right-4 w-14 h-14 bg-gradient-to-r from-primary/30 to-accent/30 rounded-xl backdrop-blur-sm border border-primary/20 flex items-center justify-center text-xl animate-float" 
+                className="absolute -bottom-4 -right-4 w-14 h-14 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-xl backdrop-blur-sm border border-primary/20 flex items-center justify-center text-xl animate-float" 
                 style={{ animationDelay: '1s' }}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 0.8, scale: 1 }}
@@ -249,8 +270,8 @@ const HeroSection = () => {
               </motion.div>
               
               {/* Enhanced Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl sm:rounded-3xl transform scale-110 -z-10 blur-3xl"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-primary/10 rounded-2xl sm:rounded-3xl transform scale-105 -z-5 blur-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl transform scale-110 -z-10 blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-primary/10 rounded-2xl transform scale-105 -z-5 blur-2xl"></div>
             </div>
           </motion.div>
           
