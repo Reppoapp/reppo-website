@@ -33,12 +33,15 @@ function App() {
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
-              <div className="flex items-center">
+              <div className="flex items-center space-x-3">
                 <img 
                   src="/Reppo-Logo.png" 
                   alt="Reppo Logo" 
                   className="h-8 w-auto hover:scale-105 transition-transform duration-300 logo-gradient"
                 />
+                <span className="text-xl font-bold text-white tracking-tight">
+                  Reppo
+                </span>
               </div>
               <button 
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
@@ -75,12 +78,15 @@ function App() {
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="flex justify-center mb-3 sm:mb-4">
+              <div className="flex justify-center items-center space-x-3 mb-3 sm:mb-4">
                 <img 
                   src="/Reppo-Logo.png" 
                   alt="Reppo Logo" 
                   className="h-12 w-auto logo-gradient"
                 />
+                <span className="text-2xl font-bold text-white tracking-tight">
+                  Reppo
+                </span>
               </div>
               <p className="text-text-secondary mb-4 sm:mb-6 text-sm sm:text-base">Where Consistency Becomes Legacy.</p>
               <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-text-secondary text-sm sm:text-base">
