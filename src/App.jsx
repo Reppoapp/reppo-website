@@ -47,16 +47,16 @@ function App() {
               {/* Navigation Menu */}
               <nav className="hidden md:flex items-center space-x-8">
                 <button 
+                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-white hover:text-primary transition-colors duration-300 font-medium"
+                >
+                  How Reppo Works
+                </button>
+                <button 
                   onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-white hover:text-primary transition-colors duration-300 font-medium"
                 >
                   Features
-                </button>
-                <button 
-                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-white hover:text-primary transition-colors duration-300 font-medium"
-                >
-                  How It Works
                 </button>
                 <button 
                   onClick={() => document.getElementById('roadmap')?.scrollIntoView({ behavior: 'smooth' })}
