@@ -63,290 +63,233 @@ const ChallengeCard = ({ delay = 0 }) => {
 }
 
 const ProfilePreview = () => {
-  const stats = [
-    {
-      title: "Reps This Week",
-      value: "847",
-      icon: "🔥"
-    },
-    {
-      title: "Streak",
-      value: "15d",
-      icon: "⚡"
-    },
-    {
-      title: "Challenges",
-      value: "8",
-      icon: "🏆"
-    }
-  ]
-
   return (
-    <section className="py-12 sm:py-16 lg:py-20 xl:py-24 relative overflow-hidden bg-gradient-to-b from-gray-800 via-gray-900 to-background">
-      {/* Seamless Gradient Transition from Previous Section */}
-      <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-gray-800 via-gray-800/70 to-transparent pointer-events-none"></div>
+    <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-card-bg/30 to-background relative overflow-hidden">
       
-      {/* Enhanced Background */}
-      <div className="absolute inset-0 bg-gradient-radial from-[#FF3B30]/10 via-transparent to-[#2979FF]/10"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-900/80 to-gray-900"></div>
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-12 sm:mb-16"
-        >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 px-4 sm:px-0">
-            <span className="gradient-text">Your Profile. Your Progress. Your Proof.</span>
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
-            Every workout builds more than muscle — it builds your identity. Reppo makes your progress visible, meaningful, and unignorable.
-          </p>
-        </motion.div>
+      <div className="max-w-7xl mx-auto relative">
+        <div className="text-center mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6"
+          >
+            <span className="text-text-primary">Your </span>
+            <span className="gradient-text">Fitness Identity</span>
+            <span className="text-text-primary"> Awaits</span>
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto"
+          >
+            Transform your fitness journey into a social experience. Track, share, and level up your grind.
+          </motion.p>
+        </div>
         
-        {/* Two-Column Layout - Mobile Optimized */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           
-          {/* Left Column - iPhone with Website Preview */}
+          {/* Left Column - iPhone Mockup */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex justify-center order-2 lg:order-1 mb-8 lg:mb-0"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center order-2 lg:order-1"
           >
             {/* iPhone Container */}
             <div className="relative">
-              {/* iPhone PNG Background */}
-              <img 
-                src="/reppo-phone.png" 
-                alt="iPhone mockup" 
-                className="w-[280px] sm:w-[320px] h-auto relative z-10"
-              />
               
-              {/* Website Content Overlay on Phone Screen */}
-              <div className="absolute top-[12%] left-[8%] right-[8%] bottom-[15%] rounded-[2rem] overflow-hidden bg-background">
-                {/* Mini Website Content - Different sections */}
-                <div className="w-full h-full bg-background text-white scale-[0.25] origin-top-left transform-gpu">
-                  {/* Mini Navigation */}
-                  <div className="bg-background/80 backdrop-blur-md border-b border-white/10 p-4 flex items-center justify-between">
-                    <img src="/Reppo-Logo.png" alt="Reppo Logo" className="h-6 w-auto" />
-                    <button className="bg-gradient-primary text-white font-semibold px-4 py-2 rounded-full text-sm">
-                      Join Waitlist
-                    </button>
-                  </div>
+              {/* iPhone Frame */}
+              <div className="relative w-[280px] sm:w-[320px] h-[560px] sm:h-[640px] bg-gradient-to-b from-gray-800 to-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                
+                {/* Screen Bezel */}
+                <div className="w-full h-full bg-black rounded-[2rem] relative overflow-hidden">
                   
-                  {/* Mini Feature Grid Section */}
-                  <div className="p-8">
-                    <h2 className="text-4xl font-bold text-center mb-8">
-                      <span className="gradient-text">Built Different. Built for Athletes.</span>
-                    </h2>
-                    <div className="grid grid-cols-3 gap-6">
-                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-6 text-center">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
-                          🔥
-                        </div>
-                        <h3 className="text-lg font-bold gradient-text mb-3">Streak Tracking</h3>
-                        <p className="text-text-secondary text-sm">Build unstoppable momentum with our advanced streak system.</p>
-                      </div>
-                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-6 text-center">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
-                          📊
-                        </div>
-                        <h3 className="text-lg font-bold gradient-text mb-3">Progress Analytics</h3>
-                        <p className="text-text-secondary text-sm">Visualize your fitness journey with detailed insights.</p>
-                      </div>
-                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-6 text-center">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
-                          🏆
-                        </div>
-                        <h3 className="text-lg font-bold gradient-text mb-3">Achievement System</h3>
-                        <p className="text-text-secondary text-sm">Earn badges and unlock rewards for your consistency.</p>
-                      </div>
-                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-6 text-center">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
-                          👥
-                        </div>
-                        <h3 className="text-lg font-bold gradient-text mb-3">Community</h3>
-                        <p className="text-text-secondary text-sm">Connect with like-minded athletes and stay motivated.</p>
-                      </div>
-                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-6 text-center">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
-                          📱
-                        </div>
-                        <h3 className="text-lg font-bold gradient-text mb-3">Mobile First</h3>
-                        <p className="text-text-secondary text-sm">Seamless experience across all your devices.</p>
-                      </div>
-                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-6 text-center">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
-                          🎯
-                        </div>
-                        <h3 className="text-lg font-bold gradient-text mb-3">Goal Setting</h3>
-                        <p className="text-text-secondary text-sm">Set, track, and smash your fitness goals.</p>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Dynamic Island */}
+                  <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-28 h-6 bg-black rounded-full z-20"></div>
                   
-                  {/* Mini Social Proof Section */}
-                  <div className="bg-card-bg/50 p-8">
-                    <h2 className="text-3xl font-bold text-center mb-8">
-                      Trusted by Athletes.{' '}
-                      <span className="gradient-text">Built for Consistency.</span>
-                    </h2>
-                    <div className="grid grid-cols-2 gap-6">
-                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-4">
-                        <div className="flex items-start space-x-3">
-                          <div className="w-10 h-10 bg-gradient-to-br from-card-bg to-background rounded-full flex items-center justify-center text-lg border-2 border-white/10">
-                            💪
-                          </div>
-                          <div>
-                            <p className="text-text-secondary text-sm mb-2">"For the first time, I actually stayed consistent. Reppo's streak system made showing up feel like winning."</p>
-                            <div className="text-text-primary font-semibold text-sm">Sarah Chen</div>
-                            <div className="text-text-secondary/70 text-xs">Marathon Runner</div>
-                          </div>
+                  {/* Screen Content */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-background to-card-bg overflow-hidden">
+                    
+                    {/* Status Bar */}
+                    <div className="flex justify-between items-center p-4 pt-12 text-xs text-white">
+                      <span className="font-medium">9:41</span>
+                      <div className="flex items-center space-x-1">
+                        <div className="flex space-x-1">
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-white/50 rounded-full"></div>
                         </div>
-                      </div>
-                      <div className="bg-card-bg/50 border border-white/10 rounded-xl p-4">
-                        <div className="flex items-start space-x-3">
-                          <div className="w-10 h-10 bg-gradient-to-br from-card-bg to-background rounded-full flex items-center justify-center text-lg border-2 border-white/10">
-                            🏋️
-                          </div>
-                          <div>
-                            <p className="text-text-secondary text-sm mb-2">"Reppo made logging fun again. I actually look forward to tracking — it's like gamifying my progress."</p>
-                            <div className="text-text-primary font-semibold text-sm">Mike Rodriguez</div>
-                            <div className="text-text-secondary/70 text-xs">Personal Trainer</div>
-                          </div>
+                        <div className="w-6 h-3 border border-white rounded-sm">
+                          <div className="w-4 h-2 bg-white rounded-sm m-0.5"></div>
                         </div>
                       </div>
                     </div>
                     
-                    {/* Stats */}
-                    <div className="grid grid-cols-4 gap-6 mt-8 max-w-4xl mx-auto">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold gradient-text mb-1">10,000+</div>
-                        <div className="text-xs text-text-secondary">Early Athletes</div>
+                    {/* Profile Dashboard Content */}
+                    <div className="px-4 pb-4 h-full">
+                      
+                      {/* Header */}
+                      <div className="flex items-center justify-between mb-6">
+                        <h1 className="text-xl font-black text-white">Dashboard</h1>
+                        <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                          <span className="text-white text-sm">🔥</span>
+                        </div>
                       </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold gradient-text mb-1">1M+</div>
-                        <div className="text-xs text-text-secondary">Reps Logged</div>
+                      
+                      {/* Streak Card */}
+                      <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-2xl p-4 mb-4">
+                        <div className="text-center">
+                          <div className="text-3xl mb-2">🔥</div>
+                          <div className="text-xl font-bold text-white mb-1">23 Day Streak</div>
+                          <div className="text-sm text-text-secondary">Keep it going!</div>
+                        </div>
                       </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold gradient-text mb-1">95%</div>
-                        <div className="text-xs text-text-secondary">User Satisfaction</div>
+                      
+                      {/* Stats Grid */}
+                      <div className="grid grid-cols-2 gap-3 mb-4">
+                        <div className="bg-card-bg/50 border border-white/10 rounded-xl p-3 text-center">
+                          <div className="text-lg font-bold gradient-text">47</div>
+                          <div className="text-xs text-text-secondary">Workouts</div>
+                        </div>
+                        <div className="bg-card-bg/50 border border-white/10 rounded-xl p-3 text-center">
+                          <div className="text-lg font-bold gradient-text">12</div>
+                          <div className="text-xs text-text-secondary">PRs Set</div>
+                        </div>
                       </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold gradient-text mb-1">60+</div>
-                        <div className="text-xs text-text-secondary">Day Streak Achievers</div>
+                      
+                      {/* Achievement Badges */}
+                      <div className="mb-4">
+                        <h3 className="text-sm font-bold text-white mb-2">Recent Achievements</h3>
+                        <div className="flex space-x-2">
+                          <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/30 to-orange-500/30 border border-yellow-500/40 rounded-lg flex items-center justify-center">
+                            <span className="text-lg">🏆</span>
+                          </div>
+                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500/30 to-pink-500/30 border border-purple-500/40 rounded-lg flex items-center justify-center">
+                            <span className="text-lg">⚡</span>
+                          </div>
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-500/30 to-teal-500/30 border border-green-500/40 rounded-lg flex items-center justify-center">
+                            <span className="text-lg">🎯</span>
+                          </div>
+                        </div>
                       </div>
+                      
+                      {/* Recent Activity */}
+                      <div className="space-y-2">
+                        <h3 className="text-sm font-bold text-white">Today's Activity</h3>
+                        <div className="bg-card-bg/30 border border-white/10 rounded-lg p-3">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-3">
+                              <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                                <span className="text-white text-xs">💪</span>
+                              </div>
+                              <div>
+                                <div className="text-sm font-medium text-white">Upper Body</div>
+                                <div className="text-xs text-text-secondary">45 min • 12 exercises</div>
+                              </div>
+                            </div>
+                            <div className="text-xs text-green-400 font-medium">+3 XP</div>
+                          </div>
+                        </div>
+                      </div>
+                      
                     </div>
                   </div>
-                  
-                  {/* Mini Final CTA */}
-                  <div className="p-8 text-center">
-                    <h2 className="text-3xl font-bold mb-4">
-                      <span className="gradient-text">Earn Your Spot in the Reppo Era.</span>
-                    </h2>
-                    <p className="text-text-secondary text-lg mb-6">
-                      Track your grind. Build your streak. Unlock merch. Reppo is for athletes who don't just train — they{' '}
-                      <span className="gradient-text font-semibold">earn it.</span>
-                    </p>
-                    <button className="bg-gradient-primary text-white font-bold px-8 py-4 rounded-full">
-                      Join the Waitlist — Claim Early Access
-                    </button>
-                  </div>
                 </div>
+                
+                {/* Screen Reflection Effect */}
+                <div className="absolute inset-2 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-[2rem] pointer-events-none"></div>
               </div>
               
-              {/* Enhanced phone shadow and glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl transform scale-110 -z-10 blur-3xl"></div>
-              <div className="absolute inset-0 bg-black/20 rounded-2xl transform scale-105 -z-5 blur-xl"></div>
+              {/* Floating Elements */}
+              <motion.div 
+                className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full backdrop-blur-sm border border-primary/20 flex items-center justify-center text-2xl animate-float"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 0.8, scale: 1 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+              >
+                🏆
+              </motion.div>
+              
+              <motion.div 
+                className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-500/30 to-orange-500/30 rounded-full backdrop-blur-sm border border-yellow-500/20 flex items-center justify-center text-lg animate-float" 
+                style={{ animationDelay: '1s' }}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 0.6, scale: 1 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+              >
+                ⚡
+              </motion.div>
+              
+              {/* Phone Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-[2.5rem] transform scale-110 -z-10 blur-2xl"></div>
             </div>
           </motion.div>
           
-          {/* Right Column - Text Content - Optimized Animation */}
+          {/* Right Column - Features */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="space-y-6 sm:space-y-8 text-center lg:text-left order-1 lg:order-2 px-4 sm:px-0"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="order-1 lg:order-2"
           >
-            
-            {/* Feature highlights - Simplified Animation */}
-            <div className="space-y-4 sm:space-y-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                className="flex items-start space-x-3 sm:space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex-shrink-0 w-8 sm:w-10 h-8 sm:h-10 bg-gradient-primary rounded-full flex items-center justify-center text-base sm:text-lg shadow-lg">
-                  📊
-                </div>
-                <div>
-                  <h4 className="text-white font-bold mb-2 text-base sm:text-lg">Your Training, Visualized</h4>
-                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">See your streaks, reps, and achievements all in one place — designed to keep you coming back stronger.</p>
-                </div>
-              </motion.div>
+            <div className="space-y-8">
               
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.15 }}
-                viewport={{ once: true, margin: "-100px" }}
-                className="flex items-start space-x-3 sm:space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex-shrink-0 w-8 sm:w-10 h-8 sm:h-10 bg-gradient-primary rounded-full flex items-center justify-center text-base sm:text-lg shadow-lg">
-                  🏆
+              {/* Feature 1 */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-white text-xl">📊</span>
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-2 text-base sm:text-lg">Compete with the Best</h4>
-                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">Join challenges, climb leaderboards, and earn badges that actually mean something.</p>
+                  <h3 className="text-xl font-bold text-text-primary mb-2">Track Your Progress</h3>
+                  <p className="text-text-secondary">Every rep, every set, every PR — beautifully organized and automatically tracked.</p>
                 </div>
-              </motion.div>
+              </div>
               
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                viewport={{ once: true, margin: "-100px" }}
-                className="flex items-start space-x-3 sm:space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex-shrink-0 w-8 sm:w-10 h-8 sm:h-10 bg-gradient-primary rounded-full flex items-center justify-center text-base sm:text-lg shadow-lg">
-                  🔥
+              {/* Feature 2 */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-white text-xl">🔥</span>
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-2 text-base sm:text-lg">Recognition That Counts</h4>
-                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">Earn props for your consistency, not your clout. Let your grind speak — and get noticed for it.</p>
+                  <h3 className="text-xl font-bold text-text-primary mb-2">Build Streaks</h3>
+                  <p className="text-text-secondary">Stay consistent with visual streak tracking that celebrates your daily wins.</p>
                 </div>
-              </motion.div>
+              </div>
+              
+              {/* Feature 3 */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-white text-xl">🏆</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-text-primary mb-2">Earn Recognition</h3>
+                  <p className="text-text-secondary">Unlock badges, level up, and show off your achievements to the community.</p>
+                </div>
+              </div>
+              
+              {/* Feature 4 */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-white text-xl">👥</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-text-primary mb-2">Connect & Inspire</h3>
+                  <p className="text-text-secondary">Join communities of like-minded athletes and share your fitness journey.</p>
+                </div>
+              </div>
+              
             </div>
-            
-            {/* CTA Button - Simplified Animation */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <button 
-                onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-auto bg-gradient-to-r from-[#FF3B30] via-[#FF6B30] to-[#2979FF] text-white font-bold rounded-full px-8 sm:px-10 py-4 shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 text-base sm:text-lg min-h-[48px]"
-              >
-                Start Your Fitness Story
-              </button>
-            </motion.div>
           </motion.div>
           
         </div>
       </div>
-      
-      {/* Seamless Gradient Transition to Next Section */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-800 pointer-events-none"></div>
     </section>
   )
 }
