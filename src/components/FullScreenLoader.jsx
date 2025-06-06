@@ -69,7 +69,7 @@ const FullScreenLoader = ({ onComplete }) => {
             />
           </div>
           <p className="text-xl sm:text-2xl text-text-secondary font-medium">
-            Own Your Reps. Share Your Grind.
+            Where Consistency Becomes Legacy.
           </p>
         </motion.div>
         
