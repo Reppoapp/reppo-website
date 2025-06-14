@@ -36,39 +36,39 @@ const TestimonialCard = ({ quote, name, role, avatar, delay = 0 }) => {
 const SocialProof = () => {
   const testimonials = [
     {
-      quote: "Finally, a place where my 200-day streak actually means something. The exclusive merch drop for verified members is insane.",
+      quote: "Reppo lets me mix up my training—lifting, running, HIIT—and still track it all in one place. The hybrid badge is my new favorite flex.",
       name: "Marcus Chen",
-      role: "Verified Powerlifter",
+      role: "Hybrid Athlete",
       avatar: "💪"
     },
     {
-      quote: "I earned my marathon badge and immediately got access to the elite runners group. These people actually get it.",
+      quote: "I never thought I'd see a leaderboard for pickleball, but here I am, grinding for the top spot and connecting with other competitors.",
       name: "Sarah Rodriguez", 
-      role: "Elite Distance Runner",
+      role: "Pickleball Competitor",
       avatar: "🏃"
     },
     {
-      quote: "The badge system is addictive. I'm chasing achievements I never knew I wanted just to unlock the next level of access.",
+      quote: "Pilates used to feel solo, but now I'm earning badges and sharing my progress with a crew that actually cheers me on.",
       name: "Jake Thompson",
-      role: "Hybrid Athlete",
+      role: "Pilates Queen",
       avatar: "🔥"
     },
     {
-      quote: "My bench badge got me into the powerlifter-only group. Being around verified lifters who've actually earned their place hits different.",
+      quote: "The elite runners group is next-level. We push each other, celebrate PRs, and the marathon badge actually means something here.",
       name: "Maria Santos",
-      role: "Verified Lifter", 
+      role: "Elite Distance Runner", 
       avatar: "🏋️"
     },
     {
-      quote: "Level 47 and counting. The higher I climb, the more exclusive perks I unlock. It's like a fitness status symbol.",
+      quote: "I log every workout, big or small. The streaks and daily check-ins keep me motivated—Reppo makes every day count.",
       name: "David Kim",
-      role: "Elite Member",
+      role: "Everyday Grinder",
       avatar: "👑"
     },
     {
-      quote: "The support here is unreal. When I hit my squat PR, the verified crew was the first to celebrate. It's more than an app—it's a real community.",
+      quote: "The support here is unreal. When I hit my squat PR, the verified crew was the first to celebrate. Powerlifters finally have a real home.",
       name: "Lena Park",
-      role: "Verified Squat Queen",
+      role: "Powerlifter",
       avatar: "🏅"
     }
   ]
