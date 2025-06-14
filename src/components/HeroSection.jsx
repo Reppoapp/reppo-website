@@ -25,8 +25,17 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-card-bg to-background pt-20 pb-12 px-4">
-      {/* Aurora Animated Gradient Background */}
-      <div className="absolute top-0 left-0 w-full h-64 md:h-80 lg:h-[28rem] z-0 pointer-events-none" style={{ opacity: 0.45 }}>
+      {/* Enhanced Background Elements with Subtle Gradients */}
+      <div className="absolute inset-0 z-0">
+        {/* Main gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10"></div>
+        {/* Geometric background shapes for visual depth */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-radial-coral rounded-full opacity-30 blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-radial-blue rounded-full opacity-25 blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-white/5 to-primary/10 rounded-full opacity-30 blur-2xl animate-float" style={{ animationDelay: '6s' }}></div>
+      </div>
+      {/* Aurora Animated Gradient Background - now above other backgrounds */}
+      <div className="absolute top-0 left-0 w-full h-64 md:h-80 lg:h-[28rem] z-10 pointer-events-none mix-blend-lighten" style={{ opacity: 0.55 }}>
         <Aurora
           colorStops={["#FF3B30", "#7B2FF2", "#2979FF"]}
           blend={0.5}
@@ -36,18 +45,8 @@ const HeroSection = () => {
         {/* Subtle dark overlay for extra dimming */}
         <div className="absolute inset-0 bg-black/60" />
       </div>
-      {/* Enhanced Background Elements with Subtle Gradients */}
-      <div className="absolute inset-0">
-        {/* Main gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10"></div>
-        
-        {/* Geometric background shapes for visual depth */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-radial-coral rounded-full opacity-30 blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-radial-blue rounded-full opacity-25 blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-white/5 to-primary/10 rounded-full opacity-30 blur-2xl animate-float" style={{ animationDelay: '6s' }}></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      {/* Main content with higher z-index */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           
           {/* Left Column - Hero Text Content */}
