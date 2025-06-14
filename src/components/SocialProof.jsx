@@ -64,6 +64,12 @@ const SocialProof = () => {
       name: "David Kim",
       role: "Elite Member",
       avatar: "👑"
+    },
+    {
+      quote: "The support here is unreal. When I hit my squat PR, the verified crew was the first to celebrate. It's more than an app—it's a real community.",
+      name: "Lena Park",
+      role: "Verified Squat Queen",
+      avatar: "🏅"
     }
   ]
 
