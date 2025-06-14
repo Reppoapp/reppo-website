@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Aurora from './Aurora'
 
 const HeroSection = () => {
   const scrollToWaitlist = () => {
@@ -24,6 +25,17 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-card-bg to-background pt-20 pb-12 px-4">
+      {/* Aurora Animated Gradient Background */}
+      <div className="absolute top-0 left-0 w-full h-64 md:h-80 lg:h-[28rem] z-0 pointer-events-none" style={{ opacity: 0.45 }}>
+        <Aurora
+          colorStops={["#FF3B30", "#7B2FF2", "#2979FF"]}
+          blend={0.5}
+          amplitude={0.7}
+          speed={0.5}
+        />
+        {/* Subtle dark overlay for extra dimming */}
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
       {/* Enhanced Background Elements with Subtle Gradients */}
       <div className="absolute inset-0">
         {/* Main gradient overlay */}
