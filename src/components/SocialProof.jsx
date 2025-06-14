@@ -39,37 +39,37 @@ const SocialProof = () => {
       quote: "Reppo lets me mix up my training—lifting, running, HIIT—and still track it all in one place. The hybrid badge is my new favorite flex.",
       name: "Marcus Chen",
       role: "Hybrid Athlete",
-      avatar: "💪"
+      avatar: "🏅"
     },
     {
       quote: "I never thought I'd see a leaderboard for pickleball, but here I am, grinding for the top spot and connecting with other competitors.",
       name: "Jake Thompson", 
       role: "Pickleball Competitor",
-      avatar: "🏃"
+      avatar: "🏓"
     },
     {
       quote: "Pilates used to feel solo, but now I'm earning badges and sharing my progress with a crew that actually cheers me on.",
       name: "Sarah Rodriguez",
       role: "Pilates Queen",
-      avatar: "🔥"
+      avatar: "🧘"
     },
     {
       quote: "The elite runners group is next-level. We push each other, celebrate PRs, and the marathon badge actually means something here.",
       name: "Maria Santos",
       role: "Elite Distance Runner", 
-      avatar: "🏋️"
+      avatar: "🏃‍♀️"
     },
     {
       quote: "I log every workout, big or small. The streaks and daily check-ins keep me motivated—Reppo makes every day count.",
       name: "David Kim",
       role: "Everyday Grinder",
-      avatar: "👑"
+      avatar: "⏱️"
     },
     {
       quote: "The support here is unreal. When I hit my squat PR, the verified crew was the first to celebrate. Powerlifters finally have a real home.",
       name: "Lena Park",
       role: "Powerlifter",
-      avatar: "🏅"
+      avatar: "🏋️‍♀️"
     }
   ]
 
