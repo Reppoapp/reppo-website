@@ -43,13 +43,13 @@ const SocialProof = () => {
     },
     {
       quote: "I never thought I'd see a leaderboard for pickleball, but here I am, grinding for the top spot and connecting with other competitors.",
-      name: "Sarah Rodriguez", 
+      name: "Jake Thompson", 
       role: "Pickleball Competitor",
       avatar: "🏃"
     },
     {
       quote: "Pilates used to feel solo, but now I'm earning badges and sharing my progress with a crew that actually cheers me on.",
-      name: "Jake Thompson",
+      name: "Sarah Rodriguez",
       role: "Pilates Queen",
       avatar: "🔥"
     },
