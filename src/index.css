@@ -5,10 +5,38 @@
 @layer base {
   html {
     font-family: 'Inter', sans-serif;
+    /* Ensure dark background on mobile */
+    background-color: #000000;
   }
   
   body {
     @apply bg-background text-text-primary;
+    /* Force dark background on mobile */
+    background-color: #000000;
+  }
+  
+  /* Mobile-specific background fixes */
+  @media (max-width: 768px) {
+    html, body {
+      background-color: #000000 !important;
+      background: #000000 !important;
+    }
+    
+    #root {
+      background-color: #000000;
+      min-height: 100vh;
+    }
+    
+    /* Prevent any red background bleeding */
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Ensure mobile browser chrome is dark */
+    body {
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+    }
   }
 }
 
