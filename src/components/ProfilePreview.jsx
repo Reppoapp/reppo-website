@@ -93,60 +93,118 @@ const AppPreviewSection = () => {
 
                         {/* Profile Screen */}
                         {index === 0 && (
-                          <div className="space-y-4">
-                            <div className="text-center">
-                              <div className="w-16 h-16 bg-gradient-to-br from-reppo-red to-reppo-blue rounded-full mx-auto mb-2"></div>
-                              <h4 className="text-white font-bold">Elite Athlete</h4>
-                              <p className="text-reppo-gray-400 text-sm">Hybrid Identity</p>
+                          <div className="space-y-3">
+                            {/* Header */}
+                            <div className="flex items-center justify-between mb-3">
+                              <h4 className="text-white font-bold text-sm">Profile</h4>
+                              <div className="w-6 h-6 bg-gradient-to-r from-reppo-red to-reppo-blue rounded-full flex items-center justify-center">
+                                <span className="text-white text-xs">🔥</span>
+                              </div>
                             </div>
-                            <div className="grid grid-cols-3 gap-2 text-center">
-                              <div>
-                                <div className="text-lg font-bold text-reppo-red">247</div>
-                                <div className="text-xs text-reppo-gray-400">Streak</div>
+                            
+                            {/* Profile Info */}
+                            <div className="text-center mb-3">
+                              <div className="w-12 h-12 bg-gradient-to-br from-reppo-red to-reppo-blue rounded-full mx-auto mb-2 flex items-center justify-center">
+                                <span className="text-white font-bold text-sm">JD</span>
                               </div>
-                              <div>
-                                <div className="text-lg font-bold text-reppo-blue">12</div>
-                                <div className="text-xs text-reppo-gray-400">Badges</div>
+                              <h4 className="text-white font-bold text-sm">Jordan Davis</h4>
+                              <p className="text-reppo-gray-400 text-xs">@jordanfitness</p>
+                            </div>
+                            
+                            {/* Stats Row */}
+                            <div className="grid grid-cols-3 gap-1 mb-3">
+                              <div className="glass rounded-lg p-2 text-center">
+                                <div className="text-sm font-bold text-reppo-red">23</div>
+                                <div className="text-xs text-reppo-gray-400">Day Streak</div>
                               </div>
-                              <div>
-                                <div className="text-lg font-bold text-white">Elite</div>
+                              <div className="glass rounded-lg p-2 text-center">
+                                <div className="text-sm font-bold text-reppo-blue">847</div>
+                                <div className="text-xs text-reppo-gray-400">Total Reps</div>
+                              </div>
+                              <div className="glass rounded-lg p-2 text-center">
+                                <div className="text-sm font-bold text-white">Elite</div>
                                 <div className="text-xs text-reppo-gray-400">Rank</div>
                               </div>
                             </div>
-                            <div className="space-y-2">
-                              {['Deadlift PR', '5K Run', 'Yoga Flow'].map((activity, i) => (
-                                <div key={i} className="glass rounded-lg p-2 flex justify-between">
-                                  <span className="text-white text-xs">{activity}</span>
-                                  <span className="text-reppo-red text-xs">+{15 - i * 2} XP</span>
+                            
+                            {/* Recent Activity */}
+                            <div>
+                              <h5 className="text-white text-xs font-semibold mb-2">Today's Session</h5>
+                              <div className="glass rounded-lg p-2">
+                                <div className="flex items-center justify-between">
+                                  <div className="flex items-center space-x-2">
+                                    <div className="w-6 h-6 bg-gradient-to-r from-reppo-red to-reppo-blue rounded-full flex items-center justify-center">
+                                      <span className="text-white text-xs">💪</span>
+                                    </div>
+                                    <div>
+                                      <div className="text-white text-xs font-medium">Push Day</div>
+                                      <div className="text-reppo-gray-400 text-xs">6 exercises • 45 min</div>
+                                    </div>
+                                  </div>
+                                  <div className="text-reppo-red text-xs font-bold">+25 XP</div>
                                 </div>
-                              ))}
+                              </div>
                             </div>
                           </div>
                         )}
 
                         {/* Feed Screen */}
                         {index === 1 && (
-                          <div className="space-y-3">
-                            <div className="glass rounded-lg p-3">
-                              <div className="flex items-center space-x-2 mb-2">
-                                <div className="w-6 h-6 bg-gradient-to-br from-reppo-blue to-purple-500 rounded-full"></div>
-                                <span className="text-white text-sm font-medium">Sarah M.</span>
+                          <div className="space-y-2">
+                            {/* Header */}
+                            <div className="flex items-center justify-between mb-3">
+                              <h4 className="text-white font-bold text-sm">Feed</h4>
+                              <div className="w-6 h-6 bg-gradient-to-r from-reppo-red to-reppo-blue rounded-full flex items-center justify-center">
+                                <span className="text-white text-xs">⚡</span>
                               </div>
-                              <p className="text-reppo-gray-300 text-xs">Just hit a new deadlift PR! 💪</p>
                             </div>
-                            <div className="glass rounded-lg p-3">
+                            
+                            {/* Post 1 */}
+                            <div className="glass rounded-lg p-2">
                               <div className="flex items-center space-x-2 mb-2">
-                                <div className="w-6 h-6 bg-gradient-to-br from-green-500 to-reppo-blue rounded-full"></div>
-                                <span className="text-white text-sm font-medium">Mike R.</span>
+                                <div className="w-6 h-6 bg-gradient-to-br from-reppo-blue to-purple-500 rounded-full flex items-center justify-center">
+                                  <span className="text-white text-xs font-bold">SM</span>
+                                </div>
+                                <div className="flex-1">
+                                  <div className="text-white text-xs font-medium">Sarah Martinez</div>
+                                  <div className="text-reppo-gray-400 text-xs">2 min ago</div>
+                                </div>
+                                <div className="text-reppo-red text-xs">🔥 23</div>
                               </div>
-                              <p className="text-reppo-gray-300 text-xs">Morning run complete! 🏃‍♂️</p>
+                              <p className="text-reppo-gray-300 text-xs mb-1">New deadlift PR: 315lbs! 💪</p>
+                              <div className="text-reppo-gray-400 text-xs">#DeadliftPR #StrengthTraining</div>
                             </div>
-                            <div className="glass rounded-lg p-3">
+                            
+                            {/* Post 2 */}
+                            <div className="glass rounded-lg p-2">
                               <div className="flex items-center space-x-2 mb-2">
-                                <div className="w-6 h-6 bg-gradient-to-br from-reppo-red to-orange-500 rounded-full"></div>
-                                <span className="text-white text-sm font-medium">Alex K.</span>
+                                <div className="w-6 h-6 bg-gradient-to-br from-green-500 to-reppo-blue rounded-full flex items-center justify-center">
+                                  <span className="text-white text-xs font-bold">MR</span>
+                                </div>
+                                <div className="flex-1">
+                                  <div className="text-white text-xs font-medium">Mike Rodriguez</div>
+                                  <div className="text-reppo-gray-400 text-xs">5 min ago</div>
+                                </div>
+                                <div className="text-reppo-blue text-xs">⚡ 18</div>
                               </div>
-                              <p className="text-reppo-gray-300 text-xs">CrossFit WOD destroyed me 🔥</p>
+                              <p className="text-reppo-gray-300 text-xs mb-1">5K morning run done! Perfect weather 🏃‍♂️</p>
+                              <div className="text-reppo-gray-400 text-xs">#MorningRun #Cardio</div>
+                            </div>
+                            
+                            {/* Post 3 */}
+                            <div className="glass rounded-lg p-2">
+                              <div className="flex items-center space-x-2 mb-2">
+                                <div className="w-6 h-6 bg-gradient-to-br from-reppo-red to-orange-500 rounded-full flex items-center justify-center">
+                                  <span className="text-white text-xs font-bold">AK</span>
+                                </div>
+                                <div className="flex-1">
+                                  <div className="text-white text-xs font-medium">Alex Kim</div>
+                                  <div className="text-reppo-gray-400 text-xs">12 min ago</div>
+                                </div>
+                                <div className="text-reppo-red text-xs">💪 31</div>
+                              </div>
+                              <p className="text-reppo-gray-300 text-xs mb-1">CrossFit Murph completed! 🔥</p>
+                              <div className="text-reppo-gray-400 text-xs">#CrossFit #Murph #Challenge</div>
                             </div>
                           </div>
                         )}
@@ -154,17 +212,62 @@ const AppPreviewSection = () => {
                         {/* Achievement Screen */}
                         {index === 2 && (
                           <div className="space-y-3">
-                            <div className="text-center mb-4">
-                              <h4 className="text-white font-bold">Achievements</h4>
-                              <p className="text-reppo-gray-400 text-xs">Your Trophy Collection</p>
+                            {/* Header */}
+                            <div className="flex items-center justify-between mb-3">
+                              <h4 className="text-white font-bold text-sm">Achievements</h4>
+                              <div className="w-6 h-6 bg-gradient-to-r from-reppo-red to-reppo-blue rounded-full flex items-center justify-center">
+                                <span className="text-white text-xs">🏆</span>
+                              </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-2">
-                              {['Iron Warrior', 'Mile Master', 'Streak King', 'Elite Status'].map((badge, i) => (
-                                <div key={i} className={`glass rounded-lg p-2 text-center ${i < 2 ? 'bg-gradient-to-br from-reppo-red/20 to-reppo-blue/20' : 'opacity-50'}`}>
-                                  <div className="w-8 h-8 bg-gradient-to-br from-reppo-red to-reppo-blue rounded-full mx-auto mb-1"></div>
-                                  <span className="text-white text-xs font-medium">{badge}</span>
+                            
+                            {/* Progress Bar */}
+                            <div className="glass rounded-lg p-2 mb-3">
+                              <div className="flex justify-between items-center mb-1">
+                                <span className="text-white text-xs font-medium">Level 12</span>
+                                <span className="text-reppo-gray-400 text-xs">2,847 / 3,200 XP</span>
+                              </div>
+                              <div className="w-full bg-reppo-gray-800 rounded-full h-1.5">
+                                <div className="bg-gradient-to-r from-reppo-red to-reppo-blue h-1.5 rounded-full" style={{ width: '89%' }}></div>
+                              </div>
+                            </div>
+                            
+                            {/* Recent Badges */}
+                            <div>
+                              <h5 className="text-white text-xs font-semibold mb-2">Recent Unlocks</h5>
+                              <div className="space-y-2">
+                                <div className="glass rounded-lg p-2 flex items-center space-x-2">
+                                  <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+                                    <span className="text-white text-xs">🔥</span>
+                                  </div>
+                                  <div className="flex-1">
+                                    <div className="text-white text-xs font-medium">Streak Master</div>
+                                    <div className="text-reppo-gray-400 text-xs">20+ day streak</div>
+                                  </div>
+                                  <div className="text-reppo-red text-xs font-bold">+100 XP</div>
                                 </div>
-                              ))}
+                                
+                                <div className="glass rounded-lg p-2 flex items-center space-x-2">
+                                  <div className="w-8 h-8 bg-gradient-to-br from-reppo-blue to-purple-500 rounded-full flex items-center justify-center">
+                                    <span className="text-white text-xs">💪</span>
+                                  </div>
+                                  <div className="flex-1">
+                                    <div className="text-white text-xs font-medium">Iron Lifter</div>
+                                    <div className="text-reppo-gray-400 text-xs">50 strength workouts</div>
+                                  </div>
+                                  <div className="text-reppo-blue text-xs font-bold">+75 XP</div>
+                                </div>
+                                
+                                <div className="glass rounded-lg p-2 flex items-center space-x-2 opacity-60">
+                                  <div className="w-8 h-8 bg-reppo-gray-600 rounded-full flex items-center justify-center">
+                                    <span className="text-reppo-gray-400 text-xs">🏃</span>
+                                  </div>
+                                  <div className="flex-1">
+                                    <div className="text-reppo-gray-400 text-xs font-medium">Marathon Runner</div>
+                                    <div className="text-reppo-gray-400 text-xs">Complete a marathon</div>
+                                  </div>
+                                  <div className="text-reppo-gray-400 text-xs">Locked</div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         )}
