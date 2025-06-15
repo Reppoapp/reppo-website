@@ -15,6 +15,16 @@ export default {
         'text-primary': '#FFFFFF',    // White text
         'text-secondary': '#D1D1D1',  // Soft gray text
         
+        // Additional grays for app preview
+        'reppo-black': '#000000',
+        'reppo-red': '#FF3B30',
+        'reppo-blue': '#2979FF',
+        'reppo-gray-300': '#D1D5DB',
+        'reppo-gray-400': '#9CA3AF',
+        'reppo-gray-600': '#4B5563',
+        'reppo-gray-800': '#1F2937',
+        'reppo-gray-900': '#111827',
+        
         // Legacy aliases for compatibility
         accent: '#2979FF',
       },

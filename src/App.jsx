@@ -4,7 +4,7 @@ import HeroSection from './components/HeroSection'
 import ProblemSection from './components/ProblemSection'
 import HowItWorks from './components/HowItWorks'
 import FeatureGrid from './components/FeatureGrid'
-import ProfilePreview from './components/ProfilePreview'
+import AppPreviewSection from './components/ProfilePreview'
 import SocialProof from './components/SocialProof'
 import FinalCTA from './components/FinalCTA'
 import RoadmapSection from './components/RoadmapSection'
@@ -90,7 +90,7 @@ function App() {
           <div id="features">
             <FeatureGrid />
           </div>
-          <ProfilePreview />
+          <AppPreviewSection />
           <SocialProof />
           <div id="roadmap">
             <RoadmapSection />
