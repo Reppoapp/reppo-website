@@ -57,21 +57,21 @@ const FinalCTA = () => {
 
   return (
     <section id="waitlist" className="py-20 px-4 relative overflow-hidden">
-      {/* Dramatic background for final CTA */}
+      {/* Subtle background elements for smooth flow - matching other sections */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl opacity-30"></div>
       </div>
       
       <div className="max-w-4xl mx-auto text-center relative z-10">
         
-        {/* Urgency Header - Original scarcity messaging */}
+        {/* Section Header - Matching style */}
         <motion.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
-          className="mb-12"
+          className="mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
             Only <span className="text-gradient">127 Founder Spots</span> Left
@@ -83,7 +83,7 @@ const FinalCTA = () => {
           </p>
         </motion.div>
 
-        {/* Founder Benefits - Original exclusive perks */}
+        {/* Founder Benefits - Consistent card styling */}
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -95,28 +95,28 @@ const FinalCTA = () => {
               transition: { duration: 0.6, delay: 0.1, ease: "easeOut" }
             }
           }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
         >
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
-            <div className="text-3xl mb-4">👑</div>
-            <h3 className="text-lg font-bold text-text-primary mb-2">Exclusive Founder Badge</h3>
-            <p className="text-text-secondary text-sm">Permanent status symbol that can never be earned again</p>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group">
+            <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">👑</div>
+            <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">Exclusive Founder Badge</h3>
+            <p className="text-text-secondary leading-relaxed">Permanent status symbol that can never be earned again</p>
           </div>
           
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
-            <div className="text-3xl mb-4">🏆</div>
-            <h3 className="text-lg font-bold text-text-primary mb-2">Founder-Only Merch</h3>
-            <p className="text-text-secondary text-sm">Limited edition gear drops exclusive to founding members</p>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group">
+            <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🏆</div>
+            <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">Founder-Only Merch</h3>
+            <p className="text-text-secondary leading-relaxed">Limited edition gear drops exclusive to founding members</p>
           </div>
           
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
-            <div className="text-3xl mb-4">💎</div>
-            <h3 className="text-lg font-bold text-text-primary mb-2">VIP Community Access</h3>
-            <p className="text-text-secondary text-sm">Direct line to founders and exclusive member events</p>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group">
+            <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">💎</div>
+            <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">VIP Community Access</h3>
+            <p className="text-text-secondary leading-relaxed">Direct line to founders and exclusive member events</p>
           </div>
         </motion.div>
 
-        {/* Email Form - Original design */}
+        {/* Email Form - Consistent styling */}
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -128,7 +128,7 @@ const FinalCTA = () => {
               transition: { duration: 0.6, delay: 0.2, ease: "easeOut" }
             }
           }}
-          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 mb-8"
+          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -165,7 +165,7 @@ const FinalCTA = () => {
           </form>
         </motion.div>
 
-        {/* Social Proof & Urgency - Original stats */}
+        {/* Social Proof & Urgency - Consistent styling */}
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -177,32 +177,37 @@ const FinalCTA = () => {
               transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
             }
           }}
-          className="space-y-6"
+          className="space-y-8"
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-text-secondary">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <span className="text-2xl">⚡</span>
               <span className="font-medium">2,847 people joined this week</span>
             </div>
             <div className="hidden sm:block w-px h-6 bg-white/20"></div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <span className="text-2xl">🔥</span>
               <span className="font-medium">127 founder spots remaining</span>
             </div>
             <div className="hidden sm:block w-px h-6 bg-white/20"></div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <span className="text-2xl">⏰</span>
               <span className="font-medium">Founder access ends soon</span>
             </div>
           </div>
           
-          <p className="text-text-secondary text-sm max-w-2xl mx-auto leading-relaxed">
-            By joining the waitlist, you agree to receive updates about Reppo. 
-            <span className="text-text-primary font-medium"> No spam, just exclusive founder updates.</span>
-          </p>
+          <div className="pt-8 border-t border-white/10">
+            <p className="text-text-secondary text-sm max-w-2xl mx-auto leading-relaxed">
+              By joining the waitlist, you agree to receive updates about Reppo. 
+              <span className="text-text-primary font-medium"> No spam, just exclusive founder updates.</span>
+            </p>
+          </div>
         </motion.div>
         
       </div>
+      
+      {/* Smooth transition - matching other sections */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-background/50 pointer-events-none"></div>
     </section>
   )
 }
