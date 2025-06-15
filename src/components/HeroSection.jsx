@@ -27,20 +27,19 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto relative z-10 w-full">
         <div className="text-center space-y-8 max-w-4xl mx-auto">
           
-          {/* Main Headline - Strava-inspired bold typography */}
+          {/* Main Headline - Original compelling copy */}
           <motion.div
             initial="initial"
             animate="animate"
             variants={fadeInUp}
           >
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight text-white mb-6">
-              Fitness-Powered
-              <br />
-              <span className="text-gradient">Community</span>
+              <span className="block text-text-primary mb-2">You Show Up,</span>
+              <span className="block text-gradient">Reppo Shows You.</span>
             </h1>
           </motion.div>
           
-          {/* Supporting Subheading - Clean and focused */}
+          {/* Supporting Subheading - Original copy */}
           <motion.div
             initial="initial"
             animate="animate"
@@ -53,11 +52,14 @@ const HeroSection = () => {
             }}
           >
             <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary leading-relaxed font-medium max-w-3xl mx-auto">
-              Track your progress and connect with athletes worldwide. Join over 100,000 active people building their fitness identity on Reppo.
+              The exclusive fitness platform where{' '}
+              <span className="text-text-primary font-semibold">verified athletes earn badges, unlock member-only merch, and build status</span>{' '}
+              through daily consistency.{' '}
+              <span className="text-gradient font-semibold">Real connections. Real progress. Real respect.</span>
             </p>
           </motion.div>
           
-          {/* CTA Buttons - Strava-style layout */}
+          {/* CTA Buttons - Clean Strava-style layout but original copy */}
           <motion.div
             initial="initial"
             animate="animate"
@@ -74,21 +76,13 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToWaitlist}
-              className="bg-gradient-primary text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 min-w-[200px]"
+              className="bg-gradient-primary text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 min-w-[280px]"
             >
-              Join for Free
-            </motion.button>
-            
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white hover:text-background transition-all duration-300 min-w-[200px]"
-            >
-              Learn More
+              Join the Waitlist – Get Early Access
             </motion.button>
           </motion.div>
 
-          {/* Trust Indicators - Strava-style */}
+          {/* Trust Indicators - Original scarcity messaging */}
           <motion.div
             initial="initial"
             animate="animate"
@@ -101,20 +95,23 @@ const HeroSection = () => {
             }}
             className="pt-8"
           >
+            <p className="text-text-secondary text-lg font-medium mb-6">
+              <span className="text-gradient font-semibold">Only 127 founder spots left.</span> Secure exclusive badges and member-only perks.
+            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-text-secondary">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">📱</span>
-                <span className="font-medium">iPhone & Android apps</span>
+                <span className="text-2xl">👑</span>
+                <span className="font-medium">Exclusive founder badge</span>
               </div>
               <div className="hidden sm:block w-px h-6 bg-white/20"></div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">🔒</span>
-                <span className="font-medium">Free to join</span>
+                <span className="text-2xl">🏆</span>
+                <span className="font-medium">Founder-only merch drops</span>
               </div>
               <div className="hidden sm:block w-px h-6 bg-white/20"></div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">🌍</span>
-                <span className="font-medium">Global community</span>
+                <span className="text-2xl">💎</span>
+                <span className="font-medium">VIP community access</span>
               </div>
             </div>
           </motion.div>
