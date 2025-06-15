@@ -4,6 +4,15 @@ import { motion } from 'framer-motion';
 const AppPreviewSection = () => {
   const [activeScreen, setActiveScreen] = useState(0);
 
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  }
+
   const screens = [
     {
       title: "Profile Dashboard",
@@ -23,41 +32,46 @@ const AppPreviewSection = () => {
   ];
 
   return (
-    <section id="app" className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+    <section className="py-20 px-4 relative overflow-hidden">
+      {/* Subtle background elements for smooth flow */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/5 rounded-full blur-3xl opacity-30"></div>
+      </div>
       
-      <div className="max-w-7xl mx-auto relative">
-        {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black mb-6"
-          >
-            <span className="text-text-primary">Your </span>
-            <span className="text-gradient">Fitness Identity</span>
-            <span className="text-text-primary"> Awaits</span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg sm:text-xl text-reppo-gray-300 max-w-3xl mx-auto"
-          >
-            Explore the app that's redefining fitness social media for elite athletes worldwide
-          </motion.p>
-        </div>
+      <div className="max-w-7xl mx-auto relative z-10">
+        
+        {/* Section Header - Matching style */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeInUp}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
+            Your <span className="text-gradient">Fitness Identity</span> Awaits
+          </h2>
+          <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+            Explore the app that's redefining fitness social media for{' '}
+            <span className="text-text-primary font-semibold">elite athletes worldwide</span>
+          </p>
+        </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* App Preview */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          {/* App Preview - Interactive Phone Carousel */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={{
+              ...fadeInUp,
+              animate: {
+                ...fadeInUp.animate,
+                transition: { duration: 0.8, delay: 0.1, ease: "easeOut" }
+              }
+            }}
             className="relative order-2 lg:order-1"
           >
             {/* Multiple Phone Mockups in 3D Layout */}
@@ -199,12 +213,12 @@ const AppPreviewSection = () => {
                                 </div>
                                 <div className="flex-1">
                                   <div className="text-white text-xs font-medium">Alex Kim</div>
-                                  <div className="text-reppo-gray-400 text-xs">12 min ago</div>
+                                  <div className="text-reppo-gray-400 text-xs">8 min ago</div>
                                 </div>
                                 <div className="text-reppo-red text-xs">💪 31</div>
                               </div>
-                              <p className="text-reppo-gray-300 text-xs mb-1">CrossFit Murph completed! 🔥</p>
-                              <div className="text-reppo-gray-400 text-xs">#CrossFit #Murph #Challenge</div>
+                              <p className="text-reppo-gray-300 text-xs mb-1">Leg day complete! Squats feeling strong 🦵</p>
+                              <div className="text-reppo-gray-400 text-xs">#LegDay #SquatLife</div>
                             </div>
                           </div>
                         )}
@@ -220,14 +234,14 @@ const AppPreviewSection = () => {
                               </div>
                             </div>
                             
-                            {/* Progress Bar */}
-                            <div className="glass rounded-lg p-2 mb-3">
-                              <div className="flex justify-between items-center mb-1">
-                                <span className="text-white text-xs font-medium">Level 12</span>
-                                <span className="text-reppo-gray-400 text-xs">2,847 / 3,200 XP</span>
+                            {/* Level Progress */}
+                            <div className="glass rounded-lg p-3 mb-3">
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="text-white text-xs font-medium">Level 12 Elite</span>
+                                <span className="text-reppo-blue text-xs">2,847 / 3,000 XP</span>
                               </div>
-                              <div className="w-full bg-reppo-gray-800 rounded-full h-1.5">
-                                <div className="bg-gradient-to-r from-reppo-red to-reppo-blue h-1.5 rounded-full" style={{ width: '89%' }}></div>
+                              <div className="w-full bg-reppo-gray-700 rounded-full h-2">
+                                <div className="bg-gradient-to-r from-reppo-red to-reppo-blue h-2 rounded-full" style={{width: '95%'}}></div>
                               </div>
                             </div>
                             
@@ -236,116 +250,142 @@ const AppPreviewSection = () => {
                               <h5 className="text-white text-xs font-semibold mb-2">Recent Unlocks</h5>
                               <div className="space-y-2">
                                 <div className="glass rounded-lg p-2 flex items-center space-x-2">
-                                  <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+                                  <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
                                     <span className="text-white text-xs">🔥</span>
                                   </div>
                                   <div className="flex-1">
-                                    <div className="text-white text-xs font-medium">Streak Master</div>
-                                    <div className="text-reppo-gray-400 text-xs">20+ day streak</div>
+                                    <div className="text-white text-xs font-medium">Fire Streak</div>
+                                    <div className="text-reppo-gray-400 text-xs">30 day consistency</div>
                                   </div>
-                                  <div className="text-reppo-red text-xs font-bold">+100 XP</div>
+                                  <div className="text-yellow-400 text-xs">NEW</div>
                                 </div>
                                 
                                 <div className="glass rounded-lg p-2 flex items-center space-x-2">
-                                  <div className="w-8 h-8 bg-gradient-to-br from-reppo-blue to-purple-500 rounded-full flex items-center justify-center">
-                                    <span className="text-white text-xs">💪</span>
+                                  <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                                    <span className="text-white text-xs">💎</span>
                                   </div>
                                   <div className="flex-1">
-                                    <div className="text-white text-xs font-medium">Iron Lifter</div>
-                                    <div className="text-reppo-gray-400 text-xs">50 strength workouts</div>
+                                    <div className="text-white text-xs font-medium">Elite Member</div>
+                                    <div className="text-reppo-gray-400 text-xs">Verified athlete status</div>
                                   </div>
-                                  <div className="text-reppo-blue text-xs font-bold">+75 XP</div>
+                                  <div className="text-purple-400 text-xs">RARE</div>
                                 </div>
-                                
-                                <div className="glass rounded-lg p-2 flex items-center space-x-2 opacity-60">
-                                  <div className="w-8 h-8 bg-reppo-gray-600 rounded-full flex items-center justify-center">
-                                    <span className="text-reppo-gray-400 text-xs">🏃</span>
-                                  </div>
-                                  <div className="flex-1">
-                                    <div className="text-reppo-gray-400 text-xs font-medium">Marathon Runner</div>
-                                    <div className="text-reppo-gray-400 text-xs">Complete a marathon</div>
-                                  </div>
-                                  <div className="text-reppo-gray-400 text-xs">Locked</div>
+                              </div>
+                            </div>
+                            
+                            {/* Locked Achievement */}
+                            <div>
+                              <h5 className="text-reppo-gray-400 text-xs font-semibold mb-2">Coming Next</h5>
+                              <div className="glass rounded-lg p-2 flex items-center space-x-2 opacity-60">
+                                <div className="w-8 h-8 bg-reppo-gray-600 rounded-full flex items-center justify-center">
+                                  <span className="text-reppo-gray-400 text-xs">🏆</span>
                                 </div>
+                                <div className="flex-1">
+                                  <div className="text-reppo-gray-400 text-xs font-medium">Legend Status</div>
+                                  <div className="text-reppo-gray-500 text-xs">100 day streak required</div>
+                                </div>
+                                <div className="text-reppo-gray-500 text-xs">🔒</div>
                               </div>
                             </div>
                           </div>
                         )}
-
-                        {/* Notch */}
-                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-4 bg-reppo-black rounded-b-xl"></div>
                       </div>
                     </div>
                   </div>
-
-                  {/* Glow Effect */}
-                  <div className={`absolute inset-0 rounded-[2.5rem] blur-xl -z-10 transition-opacity duration-700 ${
-                    activeScreen === index ? 'opacity-100 bg-gradient-to-br from-reppo-red/30 to-reppo-blue/30' : 'opacity-0'
-                  }`}></div>
                 </div>
               ))}
             </div>
 
-            {/* Screen Navigation */}
+            {/* Navigation Dots */}
             <div className="flex justify-center space-x-2 mt-8">
               {screens.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    activeScreen === index ? 'bg-gradient-to-r from-reppo-red to-reppo-blue' : 'bg-reppo-gray-600'
-                  }`}
                   onClick={() => setActiveScreen(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    activeScreen === index
+                      ? 'bg-gradient-to-r from-primary to-secondary scale-125'
+                      : 'bg-white/20 hover:bg-white/40'
+                  }`}
                 />
               ))}
             </div>
           </motion.div>
 
-          {/* Content */}
+          {/* Content Description */}
           <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8 order-1 lg:order-2"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={{
+              ...fadeInUp,
+              animate: {
+                ...fadeInUp.animate,
+                transition: { duration: 0.6, delay: 0.2, ease: "easeOut" }
+              }
+            }}
+            className="order-1 lg:order-2 space-y-8"
           >
-            <div>
-              <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <div className="space-y-6">
+              <h3 className="text-3xl sm:text-4xl font-bold text-text-primary">
                 {screens[activeScreen].title}
               </h3>
-              <p className="text-lg text-reppo-gray-300 leading-relaxed mb-6">
+              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
                 {screens[activeScreen].description}
               </p>
             </div>
 
-            {/* Features List */}
+            {/* Feature List */}
             <div className="space-y-4">
               {screens[activeScreen].features.map((feature, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={feature}
                   initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                   className="flex items-center space-x-3"
                 >
-                  <div className="w-2 h-2 bg-gradient-to-r from-reppo-red to-reppo-blue rounded-full"></div>
-                  <span className="text-reppo-gray-300">{feature}</span>
+                  <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+                  <span className="text-text-secondary">{feature}</span>
                 </motion.div>
               ))}
             </div>
 
-            {/* CTA */}
-            <motion.button 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            {/* CTA Button */}
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-premium"
+              onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-primary text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Join the Waitlist
+              Experience Reppo Now
             </motion.button>
           </motion.div>
         </div>
+
+        {/* Transition Statement */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            ...fadeInUp,
+            animate: {
+              ...fadeInUp.animate,
+              transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
+            }
+          }}
+          className="text-center mt-16 pt-8 border-t border-white/10"
+        >
+          <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            Ready to build your <span className="text-gradient font-semibold">elite fitness identity</span>?
+          </p>
+        </motion.div>
+        
       </div>
+      
+      {/* Smooth transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-background/50 pointer-events-none"></div>
     </section>
   );
 };

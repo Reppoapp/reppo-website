@@ -1,119 +1,136 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const StepCard = ({ number, title, description, icon, delay = 0, isLast = false }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: delay * 0.1 }}
-      viewport={{ once: true, margin: "-100px" }}
-      className="relative"
-    >
-      <div className="flex flex-col items-center text-center px-4 sm:px-0">
-        {/* Step number */}
-        <div className="w-14 sm:w-16 h-14 sm:h-16 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl mb-4 sm:mb-6 relative z-10">
-          {number}
-        </div>
-        
-        {/* Icon */}
-        <div className="text-4xl sm:text-5xl lg:text-6xl mb-4 sm:mb-6 opacity-80">{icon}</div>
-        
-        {/* Content */}
-        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 gradient-text">{title}</h3>
-        <p className="text-sm sm:text-base text-text-secondary leading-relaxed max-w-xs mx-auto">{description}</p>
-      </div>
-      
-      {/* Connecting line (hidden on mobile) */}
-      {number < 3 && (
-        <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary to-secondary opacity-30 transform translate-x-8"></div>
-      )}
-      
-      {/* Mobile divider line (visible only on mobile between steps) */}
-      {!isLast && (
-        <div className="lg:hidden mt-6 sm:mt-8 mb-6 sm:mb-8 w-20 sm:w-24 h-0.5 bg-gradient-to-r from-primary to-secondary opacity-30 mx-auto"></div>
-      )}
-    </motion.div>
-  )
-}
-
 const HowItWorks = () => {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  }
+
   const steps = [
     {
-      number: 1,
-      title: "Choose Your Identity",
-      description: "Powerlifter? Hybrid Athlete? Runner? Pick your lane and join verified communities where your specific grind gets recognized.",
-      icon: "🎯"
+      number: "01",
+      title: "Download & Verify",
+      description: "Get the app and verify your identity. Only real athletes get access to the exclusive community and features.",
+      icon: "📱"
     },
     {
-      number: 2,
-      title: "Post Daily, Build Status",
-      description: "One post per day. Build your streak. Every consecutive day logged increases your level and unlocks exclusive member privileges.",
+      number: "02", 
+      title: "Start Your Streak",
+      description: "Log your daily workouts and build consistency. Every day you show up counts toward your verified athlete status.",
       icon: "🔥"
     },
     {
-      number: 3,
-      title: "Earn Exclusive Access",
-      description: "Hit benchmarks, earn verified badges, unlock member-only merch. Show the world you've earned your place among the elite.",
-      icon: "🏆"
+      number: "03",
+      title: "Earn Your Status",
+      description: "Unlock exclusive badges, member-only merch, and VIP community access as you prove your dedication over time.",
+      icon: "👑"
     }
   ]
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-card-bg via-background to-card-bg relative">
-      {/* Seamless Gradient Transition from Previous Section */}
-      <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-card-bg via-background/70 to-transparent pointer-events-none"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-12 sm:mb-16"
-        >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
-            <span className="gradient-text">Earn Your Way to the Top.</span>
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-3xl mx-auto px-4 sm:px-0">
-            This isn't about following — it's about earning. Every badge unlocked, every level gained, every streak built proves you belong with the dedicated few.
-          </p>
-        </motion.div>
-        
-        {/* Mobile: flex-col with gap-8, Desktop: grid-cols-3 */}
-        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-8 relative">
-          {steps.map((step, index) => (
-            <StepCard
-              key={index}
-              {...step}
-              delay={index}
-              isLast={index === steps.length - 1}
-            />
-          ))}
-        </div>
-        
-        {/* Bottom CTA - Mobile Optimized */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-center mt-12 sm:mt-16 px-4 sm:px-0"
-        >
-          <p className="text-base sm:text-lg text-text-secondary mb-6">
-            Ready to start earning your place in the elite club?
-          </p>
-          <button 
-            onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full sm:w-auto bg-gradient-primary text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 shadow-md hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 min-h-[48px] text-base sm:text-lg"
-          >
-            Secure Early Access — Join Now
-          </button>
-        </motion.div>
+    <section className="py-20 px-4 relative overflow-hidden">
+      {/* Subtle background elements for smooth flow */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-1/3 w-80 h-80 bg-secondary/5 rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-primary/5 rounded-full blur-3xl opacity-30"></div>
       </div>
       
-      {/* Seamless Gradient Transition to Next Section */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none"></div>
+      <div className="max-w-7xl mx-auto relative z-10">
+        
+        {/* Section Header - Matching style */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeInUp}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
+            How <span className="text-gradient">Reppo Works</span>
+          </h2>
+          <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+            Three simple steps to join the most{' '}
+            <span className="text-text-primary font-semibold">exclusive fitness community</span>{' '}
+            and start earning real recognition for your consistency.
+          </p>
+        </motion.div>
+
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={{
+                ...fadeInUp,
+                animate: {
+                  ...fadeInUp.animate,
+                  transition: { duration: 0.6, delay: index * 0.1, ease: "easeOut" }
+                }
+              }}
+              className="relative"
+            >
+              {/* Step Card */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group h-full">
+                
+                {/* Step Number */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                    {step.icon}
+                  </div>
+                  <div className="text-6xl font-black text-gradient opacity-20 group-hover:opacity-40 transition-opacity duration-300">
+                    {step.number}
+                  </div>
+                </div>
+                
+                {/* Step Content */}
+                <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p className="text-text-secondary leading-relaxed text-lg">
+                  {step.description}
+                </p>
+              </div>
+
+              {/* Connection Line (except for last item) */}
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 -right-6 w-12 h-px bg-gradient-to-r from-primary/30 to-secondary/30 transform -translate-y-1/2"></div>
+              )}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Transition Statement */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            ...fadeInUp,
+            animate: {
+              ...fadeInUp.animate,
+              transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
+            }
+          }}
+          className="text-center mt-16 pt-8 border-t border-white/10"
+        >
+          <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            Simple to start, <span className="text-gradient font-semibold">impossible to fake</span>. 
+            Your consistency speaks for itself.
+          </p>
+        </motion.div>
+        
+      </div>
+      
+      {/* Smooth transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-background/50 pointer-events-none"></div>
     </section>
   )
 }

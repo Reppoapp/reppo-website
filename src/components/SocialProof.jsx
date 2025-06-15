@@ -1,147 +1,180 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const TestimonialCard = ({ quote, name, role, avatar, delay = 0 }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      viewport={{ once: true, margin: "-50px" }}
-      className="bg-card-bg/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-card-bg/70 transition-all duration-300"
-    >
-      <div className="flex items-start space-x-4">
-        {/* Avatar */}
-        <div className="flex-shrink-0">
-          <div className="w-12 h-12 bg-gradient-to-br from-card-bg to-background rounded-full flex items-center justify-center text-2xl border-2 border-white/10">
-            {avatar}
-          </div>
-        </div>
-        
-        {/* Content */}
-        <div className="flex-1">
-          <blockquote className="text-text-secondary text-sm sm:text-base leading-relaxed mb-4">
-            "{quote}"
-          </blockquote>
-          <div>
-            <div className="text-text-primary font-semibold text-sm">{name}</div>
-            <div className="text-text-secondary/70 text-xs">{role}</div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  )
-}
-
 const SocialProof = () => {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  }
+
   const testimonials = [
     {
-      quote: "Reppo lets me mix up my training—lifting, running, HIIT—and still track it all in one place. The hybrid badge is my new favorite flex.",
       name: "Marcus Chen",
-      role: "Hybrid Athlete",
-      avatar: "🏅"
-    },
-    {
-      quote: "I never thought I'd see a leaderboard for pickleball, but here I am, grinding for the top spot and connecting with other competitors.",
-      name: "Jake Thompson", 
-      role: "Pickleball Competitor",
-      avatar: "🏓"
-    },
-    {
-      quote: "Pilates used to feel solo, but now I'm earning badges and sharing my progress with a crew that actually cheers me on.",
-      name: "Sarah Rodriguez",
-      role: "Pilates Queen",
-      avatar: "🧘"
-    },
-    {
-      quote: "The elite runners group is next-level. We push each other, celebrate PRs, and the marathon badge actually means something here.",
-      name: "Maria Santos",
-      role: "Elite Distance Runner", 
-      avatar: "🏃‍♀️"
-    },
-    {
-      quote: "I log every workout, big or small. The streaks and daily check-ins keep me motivated—Reppo makes every day count.",
-      name: "David Kim",
-      role: "Everyday Grinder",
-      avatar: "⏱️"
-    },
-    {
-      quote: "The support here is unreal. When I hit my squat PR, the verified crew was the first to celebrate. Powerlifters finally have a real home.",
-      name: "Lena Park",
       role: "Powerlifter",
-      avatar: "🏋️‍♀️"
+      avatar: "MC",
+      content: "Finally, a platform that gets it. My 6-month streak earned me exclusive gear and real recognition from athletes who understand the grind.",
+      verified: true
+    },
+    {
+      name: "Sarah Williams", 
+      role: "CrossFit Athlete",
+      avatar: "SW",
+      content: "The verified badge system is genius. No more fake motivation - just real athletes pushing each other to be better every single day.",
+      verified: true
+    },
+    {
+      name: "David Rodriguez",
+      role: "Hybrid Athlete", 
+      avatar: "DR",
+      content: "Reppo's founder perks are insane. Early access to everything, exclusive merch drops, and a community that actually cares about consistency.",
+      verified: true
     }
   ]
 
+  const stats = [
+    { number: "2,847", label: "Athletes Joined This Week", icon: "⚡" },
+    { number: "127", label: "Founder Spots Remaining", icon: "🔥" },
+    { number: "94%", label: "Members Hit 30+ Day Streaks", icon: "💪" },
+    { number: "15K+", label: "Exclusive Badges Earned", icon: "🏆" }
+  ]
+
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-card-bg via-background to-card-bg">
-      {/* Seamless Gradient Transition from Previous Section */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-card-bg via-background/70 to-transparent pointer-events-none"></div>
+    <section className="py-20 px-4 relative overflow-hidden">
+      {/* Subtle background elements for smooth flow */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-secondary/5 rounded-full blur-3xl opacity-30"></div>
+      </div>
       
-      {/* Soft gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-card-bg/30 to-background/50"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
+      <div className="max-w-7xl mx-auto relative z-10">
+        
+        {/* Section Header - Matching style */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeInUp}
+          className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Verified Members Only.{' '}
-            <span className="gradient-text">Exclusive Access Earned.</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
+            Trusted by <span className="text-gradient">Elite Athletes</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-3xl mx-auto px-4">
-            These aren't just users — they're verified athletes who've earned their badges, unlocked exclusive perks, and claimed their place in the elite community.
+          <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+            Join thousands of verified athletes who've already discovered{' '}
+            <span className="text-text-primary font-semibold">what real fitness community looks like</span>
+          </p>
+        </motion.div>
+
+        {/* Stats Grid */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            ...fadeInUp,
+            animate: {
+              ...fadeInUp.animate,
+              transition: { duration: 0.6, delay: 0.1, ease: "easeOut" }
+            }
+          }}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        >
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
+            >
+              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                {stat.icon}
+              </div>
+              <div className="text-2xl sm:text-3xl font-black text-gradient mb-2">
+                {stat.number}
+              </div>
+              <div className="text-text-secondary text-sm font-medium">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={{
+                ...fadeInUp,
+                animate: {
+                  ...fadeInUp.animate,
+                  transition: { duration: 0.6, delay: (index + 2) * 0.1, ease: "easeOut" }
+                }
+              }}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
+            >
+              {/* Quote */}
+              <div className="mb-6">
+                <p className="text-text-secondary leading-relaxed italic">
+                  "{testimonial.content}"
+                </p>
+              </div>
+
+              {/* Author */}
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-sm">
+                    {testimonial.avatar}
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center space-x-2">
+                    <h4 className="text-text-primary font-bold">
+                      {testimonial.name}
+                    </h4>
+                    {testimonial.verified && (
+                      <div className="w-5 h-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs">✓</span>
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-text-secondary text-sm">
+                    {testimonial.role}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Transition Statement */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            ...fadeInUp,
+            animate: {
+              ...fadeInUp.animate,
+              transition: { duration: 0.6, delay: 0.5, ease: "easeOut" }
+            }
+          }}
+          className="text-center mt-16 pt-8 border-t border-white/10"
+        >
+          <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            Your turn to join the <span className="text-gradient font-semibold">elite fitness community</span>
           </p>
         </motion.div>
         
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={index}
-              {...testimonial}
-              delay={index * 0.15}
-            />
-          ))}
-        </div>
-        
-        {/* Bottom stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-12 sm:mt-16"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">500+</div>
-              <div className="text-xs sm:text-sm text-text-secondary">Verified Elite Members</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">150+</div>
-              <div className="text-xs sm:text-sm text-text-secondary">Exclusive Badges Earned</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">100%</div>
-              <div className="text-xs sm:text-sm text-text-secondary">Badge-Verified Members</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">$50K+</div>
-              <div className="text-xs sm:text-sm text-text-secondary">Exclusive Merch Sales</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
       
-      {/* Seamless Gradient Transition to Next Section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none"></div>
+      {/* Smooth transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-background/50 pointer-events-none"></div>
     </section>
   )
 }
