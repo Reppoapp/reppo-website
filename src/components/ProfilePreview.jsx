@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const AppPreviewSection = () => {
   const [activeScreen, setActiveScreen] = useState(0);
@@ -241,7 +240,7 @@ const AppPreviewSection = () => {
             >
               Join the Waitlist
             </motion.button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
