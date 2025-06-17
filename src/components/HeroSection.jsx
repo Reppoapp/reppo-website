@@ -37,7 +37,7 @@ const HeroSection = () => {
         <div className="flex-1 flex flex-col justify-center items-center pt-32 pb-16">
           <div className="text-center space-y-6 max-w-4xl mx-auto">
             
-            {/* Main Headline - Much smaller font sizes to match screenshot */}
+            {/* Main Headline - Updated copy */}
             <motion.div
               initial="initial"
               animate="animate"
@@ -45,12 +45,12 @@ const HeroSection = () => {
               className="space-y-2"
             >
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
-                Track Reps. Earn Streaks.{' '}
-                <span className="text-gradient">Level Up.</span>
+                Your Grind Deserves a{' '}
+                <span className="text-gradient">Platform.</span>
               </h1>
             </motion.div>
             
-            {/* Supporting Subheading - Much smaller and tighter spacing */}
+            {/* Supporting Subheading - Updated copy */}
             <motion.div
               initial="initial"
               animate="animate"
@@ -62,12 +62,12 @@ const HeroSection = () => {
                 }
               }}
             >
-              <p className="text-base sm:text-lg lg:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
-                Reppo helps you stay accountable and compete with friends — every rep counts.
+              <p className="text-base sm:text-lg lg:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
+                Where real effort gets real recognition. Join the movement that's redefining fitness — one streak, one badge, one rep at a time.
               </p>
             </motion.div>
             
-            {/* CTA Buttons - Smaller buttons with tighter spacing */}
+            {/* CTA Button - Single button with updated copy */}
             <motion.div
               initial="initial"
               animate="animate"
@@ -78,26 +78,15 @@ const HeroSection = () => {
                   transition: { duration: 0.6, delay: 0.2, ease: "easeOut" }
                 }
               }}
-              className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2"
+              className="flex justify-center items-center pt-2"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={scrollToWaitlist}
-                className="bg-gradient-primary text-white font-semibold text-base px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 min-w-[160px]"
+                className="bg-gradient-primary text-white font-semibold text-base px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Start Tracking
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-transparent border-2 border-white/20 text-white font-semibold text-base px-6 py-3 rounded-full hover:border-white/40 hover:bg-white/5 transition-all duration-300 min-w-[160px] flex items-center justify-center gap-2"
-              >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                </svg>
-                Watch Demo
+                Start Your Streak
               </motion.button>
             </motion.div>
             
