@@ -63,7 +63,7 @@ const HeroSection = () => {
               }}
             >
               <p className="text-base sm:text-lg lg:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                Where real effort gets real recognition. Join the movement that's redefining fitness — one streak, one badge, one rep at a time.
+                Reppo is where real effort gets real recognition. Join the movement that's redefining fitness — one streak, one badge, one rep at a time.
               </p>
             </motion.div>
             
