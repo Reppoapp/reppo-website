@@ -6,11 +6,19 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     // Scroll to top when route changes
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'instant' // Use instant for immediate scroll on route change
-    })
+    // Use multiple methods to ensure it works reliably
+    window.scrollTo(0, 0)
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+    
+    // Also try with a small delay in case of timing issues
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0)
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+    }, 50)
+
+    return () => clearTimeout(timeoutId)
   }, [pathname])
 
   return null

@@ -43,7 +43,18 @@ const Navigation = ({ isLoaded }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-3">
+          <Link 
+            to="/" 
+            className="flex items-center space-x-3"
+            onClick={() => {
+              // Ensure scroll to top when clicking logo
+              setTimeout(() => {
+                window.scrollTo(0, 0)
+                document.documentElement.scrollTop = 0
+                document.body.scrollTop = 0
+              }, 100)
+            }}
+          >
             <img 
               src="/Reppo-Logo.png" 
               alt="Reppo Logo" 
@@ -60,6 +71,14 @@ const Navigation = ({ isLoaded }) => {
               <Link
                 key={item.path}
                 to={item.path}
+                onClick={() => {
+                  // Ensure scroll to top on navigation
+                  setTimeout(() => {
+                    window.scrollTo(0, 0)
+                    document.documentElement.scrollTop = 0
+                    document.body.scrollTop = 0
+                  }, 100)
+                }}
                 className={`font-medium transition-colors duration-300 ${
                   location.pathname === item.path
                     ? 'text-primary'
@@ -109,8 +128,12 @@ const Navigation = ({ isLoaded }) => {
                   to={item.path}
                   onClick={() => {
                     setIsMobileMenuOpen(false)
-                    // Small delay to ensure route change happens first
-                    setTimeout(() => window.scrollTo(0, 0), 100)
+                    // Ensure scroll to top on navigation
+                    setTimeout(() => {
+                      window.scrollTo(0, 0)
+                      document.documentElement.scrollTop = 0
+                      document.body.scrollTop = 0
+                    }, 100)
                   }}
                   className={`block font-medium transition-colors duration-300 ${
                     location.pathname === item.path
@@ -180,7 +203,19 @@ function App() {
 
   // Ensure page always starts at top on load/refresh
   useEffect(() => {
+    // Multiple methods to ensure reliable scroll to top on page load
     window.scrollTo(0, 0)
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+    
+    // Also ensure it happens after a brief delay
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0)
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+    }, 100)
+
+    return () => clearTimeout(timeoutId)
   }, [])
 
   return (
