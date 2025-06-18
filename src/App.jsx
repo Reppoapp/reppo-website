@@ -241,6 +241,7 @@ function App() {
               <Route path="/features" element={<Features />} />
               <Route path="/roadmap" element={<Roadmap />} />
               <Route path="/community" element={<Community />} />
+              <Route path="*" element={<Home />} />
             </Routes>
           </motion.main>
 

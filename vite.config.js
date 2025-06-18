@@ -11,5 +11,12 @@ export default defineConfig({
   preview: {
     port: 3000,
     historyApiFallback: true
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
   }
 }) 
