@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import InlineCTA from './InlineCTA'
 
 const ProblemSection = () => {
   const fadeInUp = {
@@ -130,16 +129,24 @@ const ProblemSection = () => {
           
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <InlineCTA
-            title="Join the Platform That Rewards Dedication"
-            description="Ready to join a platform that actually rewards your dedication? Stop settling for generic fitness apps."
-            buttonText="Get Recognized"
-            size="medium"
-            className="max-w-2xl mx-auto"
-          />
-        </div>
+        {/* Transition Statement */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            ...fadeInUp,
+            animate: {
+              ...fadeInUp.animate,
+              transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
+            }
+          }}
+          className="text-center mt-16 pt-8 border-t border-white/10"
+        >
+          <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            Ready to join a platform that actually <span className="text-gradient font-semibold">rewards your dedication</span>?
+          </p>
+        </motion.div>
         
       </div>
       
