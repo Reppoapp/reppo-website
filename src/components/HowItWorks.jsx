@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import InlineCTA from './InlineCTA'
 
 const HowItWorks = () => {
   const fadeInUp = {
@@ -107,25 +108,16 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        {/* Transition Statement */}
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
-            }
-          }}
-          className="text-center mt-16 pt-8 border-t border-white/10"
-        >
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Simple to start, <span className="text-gradient font-semibold">impossible to fake</span>. 
-            Your consistency speaks for itself.
-          </p>
-        </motion.div>
+        {/* CTA Section */}
+        <div className="mt-16 pt-8 border-t border-white/10">
+          <InlineCTA
+            title="Start Building Your Streak Today"
+            description="Simple to start, impossible to fake. Your consistency speaks for itself."
+            buttonText="Begin My Journey"
+            size="medium"
+            className="max-w-2xl mx-auto"
+          />
+        </div>
         
       </div>
       

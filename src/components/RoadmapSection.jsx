@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import InlineCTA from './InlineCTA'
 
 const RoadmapSection = () => {
   const fadeInUp = {
@@ -181,24 +182,16 @@ const RoadmapSection = () => {
           </div>
         </motion.div>
 
-        {/* Transition Statement */}
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.4, ease: "easeOut" }
-            }
-          }}
-          className="text-center mt-16 pt-8 border-t border-white/10"
-        >
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Ready to be part of the <span className="text-gradient font-semibold">fitness revolution</span>?
-          </p>
-        </motion.div>
+        {/* CTA Section */}
+        <div className="mt-16 pt-8 border-t border-white/10">
+          <InlineCTA
+            title="Secure Your Founder Status"
+            description="Ready to be part of the fitness revolution? Lock in lifetime founder benefits and early access to everything."
+            buttonText="Claim Founder Status"
+            size="medium"
+            className="max-w-2xl mx-auto"
+          />
+        </div>
         
       </div>
       

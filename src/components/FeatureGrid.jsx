@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import InlineCTA from './InlineCTA'
 
 const FeatureCard = ({ title, description, icon, delay = 0 }) => {
   return (
@@ -105,24 +106,16 @@ const FeatureGrid = () => {
           ))}
         </div>
 
-        {/* Transition Statement */}
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
-            }
-          }}
-          className="text-center mt-16 pt-8 border-t border-white/10"
-        >
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Ready to see what <span className="text-gradient font-semibold">elite fitness tracking</span> looks like?
-          </p>
-        </motion.div>
+        {/* CTA Section */}
+        <div className="mt-16 pt-8 border-t border-white/10">
+          <InlineCTA
+            title="Ready to Unlock Elite Features?"
+            description="Join the exclusive community of verified athletes who get access to these premium features and more."
+            buttonText="Get Early Access"
+            size="medium"
+            className="max-w-2xl mx-auto"
+          />
+        </div>
         
       </div>
       
