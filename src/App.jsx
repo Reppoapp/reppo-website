@@ -8,6 +8,7 @@ import Roadmap from './pages/Roadmap'
 import Community from './pages/Community'
 import FullScreenLoader from './components/FullScreenLoader'
 import SmoothScroll from './components/SmoothScroll'
+import ScrollToTop from './components/ScrollToTop'
 
 // Navigation component
 const Navigation = ({ isLoaded }) => {
@@ -106,7 +107,11 @@ const Navigation = ({ isLoaded }) => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false)
+                    // Small delay to ensure route change happens first
+                    setTimeout(() => window.scrollTo(0, 0), 100)
+                  }}
                   className={`block font-medium transition-colors duration-300 ${
                     location.pathname === item.path
                       ? 'text-primary'
@@ -173,8 +178,14 @@ function App() {
     setIsLoaded(true)
   }
 
+  // Ensure page always starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Router>
+      <ScrollToTop />
       <SmoothScroll>
         <div className="min-h-screen bg-background text-text-primary overflow-x-hidden">
           {/* Full Screen Loader */}
