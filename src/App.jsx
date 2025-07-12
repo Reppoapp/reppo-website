@@ -73,12 +73,12 @@ const Navigation = ({ isLoaded }) => {
             <Link to="/community" className="text-gray-300 hover:text-white transition-colors font-medium">Community</Link>
           </nav>
 
-          {/* Desktop CTA Button - Opal style */}
+          {/* Desktop CTA Button - Gradient style */}
           <button 
             onClick={scrollToWaitlist}
-            className="hidden md:block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition-all duration-300"
+            className="hidden md:block bg-gradient-primary text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30"
           >
-            Try for free
+            Join Waitlist
           </button>
 
           {/* Mobile Menu Button */}
@@ -111,9 +111,9 @@ const Navigation = ({ isLoaded }) => {
                 <Link to="/community" className="block text-gray-300 hover:text-white transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>Community</Link>
                 <button 
                   onClick={scrollToWaitlist}
-                  className="w-full bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 mt-4"
+                  className="w-full bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 mt-4"
                 >
-                  Try for free
+                  Join Waitlist
                 </button>
               </div>
           </motion.div>
