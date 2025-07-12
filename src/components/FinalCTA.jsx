@@ -33,7 +33,7 @@ const FinalCTA = () => {
           throw error
         }
       } else {
-        setMessage('You\'re on the list! Welcome to the elite competitor circle. 👑')
+        setMessage('You\'re on the list! Welcome to the performance athlete circle. 👑')
         setIsSuccess(true)
         setEmail('')
       }
@@ -74,11 +74,11 @@ const FinalCTA = () => {
           className="mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
-            Only <span className="text-gradient">127 Elite Competitor Spots</span> Left
+            Only <span className="text-gradient">127 Performance Athlete Spots</span> Left
           </h2>
           <p className="text-xl sm:text-2xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-            Join the exclusive group of elite competitors who get early access to{' '}
-            <span className="text-text-primary font-semibold">AI challenge technology, celebrity athlete benchmarks, and founder-only competition features.</span>
+            Join the exclusive group of performance athletes who get early access to{' '}
+            <span className="text-text-primary font-semibold">AI challenge technology, celebrity athlete benchmarks, and founder-only performance features.</span>
           </p>
         </motion.div>
 
@@ -98,8 +98,8 @@ const FinalCTA = () => {
         >
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group">
             <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">👑</div>
-            <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">Exclusive Founder Competitor Badge</h3>
-            <p className="text-text-secondary leading-relaxed">Permanent founder status that proves you were here when AI fitness competition began</p>
+            <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">Exclusive Founder Athlete Badge</h3>
+            <p className="text-text-secondary leading-relaxed">Permanent founder status that proves you were here when AI fitness challenges began</p>
           </div>
           
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group">
@@ -110,8 +110,8 @@ const FinalCTA = () => {
           
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group">
             <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">💎</div>
-            <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">Founder Competition Gear</h3>
-            <p className="text-text-secondary leading-relaxed">Limited edition merchandise only available to founding competitors</p>
+            <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">Founder Performance Gear</h3>
+            <p className="text-text-secondary leading-relaxed">Limited edition merchandise only available to founding performance athletes</p>
           </div>
         </motion.div>
 

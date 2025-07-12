@@ -111,9 +111,9 @@ const HowItWorks = () => {
         {/* CTA Section */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <InlineCTA
-            title="Start Competing With Yourself Today"
+            title="Start Outperforming Yesterday Today"
             description="Simple to start, impossible to fake. Your AI challenges evolve with every workout."
-            buttonText="Begin My Competition"
+            buttonText="Begin My Journey"
             size="medium"
             className="max-w-2xl mx-auto"
           />

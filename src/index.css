@@ -121,4 +121,46 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
+  
+  /* Opal-inspired visual effects */
+  .phone-glow {
+    box-shadow: 
+      0 0 60px rgba(255, 107, 53, 0.15),
+      0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-gradient-lime {
+    @apply bg-gradient-to-r from-lime-400 to-emerald-400 bg-clip-text text-transparent;
+  }
+  
+  .hero-fade-in {
+    animation: heroFadeIn 1.2s ease-out forwards;
+  }
+  
+  .phone-float {
+    animation: phoneFloat 6s ease-in-out infinite;
+  }
+  
+  .opal-bg {
+    background: #000000;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255, 59, 48, 0.03) 0%, transparent 70%),
+      radial-gradient(circle at 75% 75%, rgba(41, 121, 255, 0.03) 0%, transparent 70%);
+  }
+}
+
+@keyframes heroFadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0px) rotate(3deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
 } 

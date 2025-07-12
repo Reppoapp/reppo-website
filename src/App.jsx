@@ -39,9 +39,9 @@ const Navigation = ({ isLoaded }) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : -20 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link 
             to="/" 
@@ -65,43 +65,26 @@ const Navigation = ({ isLoaded }) => {
             </span>
           </Link>
           
-          {/* Desktop Navigation Menu */}
+          {/* Desktop Navigation Menu - Opal minimal style */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => {
-                  // Ensure scroll to top on navigation
-                  setTimeout(() => {
-                    window.scrollTo(0, 0)
-                    document.documentElement.scrollTop = 0
-                    document.body.scrollTop = 0
-                  }, 100)
-                }}
-                className={`font-medium transition-colors duration-300 ${
-                  location.pathname === item.path
-                    ? 'text-primary'
-                    : 'text-white hover:text-primary'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors font-medium">Our Story</Link>
+            <Link to="/features" className="text-gray-300 hover:text-white transition-colors font-medium">Features</Link>
+            <Link to="/roadmap" className="text-gray-300 hover:text-white transition-colors font-medium">Roadmap</Link>
+            <Link to="/community" className="text-gray-300 hover:text-white transition-colors font-medium">Community</Link>
           </nav>
 
-          {/* Desktop CTA Button */}
+          {/* Desktop CTA Button - Opal style */}
           <button 
             onClick={scrollToWaitlist}
-            className="hidden md:block bg-gradient-primary text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+            className="hidden md:block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition-all duration-300"
           >
-            Join Waitlist
+            Try for free
           </button>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white hover:text-primary transition-colors duration-300"
+            className="md:hidden text-white hover:text-gray-300 transition-colors duration-300"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMobileMenuOpen ? (
@@ -119,38 +102,20 @@ const Navigation = ({ isLoaded }) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-background/95 backdrop-blur-md border-t border-white/10"
+            className="md:hidden bg-black/95 backdrop-blur-md border-t border-white/5"
           >
-            <div className="px-4 py-6 space-y-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => {
-                    setIsMobileMenuOpen(false)
-                    // Ensure scroll to top on navigation
-                    setTimeout(() => {
-                      window.scrollTo(0, 0)
-                      document.documentElement.scrollTop = 0
-                      document.body.scrollTop = 0
-                    }, 100)
-                  }}
-                  className={`block font-medium transition-colors duration-300 ${
-                    location.pathname === item.path
-                      ? 'text-primary'
-                      : 'text-white hover:text-primary'
-                  }`}
+                          <div className="px-4 py-6 space-y-4">
+                <Link to="/about" className="block text-gray-300 hover:text-white transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>Our Story</Link>
+                <Link to="/features" className="block text-gray-300 hover:text-white transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>Features</Link>
+                <Link to="/roadmap" className="block text-gray-300 hover:text-white transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>Roadmap</Link>
+                <Link to="/community" className="block text-gray-300 hover:text-white transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>Community</Link>
+                <button 
+                  onClick={scrollToWaitlist}
+                  className="w-full bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 mt-4"
                 >
-                  {item.name}
-                </Link>
-              ))}
-              <button 
-                onClick={scrollToWaitlist}
-                className="w-full bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 mt-4"
-              >
-                Join Waitlist
-              </button>
-            </div>
+                  Try for free
+                </button>
+              </div>
           </motion.div>
         )}
       </div>
@@ -179,7 +144,7 @@ const Footer = ({ isLoaded }) => {
               Reppo
             </span>
           </div>
-          <p className="text-text-secondary mb-4 sm:mb-6 text-sm sm:text-base">Beat Yesterday. Every Single Day.</p>
+          <p className="text-text-secondary mb-4 sm:mb-6 text-sm sm:text-base">Outperform Yesterday. Every Single Day.</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-text-secondary text-sm sm:text-base">
             <a href="#" className="hover:text-secondary transition-colors">Privacy</a>
             <a href="#" className="hover:text-secondary transition-colors">Terms</a>

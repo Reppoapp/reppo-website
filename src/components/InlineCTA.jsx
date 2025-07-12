@@ -46,7 +46,7 @@ const InlineCTA = ({
           throw error
         }
       } else {
-        setMessage('You\'re on the list! Welcome to the elite competitor circle. 👑')
+        setMessage('You\'re on the list! Welcome to the performance athlete circle. 👑')
         setIsSuccess(true)
         setEmail('')
       }

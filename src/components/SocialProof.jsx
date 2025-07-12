@@ -36,7 +36,7 @@ const SocialProof = () => {
   ]
 
   const stats = [
-    { number: "2,847", label: "Competitors Joined This Week", icon: "⚡" },
+    { number: "2,847", label: "Athletes Joined This Week", icon: "⚡" },
     { number: "127", label: "Founder Spots Remaining", icon: "🔥" },
     { number: "94%", label: "Members Beat Their First Personal Challenge", icon: "💪" },
     { number: "500K+", label: "Personal Competitions Completed", icon: "🏆" }
@@ -61,11 +61,11 @@ const SocialProof = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
-            Trusted by <span className="text-gradient">Elite Competitors</span>
+            Trusted by <span className="text-gradient">Performance Athletes</span>
           </h2>
           <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Join thousands of elite competitors who've already discovered{' '}
-            <span className="text-text-primary font-semibold">what real AI-powered fitness competition looks like</span>
+            Join thousands of performance athletes who've already discovered{' '}
+            <span className="text-text-primary font-semibold">what real AI-powered fitness challenges look like</span>
           </p>
         </motion.div>
 
@@ -167,7 +167,7 @@ const SocialProof = () => {
           className="text-center mt-16 pt-8 border-t border-white/10"
         >
           <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Your turn to join the <span className="text-gradient font-semibold">elite fitness community</span>
+            Your turn to join the <span className="text-gradient font-semibold">performance athlete community</span>
           </p>
         </motion.div>
         

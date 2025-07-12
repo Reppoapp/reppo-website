@@ -109,8 +109,8 @@ const FeatureGrid = () => {
         {/* CTA Section */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <InlineCTA
-            title="Ready to Unlock AI Competition?"
-            description="Join the exclusive community of elite competitors who get access to these premium features and more."
+            title="Ready to Unlock AI Performance Challenges?"
+            description="Join the exclusive community of performance athletes who get access to these premium features and more."
             buttonText="Get Early Access"
             size="medium"
             className="max-w-2xl mx-auto"
