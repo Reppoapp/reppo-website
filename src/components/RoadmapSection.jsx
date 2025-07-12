@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import InlineCTA from './InlineCTA'
 
 const RoadmapSection = () => {
   const fadeInUp = {
@@ -15,50 +14,64 @@ const RoadmapSection = () => {
   const roadmapItems = [
     {
       phase: "Phase 1",
-      title: "AI Competition Foundation",
-      status: "In Progress",
+      title: "AI Challenge Foundation",
       timeline: "Q1 2025",
-      features: [
-        "Core AI challenge creation engine",
-        "Personal competition interface", 
-        "Progressive challenge tracking",
-        "Victory history and achievements"
-      ],
+      status: "In Progress",
       icon: "🚀",
-      color: "from-primary to-secondary"
+      color: "from-primary to-secondary",
+      features: [
+        "Personal AI challenge generation",
+        "Basic performance tracking",
+        "Victory/defeat system",
+        "Daily challenge notifications"
+      ]
     },
     {
       phase: "Phase 2", 
-      title: "Community Competitions",
-      status: "Coming Soon",
+      title: "Advanced Competition",
       timeline: "Q2 2025",
+      status: "Coming Soon",
+      icon: "⚔️",
+      color: "from-secondary to-primary",
       features: [
-        "Cross-user challenge system",
-        "Celebrity athlete benchmarks",
-        "Tournament and league competitions", 
-        "Advanced performance analytics"
-      ],
-      icon: "🏆",
-      color: "from-secondary to-purple-500"
+        "Multi-day challenge campaigns",
+        "Performance analytics dashboard",
+        "Achievement system",
+        "Streak tracking & rewards"
+      ]
     },
     {
       phase: "Phase 3",
-      title: "Elite Competition Platform", 
+      title: "Community & Social",
+      timeline: "Q3 2025", 
       status: "Planned",
-      timeline: "Q3 2025",
+      icon: "👥",
+      color: "from-primary to-secondary",
       features: [
-        "Professional athlete challenge data",
-        "VR competition experiences",
-        "Global fitness competitions",
-        "AI coaching and optimization"
-      ],
-      icon: "💎",
-      color: "from-purple-500 to-pink-500"
+        "Anonymous leaderboards",
+        "Challenge sharing",
+        "Performance athlete badges",
+        "Elite community features"
+      ]
+    },
+    {
+      phase: "Phase 4",
+      title: "AI Evolution",
+      timeline: "Q4 2025",
+      status: "Future",
+      icon: "🧠",
+      color: "from-secondary to-primary",
+      features: [
+        "Predictive performance modeling",
+        "Personalized recovery insights",
+        "Advanced challenge algorithms",
+        "Wellness integration"
+      ]
     }
   ]
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="py-16 sm:py-20 px-4 relative overflow-hidden">
       {/* Subtle background elements for smooth flow */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl opacity-40"></div>
@@ -73,19 +86,19 @@ const RoadmapSection = () => {
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
             The <span className="text-gradient">AI Competition Roadmap</span>
           </h2>
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed px-2">
             We're building the future of AI-powered fitness competition.{' '}
             <span className="text-text-primary font-semibold">Founders get early access to everything.</span>
           </p>
         </motion.div>
 
-        {/* Roadmap Timeline */}
-        <div className="space-y-12">
+        {/* Roadmap Items */}
+        <div className="space-y-8 sm:space-y-12">
           {roadmapItems.map((item, index) => (
             <motion.div
               key={index}
@@ -99,48 +112,42 @@ const RoadmapSection = () => {
                   transition: { duration: 0.6, delay: index * 0.1, ease: "easeOut" }
                 }
               }}
-              className="relative"
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
             >
-              {/* Timeline Line */}
-              {index < roadmapItems.length - 1 && (
-                <div className="absolute left-6 top-20 w-px h-20 bg-gradient-to-b from-white/20 to-transparent hidden md:block"></div>
-              )}
-
-              <div className="grid md:grid-cols-12 gap-8 items-start">
+              <div className="grid md:grid-cols-12 gap-6 sm:gap-8 items-start">
                 
                 {/* Phase Info */}
                 <div className="md:col-span-3 text-center md:text-left">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r ${item.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="text-2xl">{item.icon}</span>
+                  <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r ${item.color} mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <span className="text-xl sm:text-2xl">{item.icon}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-text-primary mb-2">{item.phase}</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-2">{item.phase}</h3>
                   <div className="text-text-secondary text-sm mb-2">{item.timeline}</div>
                   <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
                     item.status === 'In Progress' 
                       ? 'bg-green-500/20 text-green-400 border border-green-500/30'
                       : item.status === 'Coming Soon'
                       ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
-                      : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                      : item.status === 'Planned'
+                      ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                      : 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
                   }`}>
                     {item.status}
                   </div>
                 </div>
 
-                {/* Content Card */}
+                {/* Phase Content */}
                 <div className="md:col-span-9">
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group">
-                    <h4 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">
-                      {item.title}
-                    </h4>
-                    
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      {item.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-3">
-                          <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full flex-shrink-0"></div>
-                          <span className="text-text-secondary">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
+                  <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-gradient transition-colors duration-300">
+                    {item.title}
+                  </h4>
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                    {item.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full flex-shrink-0"></div>
+                        <span className="text-text-secondary text-sm sm:text-base">{feature}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -148,7 +155,7 @@ const RoadmapSection = () => {
           ))}
         </div>
 
-        {/* Founder Benefits Callout */}
+        {/* Bottom CTA */}
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -157,41 +164,23 @@ const RoadmapSection = () => {
             ...fadeInUp,
             animate: {
               ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
+              transition: { duration: 0.6, delay: 0.5, ease: "easeOut" }
             }
           }}
-          className="mt-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center"
+          className="text-center mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10"
         >
-          <div className="text-4xl mb-4">👑</div>
-          <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
-            Founder Benefits Include
-          </h3>
-          <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div>
-              <div className="text-lg font-semibold text-gradient mb-2">Early Access</div>
-              <p className="text-text-secondary text-sm">First to try every new feature</p>
-            </div>
-            <div>
-              <div className="text-lg font-semibold text-gradient mb-2">Exclusive Merch</div>
-              <p className="text-text-secondary text-sm">Founder-only gear drops</p>
-            </div>
-            <div>
-              <div className="text-lg font-semibold text-gradient mb-2">Direct Access</div>
-              <p className="text-text-secondary text-sm">Private line to the founding team</p>
-            </div>
-          </div>
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2">
+            Get <span className="text-gradient font-semibold">founder access</span> to every feature as we build the future of fitness competition
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-gradient-primary text-white font-semibold px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 text-sm sm:text-base lg:text-lg min-h-[48px] w-full sm:w-auto max-w-sm mx-auto"
+          >
+            Secure Founder Access
+          </motion.button>
         </motion.div>
-
-        {/* CTA Section */}
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <InlineCTA
-            title="Secure Your Founder Status"
-            description="Ready to be part of the fitness revolution? Lock in lifetime founder benefits and early access to everything."
-            buttonText="Claim Founder Status"
-            size="medium"
-            className="max-w-2xl mx-auto"
-          />
-        </div>
         
       </div>
       

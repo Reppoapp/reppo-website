@@ -69,7 +69,7 @@ const SocialProof = () => {
           </p>
         </motion.div>
 
-        {/* Stats Grid - Optimized for Mobile */}
+        {/* Platform Stats - Relocated from Hero */}
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -79,6 +79,28 @@ const SocialProof = () => {
             animate: {
               ...fadeInUp.animate,
               transition: { duration: 0.6, delay: 0.1, ease: "easeOut" }
+            }
+          }}
+          className="text-center mb-12 sm:mb-16"
+        >
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 max-w-3xl mx-auto">
+            <div className="text-lg sm:text-xl lg:text-2xl text-text-secondary leading-relaxed">
+              <span className="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl">2.3M</span> daily check-ins and <span className="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl">127</span> average streak days prove that our athletes are{' '}
+              <span className="text-text-primary font-semibold">truly committed to outperforming yesterday</span>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Stats Grid - Optimized for Mobile */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            ...fadeInUp,
+            animate: {
+              ...fadeInUp.animate,
+              transition: { duration: 0.6, delay: 0.2, ease: "easeOut" }
             }
           }}
           className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16"
@@ -113,7 +135,7 @@ const SocialProof = () => {
                 ...fadeInUp,
                 animate: {
                   ...fadeInUp.animate,
-                  transition: { duration: 0.6, delay: (index + 2) * 0.1, ease: "easeOut" }
+                  transition: { duration: 0.6, delay: (index + 3) * 0.1, ease: "easeOut" }
                 }
               }}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
@@ -161,7 +183,7 @@ const SocialProof = () => {
             ...fadeInUp,
             animate: {
               ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.5, ease: "easeOut" }
+              transition: { duration: 0.6, delay: 0.6, ease: "easeOut" }
             }
           }}
           className="text-center mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10"

@@ -23,7 +23,7 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-16 items-center min-h-screen pt-16 pb-20 lg:pt-20">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-16 items-center min-h-screen pt-16 pb-12 lg:pt-20 lg:pb-16">
           
           {/* LEFT SIDE: Phone Mockup */}
           <div className="order-2 lg:order-1 lg:col-span-2 flex justify-center lg:justify-start">
@@ -218,18 +218,6 @@ const HeroSection = () => {
 
           </div>
         </div>
-        
-        {/* Bottom Statistics - Opal style - Mobile Optimized */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-center px-4 w-full max-w-4xl"
-        >
-          <div className="text-gray-400 text-sm sm:text-base lg:text-lg font-medium tracking-wider leading-relaxed">
-            <span className="text-white font-bold">2.3M</span> daily check-ins, <span className="text-white font-bold">127</span> avg streak days with Reppo
-          </div>
-        </motion.div>
       </div>
     </section>
   )
