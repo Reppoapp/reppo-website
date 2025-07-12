@@ -45,8 +45,8 @@ const HeroSection = () => {
               className="space-y-2"
             >
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
-                Your Grind Deserves a{' '}
-                <span className="text-gradient">Platform.</span>
+                Beat Yesterday.{' '}
+                <span className="text-gradient">Every Single Day.</span>
               </h1>
             </motion.div>
             
@@ -63,7 +63,7 @@ const HeroSection = () => {
               }}
             >
               <p className="text-base sm:text-lg lg:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                Reppo is where real effort gets real recognition. Join the movement that's redefining fitness — one streak, one badge, one rep at a time.
+                The first AI-powered fitness app where your biggest competition is yourself. Every workout creates a smarter challenge that pushes you beyond yesterday's limits.
               </p>
             </motion.div>
             
@@ -86,7 +86,7 @@ const HeroSection = () => {
                 onClick={scrollToWaitlist}
                 className="bg-gradient-primary text-white font-semibold text-base px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Start Your Streak
+                Start Competing With Yourself
               </motion.button>
             </motion.div>
             
@@ -125,19 +125,19 @@ const HeroSection = () => {
 
               {/* Welcome Message */}
               <div className="mb-6">
-                <h3 className="text-xl font-bold text-white mb-1">Good morning, Athlete!</h3>
-                <p className="text-text-secondary text-sm">Ready to crush today's workout? Let's build that streak.</p>
+                <h3 className="text-xl font-bold text-white mb-1">Ready to Beat Yesterday?</h3>
+                <p className="text-text-secondary text-sm">Your AI challenge is ready. Time to defeat your past self.</p>
               </div>
 
               {/* Stats Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                {/* Reps This Week */}
+                {/* Victories Over Past Self */}
                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="text-text-secondary font-medium text-sm">Reps This Week</h4>
-                    <div className="text-lg">💪</div>
+                    <h4 className="text-text-secondary font-medium text-sm">Victories Over Past Self</h4>
+                    <div className="text-lg">⚔️</div>
                   </div>
-                  <div className="text-2xl font-bold text-white mb-2">847</div>
+                  <div className="text-2xl font-bold text-white mb-2">23</div>
                   <div className="flex items-center gap-2">
                     <div className="w-full bg-white/10 rounded-full h-1.5">
                       <div className="bg-gradient-primary h-1.5 rounded-full" style={{ width: '78%' }}></div>
@@ -146,30 +146,30 @@ const HeroSection = () => {
                   </div>
                 </div>
 
-                {/* Current Streak */}
+                {/* Current Win Streak */}
                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="text-text-secondary font-medium text-sm">Current Streak</h4>
+                    <h4 className="text-text-secondary font-medium text-sm">Current Win Streak</h4>
                     <div className="text-lg">🔥</div>
                   </div>
                   <div className="text-2xl font-bold text-white mb-2">15 days</div>
                   <div className="text-xs text-text-secondary">Personal best: 23 days</div>
                 </div>
 
-                {/* Active Challenges */}
+                {/* AI Challenge Level */}
                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="text-text-secondary font-medium text-sm">Active Challenges</h4>
-                    <div className="text-lg">🏆</div>
+                    <h4 className="text-text-secondary font-medium text-sm">AI Challenge Level</h4>
+                    <div className="text-lg">🤖</div>
                   </div>
-                  <div className="text-2xl font-bold text-white mb-2">3</div>
-                  <div className="text-xs text-text-secondary">2 ending this week</div>
+                  <div className="text-2xl font-bold text-white mb-2">8</div>
+                  <div className="text-xs text-text-secondary">Next level: 2 wins away</div>
                 </div>
               </div>
 
-              {/* Today's Goals */}
+              {/* Today's Self-Challenges */}
               <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                <h4 className="text-white font-semibold mb-3 text-sm">Today's Goals</h4>
+                <h4 className="text-white font-semibold mb-3 text-sm">Today's Self-Challenges</h4>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full flex items-center justify-center">
@@ -177,15 +177,15 @@ const HeroSection = () => {
                         <path d="M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z"/>
                       </svg>
                     </div>
-                    <span className="text-text-secondary line-through text-sm">Complete 30 push-ups</span>
+                    <span className="text-text-secondary line-through text-sm">Beat yesterday's 28 push-ups</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 border-2 border-white/30 rounded-full"></div>
-                    <span className="text-white text-sm">Run 2 miles</span>
+                    <span className="text-white text-sm">Defeat last week's 2-mile time</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 border-2 border-white/30 rounded-full"></div>
-                    <span className="text-white text-sm">Log workout in app</span>
+                    <span className="text-white text-sm">Conquer AI challenge level 8</span>
                   </div>
                 </div>
               </div>

@@ -16,30 +16,30 @@ const SocialProof = () => {
       name: "Marcus Chen",
       role: "Powerlifter",
       avatar: "MC",
-      content: "Finally, a platform that gets it. My 6-month streak earned me exclusive gear and real recognition from athletes who understand the grind.",
+      content: "Competing against myself is addictive. I've never been more motivated to work out. Seeing my daily challenges evolve keeps me coming back stronger.",
       verified: true
     },
     {
       name: "Sarah Williams", 
       role: "CrossFit Athlete",
       avatar: "SW",
-      content: "The verified badge system is genius. No more fake motivation - just real athletes pushing each other to be better every single day.",
+      content: "The AI challenge system is brilliant. Every workout feels like I'm fighting for my future self. I'm literally competing with my own potential.",
       verified: true
     },
     {
       name: "David Rodriguez",
       role: "Hybrid Athlete", 
       avatar: "DR",
-      content: "Reppo's founder perks are insane. Early access to everything, exclusive merch drops, and a community that actually cares about consistency.",
+      content: "I challenged my friend's personal best and got destroyed. Now I'm training harder than ever for a rematch. This app turned fitness into intelligent competition.",
       verified: true
     }
   ]
 
   const stats = [
-    { number: "2,847", label: "Athletes Joined This Week", icon: "⚡" },
+    { number: "2,847", label: "Competitors Joined This Week", icon: "⚡" },
     { number: "127", label: "Founder Spots Remaining", icon: "🔥" },
-    { number: "94%", label: "Members Hit 30+ Day Streaks", icon: "💪" },
-    { number: "15K+", label: "Exclusive Badges Earned", icon: "🏆" }
+    { number: "94%", label: "Members Beat Their First Personal Challenge", icon: "💪" },
+    { number: "500K+", label: "Personal Competitions Completed", icon: "🏆" }
   ]
 
   return (
@@ -61,11 +61,11 @@ const SocialProof = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
-            Trusted by <span className="text-gradient">Elite Athletes</span>
+            Trusted by <span className="text-gradient">Elite Competitors</span>
           </h2>
           <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Join thousands of verified athletes who've already discovered{' '}
-            <span className="text-text-primary font-semibold">what real fitness community looks like</span>
+            Join thousands of elite competitors who've already discovered{' '}
+            <span className="text-text-primary font-semibold">what real AI-powered fitness competition looks like</span>
           </p>
         </motion.div>
 

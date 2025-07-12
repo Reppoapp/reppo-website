@@ -30,8 +30,8 @@ const ProblemSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
-            Most Fitness Apps Are{' '}
-            <span className="text-gradient">Broken</span>
+            Most Fitness Apps Lack{' '}
+            <span className="text-gradient">Real Competition</span>
           </h2>
           <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
             They track your workouts but ignore what really drives you: <span className="text-text-primary font-semibold">recognition, status, and belonging to something exclusive.</span>
@@ -62,23 +62,23 @@ const ProblemSection = () => {
             
             <div className="space-y-6">
               <div className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 transition-all duration-300">
-                <h4 className="text-xl font-bold text-text-primary mb-3">No Recognition for Consistency</h4>
+                <h4 className="text-xl font-bold text-text-primary mb-3">No Personal Competition</h4>
                 <p className="text-text-secondary leading-relaxed">
-                  You show up every day, but nobody sees it. Your 30-day streak means nothing without the right audience to witness your dedication.
+                  You track workouts but never truly compete. Where's the challenge that pushes you beyond your comfort zone every single day?
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 transition-all duration-300">
-                <h4 className="text-xl font-bold text-text-primary mb-3">Fake Motivation & Empty Communities</h4>
+                <h4 className="text-xl font-bold text-text-primary mb-3">Competing Against Random Strangers</h4>
                 <p className="text-text-secondary leading-relaxed">
-                  Generic "great job!" comments from strangers who don't actually care about your progress. Surface-level engagement that fades fast.
+                  Leaderboards with people you'll never meet don't inspire real progress. Your best competition is the person you were yesterday.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 transition-all duration-300">
-                <h4 className="text-xl font-bold text-text-primary mb-3">No Exclusive Rewards</h4>
+                <h4 className="text-xl font-bold text-text-primary mb-3">No Evolution, No Real Progress</h4>
                 <p className="text-text-secondary leading-relaxed">
-                  Your achievements unlock... nothing. No exclusive access, no special perks, no way to show the world you're part of an elite group.
+                  Your improvements disappear into data points. You deserve to see yourself evolve and witness your transformation in real-time.
                 </p>
               </div>
             </div>
@@ -105,23 +105,23 @@ const ProblemSection = () => {
             
             <div className="space-y-6">
               <div className="bg-white/5 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10">
-                <h4 className="text-xl font-bold text-text-primary mb-3">Verified Athlete Status</h4>
+                <h4 className="text-xl font-bold text-text-primary mb-3">AI-Powered Self Competition</h4>
                 <p className="text-text-secondary leading-relaxed">
-                  Earn exclusive badges that prove your consistency. Your profile shows real achievements that can't be faked or bought.
+                  Advanced AI creates personalized challenges from your workout history. Every session, you compete against a smarter version of yesterday's performance.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10">
-                <h4 className="text-xl font-bold text-text-primary mb-3">Elite Community Access</h4>
+                <h4 className="text-xl font-bold text-text-primary mb-3">Progressive Challenge System</h4>
                 <p className="text-text-secondary leading-relaxed">
-                  Connect with verified athletes who actually understand the grind. Real conversations, real accountability, real respect.
+                  Our AI learns your patterns and creates increasingly intelligent challenges. Beat yesterday's you, then face an even stronger version tomorrow.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10">
-                <h4 className="text-xl font-bold text-text-primary mb-3">Member-Only Rewards</h4>
+                <h4 className="text-xl font-bold text-text-primary mb-3">Victory-Based Progression</h4>
                 <p className="text-text-secondary leading-relaxed">
-                  Unlock exclusive merch, early access to features, and VIP experiences. Your consistency pays off with tangible rewards.
+                  Every win over your past self unlocks exclusive rewards, advanced challenges, and proves your commitment to constant evolution.
                 </p>
               </div>
             </div>

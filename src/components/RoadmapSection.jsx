@@ -15,42 +15,42 @@ const RoadmapSection = () => {
   const roadmapItems = [
     {
       phase: "Phase 1",
-      title: "Foundation Launch",
+      title: "AI Competition Foundation",
       status: "In Progress",
       timeline: "Q1 2025",
       features: [
-        "Core workout tracking & streaks",
-        "Verified athlete badge system", 
-        "Elite community access",
-        "Founder-exclusive perks"
+        "Core AI challenge creation engine",
+        "Personal competition interface", 
+        "Progressive challenge tracking",
+        "Victory history and achievements"
       ],
       icon: "🚀",
       color: "from-primary to-secondary"
     },
     {
       phase: "Phase 2", 
-      title: "Social & Competition",
+      title: "Community Competitions",
       status: "Coming Soon",
       timeline: "Q2 2025",
       features: [
-        "Advanced leaderboards & rankings",
-        "Member-only merch marketplace",
-        "Live workout challenges",
-        "VIP community events"
+        "Cross-user challenge system",
+        "Celebrity athlete benchmarks",
+        "Tournament and league competitions", 
+        "Advanced performance analytics"
       ],
       icon: "🏆",
       color: "from-secondary to-purple-500"
     },
     {
       phase: "Phase 3",
-      title: "Elite Expansion", 
+      title: "Elite Competition Platform", 
       status: "Planned",
       timeline: "Q3 2025",
       features: [
-        "Professional athlete partnerships",
-        "Exclusive brand collaborations",
-        "Advanced analytics & insights",
-        "Global fitness competitions"
+        "Professional athlete challenge data",
+        "VR competition experiences",
+        "Global fitness competitions",
+        "AI coaching and optimization"
       ],
       icon: "💎",
       color: "from-purple-500 to-pink-500"
@@ -76,10 +76,10 @@ const RoadmapSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
-            The <span className="text-gradient">Reppo Roadmap</span>
+            The <span className="text-gradient">AI Competition Roadmap</span>
           </h2>
           <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            We're building the future of elite fitness community.{' '}
+            We're building the future of AI-powered fitness competition.{' '}
             <span className="text-text-primary font-semibold">Founders get early access to everything.</span>
           </p>
         </motion.div>

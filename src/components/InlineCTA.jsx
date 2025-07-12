@@ -5,7 +5,7 @@ import { supabase } from '../lib/supabase'
 const InlineCTA = ({ 
   title, 
   description, 
-  buttonText = "Join Waitlist", 
+  buttonText = "Join Competition", 
   showEmailInput = true,
   redirectToWaitlist = false,
   className = "",
@@ -46,7 +46,7 @@ const InlineCTA = ({
           throw error
         }
       } else {
-        setMessage('You\'re on the list! Welcome to the founder\'s circle. 👑')
+        setMessage('You\'re on the list! Welcome to the elite competitor circle. 👑')
         setIsSuccess(true)
         setEmail('')
       }

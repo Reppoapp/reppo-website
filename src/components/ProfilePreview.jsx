@@ -15,19 +15,19 @@ const AppPreviewSection = () => {
 
   const screens = [
     {
-      title: "Profile Dashboard",
-      description: "Your complete fitness identity in one place. Track progress, showcase achievements, and monitor your journey.",
-      features: ["Personal Stats", "Achievement Timeline", "Progress Analytics", "Identity Badges"]
+      title: "Personal Competition Dashboard",
+      description: "Your AI-powered competition center. Track victories over your past self and monitor your evolution.",
+      features: ["Daily Challenges Completed", "Victories Over Past Self", "Progress Points", "AI Challenge Level"]
     },
     {
-      title: "Social Feed",
-      description: "Connect with elite athletes worldwide. Share victories, get inspired, and build meaningful fitness relationships.",
-      features: ["Live Activity Feed", "Community Challenges", "Friend Connections", "Motivation Hub"]
+      title: "Competition Feed",
+      description: "Social feed focused on self-improvement victories. Share your wins and challenge others' best performances.",
+      features: ["Victory Celebrations", "Challenge Completions", "Personal Bests", "Rematch Requests"]
     },
     {
-      title: "Achievement System",
-      description: "Unlock exclusive badges and climb the ranks. Every workout brings you closer to legendary status.",
-      features: ["Rare Badge Collection", "Rank Progression", "Milestone Tracking", "Elite Recognition"]
+      title: "Challenge Collection",
+      description: "Your active challenges and conquered benchmarks. Unlock new difficulty levels through consistent progress.",
+      features: ["Active Challenges", "Conquered Benchmarks", "Difficulty Levels", "Celebrity Challenges"]
     }
   ];
 

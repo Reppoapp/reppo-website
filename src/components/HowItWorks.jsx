@@ -15,21 +15,21 @@ const HowItWorks = () => {
   const steps = [
     {
       number: "01",
-      title: "Download & Verify",
-      description: "Get the app and verify your identity. Only real athletes get access to the exclusive community and features.",
-      icon: "📱"
+      title: "Complete Your First Workout",
+      description: "Track any exercise and our AI analyzes your performance to create your personalized challenge benchmark for tomorrow.",
+      icon: "📊"
     },
     {
       number: "02", 
-      title: "Start Your Streak",
-      description: "Log your daily workouts and build consistency. Every day you show up counts toward your verified athlete status.",
-      icon: "🔥"
+      title: "Face Tomorrow's Challenge",
+      description: "Each day, compete against an AI-enhanced version of yesterday's performance. Win and the challenge evolves. Lose and train for revenge.",
+      icon: "⚔️"
     },
     {
       number: "03",
-      title: "Earn Your Status",
-      description: "Unlock exclusive badges, member-only merch, and VIP community access as you prove your dedication over time.",
-      icon: "👑"
+      title: "Challenge Others & Legends",
+      description: "Compete against AI recreations of other users' best performances and even challenge celebrity athlete benchmarks.",
+      icon: "🏆"
     }
   ]
 
@@ -52,12 +52,12 @@ const HowItWorks = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
-            How <span className="text-gradient">Reppo Works</span>
+            How <span className="text-gradient">Self-Competition Works</span>
           </h2>
           <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Three simple steps to join the most{' '}
-            <span className="text-text-primary font-semibold">exclusive fitness community</span>{' '}
-            and start earning real recognition for your consistency.
+            Three simple steps to start{' '}
+            <span className="text-text-primary font-semibold">competing against yourself</span>{' '}
+            and unlock the most advanced AI-powered fitness challenges.
           </p>
         </motion.div>
 
@@ -111,9 +111,9 @@ const HowItWorks = () => {
         {/* CTA Section */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <InlineCTA
-            title="Start Building Your Streak Today"
-            description="Simple to start, impossible to fake. Your consistency speaks for itself."
-            buttonText="Begin My Journey"
+            title="Start Competing With Yourself Today"
+            description="Simple to start, impossible to fake. Your AI challenges evolve with every workout."
+            buttonText="Begin My Competition"
             size="medium"
             className="max-w-2xl mx-auto"
           />

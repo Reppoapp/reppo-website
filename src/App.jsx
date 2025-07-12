@@ -179,7 +179,7 @@ const Footer = ({ isLoaded }) => {
               Reppo
             </span>
           </div>
-          <p className="text-text-secondary mb-4 sm:mb-6 text-sm sm:text-base">Where Consistency Becomes Legacy.</p>
+          <p className="text-text-secondary mb-4 sm:mb-6 text-sm sm:text-base">Beat Yesterday. Every Single Day.</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-text-secondary text-sm sm:text-base">
             <a href="#" className="hover:text-secondary transition-colors">Privacy</a>
             <a href="#" className="hover:text-secondary transition-colors">Terms</a>
