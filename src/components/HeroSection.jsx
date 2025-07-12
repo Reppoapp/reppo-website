@@ -163,6 +163,7 @@ const HeroSection = () => {
                 <span className="text-gradient">
                   Yesterday
                 </span>
+                .
               </h1>
             </motion.div>
 
@@ -173,7 +174,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              So we made outperforming yesterday addictive. Join over 47,000 athletes using AI to compete with their past selves daily.
+              The elite fitness community where yesterday's you becomes today's competition. Join 47,000+ athletes who've cracked the code to unstoppable daily progress.
             </motion.p>
 
             {/* Feature Badges */}
