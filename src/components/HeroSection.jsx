@@ -163,7 +163,7 @@ const HeroSection = () => {
                 <span className="text-gradient">
                   Yesterday
                 </span>
-                .
+                <span className="text-gradient">.</span>
               </h1>
             </motion.div>
 
@@ -216,16 +216,7 @@ const HeroSection = () => {
               </motion.button>
             </motion.div>
 
-            {/* Social Proof Testimonial */}
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-gray-400 text-sm italic max-w-2xl mx-auto lg:mx-0"
-            >
-              "I've tried every fitness app. This is the only one that made me <strong className="text-white">obsessed</strong> with my own progress."<br />
-              <span className="text-primary font-semibold">— Sarah M., 284-day streak</span>
-            </motion.p>
+
           </div>
         </div>
         
