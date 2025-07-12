@@ -129,10 +129,6 @@
       0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
   
-  .text-gradient-lime {
-    @apply bg-gradient-to-r from-lime-400 to-emerald-400 bg-clip-text text-transparent;
-  }
-  
   .hero-fade-in {
     animation: heroFadeIn 1.2s ease-out forwards;
   }

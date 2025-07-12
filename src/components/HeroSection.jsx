@@ -24,86 +24,85 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen pt-20">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-16 items-center min-h-screen pt-20">
           
-          {/* LEFT SIDE: Phone Mockup */}
-          <div className="order-2 lg:order-1 flex justify-center lg:justify-end">
+          {/* LEFT SIDE: Phone Mockup - Smaller and with more spacing */}
+          <div className="order-2 lg:order-1 lg:col-span-2 flex justify-center lg:justify-start">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="relative max-w-sm mx-auto lg:mx-0"
+              className="relative max-w-xs mx-auto lg:mx-0"
             >
-              <div className="relative transform rotate-3 hover:rotate-0 transition-transform duration-700 phone-float">
+              <div className="relative transform -rotate-3 hover:rotate-0 transition-transform duration-700 phone-float">
                 {/* Phone frame with realistic shadows */}
-                <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl phone-glow">
-                  <div className="bg-black rounded-[2.5rem] overflow-hidden relative">
+                <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-[2.5rem] p-2 shadow-2xl phone-glow">
+                  <div className="bg-black rounded-[2rem] overflow-hidden relative">
                     
                     {/* Status bar */}
-                    <div className="flex justify-between items-center px-6 pt-4 text-white text-sm">
+                    <div className="flex justify-between items-center px-5 pt-3 text-white text-xs">
                       <span className="font-medium">9:41</span>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1">
                         <div className="flex gap-1">
                           <div className="w-1 h-1 bg-white rounded-full"></div>
                           <div className="w-1 h-1 bg-white rounded-full"></div>
                           <div className="w-1 h-1 bg-white rounded-full"></div>
                         </div>
                         <div className="text-xs">100%</div>
-                        <div className="w-6 h-3 border border-white rounded-sm">
+                        <div className="w-5 h-2.5 border border-white rounded-sm">
                           <div className="w-full h-full bg-green-500 rounded-sm"></div>
                         </div>
                       </div>
                     </div>
 
                     {/* App header */}
-                    <div className="px-6 py-4">
+                    <div className="px-5 py-3">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <img src="/Reppo-Logo.png" alt="Reppo" className="h-8 w-auto" />
-                          <span className="text-white font-bold text-lg">Reppo</span>
+                        <div className="flex items-center gap-2">
+                          <img src="/Reppo-Logo.png" alt="Reppo" className="h-6 w-auto" />
+                          <span className="text-white font-bold text-base">Reppo</span>
                         </div>
-                        <span className="text-gray-400 text-sm font-medium">TODAY ↓</span>
+                        <span className="text-gray-400 text-xs font-medium">TODAY ↓</span>
                       </div>
                     </div>
 
                     {/* Main content area - Performance stats */}
-                    <div className="px-6 pb-8 space-y-6">
+                    <div className="px-5 pb-6 space-y-4">
                       {/* Large performance indicator */}
                       <div className="text-center">
-                        <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center relative overflow-hidden">
-                          <div className="absolute inset-0 bg-gradient-to-br from-lime-400/20 to-emerald-400/20"></div>
-                          <span className="text-white text-4xl font-bold relative z-10">+12%</span>
+                        <div className="w-24 h-24 mx-auto mb-3 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center relative overflow-hidden">
+                          <span className="text-white text-2xl font-bold relative z-10">+12%</span>
                         </div>
                         <div className="text-white">
-                          <div className="text-3xl font-bold mb-1">23</div>
-                          <div className="text-sm text-gray-400 font-medium tracking-wide">VICTORIES TODAY</div>
+                          <div className="text-2xl font-bold mb-1">23</div>
+                          <div className="text-xs text-gray-400 font-medium tracking-wide">VICTORIES TODAY</div>
                         </div>
                       </div>
 
                       {/* Stats grid */}
-                      <div className="grid grid-cols-3 gap-4">
+                      <div className="grid grid-cols-3 gap-3">
                         <div className="text-center">
                           <div className="text-white font-bold text-xs mb-1">STREAK</div>
-                          <div className="text-primary text-xl font-bold">15</div>
+                          <div className="text-primary text-lg font-bold">15</div>
                         </div>
                         <div className="text-center">
                           <div className="text-white font-bold text-xs mb-1">WIN RATE</div>
-                          <div className="text-secondary text-xl font-bold">89%</div>
+                          <div className="text-secondary text-lg font-bold">89%</div>
                         </div>
                         <div className="text-center">
                           <div className="text-white font-bold text-xs mb-1">LEVEL</div>
-                          <div className="text-gradient text-xl font-bold">12</div>
+                          <div className="text-gradient text-lg font-bold">12</div>
                         </div>
                       </div>
 
                       {/* Performance chart area */}
-                      <div className="bg-gray-800/50 rounded-xl p-4">
+                      <div className="bg-gray-800/50 rounded-lg p-3">
                         <div className="flex justify-between text-xs text-gray-400 mb-2">
                           <span>6AM</span>
                           <span>12PM</span>
                           <span>6PM</span>
                         </div>
-                        <div className="flex items-end gap-1 h-16">
+                        <div className="flex items-end gap-1 h-12">
                           {/* Simplified bar chart */}
                           {[65, 45, 80, 35, 90, 55, 75, 40, 85, 60, 95, 70].map((height, i) => (
                             <div 
@@ -116,9 +115,9 @@ const HeroSection = () => {
                       </div>
 
                       {/* Today's challenge */}
-                      <div className="text-center bg-gray-900/50 rounded-xl p-4">
-                        <div className="text-gray-400 text-sm mb-1">TODAY'S CHALLENGE</div>
-                        <div className="text-white font-semibold">Outperform Yesterday's Push-ups</div>
+                      <div className="text-center bg-gray-900/50 rounded-lg p-3">
+                        <div className="text-gray-400 text-xs mb-1">TODAY'S CHALLENGE</div>
+                        <div className="text-white font-semibold text-sm">Outperform Yesterday's Push-ups</div>
                         <div className="text-xs text-gray-500 mt-1">Target: 32 reps (vs yesterday's 28)</div>
                       </div>
                     </div>
@@ -128,8 +127,8 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* RIGHT SIDE: Content */}
-          <div className="order-1 lg:order-2 space-y-8 text-center lg:text-left hero-fade-in">
+          {/* RIGHT SIDE: Content - More space */}
+          <div className="order-1 lg:order-2 lg:col-span-3 space-y-8 text-center lg:text-left hero-fade-in">
             
             {/* Social Proof Badges - Top positioned like Opal */}
             <motion.div
@@ -153,7 +152,7 @@ const HeroSection = () => {
               </div>
             </motion.div>
 
-            {/* Main Headline - Opal style with gradient accent */}
+            {/* Main Headline - Updated to "Outperform Yesterday" with gradient on "Yesterday" */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -161,9 +160,9 @@ const HeroSection = () => {
               className="space-y-4"
             >
               <h1 className="text-5xl lg:text-7xl font-black leading-tight text-white">
-                Fitness is 
-                <span className="text-gradient-lime block">
-                  competitive.
+                Outperform{' '}
+                <span className="text-gradient">
+                  Yesterday
                 </span>
               </h1>
             </motion.div>
