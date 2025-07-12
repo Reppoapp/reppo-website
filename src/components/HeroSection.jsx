@@ -23,7 +23,7 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-16 items-center min-h-screen pt-20">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-16 items-center min-h-screen pt-16 pb-20 lg:pt-20">
           
           {/* LEFT SIDE: Phone Mockup */}
           <div className="order-2 lg:order-1 lg:col-span-2 flex justify-center lg:justify-start">
@@ -31,7 +31,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="relative max-w-xs mx-auto lg:mx-0"
+              className="relative w-full max-w-[280px] sm:max-w-xs mx-auto lg:mx-0"
             >
               <div className="relative transform -rotate-3 hover:rotate-0 transition-transform duration-700 phone-float">
                 {/* Phone frame with realistic shadows */}
@@ -39,7 +39,7 @@ const HeroSection = () => {
                   <div className="bg-black rounded-[2rem] overflow-hidden relative">
                     
                     {/* Status bar */}
-                    <div className="flex justify-between items-center px-5 pt-3 text-white text-xs">
+                    <div className="flex justify-between items-center px-4 sm:px-5 pt-3 text-white text-xs">
                       <span className="font-medium">9:41</span>
                       <div className="flex items-center gap-1">
                         <div className="flex gap-1">
@@ -55,42 +55,42 @@ const HeroSection = () => {
                     </div>
 
                     {/* App header */}
-                    <div className="px-5 py-3">
+                    <div className="px-4 sm:px-5 py-3">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <img src="/Reppo-Logo.png" alt="Reppo" className="h-6 w-auto" />
-                          <span className="text-white font-bold text-base">Reppo</span>
+                          <img src="/Reppo-Logo.png" alt="Reppo" className="h-5 sm:h-6 w-auto" />
+                          <span className="text-white font-bold text-sm sm:text-base">Reppo</span>
                         </div>
                         <span className="text-gray-400 text-xs font-medium">TODAY ↓</span>
                       </div>
                     </div>
 
                     {/* Main content area - Performance stats */}
-                    <div className="px-5 pb-6 space-y-4">
+                    <div className="px-4 sm:px-5 pb-6 space-y-4">
                       {/* Large performance indicator */}
                       <div className="text-center">
-                        <div className="w-24 h-24 mx-auto mb-3 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center relative overflow-hidden">
-                          <span className="text-white text-2xl font-bold relative z-10">+12%</span>
+                        <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center relative overflow-hidden">
+                          <span className="text-white text-xl sm:text-2xl font-bold relative z-10">+12%</span>
                         </div>
                         <div className="text-white">
-                          <div className="text-2xl font-bold mb-1">23</div>
+                          <div className="text-xl sm:text-2xl font-bold mb-1">23</div>
                           <div className="text-xs text-gray-400 font-medium tracking-wide">VICTORIES TODAY</div>
                         </div>
                       </div>
 
                       {/* Stats grid */}
-                      <div className="grid grid-cols-3 gap-3">
+                      <div className="grid grid-cols-3 gap-2 sm:gap-3">
                         <div className="text-center">
                           <div className="text-white font-bold text-xs mb-1">STREAK</div>
-                          <div className="text-primary text-lg font-bold">15</div>
+                          <div className="text-primary text-base sm:text-lg font-bold">15</div>
                         </div>
                         <div className="text-center">
                           <div className="text-white font-bold text-xs mb-1">WIN RATE</div>
-                          <div className="text-secondary text-lg font-bold">89%</div>
+                          <div className="text-secondary text-base sm:text-lg font-bold">89%</div>
                         </div>
                         <div className="text-center">
                           <div className="text-white font-bold text-xs mb-1">LEVEL</div>
-                          <div className="text-gradient text-lg font-bold">12</div>
+                          <div className="text-gradient text-base sm:text-lg font-bold">12</div>
                         </div>
                       </div>
 
@@ -101,7 +101,7 @@ const HeroSection = () => {
                           <span>12PM</span>
                           <span>6PM</span>
                         </div>
-                        <div className="flex items-end gap-1 h-12">
+                        <div className="flex items-end gap-1 h-10 sm:h-12">
                           {/* Simplified bar chart */}
                           {[65, 45, 80, 35, 90, 55, 75, 40, 85, 60, 95, 70].map((height, i) => (
                             <div 
@@ -127,27 +127,27 @@ const HeroSection = () => {
           </div>
 
           {/* RIGHT SIDE: Content */}
-          <div className="order-1 lg:order-2 lg:col-span-3 space-y-8 text-center lg:text-left">
+          <div className="order-1 lg:order-2 lg:col-span-3 space-y-6 sm:space-y-8 text-center lg:text-left px-2 sm:px-0">
             
             {/* Social Proof Badges - Top positioned like Opal */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 lg:gap-6"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 lg:gap-6"
             >
-              <div className="flex items-center gap-2 bg-white/5 backdrop-blur border border-white/10 rounded-full px-4 py-2">
-                <div className="text-green-400">🏆</div>
-                <span className="text-white text-sm font-medium">Featured App</span>
+              <div className="flex items-center gap-2 bg-white/5 backdrop-blur border border-white/10 rounded-full px-3 sm:px-4 py-2">
+                <div className="text-green-400 text-sm sm:text-base">🏆</div>
+                <span className="text-white text-xs sm:text-sm font-medium">Featured App</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-sm">★</span>
+                    <span key={i} className="text-xs sm:text-sm">★</span>
                   ))}
                 </div>
-                <span className="text-white font-bold">4.9</span>
-                <span className="text-gray-400 text-sm">47K+ ratings</span>
+                <span className="text-white font-bold text-sm sm:text-base">4.9</span>
+                <span className="text-gray-400 text-xs sm:text-sm">47K+ ratings</span>
               </div>
             </motion.div>
 
@@ -158,7 +158,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-4"
             >
-              <h1 className="text-5xl lg:text-7xl font-black leading-tight text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight text-white">
                 Outperform{' '}
                 <span className="text-gradient">
                   Yesterday
@@ -172,7 +172,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
               The elite fitness community where yesterday's you becomes today's competition. Join 47,000+ athletes who've cracked the code to unstoppable daily progress.
             </motion.p>
@@ -182,11 +182,11 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex flex-wrap justify-center lg:justify-start gap-3"
+              className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3"
             >
-              <span className="bg-white/10 backdrop-blur border border-white/10 rounded-full px-4 py-2 text-sm font-medium">🔥 Daily Streaks</span>
-              <span className="bg-white/10 backdrop-blur border border-white/10 rounded-full px-4 py-2 text-sm font-medium">🏆 AI Challenges</span>
-              <span className="bg-white/10 backdrop-blur border border-white/10 rounded-full px-4 py-2 text-sm font-medium">⚡ Real Progress</span>
+              <span className="bg-white/10 backdrop-blur border border-white/10 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium">🔥 Daily Streaks</span>
+              <span className="bg-white/10 backdrop-blur border border-white/10 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium">🏆 AI Challenges</span>
+              <span className="bg-white/10 backdrop-blur border border-white/10 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium">⚡ Real Progress</span>
             </motion.div>
 
             {/* Dual CTA Buttons */}
@@ -194,13 +194,13 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={scrollToWaitlist}
-                className="bg-gradient-primary text-white font-semibold px-8 py-4 rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-gradient-primary text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base min-h-[48px] w-full sm:w-auto"
               >
                 <span>Join the Movement</span>
                 <span>🚀</span>
@@ -209,25 +209,24 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={scrollToDemo}
-                className="border-2 border-white/20 text-white font-semibold px-8 py-4 rounded-full hover:border-white/40 hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
+                className="border-2 border-white/20 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:border-white/40 hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base min-h-[48px] w-full sm:w-auto"
               >
                 <span>Watch Demo</span>
                 <span>▶️</span>
               </motion.button>
             </motion.div>
 
-
           </div>
         </div>
         
-        {/* Bottom Statistics - Opal style */}
+        {/* Bottom Statistics - Opal style - Mobile Optimized */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center"
+          className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-center px-4 w-full max-w-4xl"
         >
-          <div className="text-gray-400 text-lg font-medium tracking-wider">
+          <div className="text-gray-400 text-sm sm:text-base lg:text-lg font-medium tracking-wider leading-relaxed">
             <span className="text-white font-bold">2.3M</span> daily check-ins, <span className="text-white font-bold">127</span> avg streak days with Reppo
           </div>
         </motion.div>

@@ -12,7 +12,7 @@ const ProblemSection = () => {
   }
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="py-16 sm:py-20 px-4 relative overflow-hidden">
       {/* Subtle background elements for smooth flow */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/3 w-64 h-64 bg-primary/5 rounded-full blur-3xl opacity-40"></div>
@@ -27,21 +27,21 @@ const ProblemSection = () => {
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
             Most Fitness Apps Lack{' '}
             <span className="text-gradient">Real Competition</span>
           </h2>
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed px-2">
             They track your workouts but ignore what really drives you: <span className="text-text-primary font-semibold">recognition, status, and belonging to something exclusive.</span>
           </p>
         </motion.div>
 
-        {/* Problem-Solution Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Problem-Solution Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           
-          {/* Problem Cards */}
+          {/* Problem Side */}
           <motion.div
             initial="initial"
             whileInView="animate"
@@ -53,38 +53,34 @@ const ProblemSection = () => {
                 transition: { duration: 0.6, delay: 0.1, ease: "easeOut" }
               }
             }}
-            className="space-y-6"
+            className="space-y-6 sm:space-y-8"
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-red-400 mb-8 flex items-center gap-3">
-              <span className="text-3xl">❌</span>
-              The Problem
-            </h3>
-            
-            <div className="space-y-6">
-              <div className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 transition-all duration-300">
-                <h4 className="text-xl font-bold text-text-primary mb-3">No Personal Competition</h4>
-                <p className="text-text-secondary leading-relaxed">
-                  You track workouts but never truly compete. Where's the challenge that pushes you beyond your comfort zone every single day?
-                </p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 transition-all duration-300">
-                <h4 className="text-xl font-bold text-text-primary mb-3">Competing Against Random Strangers</h4>
-                <p className="text-text-secondary leading-relaxed">
-                  Leaderboards with people you'll never meet don't inspire real progress. Your best competition is the person you were yesterday.
-                </p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 transition-all duration-300">
-                <h4 className="text-xl font-bold text-text-primary mb-3">No Evolution, No Real Progress</h4>
-                <p className="text-text-secondary leading-relaxed">
-                  Your improvements disappear into data points. You deserve to see yourself evolve and witness your transformation in real-time.
-                </p>
-              </div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <div className="text-3xl sm:text-4xl mb-4 sm:mb-6">😴</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4">Generic Fitness Tracking</h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                Most apps just count your reps and calories. Zero personalization, zero challenge, zero reason to push harder tomorrow.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <div className="text-3xl sm:text-4xl mb-4 sm:mb-6">👥</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4">Competing Against Strangers</h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                Why compete against random people when your biggest competition is who you were yesterday? That's where real growth happens.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <div className="text-3xl sm:text-4xl mb-4 sm:mb-6">📱</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4">No Real Status or Recognition</h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                Generic badges and meaningless streaks don't build the exclusive identity that drives elite performance athletes.
+              </p>
             </div>
           </motion.div>
 
-          {/* Solution Cards */}
+          {/* Solution Side */}
           <motion.div
             initial="initial"
             whileInView="animate"
@@ -96,40 +92,35 @@ const ProblemSection = () => {
                 transition: { duration: 0.6, delay: 0.2, ease: "easeOut" }
               }
             }}
-            className="space-y-6"
+            className="space-y-6 sm:space-y-8"
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-green-400 mb-8 flex items-center gap-3">
-              <span className="text-3xl">✅</span>
-              The Reppo Way
-            </h3>
-            
-            <div className="space-y-6">
-              <div className="bg-white/5 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10">
-                <h4 className="text-xl font-bold text-text-primary mb-3">AI-Powered Self Competition</h4>
-                <p className="text-text-secondary leading-relaxed">
-                  Advanced AI creates personalized challenges from your workout history. Every session, you compete against a smarter version of yesterday's performance.
-                </p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10">
-                <h4 className="text-xl font-bold text-text-primary mb-3">Progressive Challenge System</h4>
-                <p className="text-text-secondary leading-relaxed">
-                  Our AI learns your patterns and creates increasingly intelligent challenges. Beat yesterday's you, then face an even stronger version tomorrow.
-                </p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10">
-                <h4 className="text-xl font-bold text-text-primary mb-3">Victory-Based Progression</h4>
-                <p className="text-text-secondary leading-relaxed">
-                  Every win over your past self unlocks exclusive rewards, advanced challenges, and proves your commitment to constant evolution.
-                </p>
-              </div>
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm border border-primary/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-primary/30 hover:from-primary/15 hover:to-secondary/15 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <div className="text-3xl sm:text-4xl mb-4 sm:mb-6">🧠</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4">AI-Powered Personal Competition</h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                Our AI analyzes your patterns and creates intelligent challenges that push you exactly where you need to grow most.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm border border-primary/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-primary/30 hover:from-primary/15 hover:to-secondary/15 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <div className="text-3xl sm:text-4xl mb-4 sm:mb-6">⚔️</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4">Battle Yesterday's You</h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                Every workout becomes a head-to-head competition against your previous self. Track wins, losses, and breakthrough moments.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm border border-primary/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-primary/30 hover:from-primary/15 hover:to-secondary/15 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <div className="text-3xl sm:text-4xl mb-4 sm:mb-6">👑</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4">Elite Performance Athlete Status</h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                Build genuine status through consistent self-improvement victories. Join an exclusive community that recognizes real progress.
+              </p>
             </div>
           </motion.div>
-          
         </div>
 
-        {/* Transition Statement */}
+        {/* Bottom Statement */}
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -141,10 +132,10 @@ const ProblemSection = () => {
               transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
             }
           }}
-          className="text-center mt-16 pt-8 border-t border-white/10"
+          className="text-center mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10"
         >
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Ready to join a platform that actually <span className="text-gradient font-semibold">rewards your dedication</span>?
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed px-2">
+            Stop settling for generic fitness tracking. <span className="text-gradient font-semibold">Your only competition is who you were yesterday.</span>
           </p>
         </motion.div>
         

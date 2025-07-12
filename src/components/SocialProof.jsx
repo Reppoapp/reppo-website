@@ -43,7 +43,7 @@ const SocialProof = () => {
   ]
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="py-16 sm:py-20 px-4 relative overflow-hidden">
       {/* Subtle background elements for smooth flow */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-40"></div>
@@ -58,18 +58,18 @@ const SocialProof = () => {
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
             Trusted by <span className="text-gradient">Performance Athletes</span>
           </h2>
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed px-2">
             Join thousands of performance athletes who've already discovered{' '}
             <span className="text-text-primary font-semibold">what real AI-powered fitness challenges look like</span>
           </p>
         </motion.div>
 
-        {/* Stats Grid */}
+        {/* Stats Grid - Optimized for Mobile */}
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -81,20 +81,20 @@ const SocialProof = () => {
               transition: { duration: 0.6, delay: 0.1, ease: "easeOut" }
             }
           }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16"
         >
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
             >
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-2xl sm:text-3xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}
               </div>
-              <div className="text-2xl sm:text-3xl font-black text-gradient mb-2">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-black text-gradient mb-1 sm:mb-2">
                 {stat.number}
               </div>
-              <div className="text-text-secondary text-sm font-medium">
+              <div className="text-text-secondary text-xs sm:text-sm font-medium leading-tight">
                 {stat.label}
               </div>
             </div>
@@ -102,7 +102,7 @@ const SocialProof = () => {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -116,34 +116,34 @@ const SocialProof = () => {
                   transition: { duration: 0.6, delay: (index + 2) * 0.1, ease: "easeOut" }
                 }
               }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
             >
               {/* Quote */}
-              <div className="mb-6">
-                <p className="text-text-secondary leading-relaxed italic">
+              <div className="mb-4 sm:mb-6">
+                <p className="text-text-secondary leading-relaxed italic text-sm sm:text-base">
                   "{testimonial.content}"
                 </p>
               </div>
 
               {/* Author */}
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-sm">
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-xs sm:text-sm">
                     {testimonial.avatar}
                   </span>
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center space-x-2">
-                    <h4 className="text-text-primary font-bold">
+                    <h4 className="text-text-primary font-bold text-sm sm:text-base">
                       {testimonial.name}
                     </h4>
                     {testimonial.verified && (
-                      <div className="w-5 h-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
                         <span className="text-white text-xs">✓</span>
                       </div>
                     )}
                   </div>
-                  <p className="text-text-secondary text-sm">
+                  <p className="text-text-secondary text-xs sm:text-sm">
                     {testimonial.role}
                   </p>
                 </div>
@@ -164,9 +164,9 @@ const SocialProof = () => {
               transition: { duration: 0.6, delay: 0.5, ease: "easeOut" }
             }
           }}
-          className="text-center mt-16 pt-8 border-t border-white/10"
+          className="text-center mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10"
         >
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed px-2">
             Your turn to join the <span className="text-gradient font-semibold">performance athlete community</span>
           </p>
         </motion.div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import InlineCTA from './InlineCTA'
 
 const HowItWorks = () => {
   const fadeInUp = {
@@ -15,30 +14,33 @@ const HowItWorks = () => {
   const steps = [
     {
       number: "01",
-      title: "Complete Your First Workout",
-      description: "Track any exercise and our AI analyzes your performance to create your personalized challenge benchmark for tomorrow.",
-      icon: "📊"
+      title: "Connect Your Fitness Data",
+      description: "Link your existing fitness apps or input your workout history. Our AI analyzes your patterns, strengths, and improvement areas.",
+      icon: "📊",
+      color: "from-primary to-secondary"
     },
     {
       number: "02", 
-      title: "Face Tomorrow's Challenge",
-      description: "Each day, compete against an AI-enhanced version of yesterday's performance. Win and the challenge evolves. Lose and train for revenge.",
-      icon: "⚔️"
+      title: "AI Creates Your Daily Challenge",
+      description: "Every morning, receive a personalized challenge designed to push you exactly where you need to grow most. Beat yesterday's you.",
+      icon: "🧠",
+      color: "from-secondary to-primary"
     },
     {
       number: "03",
-      title: "Challenge Others & Legends",
-      description: "Compete against AI recreations of other users' best performances and even challenge celebrity athlete benchmarks.",
-      icon: "🏆"
+      title: "Compete and Evolve",
+      description: "Complete your challenge, track your victory, and unlock your next level. Watch yourself evolve from competitor to champion.",
+      icon: "🏆",
+      color: "from-primary to-secondary"
     }
   ]
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="how-it-works" className="py-16 sm:py-20 px-4 relative overflow-hidden">
       {/* Subtle background elements for smooth flow */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-1/3 w-80 h-80 bg-secondary/5 rounded-full blur-3xl opacity-40"></div>
-        <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-primary/5 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-30"></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -49,20 +51,19 @@ const HowItWorks = () => {
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
-            How <span className="text-gradient">Self-Competition Works</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
+            How <span className="text-gradient">AI Competition</span> Works
           </h2>
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Three simple steps to start{' '}
-            <span className="text-text-primary font-semibold">competing against yourself</span>{' '}
-            and unlock the most advanced AI-powered fitness challenges.
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed px-2">
+            Three simple steps to transform your fitness journey into{' '}
+            <span className="text-text-primary font-semibold">intelligent self-competition</span>
           </p>
         </motion.div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -73,51 +74,63 @@ const HowItWorks = () => {
                 ...fadeInUp,
                 animate: {
                   ...fadeInUp.animate,
-                  transition: { duration: 0.6, delay: index * 0.1, ease: "easeOut" }
+                  transition: { duration: 0.6, delay: index * 0.2, ease: "easeOut" }
                 }
               }}
               className="relative"
             >
-              {/* Step Card */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group h-full">
-                
-                {/* Step Number */}
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
-                    {step.icon}
-                  </div>
-                  <div className="text-6xl font-black text-gradient opacity-20 group-hover:opacity-40 transition-opacity duration-300">
-                    {step.number}
-                  </div>
+              {/* Step Number */}
+              <div className="flex items-center justify-center lg:justify-start mb-6 sm:mb-8">
+                <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center text-white font-black text-xl sm:text-2xl shadow-lg`}>
+                  {step.number}
                 </div>
-                
-                {/* Step Content */}
-                <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4 group-hover:text-gradient transition-colors duration-300">
+              </div>
+
+              {/* Step Content */}
+              <div className="text-center lg:text-left">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">{step.icon}</div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-3 sm:mb-4">
                   {step.title}
                 </h3>
-                <p className="text-text-secondary leading-relaxed text-lg">
+                <p className="text-text-secondary leading-relaxed text-sm sm:text-base lg:text-lg">
                   {step.description}
                 </p>
               </div>
 
-              {/* Connection Line (except for last item) */}
+              {/* Connecting Line (Desktop Only) */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-6 w-12 h-px bg-gradient-to-r from-primary/30 to-secondary/30 transform -translate-y-1/2"></div>
+                <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary/30 to-secondary/30 transform translate-x-4"></div>
               )}
             </motion.div>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <InlineCTA
-            title="Start Outperforming Yesterday Today"
-            description="Simple to start, impossible to fake. Your AI challenges evolve with every workout."
-            buttonText="Begin My Journey"
-            size="medium"
-            className="max-w-2xl mx-auto"
-          />
-        </div>
+        {/* Bottom CTA */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            ...fadeInUp,
+            animate: {
+              ...fadeInUp.animate,
+              transition: { duration: 0.6, delay: 0.8, ease: "easeOut" }
+            }
+          }}
+          className="text-center mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10"
+        >
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2">
+            Ready to start competing against <span className="text-gradient font-semibold">the only opponent that matters</span>?
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-gradient-primary text-white font-semibold px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 text-sm sm:text-base lg:text-lg min-h-[48px] w-full sm:w-auto max-w-sm mx-auto"
+          >
+            Join the Elite Competition
+          </motion.button>
+        </motion.div>
         
       </div>
       

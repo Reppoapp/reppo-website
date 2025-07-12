@@ -9,15 +9,15 @@ const FeatureCard = ({ title, description, icon, delay = 0 }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: delay * 0.1, ease: "easeOut" }}
       viewport={{ once: true, margin: "-100px" }}
-      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group h-full"
+      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group h-full"
     >
-      <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+      <div className="text-3xl sm:text-4xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
-      <h3 className="text-xl sm:text-2xl font-bold mb-4 text-text-primary group-hover:text-gradient transition-colors duration-300">
+      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 text-text-primary group-hover:text-gradient transition-colors duration-300">
         {title}
       </h3>
-      <p className="text-text-secondary leading-relaxed">
+      <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
         {description}
       </p>
     </motion.div>
@@ -37,38 +37,38 @@ const FeatureGrid = () => {
   const features = [
     {
       title: "AI Challenge Engine",
-      description: "Advanced machine learning analyzes your workout patterns and creates personalized challenges that evolve with your progress. Never plateau again.",
-      icon: "🤖"
+      description: "Our proprietary AI analyzes your performance patterns and creates personalized challenges that push you exactly where you need to grow most.",
+      icon: "🧠"
     },
     {
-      title: "Live Competition Interface",
-      description: "Real-time performance tracking shows you exactly how you're performing against yesterday's you. Every rep becomes a victory or learning moment.",
+      title: "Yesterday vs Today Battles",
+      description: "Every workout becomes a head-to-head competition against your previous self. Track wins, losses, and breakthrough moments in real-time.",
       icon: "⚔️"
     },
     {
-      title: "Progressive Challenge System",
-      description: "Our AI learns from every workout, creating increasingly intelligent challenges that push you just beyond your current limits. Always growing.",
-      icon: "📈"
+      title: "Elite Performance Tracking",
+      description: "Advanced metrics that go beyond basic fitness apps. Measure improvement velocity, consistency streaks, and performance acceleration.",
+      icon: "📊"
     },
     {
-      title: "Celebrity Challenge Library",
-      description: "Train against performance data from elite athletes and fitness legends. See how you measure up against your heroes' actual workouts.",
-      icon: "🌟"
-    },
-    {
-      title: "Victory History & Progression",
-      description: "Track every win against your past self, document breakthrough moments, and watch your fitness identity evolve through proven achievements.",
-      icon: "📜"
-    },
-    {
-      title: "Community Competition Hub",
-      description: "Challenge other users' best performances, join competitive leagues, and build your reputation through consistent self-improvement victories.",
+      title: "Community Leaderboards",
+      description: "Compete anonymously with other performance athletes. See how your self-improvement rate stacks up against the elite fitness community.",
       icon: "🏆"
+    },
+    {
+      title: "Smart Recovery Insights",
+      description: "AI-powered recovery recommendations that ensure you're competing at peak performance every single day without burnout.",
+      icon: "🔄"
+    },
+    {
+      title: "Achievement Unlocks",
+      description: "Unlock exclusive badges, performance milestones, and elite status levels as you consistently outperform your previous self.",
+      icon: "🎖️"
     }
   ]
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="py-16 sm:py-20 px-4 relative overflow-hidden">
       {/* Subtle background elements for smooth flow */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-secondary/5 rounded-full blur-3xl opacity-40"></div>
@@ -83,20 +83,20 @@ const FeatureGrid = () => {
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-primary mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
             The Future of{' '}
             <span className="text-gradient">Personal Competition</span>
           </h2>
-          <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed px-2">
             Forget generic fitness tracking. Reppo creates intelligent challenges that separate{' '}
             <span className="text-text-primary font-semibold">elite competitors from casual users.</span>
           </p>
         </motion.div>
 
         {/* Features Grid - 2x3 layout for better balance */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -106,17 +106,16 @@ const FeatureGrid = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 pt-8 border-t border-white/10">
+        {/* Inline CTA - Positioned after features */}
+        <div className="mt-12 sm:mt-16">
           <InlineCTA
-            title="Ready to Unlock AI Performance Challenges?"
-            description="Join the exclusive community of performance athletes who get access to these premium features and more."
-            buttonText="Get Early Access"
-            size="medium"
-            className="max-w-2xl mx-auto"
+            title="Ready to Compete Against Yesterday?"
+            description="Join thousands of performance athletes who've made the switch from generic fitness tracking to intelligent self-competition."
+            size="large"
+            className="max-w-4xl mx-auto"
           />
         </div>
-        
+
       </div>
       
       {/* Smooth transition to next section */}
