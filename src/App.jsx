@@ -503,7 +503,7 @@ const Footer = ({ isLoaded }) => {
           
           {/* Copyright */}
           <div className="text-gray-400 text-sm">
-            © 2024 Reppo. All rights reserved. Built with ❤️ for performance athletes.
+            © 2024 Reppo. All rights reserved. Built by athletes, for athletes.
           </div>
 
           {/* Legal Links */}
