@@ -44,8 +44,24 @@
 
   /* Focus management for accessibility */
   *:focus {
+    outline: none;
+  }
+
+  /* Only show focus outline for keyboard navigation */
+  *:focus-visible {
     outline: 2px solid #FF3B30;
     outline-offset: 2px;
+  }
+
+  /* Remove focus outline for buttons and interactive elements */
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus,
+  a:focus,
+  [role="button"]:focus,
+  [role="menuitem"]:focus {
+    outline: none;
   }
 
   /* Screen reader only content */
