@@ -478,23 +478,7 @@ const FinalCTA = () => {
             </motion.div>
           </div>
           
-          {/* Trust Signals */}
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">⚡</span>
-                <span className="font-medium">Instant access</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">👑</span>
-                <span className="font-medium">Lifetime benefits</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">🔒</span>
-                <span className="font-medium">No spam, ever</span>
-              </div>
-            </div>
-          </div>
+
           
           <div className="pt-6 sm:pt-8 border-t border-white/10">
             <p className="text-text-secondary text-sm sm:text-base max-w-3xl mx-auto leading-relaxed px-2">
