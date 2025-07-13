@@ -163,30 +163,32 @@ const ProblemSection = () => {
                     transition: { duration: 0.6, delay: index * 0.1, ease: "easeOut" }
                   }
                 }}
-                className="bg-white/5 backdrop-blur-[10px] border border-white/10 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:bg-white/10 hover:border-white/20 group relative h-full flex flex-col"
+                className="bg-white/5 backdrop-blur-[10px] border border-white/10 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:bg-white/10 hover:border-white/20 group relative min-h-[320px] flex flex-col"
                 style={{
                   boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
                   backdropFilter: 'blur(10px)',
                   WebkitBackdropFilter: 'blur(10px)'
                 }}
               >
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="text-3xl mb-4 opacity-60">
-                    {card.icon}
+                <div className="relative z-10 flex flex-col justify-between h-full">
+                  <div>
+                    <div className="text-3xl mb-4 opacity-60">
+                      {card.icon}
+                    </div>
+                    
+                    <div className="bg-gray-500/20 border border-gray-400/30 rounded-full px-3 py-1 inline-block mb-3">
+                      <span className="text-gray-300 text-xs font-medium uppercase tracking-wide">
+                        {card.painPoint}
+                      </span>
+                    </div>
+                    
+                    <h4 className="text-xl sm:text-2xl font-semibold text-white mb-3 sm:mb-4">
+                      {card.title}
+                    </h4>
+                    <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
+                      {card.description}
+                    </p>
                   </div>
-                  
-                  <div className="bg-gray-500/20 border border-gray-400/30 rounded-full px-3 py-1 inline-block mb-3">
-                    <span className="text-gray-300 text-xs font-medium uppercase tracking-wide">
-                      {card.painPoint}
-                    </span>
-                  </div>
-                  
-                  <h4 className="text-xl sm:text-2xl font-semibold text-white mb-3 sm:mb-4">
-                    {card.title}
-                  </h4>
-                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base flex-grow">
-                    {card.description}
-                  </p>
                   
                   {/* Spacer to match solution cards height */}
                   <div className="pt-3 mt-4 border-t border-white/10">
@@ -229,7 +231,7 @@ const ProblemSection = () => {
                   },
                   ...cardHover
                 }}
-                className={`bg-gradient-to-br ${card.gradient} backdrop-blur-[20px] border ${card.borderColor} rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl cursor-pointer group relative overflow-hidden h-full flex flex-col`}
+                className={`bg-gradient-to-br ${card.gradient} backdrop-blur-[20px] border ${card.borderColor} rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl cursor-pointer group relative overflow-hidden min-h-[320px] flex flex-col`}
                 style={{
                   boxShadow: '0 8px 32px rgba(255, 59, 48, 0.2)',
                   backdropFilter: 'blur(20px)',
@@ -239,29 +241,31 @@ const ProblemSection = () => {
                 {/* Animated background overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
-                <div className="relative z-10 flex flex-col h-full">
-                  <motion.div 
-                    variants={iconAnimation}
-                    className="text-4xl sm:text-5xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    {card.icon}
-                  </motion.div>
-                  
-                  <div className="bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur border border-primary/30 rounded-full px-3 py-1 inline-block mb-3">
-                    <span className="text-primary text-xs font-semibold uppercase tracking-wide">
-                      {card.benefit}
-                    </span>
+                <div className="relative z-10 flex flex-col justify-between h-full">
+                  <div>
+                    <motion.div 
+                      variants={iconAnimation}
+                      className="text-4xl sm:text-5xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300"
+                    >
+                      {card.icon}
+                    </motion.div>
+                    
+                    <div className="bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur border border-primary/30 rounded-full px-3 py-1 inline-block mb-3">
+                      <span className="text-primary text-xs font-semibold uppercase tracking-wide">
+                        {card.benefit}
+                      </span>
+                    </div>
+                    
+                    <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-gradient transition-colors duration-300">
+                      {card.title}
+                    </h4>
+                    <p className="text-text-secondary leading-relaxed text-sm sm:text-base lg:text-lg mb-4">
+                      {card.description}
+                    </p>
                   </div>
                   
-                  <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-gradient transition-colors duration-300">
-                    {card.title}
-                  </h4>
-                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base lg:text-lg mb-4 flex-grow">
-                    {card.description}
-                  </p>
-                  
                   {/* Success Metric */}
-                  <div className="flex items-center gap-2 pt-3 border-t border-white/10 mt-auto">
+                  <div className="flex items-center gap-2 pt-3 border-t border-white/10">
                     <span className="text-green-400 text-sm">✅</span>
                     <span className="text-green-300 text-sm font-semibold">
                       {card.successMetric}
