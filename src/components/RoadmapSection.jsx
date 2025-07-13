@@ -203,10 +203,7 @@ const RoadmapSection = () => {
               <p className="text-sm text-gray-400">{item.timeline}</p>
             </div>
           </div>
-          <div className="text-right">
-            <div className="text-2xl font-black text-gradient mb-1">{item.completion}%</div>
-            <div className="text-xs text-gray-400">Complete</div>
-          </div>
+
         </div>
 
         {/* Progress Bar */}
