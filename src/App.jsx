@@ -156,6 +156,30 @@ const Navigation = ({ isLoaded }) => {
     }
   }
 
+  // Function to get nav item styling based on active state
+  const getNavItemClass = (path) => {
+    const isActive = location.pathname === path
+    const baseClass = "font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1 transition-all duration-300"
+    
+    if (isActive) {
+      return `${baseClass} bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent font-bold`
+    }
+    
+    return `${baseClass} text-gray-300 hover:text-white`
+  }
+
+  // Function to get mobile nav item styling
+  const getMobileNavItemClass = (path) => {
+    const isActive = location.pathname === path
+    const baseClass = "block font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1 transition-all duration-300"
+    
+    if (isActive) {
+      return `${baseClass} bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent font-bold`
+    }
+    
+    return `${baseClass} text-gray-300 hover:text-white`
+  }
+
   return (
     <motion.nav 
       initial={{ opacity: 0, y: -20 }}
@@ -192,38 +216,22 @@ const Navigation = ({ isLoaded }) => {
           
           {/* Desktop Navigation Menu */}
           <nav className="hidden md:flex items-center space-x-8" role="menubar">
-            <Link 
-              to="/features" 
-              className="text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
-              role="menuitem"
-              aria-label="Explore platform features"
-            >
-              Features
-            </Link>
-            <Link 
-              to="/community" 
-              className="text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
-              role="menuitem"
-              aria-label="Join our community"
-            >
-              Community
-            </Link>
-            <Link 
-              to="/roadmap" 
-              className="text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
-              role="menuitem"
-              aria-label="View development roadmap"
-            >
-              Roadmap
-            </Link>
-            <Link 
-              to="/about" 
-              className="text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
-              role="menuitem"
-              aria-label="Learn about our story"
-            >
-              About
-            </Link>
+            {navItems.map((item) => (
+              <Link 
+                key={item.path}
+                to={item.path} 
+                className={getNavItemClass(item.path)}
+                role="menuitem"
+                aria-label={`Navigate to ${item.name}`}
+                style={location.pathname === item.path ? {
+                  backgroundImage: 'linear-gradient(135deg, #FF3B30 0%, #8B5CF6 50%, #2979FF 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent'
+                } : {}}
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
 
           {/* CTA Button */}
@@ -266,38 +274,22 @@ const Navigation = ({ isLoaded }) => {
             aria-label="Mobile navigation menu"
           >
             <div className="px-4 py-6 space-y-4">
-              <Link 
-                to="/features" 
-                className="block text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                role="menuitem"
-              >
-                Features
-              </Link>
-              <Link 
-                to="/community" 
-                className="block text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                role="menuitem"
-              >
-                Community
-              </Link>
-              <Link 
-                to="/roadmap" 
-                className="block text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                role="menuitem"
-              >
-                Roadmap
-              </Link>
-              <Link 
-                to="/about" 
-                className="block text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                role="menuitem"
-              >
-                About
-              </Link>
+              {navItems.map((item) => (
+                <Link 
+                  key={item.path}
+                  to={item.path} 
+                  className={getMobileNavItemClass(item.path)}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  role="menuitem"
+                  style={location.pathname === item.path ? {
+                    backgroundImage: 'linear-gradient(135deg, #FF3B30 0%, #8B5CF6 50%, #2979FF 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  } : {}}
+                >
+                  {item.name}
+                </Link>
+              ))}
               
               <Link
                 to="/join"
