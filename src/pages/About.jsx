@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import ProblemSection from '../components/ProblemSection'
-import InlineCTA from '../components/InlineCTA'
 
 const About = () => {
   // Ensure page starts at top when loaded - enhanced for reliability
@@ -38,15 +37,6 @@ const About = () => {
     <div className="pt-16">
       {/* Problem Section - Our mission and vision */}
       <ProblemSection />
-      
-      {/* CTA to learn more or join */}
-      <InlineCTA 
-        title="Ready to Transform Your Fitness Journey?"
-        subtitle="Join the movement that's changing how athletes approach daily training"
-        primaryButtonText="Start Your Journey"
-        size="large"
-        className="my-16"
-      />
     </div>
   )
 }
