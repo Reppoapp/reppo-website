@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet'
+import { supabase } from './lib/supabase'
 import Home from './pages/Home'
 import About from './pages/About'
 import Features from './pages/Features'
@@ -311,6 +312,7 @@ const Navigation = ({ isLoaded }) => {
 const Footer = ({ isLoaded }) => {
   const [newsletterEmail, setNewsletterEmail] = useState('')
   const [newsletterStatus, setNewsletterStatus] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault()
@@ -319,12 +321,29 @@ const Footer = ({ isLoaded }) => {
       return
     }
     
+    setIsSubmitting(true)
+    setNewsletterStatus('')
+    
     try {
-      // Add newsletter signup logic here
-      setNewsletterStatus('Thanks for subscribing! 🚀')
-      setNewsletterEmail('')
+      const { error } = await supabase
+        .from('waitlist')
+        .insert([{ email: newsletterEmail.toLowerCase().trim() }])
+
+      if (error) {
+        if (error.code === '23505') {
+          setNewsletterStatus('You\'re already on the list! 🎉')
+        } else {
+          throw error
+        }
+      } else {
+        setNewsletterStatus('You\'re on the list! Welcome to the performance athlete circle. 👑')
+        setNewsletterEmail('')
+      }
     } catch (error) {
+      console.error('Error:', error)
       setNewsletterStatus('Something went wrong. Please try again.')
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -376,10 +395,11 @@ const Footer = ({ isLoaded }) => {
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-3 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
-                  aria-label="Subscribe to newsletter"
+                  disabled={isSubmitting}
+                  className="bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-3 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed"
+                  aria-label="Join waitlist"
                 >
-                  Subscribe
+                  {isSubmitting ? 'Joining...' : 'Join Waitlist'}
                 </button>
               </form>
               {newsletterStatus && (
