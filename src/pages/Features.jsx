@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import FeatureGrid from '../components/FeatureGrid'
 import ProfilePreview from '../components/ProfilePreview'
-import HowItWorks from '../components/HowItWorks'
 import InlineCTA from '../components/InlineCTA'
 
 const Features = () => {
@@ -43,9 +42,6 @@ const Features = () => {
       
       {/* Profile Preview - Show the product in action */}
       <ProfilePreview />
-      
-      {/* How It Works - Explain the 3-step process */}
-      <HowItWorks />
       
       {/* CTA to join after seeing features */}
       <InlineCTA 
