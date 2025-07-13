@@ -120,7 +120,7 @@ const InlineCTA = ({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className={`flex-1 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/60 focus:outline-none focus:border-primary focus:bg-white/15 transition-all duration-300 ${currentSize.input}`}
+              className={`flex-1 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/60 focus:outline-none focus:bg-white/15 transition-all duration-300 ${currentSize.input}`}
               disabled={isSubmitting}
             />
             <motion.button

@@ -160,7 +160,7 @@ const Navigation = ({ isLoaded }) => {
   // Function to get nav item styling based on active state
   const getNavItemClass = (path) => {
     const isActive = location.pathname === path
-    const baseClass = "font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1 transition-all duration-300"
+    const baseClass = "font-medium focus:outline-none rounded-lg px-2 py-1 transition-all duration-300"
     
     if (isActive) {
       return `${baseClass} bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent font-bold`
@@ -172,7 +172,7 @@ const Navigation = ({ isLoaded }) => {
   // Function to get mobile nav item styling
   const getMobileNavItemClass = (path) => {
     const isActive = location.pathname === path
-    const baseClass = "block font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1 transition-all duration-300"
+    const baseClass = "block font-medium focus:outline-none rounded-lg px-2 py-1 transition-all duration-300"
     
     if (isActive) {
       return `${baseClass} bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent font-bold`
@@ -194,7 +194,7 @@ const Navigation = ({ isLoaded }) => {
         <div className="flex items-center justify-between h-16">
           <Link 
             to="/" 
-            className="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg"
+            className="flex items-center space-x-3 focus:outline-none rounded-lg"
             aria-label="Reppo home"
             onClick={() => {
               // Ensure scroll to top when clicking logo
@@ -238,7 +238,7 @@ const Navigation = ({ isLoaded }) => {
           {/* CTA Button */}
           <Link
             to="/join"
-            className="hidden md:block bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
+            className="hidden md:block bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 focus:outline-none"
             aria-label="Join waitlist for early access"
           >
             Join Waitlist
@@ -248,7 +248,7 @@ const Navigation = ({ isLoaded }) => {
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             onKeyDown={(e) => handleKeyDown(e, () => setIsMobileMenuOpen(!isMobileMenuOpen))}
-            className="md:hidden text-white hover:text-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded-lg p-2"
+            className="md:hidden text-white hover:text-gray-300 transition-colors focus:outline-none rounded-lg p-2"
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -294,7 +294,7 @@ const Navigation = ({ isLoaded }) => {
               
               <Link
                 to="/join"
-                className="w-full block bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 mt-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black text-center"
+                className="w-full block bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 mt-4 focus:outline-none text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
                 aria-label="Join waitlist for early access"
               >
@@ -396,7 +396,7 @@ const Footer = ({ isLoaded }) => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-3 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-3 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label="Join waitlist"
                 >
                   {isSubmitting ? 'Joining...' : 'Join Waitlist'}

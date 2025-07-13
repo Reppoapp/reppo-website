@@ -316,7 +316,7 @@ const FinalCTA = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email to secure founder status"
-                    className="w-full px-6 sm:px-8 py-4 sm:py-5 lg:py-6 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-base sm:text-lg font-medium min-h-[56px] backdrop-blur-sm"
+                    className="w-full px-6 sm:px-8 py-4 sm:py-5 lg:py-6 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-300 focus:outline-none focus:border-transparent transition-all duration-300 text-base sm:text-lg font-medium min-h-[56px] backdrop-blur-sm"
                     disabled={isSubmitting}
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
