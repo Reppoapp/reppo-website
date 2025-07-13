@@ -428,7 +428,6 @@ const Footer = ({ isLoaded }) => {
               <li><Link to="/roadmap" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Roadmap</Link></li>
               <li><Link to="/join" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Join Waitlist</Link></li>
               <li><Link to="/features" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">How It Works</Link></li>
-              <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">API Documentation</a></li>
             </ul>
           </div>
 
@@ -438,8 +437,6 @@ const Footer = ({ isLoaded }) => {
             <ul className="space-y-3 text-gray-300" role="list">
               <li><Link to="/about" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">About Us</Link></li>
               <li><Link to="/community" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Community</Link></li>
-              <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Press Kit</a></li>
               <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Contact</a></li>
             </ul>
           </div>
