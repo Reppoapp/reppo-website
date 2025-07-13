@@ -155,44 +155,36 @@ const ProblemSection = () => {
                 key={index}
                 initial="initial"
                 whileInView="animate"
-                whileHover="hover"
                 viewport={{ once: true, margin: "-50px" }}
                 variants={{
                   ...fadeInUp,
                   animate: {
                     ...fadeInUp.animate,
                     transition: { duration: 0.6, delay: index * 0.1, ease: "easeOut" }
-                  },
-                  ...cardHover
+                  }
                 }}
-                className={`bg-gradient-to-br ${card.gradient} backdrop-blur-[20px] border ${card.borderColor} rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl cursor-pointer group relative overflow-hidden`}
+                className="bg-white/5 backdrop-blur-[10px] border border-white/10 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:bg-white/10 hover:border-white/20 group relative"
                 style={{
-                  boxShadow: '0 8px 32px rgba(31, 38, 135, 0.2)',
-                  backdropFilter: 'blur(20px)',
-                  WebkitBackdropFilter: 'blur(20px)'
+                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)'
                 }}
               >
-                {/* Animated background overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 <div className="relative z-10">
-                  <motion.div 
-                    variants={iconAnimation}
-                    className="text-4xl sm:text-5xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300"
-                  >
+                  <div className="text-3xl mb-4 opacity-60">
                     {card.icon}
-                  </motion.div>
+                  </div>
                   
-                  <div className="bg-red-500/20 backdrop-blur border border-red-400/30 rounded-full px-3 py-1 inline-block mb-3">
-                    <span className="text-red-300 text-xs font-semibold uppercase tracking-wide">
+                  <div className="bg-gray-500/20 border border-gray-400/30 rounded-full px-3 py-1 inline-block mb-3">
+                    <span className="text-gray-300 text-xs font-medium uppercase tracking-wide">
                       {card.painPoint}
                     </span>
                   </div>
                   
-                  <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-red-300 transition-colors duration-300">
+                  <h4 className="text-xl sm:text-2xl font-semibold text-white mb-3 sm:mb-4">
                     {card.title}
                   </h4>
-                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base lg:text-lg">
+                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                     {card.description}
                   </p>
                 </div>
@@ -210,7 +202,7 @@ const ProblemSection = () => {
               className="text-center lg:text-left mb-8"
             >
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gradient mb-3">
-                🚀 The Solution
+                🚀 The Reppo Solution
               </h3>
               <p className="text-lg sm:text-xl text-gray-300 font-medium">
                 How elite athletes actually achieve breakthrough results
