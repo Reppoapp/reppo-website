@@ -437,29 +437,7 @@ const Footer = ({ isLoaded }) => {
           </div>
         </div>
 
-        {/* Press Mentions & Trust Signals */}
-        <div className="mb-12 py-8 border-t border-b border-white/10">
-          <h4 className="text-white font-semibold mb-6 text-center">Trusted by Performance Athletes</h4>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-            {/* Placeholder press mentions */}
-            <div className="text-center">
-              <div className="text-2xl mb-2" aria-hidden="true">📱</div>
-              <div className="text-sm text-gray-400">Featured in TechCrunch</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl mb-2" aria-hidden="true">🏆</div>
-              <div className="text-sm text-gray-400">App of the Day</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl mb-2" aria-hidden="true">⭐</div>
-              <div className="text-sm text-gray-400">Product Hunt #1</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl mb-2" aria-hidden="true">🎯</div>
-              <div className="text-sm text-gray-400">Fitness Weekly</div>
-            </div>
-          </div>
-        </div>
+
 
         {/* Social Media & Stats */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-8">
@@ -468,17 +446,17 @@ const Footer = ({ isLoaded }) => {
           <div className="flex items-center gap-4">
             <span className="text-gray-400 text-sm">Follow us:</span>
             <div className="flex items-center gap-3">
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full flex items-center justify-center text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Follow us on Twitter">
-                <span className="text-lg" aria-hidden="true">𝕏</span>
+              <a href="#" className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium" aria-label="Follow us on Instagram">
+                Instagram
               </a>
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full flex items-center justify-center text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Follow us on Facebook">
-                <span className="text-lg" aria-hidden="true">📘</span>
+              <a href="#" className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium" aria-label="Follow us on X">
+                X
               </a>
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full flex items-center justify-center text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Follow us on Instagram">
-                <span className="text-lg" aria-hidden="true">📸</span>
+              <a href="#" className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium" aria-label="Follow us on TikTok">
+                TikTok
               </a>
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full flex items-center justify-center text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Follow us on TikTok">
-                <span className="text-lg" aria-hidden="true">🎵</span>
+              <a href="#" className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium" aria-label="Follow us on LinkedIn">
+                LinkedIn
               </a>
             </div>
           </div>
