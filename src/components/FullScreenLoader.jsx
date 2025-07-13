@@ -3,17 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const FullScreenLoader = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true)
-  const [currentSlogan, setCurrentSlogan] = useState(0)
   const [loadingProgress, setLoadingProgress] = useState(0)
-
-  // Fresh Reppo slogans that rotate
-  const slogans = [
-    "Where Consistency Becomes Legacy",
-    "Your Only Competition is Yesterday",
-    "Elite Athletes. Intelligent Challenges",
-    "Compete Against Your Best Self",
-    "AI-Powered Performance Evolution"
-  ]
 
   // Simulate loading progress
   useEffect(() => {
@@ -28,15 +18,6 @@ const FullScreenLoader = ({ onComplete }) => {
     }, 150)
 
     return () => clearInterval(progressInterval)
-  }, [])
-
-  // Rotate slogans every 800ms
-  useEffect(() => {
-    const sloganInterval = setInterval(() => {
-      setCurrentSlogan(prev => (prev + 1) % slogans.length)
-    }, 800)
-
-    return () => clearInterval(sloganInterval)
   }, [])
 
   // Complete loading after 2.5 seconds
@@ -175,21 +156,17 @@ const FullScreenLoader = ({ onComplete }) => {
             />
           </div>
           
-          {/* Rotating slogans */}
-          <div className="h-16 flex items-center justify-center">
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={currentSlogan}
-                initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -20, scale: 0.9 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="text-lg sm:text-xl md:text-2xl text-text-secondary font-semibold bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent"
-              >
-                {slogans[currentSlogan]}
-              </motion.p>
-            </AnimatePresence>
-          </div>
+                     {/* Static slogan */}
+           <div className="h-16 flex items-center justify-center">
+             <motion.p
+               initial={{ opacity: 0, y: 20, scale: 0.9 }}
+               animate={{ opacity: 1, y: 0, scale: 1 }}
+               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+               className="text-lg sm:text-xl md:text-2xl text-text-secondary font-semibold bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent"
+             >
+               Your Only Competition is Yesterday
+             </motion.p>
+           </div>
         </motion.div>
         
         {/* Advanced loading animation */}
