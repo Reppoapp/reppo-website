@@ -160,10 +160,7 @@ const FinalCTA = () => {
       question: "What exactly do I get as a founder?",
       answer: "Founders get lifetime early access to all new features, advanced analytics, exclusive tools, direct product influence, priority support, and a special founder badge. You'll also save significantly compared to regular pricing."
     },
-    {
-      question: "Is there a risk-free guarantee?",
-      answer: "Absolutely. We offer a 30-day money-back guarantee. If you're not satisfied with your founder access, we'll refund your investment completely, no questions asked."
-    },
+
     {
       question: "How is this different from regular access?",
       answer: "Founders get exclusive features that regular users never will, advanced analytics, direct influence on product development, and lifetime benefits. Plus, you lock in founder pricing forever."
@@ -172,10 +169,7 @@ const FinalCTA = () => {
       question: "When will the platform launch?",
       answer: "We're launching in Q1 2025. Founders get beta access 30 days before public launch, plus exclusive testing of new features as they're developed."
     },
-    {
-      question: "What if I'm not satisfied?",
-      answer: "We're confident you'll love the platform, but if not, we offer a full 30-day money-back guarantee. Your success is our priority."
-    }
+
   ]
 
   return (
@@ -291,31 +285,7 @@ const FinalCTA = () => {
           </div>
         </motion.div>
 
-        {/* Risk-Free Guarantee */}
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
-            }
-          }}
-          className="mb-12"
-        >
-          <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-[20px] border border-green-400/30 rounded-2xl p-6 sm:p-8 shadow-lg">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="text-3xl">🛡️</span>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">30-Day Risk-Free Guarantee</h3>
-            </div>
-            <p className="text-gray-300 leading-relaxed">
-              We're so confident you'll love your founder access that we offer a complete 30-day money-back guarantee. 
-              If you're not satisfied for any reason, we'll refund your investment completely, no questions asked.
-            </p>
-          </div>
-        </motion.div>
+
 
         {/* Enhanced Waitlist Form */}
         <motion.div
@@ -510,11 +480,7 @@ const FinalCTA = () => {
           
           {/* Trust Signals */}
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-300">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">🛡️</span>
-                <span className="font-medium">30-day guarantee</span>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">⚡</span>
                 <span className="font-medium">Instant access</span>
