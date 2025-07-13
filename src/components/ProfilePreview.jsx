@@ -21,15 +21,7 @@ const ProfilePreview = () => {
     }
   }
 
-  // Auto-cycle through screens
-  useEffect(() => {
-    if (isInView) {
-      const interval = setInterval(() => {
-        setActiveScreen(prev => (prev + 1) % 3)
-      }, 4000)
-      return () => clearInterval(interval)
-    }
-  }, [isInView])
+  // Removed auto-cycle - now user-controlled only
 
   // Animate metrics counters
   useEffect(() => {
@@ -195,10 +187,11 @@ const ProfilePreview = () => {
                         </div>
                         <div className="flex gap-1">
                           {[0, 1, 2].map((index) => (
-                            <div
+                            <button
                               key={index}
-                              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                activeScreen === index ? 'bg-primary' : 'bg-gray-600'
+                              onClick={() => setActiveScreen(index)}
+                              className={`w-2 h-2 rounded-full transition-all duration-300 hover:scale-125 cursor-pointer ${
+                                activeScreen === index ? 'bg-primary' : 'bg-gray-600 hover:bg-gray-500'
                               }`}
                             />
                           ))}
