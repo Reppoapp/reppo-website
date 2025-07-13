@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ProblemSection from '../components/ProblemSection'
 import HowItWorks from '../components/HowItWorks'
 import InlineCTA from '../components/InlineCTA'
 
 const About = () => {
+  // Ensure page starts at top when loaded
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }, [])
+
   return (
     <div className="pt-16">
       {/* Problem Section - Our mission and vision */}

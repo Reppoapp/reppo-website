@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeroSection from '../components/HeroSection'
 import ProblemSection from '../components/ProblemSection'
 import InlineCTA from '../components/InlineCTA'
 
 const Home = () => {
+  // Ensure page starts at top when loaded
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }, [])
+
   return (
     <div>
       {/* Hero Section - First impression and main value proposition */}
