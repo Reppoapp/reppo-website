@@ -20,7 +20,7 @@ const InlineCTA = ({
     e.preventDefault()
     
     if (redirectToWaitlist) {
-      document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+      window.location.href = '/join'
       return
     }
 

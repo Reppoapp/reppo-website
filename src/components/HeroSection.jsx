@@ -29,7 +29,7 @@ const HeroSection = () => {
   }, [])
 
   const scrollToWaitlist = () => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+    window.location.href = '/join'
   }
 
   const scrollToDemo = () => {
@@ -224,7 +224,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="space-y-4 mb-6"
               >
-                <h1 className="text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-black leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
                   <span className="text-white">Outperform </span>
                   <span 
                     className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent"

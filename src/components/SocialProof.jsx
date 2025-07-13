@@ -357,7 +357,7 @@ const SocialProof = () => {
                 boxShadow: '0 20px 40px rgba(255, 59, 48, 0.4)'
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.location.href = '/join'}
               className="bg-gradient-to-r from-primary to-secondary text-white font-bold px-10 sm:px-12 py-5 sm:py-6 rounded-full shadow-2xl transition-all duration-300 text-lg sm:text-xl hover:shadow-primary/40 group mb-6"
             >
               <span>Join the Elite Community</span>

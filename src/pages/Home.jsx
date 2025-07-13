@@ -1,13 +1,7 @@
 import React from 'react'
 import HeroSection from '../components/HeroSection'
 import ProblemSection from '../components/ProblemSection'
-import FeatureGrid from '../components/FeatureGrid'
-import HowItWorks from '../components/HowItWorks'
-import ProfilePreview from '../components/ProfilePreview'
-import SocialProof from '../components/SocialProof'
-import TrustSignals from '../components/TrustSignals'
-import RoadmapSection from '../components/RoadmapSection'
-import FinalCTA from '../components/FinalCTA'
+import InlineCTA from '../components/InlineCTA'
 
 const Home = () => {
   return (
@@ -18,26 +12,13 @@ const Home = () => {
       {/* Problem Section - Establish the problem and solution */}
       <ProblemSection />
       
-      {/* Feature Grid - Show key features and benefits */}
-      <FeatureGrid />
-      
-      {/* How It Works - Explain the 3-step process */}
-      <HowItWorks />
-      
-      {/* Profile Preview - Show the product in action */}
-      <ProfilePreview />
-      
-      {/* Social Proof - Build trust with testimonials and stats */}
-      <SocialProof />
-      
-      {/* Trust Signals - Industry recognition and security */}
-      <TrustSignals />
-      
-      {/* Roadmap Section - Show future development and founder benefits */}
-      <RoadmapSection />
-      
-      {/* Final CTA - Convert visitors to waitlist with founder benefits */}
-      <FinalCTA />
+      {/* Inline CTA - Convert visitors to explore more or join waitlist */}
+      <InlineCTA 
+        title="Ready to Outperform Yesterday?"
+        subtitle="Join 47,000+ athletes already transforming their fitness journey"
+        size="large"
+        className="my-16"
+      />
     </div>
   )
 }

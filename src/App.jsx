@@ -7,6 +7,7 @@ import About from './pages/About'
 import Features from './pages/Features'
 import Roadmap from './pages/Roadmap'
 import Community from './pages/Community'
+import Join from './pages/Join'
 import FullScreenLoader from './components/FullScreenLoader'
 import SmoothScroll from './components/SmoothScroll'
 import ScrollToTop from './components/ScrollToTop'
@@ -21,19 +22,19 @@ const SEOHead = ({ page = 'home' }) => {
       url: "https://reppo.app",
       image: "https://reppo.app/og-image.jpg"
     },
-    about: {
-      title: "About Reppo - The Future of AI-Powered Fitness Competition",
-      description: "Learn how Reppo is revolutionizing fitness with AI-powered personal competition. Discover our mission to help athletes outperform yesterday, every single day.",
-      keywords: "about reppo, AI fitness company, fitness technology, personal competition platform",
-      url: "https://reppo.app/about",
-      image: "https://reppo.app/og-about.jpg"
-    },
     features: {
       title: "Features - AI Challenge Engine & Performance Analytics | Reppo",
       description: "Explore Reppo's powerful features: AI challenge generation, performance tracking, victory analytics, and community leaderboards for elite athletes.",
       keywords: "AI challenges, performance analytics, fitness features, workout tracking, competition platform",
       url: "https://reppo.app/features",
       image: "https://reppo.app/og-features.jpg"
+    },
+    community: {
+      title: "Community - Join 47,000+ Elite Athletes | Reppo",
+      description: "Connect with performance athletes worldwide. Read testimonials, see success stories, and join the elite community transforming fitness through AI competition.",
+      keywords: "fitness community, athlete testimonials, elite athletes, fitness success stories",
+      url: "https://reppo.app/community",
+      image: "https://reppo.app/og-community.jpg"
     },
     roadmap: {
       title: "Roadmap - Development Timeline & Founder Benefits | Reppo",
@@ -42,12 +43,19 @@ const SEOHead = ({ page = 'home' }) => {
       url: "https://reppo.app/roadmap",
       image: "https://reppo.app/og-roadmap.jpg"
     },
-    community: {
-      title: "Community - Join 47,000+ Elite Athletes | Reppo",
-      description: "Connect with performance athletes worldwide. Read testimonials, see success stories, and join the elite community transforming fitness through AI competition.",
-      keywords: "fitness community, athlete testimonials, elite athletes, fitness success stories",
-      url: "https://reppo.app/community",
-      image: "https://reppo.app/og-community.jpg"
+    about: {
+      title: "About Reppo - The Future of AI-Powered Fitness Competition",
+      description: "Learn how Reppo is revolutionizing fitness with AI-powered personal competition. Discover our mission to help athletes outperform yesterday, every single day.",
+      keywords: "about reppo, AI fitness company, fitness technology, personal competition platform",
+      url: "https://reppo.app/about",
+      image: "https://reppo.app/og-about.jpg"
+    },
+    join: {
+      title: "Join Waitlist - Get Founder Access to Reppo | Limited Spots",
+      description: "Secure your founder access to Reppo's AI-powered fitness competition platform. Only 127 spots remaining for exclusive early access and lifetime benefits.",
+      keywords: "join waitlist, founder access, early access, AI fitness app, exclusive membership",
+      url: "https://reppo.app/join",
+      image: "https://reppo.app/og-join.jpg"
     }
   }
 
@@ -123,10 +131,10 @@ const Navigation = ({ isLoaded }) => {
   
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
     { name: 'Features', path: '/features' },
-    { name: 'Roadmap', path: '/roadmap' },
     { name: 'Community', path: '/community' },
+    { name: 'Roadmap', path: '/roadmap' },
+    { name: 'About', path: '/about' },
   ]
 
   const scrollToWaitlist = () => {
@@ -134,8 +142,8 @@ const Navigation = ({ isLoaded }) => {
     if (location.pathname === '/') {
       document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
     } else {
-      // Navigate to home and then scroll
-      window.location.href = '/#waitlist'
+      // Navigate to join page
+      window.location.href = '/join'
     }
     setIsMobileMenuOpen(false)
   }
@@ -185,20 +193,20 @@ const Navigation = ({ isLoaded }) => {
           {/* Desktop Navigation Menu */}
           <nav className="hidden md:flex items-center space-x-8" role="menubar">
             <Link 
-              to="/about" 
-              className="text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
-              role="menuitem"
-              aria-label="Learn about our story"
-            >
-              Our Story
-            </Link>
-            <Link 
               to="/features" 
               className="text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
               role="menuitem"
               aria-label="Explore platform features"
             >
               Features
+            </Link>
+            <Link 
+              to="/community" 
+              className="text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
+              role="menuitem"
+              aria-label="Join our community"
+            >
+              Community
             </Link>
             <Link 
               to="/roadmap" 
@@ -209,24 +217,23 @@ const Navigation = ({ isLoaded }) => {
               Roadmap
             </Link>
             <Link 
-              to="/community" 
+              to="/about" 
               className="text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1"
               role="menuitem"
-              aria-label="Join our community"
+              aria-label="Learn about our story"
             >
-              Community
+              About
             </Link>
           </nav>
 
           {/* CTA Button */}
-          <button 
-            onClick={scrollToWaitlist}
-            onKeyDown={(e) => handleKeyDown(e, scrollToWaitlist)}
+          <Link
+            to="/join"
             className="hidden md:block bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
             aria-label="Join waitlist for early access"
           >
             Join Waitlist
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button 
@@ -260,20 +267,20 @@ const Navigation = ({ isLoaded }) => {
           >
             <div className="px-4 py-6 space-y-4">
               <Link 
-                to="/about" 
-                className="block text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                role="menuitem"
-              >
-                Our Story
-              </Link>
-              <Link 
                 to="/features" 
                 className="block text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 role="menuitem"
               >
                 Features
+              </Link>
+              <Link 
+                to="/community" 
+                className="block text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                role="menuitem"
+              >
+                Community
               </Link>
               <Link 
                 to="/roadmap" 
@@ -284,21 +291,22 @@ const Navigation = ({ isLoaded }) => {
                 Roadmap
               </Link>
               <Link 
-                to="/community" 
+                to="/about" 
                 className="block text-gray-300 hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded-lg px-2 py-1" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 role="menuitem"
               >
-                Community
+                About
               </Link>
-              <button 
-                onClick={scrollToWaitlist}
-                onKeyDown={(e) => handleKeyDown(e, scrollToWaitlist)}
-                className="w-full bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 mt-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
+              
+              <Link
+                to="/join"
+                className="w-full block bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 mt-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
                 aria-label="Join waitlist for early access"
               >
                 Join Waitlist
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}
@@ -406,8 +414,8 @@ const Footer = ({ isLoaded }) => {
             <ul className="space-y-3 text-gray-300" role="list">
               <li><Link to="/features" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Features</Link></li>
               <li><Link to="/roadmap" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Roadmap</Link></li>
-              <li><a href="#waitlist" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Join Waitlist</a></li>
-              <li><a href="#how-it-works" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">How It Works</a></li>
+              <li><Link to="/join" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Join Waitlist</Link></li>
+              <li><Link to="/features" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">How It Works</Link></li>
               <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">API Documentation</a></li>
             </ul>
           </div>
@@ -594,6 +602,7 @@ const App = () => {
               <Route path="/features" element={<Features />} />
               <Route path="/roadmap" element={<Roadmap />} />
               <Route path="/community" element={<Community />} />
+              <Route path="/join" element={<Join />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </motion.main>

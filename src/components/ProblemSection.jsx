@@ -314,7 +314,7 @@ const ProblemSection = () => {
                 boxShadow: '0 20px 40px rgba(255, 59, 48, 0.4)'
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.location.href = '/join'}
               className="bg-gradient-to-r from-primary to-secondary text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-2xl transition-all duration-300 text-base sm:text-lg hover:shadow-primary/40 group"
             >
               <span>Experience Real Competition</span>
