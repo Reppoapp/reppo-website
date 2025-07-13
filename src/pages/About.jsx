@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import ProblemSection from '../components/ProblemSection'
-import HowItWorks from '../components/HowItWorks'
 import InlineCTA from '../components/InlineCTA'
 
 const About = () => {
@@ -39,9 +38,6 @@ const About = () => {
     <div className="pt-16">
       {/* Problem Section - Our mission and vision */}
       <ProblemSection />
-      
-      {/* How It Works - Our approach and methodology */}
-      <HowItWorks />
       
       {/* CTA to learn more or join */}
       <InlineCTA 
