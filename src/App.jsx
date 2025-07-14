@@ -17,23 +17,23 @@ import ScrollToTop from './components/ScrollToTop'
 const SEOHead = ({ page = 'home' }) => {
   const seoData = {
     home: {
-      title: "Reppo - AI-Powered Fitness Competition Platform | Outperform Yesterday",
-      description: "Transform your fitness journey with AI-powered challenges that pit you against yesterday's performance. Join 47,000+ athletes already outperforming their limits.",
-      keywords: "AI fitness, personal competition, fitness challenges, performance tracking, workout motivation, fitness app, AI training, athletic performance",
+      title: "Reppo - Train WITH Your Favorite Athletes | Live Athlete Data",
+      description: "The first platform where you train with your favorite athletes using their actual workout data. When David Goggins finishes his run, you get the AI-personalized version.",
+      keywords: "live athlete data, train with athletes, authentic training, AI personalization, Garmin Apple Watch, verified athletes, real workout data",
       url: "https://reppo.app",
       image: "https://reppo.app/og-image.jpg"
     },
     features: {
-      title: "Features - AI Challenge Engine & Performance Analytics | Reppo",
-      description: "Explore Reppo's powerful features: AI challenge generation, performance tracking, victory analytics, and community leaderboards for elite athletes.",
-      keywords: "AI challenges, performance analytics, fitness features, workout tracking, competition platform",
+      title: "Features - Live Athlete Data & AI Personalization | Reppo",
+      description: "Explore Reppo's powerful features: live athlete data from Garmin/Apple Watch, AI personalization, authentic training, and community with your favorite athletes.",
+      keywords: "live athlete data, AI personalization, authentic training, Garmin Apple Watch, verified athletes, workout scaling",
       url: "https://reppo.app/features",
       image: "https://reppo.app/og-features.jpg"
     },
     community: {
-      title: "Community - Join 47,000+ Elite Athletes | Reppo",
-      description: "Connect with performance athletes worldwide. Read testimonials, see success stories, and join the elite community transforming fitness through AI competition.",
-      keywords: "fitness community, athlete testimonials, elite athletes, fitness success stories",
+      title: "Community - Join 47,000+ Athletes Training with Favorites | Reppo",
+      description: "Connect with athletes training with their favorite influencers. Read testimonials, see success stories, and join the community transforming fitness through authentic training.",
+      keywords: "fitness community, athlete testimonials, training with favorites, authentic training success stories",
       url: "https://reppo.app/community",
       image: "https://reppo.app/og-community.jpg"
     },
@@ -45,16 +45,16 @@ const SEOHead = ({ page = 'home' }) => {
       image: "https://reppo.app/og-roadmap.jpg"
     },
     about: {
-      title: "About Reppo - The Future of AI-Powered Fitness Competition",
-      description: "Learn how Reppo is revolutionizing fitness with AI-powered personal competition. Discover our mission to help athletes outperform yesterday, every single day.",
-      keywords: "about reppo, AI fitness company, fitness technology, personal competition platform",
+      title: "About Reppo - The Future of Authentic Athlete Training",
+      description: "Learn how Reppo is revolutionizing fitness with live athlete data and AI personalization. Discover our mission to connect athletes with their favorites' authentic training.",
+      keywords: "about reppo, live athlete data, authentic training, AI personalization, fitness technology",
       url: "https://reppo.app/about",
       image: "https://reppo.app/og-about.jpg"
     },
     join: {
       title: "Join Waitlist - Get Founder Access to Reppo | Limited Spots",
-      description: "Secure your founder access to Reppo's AI-powered fitness competition platform. Only 127 spots remaining for exclusive early access and lifetime benefits.",
-      keywords: "join waitlist, founder access, early access, AI fitness app, exclusive membership",
+      description: "Secure your founder access to Reppo's live athlete training platform. Only 127 spots remaining for exclusive access to verified athletes and AI personalization.",
+      keywords: "join waitlist, founder access, early access, live athlete data, authentic training, exclusive membership",
       url: "https://reppo.app/join",
       image: "https://reppo.app/og-join.jpg"
     }
@@ -65,7 +65,7 @@ const SEOHead = ({ page = 'home' }) => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Reppo",
-    "description": "AI-powered fitness competition platform that transforms daily workouts into intelligent battles against yesterday's performance.",
+    "description": "Live athlete training platform that connects fitness enthusiasts with their favorite athletes through authentic workout data sharing and AI personalization.",
     "url": "https://reppo.app",
     "logo": "https://reppo.app/Reppo-Logo.png",
     "sameAs": [

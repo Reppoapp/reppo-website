@@ -155,9 +155,9 @@ const HeroSection = () => {
 
                       {/* Today's challenge */}
                       <div className="text-center bg-gray-900/50 rounded-lg p-3">
-                        <div className="text-gray-400 text-xs mb-1">TODAY'S CHALLENGE</div>
-                        <div className="text-white font-semibold text-sm">Outperform Yesterday's Push-ups</div>
-                        <div className="text-xs text-gray-500 mt-1">Target: 32 reps (vs yesterday's 28)</div>
+                        <div className="text-gray-400 text-xs mb-1">LIVE ATHLETE WORKOUT</div>
+                        <div className="text-white font-semibold text-sm">David Goggins' Morning Run</div>
+                        <div className="text-xs text-gray-500 mt-1">AI-scaled to your level: 3.2 miles</div>
                       </div>
                     </div>
                   </div>
@@ -225,7 +225,7 @@ const HeroSection = () => {
                 className="space-y-4 mb-6"
               >
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
-                  <span className="text-white">Outperform </span>
+                  <span className="text-white">Train </span>
                   <span 
                     className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent"
                     style={{
@@ -234,8 +234,9 @@ const HeroSection = () => {
                       WebkitTextFillColor: 'transparent'
                     }}
                   >
-                    Yesterday
+                    WITH
                   </span>
+                  <span className="text-white"> Your </span>
                   <span 
                     className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent"
                     style={{
@@ -244,7 +245,7 @@ const HeroSection = () => {
                       WebkitTextFillColor: 'transparent'
                     }}
                   >
-                    .
+                    Favorites
                   </span>
                 </h1>
               </motion.div>
@@ -256,11 +257,11 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed max-w-3xl mx-auto lg:mx-0 mb-8 font-medium"
               >
-                The elite fitness community where yesterday's you becomes today's competition. Join{' '}
+                The first platform where you train with your favorite athletes using their actual workout data. When David Goggins finishes his run, you get the AI-personalized version. Join{' '}
                 <span className="text-white font-bold">
                   {Math.floor(userCount / 1000)}K+
                 </span>{' '}
-                athletes who've cracked the code to unstoppable daily progress.
+                athletes who train alongside their favorites using live Garmin and Apple Watch data.
               </motion.p>
 
               {/* Enhanced Feature Badges */}
@@ -271,9 +272,9 @@ const HeroSection = () => {
                 className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-8"
               >
                 {[
-                  { icon: '🔥', text: 'Daily Streaks', color: 'from-red-500/20 to-orange-500/20 border-red-400/30' },
-                  { icon: '⚡', text: 'AI Challenges', color: 'from-blue-500/20 to-cyan-500/20 border-blue-400/30' },
-                  { icon: '🚀', text: 'Real Progress', color: 'from-purple-500/20 to-pink-500/20 border-purple-400/30' }
+                  { icon: '📱', text: 'Live Athlete Data', color: 'from-red-500/20 to-orange-500/20 border-red-400/30' },
+                  { icon: '🤖', text: 'AI Personalization', color: 'from-blue-500/20 to-cyan-500/20 border-blue-400/30' },
+                  { icon: '🏆', text: 'Authentic Training', color: 'from-purple-500/20 to-pink-500/20 border-purple-400/30' }
                 ].map((badge, index) => (
                   <motion.span
                     key={index}

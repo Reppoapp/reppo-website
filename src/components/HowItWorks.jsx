@@ -11,7 +11,7 @@ const HowItWorks = () => {
   useEffect(() => {
     if (isInView) {
       const interval = setInterval(() => {
-        setActiveStep(prev => (prev + 1) % 3)
+        setActiveStep(prev => (prev + 1) % 4)
       }, 3000)
       return () => clearInterval(interval)
     }
@@ -46,44 +46,58 @@ const HowItWorks = () => {
   const steps = [
     {
       number: "01",
-      title: "Connect Your Fitness Data",
-      description: "Link your existing fitness apps or input your workout history. Our AI analyzes your patterns, strengths, and improvement areas to create your personal performance baseline.",
-      icon: "📊",
+      title: "Choose Your Favorite",
+      description: "Subscribe to train with your favorite fitness influencer or athlete. Browse verified athletes with live Garmin and Apple Watch data sharing.",
+      icon: "⭐",
       color: "from-primary to-secondary",
-      successMetric: "94% see patterns they never noticed",
+      successMetric: "Train with verified elite athletes",
       features: [
-        "Instant data sync from 50+ fitness apps",
-        "AI pattern recognition in under 60 seconds",
-        "Personalized strength & weakness analysis",
-        "Baseline performance establishment"
+        "Verified athlete profiles with live data",
+        "Multiple athlete subscriptions available",
+        "Real workout data from Garmin/Apple Watch",
+        "Authentic training programs only"
       ]
     },
     {
       number: "02", 
-      title: "AI Creates Your Daily Challenge",
-      description: "Every morning, receive a personalized challenge designed to push you exactly where you need to grow most. Beat yesterday's you with intelligent, adaptive competition.",
-      icon: "🧠",
+      title: "Get Live Notifications",
+      description: "When your favorite athlete finishes their workout, you're notified instantly. No delays, no fake programs - just real training data from their actual sessions.",
+      icon: "🔔",
       color: "from-secondary to-primary",
-      successMetric: "Average 23% performance improvement",
+      successMetric: "Instant notifications from live workouts",
       features: [
-        "Personalized challenges every morning",
-        "Adaptive difficulty based on your progress",
-        "Multiple challenge types (strength, endurance, skill)",
-        "Real-time performance tracking"
+        "Real-time workout completion alerts",
+        "Live data from athlete devices",
+        "Authentic workout timestamps",
+        "No pre-recorded or fake content"
       ]
     },
     {
       number: "03",
-      title: "Compete and Evolve",
-      description: "Complete your challenge, track your victory, and unlock your next level. Watch yourself evolve from competitor to champion through data-driven self-improvement.",
-      icon: "🏆",
+      title: "Train Together",
+      description: "Our AI creates your personalized version of their exact workout, scaled to your fitness level. Same intensity, same structure, your capability.",
+      icon: "🤖",
       color: "from-primary to-secondary",
-      successMetric: "89% maintain 30+ day streaks",
+      successMetric: "AI-personalized to your exact level",
       features: [
-        "Victory tracking and celebration",
-        "Progressive difficulty scaling",
-        "Achievement unlocks and badges",
-        "Elite status level progression"
+        "AI scaling to your fitness level",
+        "Maintains original workout structure",
+        "Personalized intensity adjustments",
+        "Real-time performance tracking"
+      ]
+    },
+    {
+      number: "04",
+      title: "Track Progress",
+      description: "See how you compare and improve alongside your favorite athlete. Track your progress, celebrate victories, and build your training legacy.",
+      icon: "📈",
+      color: "from-secondary to-primary",
+      successMetric: "Progress tracking with your favorites",
+      features: [
+        "Side-by-side progress comparison",
+        "Achievement tracking and badges",
+        "Training streak monitoring",
+        "Community leaderboards"
       ]
     }
   ]
@@ -127,17 +141,17 @@ const HowItWorks = () => {
           </div>
           
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
-            How <span className="text-gradient">AI Competition</span> Works
+            How <span className="text-gradient">Live Athlete Training</span> Works
           </h2>
           <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-2 font-medium">
-            Three simple steps to transform your fitness journey into{' '}
-            <span className="text-text-primary font-bold">intelligent self-competition</span>{' '}
-            that delivers real results.
+            Four simple steps to train with{' '}
+            <span className="text-text-primary font-bold">your favorite athletes</span>{' '}
+            using their actual workout data.
           </p>
         </motion.div>
 
         {/* Enhanced Steps with Progressive Animation */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-8 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 sm:gap-12 lg:gap-8 mb-12 sm:mb-16">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -254,27 +268,27 @@ const HowItWorks = () => {
             }}
           >
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-text-primary mb-6 leading-tight">
-              Ready to Start Competing Against{' '}
-              <span className="text-gradient">The Only Opponent That Matters</span>?
+              Ready to Train WITH{' '}
+              <span className="text-gradient">Your Favorite Athletes</span>?
             </h3>
             
             <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
-              Join thousands of elite athletes who've transformed their fitness journey with AI-powered self-competition.
+              Join thousands of athletes who train alongside their favorites using live workout data and AI personalization.
             </p>
 
             {/* Stats Row */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">94%</div>
-                <div className="text-sm text-gray-300">See immediate improvement</div>
+                <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">100%</div>
+                <div className="text-sm text-gray-300">Authentic athlete data</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">23%</div>
-                <div className="text-sm text-gray-300">Average performance boost</div>
+                <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">Live</div>
+                <div className="text-sm text-gray-300">Real-time notifications</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">89%</div>
-                <div className="text-sm text-gray-300">Maintain 30+ day streaks</div>
+                <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">AI</div>
+                <div className="text-sm text-gray-300">Personalized scaling</div>
               </div>
             </div>
 
@@ -288,7 +302,7 @@ const HowItWorks = () => {
               onClick={() => window.location.href = '/join'}
               className="bg-gradient-to-r from-primary to-secondary text-white font-bold px-10 sm:px-12 py-5 sm:py-6 rounded-full shadow-2xl transition-all duration-300 text-lg sm:text-xl hover:shadow-primary/40 group mb-6"
             >
-              <span>Join the Elite Competition</span>
+              <span>Train with Your Favorites</span>
               <motion.span 
                 className="ml-3 text-2xl"
                 animate={{ x: [0, 3, 0] }}
@@ -301,15 +315,15 @@ const HowItWorks = () => {
             <div className="flex items-center justify-center gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✅</span>
-                <span>Instant setup</span>
+                <span>Live athlete data</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-blue-400">🛡️</span>
-                <span>Privacy protected</span>
+                <span>AI personalization</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-purple-400">⚡</span>
-                <span>Results guaranteed</span>
+                <span>Authentic training</span>
               </div>
             </div>
           </div>

@@ -124,9 +124,9 @@ const FinalCTA = () => {
 
   const founderBenefits = [
     {
-      icon: "🚀",
-      title: "Early Access to AI Features",
-      description: "First access to new AI algorithms, challenge types, and performance insights as they're released."
+      icon: "📱",
+      title: "Early Access to Elite Athletes",
+      description: "First access to new verified athletes and their live workout data as they join the platform."
     },
     {
       icon: "👑",
@@ -136,7 +136,7 @@ const FinalCTA = () => {
     {
       icon: "📊",
       title: "Advanced Analytics Dashboard",
-      description: "Deep performance insights, predictive modeling, and elite athlete benchmarking tools."
+      description: "Deep performance insights, athlete comparison tools, and training progress analytics."
     },
     {
       icon: "🎯",
@@ -145,29 +145,29 @@ const FinalCTA = () => {
     },
     {
       icon: "💎",
-      title: "Founder-Only Features",
-      description: "Exclusive tools and capabilities never available to regular users, reserved for founders."
+      title: "Founder-Only Athletes",
+      description: "Exclusive access to premium athletes and their workout data, reserved for founders only."
     },
     {
       icon: "🔥",
-      title: "Priority Challenge Generation",
-      description: "Enhanced AI challenge algorithms with faster processing and more personalized experiences."
+      title: "Priority AI Personalization",
+      description: "Enhanced AI scaling algorithms with faster processing and more personalized workout adaptations."
     }
   ]
 
   const faqItems = [
     {
       question: "What exactly do I get as a founder?",
-      answer: "Founders get lifetime early access to all new features, advanced analytics, exclusive tools, direct product influence, priority support, and a special founder badge. You'll also save significantly compared to regular pricing."
+      answer: "Founders get lifetime early access to all new verified athletes, advanced analytics, exclusive athlete access, direct product influence, priority support, and a special founder badge. You'll also save significantly compared to regular pricing."
     },
 
     {
       question: "How is this different from regular access?",
-      answer: "Founders get exclusive features that regular users never will, advanced analytics, direct influence on product development, and lifetime benefits. Plus, you lock in founder pricing forever."
+      answer: "Founders get exclusive access to premium athletes that regular users never will, advanced analytics, direct influence on product development, and lifetime benefits. Plus, you lock in founder pricing forever."
     },
     {
       question: "When will the platform launch?",
-      answer: "We're launching in Q1 2025. Founders get beta access 30 days before public launch, plus exclusive testing of new features as they're developed."
+      answer: "We're launching in Q1 2025. Founders get beta access 30 days before public launch, plus exclusive testing of new athlete integrations as they're developed."
     },
 
   ]
@@ -201,7 +201,7 @@ const FinalCTA = () => {
           </h2>
           <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary leading-relaxed max-w-4xl mx-auto px-2 font-medium">
             Secure your <span className="text-text-primary font-bold">lifetime founder status</span> with{' '}
-            <span className="text-gradient font-bold">exclusive features, early access, and direct product influence</span>{' '}
+            <span className="text-gradient font-bold">exclusive access to verified athletes, live data, and AI personalization</span>{' '}
             that regular users will never get.
           </p>
         </motion.div>

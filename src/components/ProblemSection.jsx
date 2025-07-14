@@ -34,28 +34,28 @@ const ProblemSection = () => {
 
   const problemCards = [
     {
-      icon: "😴",
-      title: "Generic Fitness Tracking",
-      description: "Most apps just count your reps and calories. Zero personalization, zero challenge, zero reason to push harder tomorrow.",
-      painPoint: "You're stuck in mediocrity",
+      icon: "🎭",
+      title: "Fake Fitness Programs",
+      description: "Most fitness programs are generic templates with no proof that your favorite athletes actually follow them. Pure marketing, zero authenticity.",
+      painPoint: "You're following fake programs",
       gradient: "from-gray-500/20 to-gray-600/20",
       borderColor: "border-gray-400/30",
       iconColor: "text-gray-400"
     },
     {
-      icon: "👥",
-      title: "Competing Against Strangers",
-      description: "Why compete against random people when your biggest competition is who you were yesterday? That's where real growth happens.",
-      painPoint: "You're wasting energy on meaningless competition",
+      icon: "❌",
+      title: "No Proof Athletes Follow Their Own Advice",
+      description: "That workout plan your favorite athlete is selling? They probably don't even use it. You're getting their marketing, not their training.",
+      painPoint: "You're getting sold, not trained",
       gradient: "from-orange-500/20 to-red-500/20",
       borderColor: "border-orange-400/30",
       iconColor: "text-orange-400"
     },
     {
-      icon: "📱",
-      title: "No Real Status or Recognition",
-      description: "Generic badges and meaningless streaks don't build the exclusive identity that drives elite performance athletes.",
-      painPoint: "You're invisible in a sea of casual users",
+      icon: "🔒",
+      title: "Static Content That Doesn't Adapt",
+      description: "Pre-recorded workouts and static programs can't evolve with your progress or match what elite athletes are actually doing today.",
+      painPoint: "You're stuck with outdated content",
       gradient: "from-purple-500/20 to-pink-500/20",
       borderColor: "border-purple-400/30",
       iconColor: "text-purple-400"
@@ -64,34 +64,34 @@ const ProblemSection = () => {
 
   const solutionCards = [
     {
-      icon: "🧠",
-      title: "AI-Powered Personal Competition",
-      description: "Our AI analyzes your patterns and creates intelligent challenges that push you exactly where you need to grow most.",
-      benefit: "Personalized growth that actually works",
+      icon: "📱",
+      title: "Live Athlete Data from Garmin & Apple Watch",
+      description: "Get real workout data straight from your favorite athletes' devices. When they finish training, you get instant access to their actual workout.",
+      benefit: "100% authentic athlete training",
       gradient: "from-primary/15 to-secondary/15",
       borderColor: "border-primary/30",
       iconColor: "text-primary",
-      successMetric: "94% see improvement in first week"
+      successMetric: "Real-time data from verified athletes"
     },
     {
-      icon: "⚔️",
-      title: "Battle Yesterday's You",
-      description: "Every workout becomes a head-to-head competition against your previous self. Track wins, losses, and breakthrough moments.",
-      benefit: "Turn every workout into a victory",
+      icon: "🤖",
+      title: "AI Personalization Engine",
+      description: "Our AI takes your favorite athlete's workout and scales it perfectly to your fitness level. Same intensity, same structure, your capability.",
+      benefit: "Elite training made achievable",
       gradient: "from-secondary/15 to-primary/15",
       borderColor: "border-secondary/30",
       iconColor: "text-secondary",
-      successMetric: "Average 23% performance increase"
+      successMetric: "Personalized to your exact level"
     },
     {
-      icon: "👑",
-      title: "Elite Performance Athlete Status",
-      description: "Build genuine status through consistent self-improvement victories. Join an exclusive community that recognizes real progress.",
-      benefit: "Earn respect through real achievement",
+      icon: "🏆",
+      title: "Train with Multiple Favorites",
+      description: "Subscribe to different athletes for variety. Train with David Goggins on Monday, Cameron Hanes on Tuesday. Always authentic, always current.",
+      benefit: "Unlimited access to elite training",
       gradient: "from-primary/15 to-secondary/15",
       borderColor: "border-primary/30",
       iconColor: "text-gradient",
-      successMetric: "Join 47K+ elite athletes"
+      successMetric: "Train with 47K+ other athletes"
     }
   ]
 
@@ -299,12 +299,12 @@ const ProblemSection = () => {
             }}
           >
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-text-primary mb-6 leading-tight">
-              Stop Settling for Generic Fitness Tracking
+              Stop Settling for Fake Fitness Programs
             </h3>
             <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8 font-medium">
-              Your only competition is{' '}
-              <span className="text-gradient font-bold">who you were yesterday</span>.{' '}
-              Join the elite athletes who've discovered what real AI-powered challenges look like.
+              Train with{' '}
+              <span className="text-gradient font-bold">your favorite athletes</span>{' '}
+              using their actual workout data. Every workout is authentic, personalized, and perfectly scaled to your fitness level.
             </p>
             
             {/* Mini CTA */}
@@ -318,7 +318,7 @@ const ProblemSection = () => {
               onClick={() => window.location.href = '/join'}
               className="bg-gradient-to-r from-primary to-secondary text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-2xl transition-all duration-300 text-base sm:text-lg hover:shadow-primary/40 group"
             >
-              <span>Experience Real Competition</span>
+              <span>Train with Your Favorites</span>
               <motion.span 
                 className="ml-2 text-xl"
                 animate={{ x: [0, 3, 0] }}
@@ -331,15 +331,15 @@ const ProblemSection = () => {
             <div className="flex items-center justify-center gap-6 mt-6 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✅</span>
-                <span>No spam, ever</span>
+                <span>Live athlete data</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-blue-400">⚡</span>
-                <span>Instant access</span>
+                <span>AI personalization</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-purple-400">👑</span>
-                <span>Elite status</span>
+                <span>Authentic training</span>
               </div>
             </div>
           </div>

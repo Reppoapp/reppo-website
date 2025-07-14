@@ -32,11 +32,11 @@ const SocialProof = () => {
       role: "Powerlifter & Coach",
       avatar: "MC",
       avatarColor: "from-blue-500 to-purple-600",
-      content: "Competing against myself is addictive. I've never been more motivated to work out. Seeing my daily challenges evolve keeps me coming back stronger every single day.",
+      content: "Training with David Goggins' actual data feels like having a workout partner who never misses a session. The AI makes it achievable for my level while keeping that same intensity.",
       verified: true,
       rating: 5,
       date: "2 days ago",
-      achievement: "127-day streak",
+      achievement: "Training with 3 athletes",
       location: "San Francisco, CA"
     },
     {
@@ -44,7 +44,7 @@ const SocialProof = () => {
       role: "CrossFit Athlete",
       avatar: "SW",
       avatarColor: "from-pink-500 to-red-600",
-      content: "The AI challenge system is brilliant. Every workout feels like I'm fighting for my future self. I'm literally competing with my own potential and winning.",
+      content: "Finally, authentic access to how my favorite athletes actually train - not just what they post on social media. The live notifications keep me motivated daily.",
       verified: true,
       rating: 5,
       date: "1 week ago",
@@ -56,7 +56,7 @@ const SocialProof = () => {
       role: "Hybrid Athlete", 
       avatar: "DR",
       avatarColor: "from-green-500 to-teal-600",
-      content: "I challenged my friend's personal best and got destroyed. Now I'm training harder than ever for a rematch. This app turned fitness into intelligent competition.",
+      content: "The AI makes every athlete workout achievable for my fitness level while maintaining the same training intensity. It's like having a personal trainer who knows exactly what I need.",
       verified: true,
       rating: 5,
       date: "3 days ago",
@@ -68,7 +68,7 @@ const SocialProof = () => {
       role: "Marathon Runner",
       avatar: "ET",
       avatarColor: "from-orange-500 to-yellow-600",
-      content: "The recovery insights are game-changing. I'm pushing harder than ever but avoiding burnout completely. My consistency has never been better.",
+      content: "Training with Cameron Hanes' actual running data has transformed my endurance training. Every workout is authentic and perfectly scaled to push me forward.",
       verified: true,
       rating: 5,
       date: "5 days ago",
@@ -80,7 +80,7 @@ const SocialProof = () => {
       role: "Strength Coach",
       avatar: "AK",
       avatarColor: "from-purple-500 to-indigo-600",
-      content: "My clients are obsessed with their daily battles. The competitive element transforms how they approach every single workout. Results speak for themselves.",
+      content: "My clients love training with their favorite athletes' real workouts. The authenticity factor is huge - they know they're doing exactly what their heroes do.",
       verified: true,
       rating: 5,
       date: "1 day ago",
@@ -92,8 +92,8 @@ const SocialProof = () => {
   const stats = [
     { number: "2,847", label: "Athletes Joined This Week", icon: "⚡", color: "text-yellow-400" },
     { number: "127", label: "Founder Spots Remaining", icon: "🔥", color: "text-red-400" },
-    { number: "94%", label: "Beat Their First Challenge", icon: "💪", color: "text-green-400" },
-    { number: "47K+", label: "Elite Athletes Competing", icon: "👑", color: "text-purple-400" }
+    { number: "100%", label: "Authentic Athlete Data", icon: "💪", color: "text-green-400" },
+    { number: "47K+", label: "Training with Favorites", icon: "👑", color: "text-purple-400" }
   ]
 
   const TestimonialCard = ({ testimonial, isActive, onClick }) => (
@@ -200,9 +200,9 @@ const SocialProof = () => {
             Trusted by <span className="text-gradient">Performance Athletes</span>
           </h2>
           <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-2 font-medium">
-            Join thousands of elite athletes who've already discovered{' '}
-            <span className="text-text-primary font-bold">what real AI-powered fitness challenges look like</span>{' '}
-            and transformed their training forever.
+            Join thousands of athletes who've already discovered{' '}
+            <span className="text-text-primary font-bold">what authentic athlete training looks like</span>{' '}
+            and transformed their fitness journey forever.
           </p>
         </motion.div>
 

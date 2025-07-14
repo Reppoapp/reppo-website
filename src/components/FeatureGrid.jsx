@@ -116,75 +116,75 @@ const FeatureGrid = () => {
 
   const features = [
     {
-      title: "AI Challenge Engine",
-      description: "Our proprietary AI analyzes your performance patterns and creates personalized challenges that push you exactly where you need to grow most.",
-      icon: "🧠",
-      metric: "94% see improvement in first week",
+      title: "Live Athlete Data",
+      description: "Get real workout data straight from your favorite athletes' Garmin and Apple Watch devices. When they finish training, you get instant access to their actual workout.",
+      icon: "📱",
+      metric: "100% authentic athlete data",
       features: [
-        "Real-time performance analysis",
-        "Adaptive difficulty scaling",
-        "Pattern recognition algorithms",
-        "Personalized growth targeting"
+        "Real-time Garmin/Apple Watch sync",
+        "Verified athlete profiles only",
+        "Instant workout notifications",
+        "No fake or pre-recorded content"
       ]
     },
     {
-      title: "Yesterday vs Today Battles",
-      description: "Every workout becomes a head-to-head competition against your previous self. Track wins, losses, and breakthrough moments in real-time.",
-      icon: "⚔️",
-      metric: "Average 23% performance increase",
+      title: "AI Personalization",
+      description: "Our AI takes your favorite athlete's workout and scales it perfectly to your fitness level. Same intensity, same structure, your capability.",
+      icon: "🤖",
+      metric: "Personalized to your exact level",
       features: [
-        "Daily performance comparisons",
-        "Win/loss tracking system",
-        "Breakthrough moment detection",
-        "Progress velocity monitoring"
+        "Fitness level assessment",
+        "Workout scaling algorithms",
+        "Maintains original structure",
+        "Adaptive intensity adjustments"
       ]
     },
     {
-      title: "Elite Performance Tracking",
-      description: "Advanced metrics that go beyond basic fitness apps. Measure improvement velocity, consistency streaks, and performance acceleration.",
-      icon: "📊",
-      metric: "Track 50+ performance metrics",
-      features: [
-        "Improvement velocity analysis",
-        "Consistency streak tracking",
-        "Performance acceleration curves",
-        "Advanced analytics dashboard"
-      ]
-    },
-    {
-      title: "Community Leaderboards",
-      description: "Compete anonymously with other performance athletes. See how your self-improvement rate stacks up against the elite fitness community.",
+      title: "Authentic Training",
+      description: "No fake programs or marketing gimmicks. Every workout comes from verified athletes doing their actual training sessions.",
       icon: "🏆",
-      metric: "Join 47K+ elite athletes",
+      metric: "Zero fake programs guaranteed",
       features: [
-        "Anonymous competition system",
-        "Elite athlete rankings",
-        "Self-improvement rate comparisons",
-        "Community achievement showcases"
+        "Verified athlete workouts only",
+        "Real training session data",
+        "No marketing content",
+        "Authentic performance tracking"
       ]
     },
     {
-      title: "Smart Recovery Insights",
-      description: "AI-powered recovery recommendations that ensure you're competing at peak performance every single day without burnout.",
-      icon: "🔄",
-      metric: "89% avoid overtraining",
+      title: "Multiple Athletes",
+      description: "Train with different favorites for variety. Subscribe to David Goggins, Cameron Hanes, or any verified athlete for diverse training experiences.",
+      icon: "👥",
+      metric: "Access to 100+ elite athletes",
       features: [
-        "AI recovery optimization",
-        "Burnout prevention algorithms",
-        "Peak performance timing",
-        "Personalized rest recommendations"
+        "Multiple athlete subscriptions",
+        "Diverse training styles",
+        "Verified elite athlete network",
+        "Unlimited variety access"
       ]
     },
     {
-      title: "Achievement Unlocks",
-      description: "Unlock exclusive badges, performance milestones, and elite status levels as you consistently outperform your previous self.",
-      icon: "🎖️",
-      metric: "Unlock 100+ achievements",
+      title: "Progress Tracking",
+      description: "See how you improve alongside your favorite athletes. Track your progress, celebrate victories, and build your training legacy.",
+      icon: "📈",
+      metric: "Track progress with favorites",
       features: [
-        "Exclusive badge system",
-        "Performance milestone tracking",
-        "Elite status progression",
-        "Achievement showcase profiles"
+        "Side-by-side comparisons",
+        "Progress visualization",
+        "Achievement tracking",
+        "Training legacy building"
+      ]
+    },
+    {
+      title: "Community",
+      description: "Connect with others training with the same athletes. Share experiences, celebrate achievements, and build lasting fitness friendships.",
+      icon: "🤝",
+      metric: "Join 47K+ training community",
+      features: [
+        "Athlete-specific communities",
+        "Shared training experiences",
+        "Achievement celebrations",
+        "Fitness friendship building"
       ]
     }
   ]
@@ -215,12 +215,12 @@ const FeatureGrid = () => {
           
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
             The Future of{' '}
-            <span className="text-gradient">Personal Competition</span>
+            <span className="text-gradient">Authentic Training</span>
           </h2>
           <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-2 font-medium">
-            Forget generic fitness tracking. Reppo creates intelligent challenges that separate{' '}
-            <span className="text-text-primary font-bold">elite competitors from casual users</span>{' '}
-            through AI-powered self-improvement.
+            Forget fake fitness programs. Reppo connects you with{' '}
+            <span className="text-text-primary font-bold">your favorite athletes' actual workouts</span>{' '}
+            through live data and AI personalization.
           </p>
         </motion.div>
 
@@ -306,11 +306,11 @@ const FeatureGrid = () => {
             }}
           >
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-text-primary mb-6 leading-tight">
-              Ready to Compete Against Yesterday?
+              Ready to Train WITH Your Favorites?
             </h3>
             <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
-              Join thousands of performance athletes who've made the switch from generic fitness tracking to{' '}
-              <span className="text-gradient font-bold">intelligent self-competition</span>.
+              Join thousands of athletes who've made the switch from fake fitness programs to{' '}
+              <span className="text-gradient font-bold">authentic athlete training</span>.
             </p>
             
             <motion.button
@@ -323,7 +323,7 @@ const FeatureGrid = () => {
               onClick={() => window.location.href = '/join'}
               className="bg-gradient-to-r from-primary to-secondary text-white font-bold px-10 sm:px-12 py-5 sm:py-6 rounded-full shadow-2xl transition-all duration-300 text-lg sm:text-xl hover:shadow-primary/40 group mb-6"
             >
-              <span>Start Your Elite Journey</span>
+              <span>Train with Your Favorites</span>
               <motion.span 
                 className="ml-3 text-2xl"
                 animate={{ x: [0, 3, 0] }}
@@ -336,15 +336,15 @@ const FeatureGrid = () => {
             <div className="flex items-center justify-center gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✅</span>
-                <span>Free to join</span>
+                <span>Live athlete data</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-blue-400">⚡</span>
-                <span>Instant results</span>
+                <span>AI personalization</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-purple-400">👑</span>
-                <span>Elite community</span>
+                <span>Authentic training</span>
               </div>
             </div>
           </div>
