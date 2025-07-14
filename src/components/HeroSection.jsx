@@ -222,8 +222,7 @@ const HeroSection = () => {
                 <h1 className="hero-title">
                   <span className="text-primary-navy">Train </span>
                   <span className="text-gradient">WITH</span>
-                  <span className="text-primary-navy"> Your </span>
-                  <span className="text-gradient">Favorites</span>
+                  <span className="text-primary-navy"> Elite Athletes</span>
                 </h1>
               </motion.div>
 
@@ -234,11 +233,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-xl sm:text-2xl lg:text-3xl text-text-gray leading-relaxed max-w-3xl mx-auto lg:mx-0 mb-8 font-medium"
               >
-                The first platform where you train with your favorite athletes using their actual workout data. When your favorite athlete finishes their workout, you get the AI-personalized version. Join{' '}
-                <span className="text-primary-navy font-bold font-mono">
-                  {Math.floor(userCount / 1000)}K+
-                </span>{' '}
-                athletes who train alongside their favorites using live Garmin and Apple Watch data.
+                Your favorite elite athletes just finished their workouts. 12k+ people are getting their personalized versions right now. You're not...yet.
               </motion.p>
 
               {/* Athletic Precision Feature Badges */}
