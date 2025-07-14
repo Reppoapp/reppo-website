@@ -114,7 +114,7 @@ const SEOHead = ({ page = 'home' }) => {
       <meta name="twitter:site" content="@reppoapp" />
       
       {/* Additional SEO Tags */}
-      <meta name="theme-color" content="#FF3B30" />
+      <meta name="theme-color" content="#1a1d29" />
       <link rel="canonical" href={data.url} />
       
       {/* Structured Data */}
@@ -125,7 +125,7 @@ const SEOHead = ({ page = 'home' }) => {
   )
 }
 
-// Navigation component with accessibility improvements
+// Navigation component with Athletic Precision design
 const Navigation = ({ isLoaded }) => {
   const location = useLocation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
@@ -134,7 +134,6 @@ const Navigation = ({ isLoaded }) => {
     { name: 'Home', path: '/' },
     { name: 'Features', path: '/features' },
     { name: 'Community', path: '/community' },
-    { name: 'Roadmap', path: '/roadmap' },
     { name: 'About', path: '/about' },
   ]
 
@@ -160,25 +159,25 @@ const Navigation = ({ isLoaded }) => {
   // Function to get nav item styling based on active state
   const getNavItemClass = (path) => {
     const isActive = location.pathname === path
-    const baseClass = "font-medium focus:outline-none rounded-lg px-2 py-1 transition-all duration-300"
+    const baseClass = "font-medium focus:outline-none rounded-athletic px-3 py-2 transition-all duration-300"
     
     if (isActive) {
-      return `${baseClass} bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent font-bold`
+      return `${baseClass} text-primary-blue font-semibold`
     }
     
-    return `${baseClass} text-gray-300 hover:text-white`
+    return `${baseClass} text-primary-white/80 hover:text-primary-blue`
   }
 
   // Function to get mobile nav item styling
   const getMobileNavItemClass = (path) => {
     const isActive = location.pathname === path
-    const baseClass = "block font-medium focus:outline-none rounded-lg px-2 py-1 transition-all duration-300"
+    const baseClass = "block font-medium focus:outline-none rounded-athletic px-3 py-2 transition-all duration-300"
     
     if (isActive) {
-      return `${baseClass} bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent font-bold`
+      return `${baseClass} text-primary-blue font-semibold`
     }
     
-    return `${baseClass} text-gray-300 hover:text-white`
+    return `${baseClass} text-primary-white/80 hover:text-primary-blue`
   }
 
   return (
@@ -186,15 +185,15 @@ const Navigation = ({ isLoaded }) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : -20 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5"
+      className="fixed top-0 left-0 right-0 z-50 bg-primary-navy/95 backdrop-blur-md border-b border-primary-blue/20"
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link 
             to="/" 
-            className="flex items-center space-x-3 focus:outline-none rounded-lg"
+            className="flex items-center space-x-3 focus:outline-none rounded-athletic"
             aria-label="Reppo home"
             onClick={() => {
               // Ensure scroll to top when clicking logo
@@ -208,15 +207,15 @@ const Navigation = ({ isLoaded }) => {
             <img 
               src="/Reppo-Logo.png" 
               alt="Reppo Logo" 
-              className="h-8 w-auto hover:scale-105 transition-transform duration-300 logo-gradient"
+              className="h-8 w-auto hover:scale-105 transition-transform duration-300"
             />
-            <span className="text-xl font-bold text-white tracking-tight">
+            <span className="text-xl font-bold text-primary-white tracking-tight">
               Reppo
             </span>
           </Link>
           
           {/* Desktop Navigation Menu */}
-          <nav className="hidden md:flex items-center space-x-8" role="menubar">
+          <nav className="hidden md:flex items-center space-x-6" role="menubar">
             {navItems.map((item) => (
               <Link 
                 key={item.path}
@@ -224,11 +223,6 @@ const Navigation = ({ isLoaded }) => {
                 className={getNavItemClass(item.path)}
                 role="menuitem"
                 aria-label={`Navigate to ${item.name}`}
-                style={location.pathname === item.path ? {
-                  backgroundImage: 'linear-gradient(135deg, #FF3B30 0%, #8B5CF6 50%, #2979FF 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                } : {}}
               >
                 {item.name}
               </Link>
@@ -238,17 +232,17 @@ const Navigation = ({ isLoaded }) => {
           {/* CTA Button */}
           <Link
             to="/join"
-            className="hidden md:block bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 focus:outline-none"
+            className="hidden md:block btn-primary bg-gradient-athletic text-primary-white font-semibold px-6 py-3 rounded-athletic hover:scale-105 transition-all duration-300 shadow-blue-glow focus:outline-none"
             aria-label="Join waitlist for early access"
           >
-            Join Waitlist
+            Train with Favorites
           </Link>
 
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             onKeyDown={(e) => handleKeyDown(e, () => setIsMobileMenuOpen(!isMobileMenuOpen))}
-            className="md:hidden text-white hover:text-gray-300 transition-colors focus:outline-none rounded-lg p-2"
+            className="md:hidden text-primary-white hover:text-primary-blue transition-colors focus:outline-none rounded-athletic p-2"
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -269,7 +263,7 @@ const Navigation = ({ isLoaded }) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-black/95 backdrop-blur-md border-t border-white/5"
+            className="md:hidden bg-primary-navy/98 backdrop-blur-md border-t border-primary-blue/20"
             id="mobile-menu"
             role="menu"
             aria-label="Mobile navigation menu"
@@ -282,11 +276,6 @@ const Navigation = ({ isLoaded }) => {
                   className={getMobileNavItemClass(item.path)}
                   onClick={() => setIsMobileMenuOpen(false)}
                   role="menuitem"
-                  style={location.pathname === item.path ? {
-                    backgroundImage: 'linear-gradient(135deg, #FF3B30 0%, #8B5CF6 50%, #2979FF 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent'
-                  } : {}}
                 >
                   {item.name}
                 </Link>
@@ -294,11 +283,11 @@ const Navigation = ({ isLoaded }) => {
               
               <Link
                 to="/join"
-                className="w-full block bg-gradient-primary text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 mt-4 focus:outline-none text-center"
+                className="w-full block btn-primary bg-gradient-athletic text-primary-white font-semibold px-6 py-3 rounded-athletic hover:scale-105 transition-all duration-300 shadow-blue-glow mt-4 focus:outline-none text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
                 aria-label="Join waitlist for early access"
               >
-                Join Waitlist
+                Train with Favorites
               </Link>
             </div>
           </motion.div>
@@ -336,7 +325,7 @@ const Footer = ({ isLoaded }) => {
           throw error
         }
       } else {
-        setNewsletterStatus('You\'re on the list! Welcome to the performance athlete circle. 👑')
+        setNewsletterStatus('Welcome to the elite! Check your email for next steps. 🚀')
         setNewsletterEmail('')
       }
     } catch (error) {
@@ -352,14 +341,14 @@ const Footer = ({ isLoaded }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-      className="bg-black/95 backdrop-blur-md border-t border-white/10 py-12 sm:py-16"
+      className="footer bg-primary-navy border-t border-primary-blue/20 py-16"
       role="contentinfo"
       aria-label="Site footer"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
         
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           
           {/* Company Info & Newsletter */}
           <div className="lg:col-span-2">
@@ -369,18 +358,19 @@ const Footer = ({ isLoaded }) => {
                 alt="Reppo Logo" 
                 className="h-8 w-auto"
               />
-              <span className="text-xl font-bold text-white">Reppo</span>
+              <span className="footer-title text-primary-white">Reppo</span>
             </div>
             
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              AI-powered fitness competition platform that transforms your daily workouts into intelligent battles against yesterday's you. Join 47,000+ performance athletes already outperforming their limits.
+            <p className="text-primary-white/80 mb-6 leading-relaxed">
+              The first platform where you train WITH your favorite athletes using their actual workout data. 
+              Authentic training powered by AI personalization.
             </p>
 
             {/* Newsletter Signup */}
             <div className="mb-6">
-              <h4 className="text-white font-semibold mb-3">Get Exclusive Updates</h4>
-              <p className="text-gray-400 text-sm mb-4">
-                Early access to new features, performance insights, and founder-only content.
+              <h4 className="text-primary-white font-semibold mb-3">Join the Elite</h4>
+              <p className="text-primary-white/60 text-sm mb-4">
+                Get early access to live athlete data and AI-personalized training.
               </p>
               <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3">
                 <label htmlFor="newsletter-email" className="sr-only">Email address</label>
@@ -390,137 +380,81 @@ const Footer = ({ isLoaded }) => {
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary/50 focus:bg-white/10 transition-all duration-300"
+                  className="waitlist-input flex-1"
                   aria-describedby="newsletter-description"
                 />
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-3 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="waitlist-submit"
                   aria-label="Join waitlist"
                 >
-                  {isSubmitting ? 'Joining...' : 'Join Waitlist'}
+                  {isSubmitting ? 'Joining...' : 'Join Now'}
                 </button>
               </form>
               {newsletterStatus && (
-                <p className="text-sm mt-2 text-gray-300" role="status" aria-live="polite">{newsletterStatus}</p>
+                <p className={`text-sm mt-2 ${newsletterStatus.includes('🎉') || newsletterStatus.includes('🚀') ? 'text-accent-green' : 'text-accent-orange'}`} role="status" aria-live="polite">{newsletterStatus}</p>
               )}
             </div>
 
             {/* Trust Signals */}
-            <div className="flex items-center gap-6 text-sm text-gray-400">
+            <div className="flex items-center gap-6 text-sm text-primary-white/60">
               <div className="flex items-center gap-2">
-                <span className="text-green-400" aria-hidden="true">🔒</span>
-                <span>Secure & Private</span>
+                <span className="text-accent-green" aria-hidden="true">✅</span>
+                <span>100% Authentic Data</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-blue-400" aria-hidden="true">⭐</span>
-                <span>4.9/5 Rating</span>
+                <span className="text-primary-blue" aria-hidden="true">🤖</span>
+                <span>AI Personalized</span>
               </div>
             </div>
           </div>
 
           {/* Product Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Product</h4>
-            <ul className="space-y-3 text-gray-300" role="list">
-              <li><Link to="/features" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Features</Link></li>
-              <li><Link to="/roadmap" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Roadmap</Link></li>
-              <li><Link to="/join" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Join Waitlist</Link></li>
-              <li><Link to="/features" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">How It Works</Link></li>
+            <h4 className="text-primary-white font-semibold mb-4">Product</h4>
+            <ul className="space-y-3 text-primary-white/70" role="list">
+              <li><Link to="/features" className="footer-link">Features</Link></li>
+              <li><Link to="/community" className="footer-link">Community</Link></li>
+              <li><Link to="/join" className="footer-link">Join Waitlist</Link></li>
             </ul>
           </div>
 
           {/* Company Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
-            <ul className="space-y-3 text-gray-300" role="list">
-              <li><Link to="/about" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">About Us</Link></li>
-              <li><Link to="/community" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Community</Link></li>
-              <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Support & Resources */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">Support</h4>
-            <ul className="space-y-3 text-gray-300" role="list">
-              <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Help Center</a></li>
-              <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Community Forum</a></li>
-              <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">System Status</a></li>
-              <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Bug Reports</a></li>
-              <li><a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Feature Requests</a></li>
+            <h4 className="text-primary-white font-semibold mb-4">Company</h4>
+            <ul className="space-y-3 text-primary-white/70" role="list">
+              <li><Link to="/about" className="footer-link">About</Link></li>
+              <li><a href="#" className="footer-link">Contact</a></li>
+              <li><a href="#" className="footer-link">Support</a></li>
             </ul>
           </div>
         </div>
 
-
-
-        {/* Social Media & Stats */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-8">
+        {/* Bottom Bar */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 pt-8 border-t border-primary-blue/20">
           
-          {/* Social Media Links */}
-          <div className="flex items-center gap-4">
-            <span className="text-gray-400 text-sm">Follow us:</span>
-            <div className="flex items-center gap-3">
-              <a href="#" className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium" aria-label="Follow us on Instagram">
-                Instagram
-              </a>
-              <a href="#" className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium" aria-label="Follow us on X">
-                X
-              </a>
-              <a href="#" className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium" aria-label="Follow us on TikTok">
-                TikTok
-              </a>
-              <a href="#" className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium" aria-label="Follow us on LinkedIn">
-                LinkedIn
-              </a>
-            </div>
+          {/* Copyright */}
+          <div className="text-primary-white/60 text-sm">
+            © 2024 Reppo. Built by athletes, for athletes.
           </div>
 
           {/* Live Stats */}
           <div className="flex items-center gap-6 text-sm">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" aria-hidden="true"></div>
-              <span className="text-gray-300">47,000+ Athletes</span>
+              <div className="w-2 h-2 bg-accent-green rounded-full animate-pulse" aria-hidden="true"></div>
+              <span className="text-primary-white/70 font-mono">47K+ Athletes</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" aria-hidden="true"></div>
-              <span className="text-gray-300">2.3M+ Workouts Tracked</span>
+              <div className="w-2 h-2 bg-primary-blue rounded-full animate-pulse" aria-hidden="true"></div>
+              <span className="text-primary-white/70 font-mono">Live Data</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" aria-hidden="true"></div>
-              <span className="text-gray-300">127 Spots Left</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10">
-          
-          {/* Copyright */}
-          <div className="text-gray-400 text-sm">
-            © 2024 Reppo. All rights reserved. Built by athletes, for athletes.
           </div>
 
           {/* Legal Links */}
-          <div className="flex items-center gap-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">Cookie Policy</a>
-            <a href="#" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">GDPR</a>
-          </div>
-
-          {/* Security Badges */}
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1 text-xs text-gray-400">
-              <span className="text-green-400" aria-hidden="true">🔒</span>
-              <span>SSL Secured</span>
-            </div>
-            <div className="flex items-center gap-1 text-xs text-gray-400">
-              <span className="text-blue-400" aria-hidden="true">🛡️</span>
-              <span>SOC 2 Compliant</span>
-            </div>
+          <div className="flex items-center gap-4 text-sm text-primary-white/60">
+            <a href="#" className="footer-link">Privacy</a>
+            <a href="#" className="footer-link">Terms</a>
           </div>
         </div>
       </div>

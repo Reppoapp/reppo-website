@@ -22,361 +22,258 @@ const RoadmapSection = () => {
   const roadmapItems = [
     {
       phase: "Phase 1",
-      title: "AI Challenge Foundation",
+      title: "Live Athlete Data Integration",
       timeline: "Q1 2025",
       status: "In Progress",
       completion: 78,
-      icon: "🚀",
-      color: "from-primary to-secondary",
-      statusColor: "bg-blue-500",
-      statusTextColor: "text-blue-300",
+      icon: "📱",
+      color: "from-primary-blue to-accent-orange",
+      statusColor: "bg-primary-blue",
+      statusTextColor: "text-primary-blue",
       features: [
-        "Personal AI challenge generation",
-        "Basic performance tracking",
-        "Victory/defeat system",
-        "Daily challenge notifications"
+        "Garmin & Apple Watch integration",
+        "Real-time workout notifications",
+        "Athlete verification system",
+        "Live data streaming"
       ],
       founderBenefits: [
-        "Early access to AI algorithms",
-        "Priority challenge customization",
-        "Direct feedback to development team",
-        "Exclusive beta testing privileges"
+        "Early access to elite athletes",
+        "Priority athlete subscriptions",
+        "Direct feedback channel",
+        "Exclusive beta features"
       ],
-      devInsights: "Our AI is trained on 2.3M+ workout sessions from elite athletes. The challenge generation algorithm considers 47 performance variables to create optimal daily battles.",
-      deliverables: ["Core AI engine", "Mobile app MVP", "Performance dashboard", "Challenge system"],
-      risks: ["Algorithm optimization", "User experience refinement"],
+      devInsights: "Building secure APIs to connect with athlete devices while maintaining privacy and authenticity.",
+      deliverables: ["Device integrations", "Notification system", "Athlete dashboard", "Data pipeline"],
       timeline_details: "Started Dec 2024, Beta launch Feb 2025"
     },
     {
       phase: "Phase 2", 
-      title: "Advanced Competition",
+      title: "AI Personalization Engine",
       timeline: "Q2 2025",
       status: "Coming Soon",
       completion: 15,
-      icon: "⚔️",
-      color: "from-secondary to-primary",
-      statusColor: "bg-yellow-500",
-      statusTextColor: "text-yellow-300",
+      icon: "🤖",
+      color: "from-accent-orange to-accent-green",
+      statusColor: "bg-accent-orange",
+      statusTextColor: "text-accent-orange",
       features: [
-        "Multi-day challenge campaigns",
-        "Performance analytics dashboard",
-        "Achievement system",
-        "Streak tracking & rewards"
+        "Fitness level analysis",
+        "Equipment adaptation",
+        "Workout scaling algorithms",
+        "Performance tracking"
       ],
       founderBenefits: [
-        "Advanced analytics access",
-        "Custom challenge creation tools",
-        "Performance coaching insights",
-        "Elite athlete benchmarking"
+        "Advanced AI features",
+        "Custom workout parameters",
+        "Performance insights",
+        "Priority algorithm access"
       ],
-      devInsights: "Building predictive models that anticipate performance plateaus and automatically adjust challenge difficulty. Machine learning from 47K+ athlete data points.",
-      deliverables: ["Advanced dashboard", "Campaign system", "Achievement engine", "Predictive analytics"],
-      risks: ["Scaling challenges", "Data processing optimization"],
-      timeline_details: "Planning phase complete, Development starts Q1 2025"
+      devInsights: "Training AI models on diverse fitness data to create personalized workout experiences for every athlete.",
+      deliverables: ["AI engine", "Personalization system", "Analytics dashboard", "Scaling algorithms"],
+      timeline_details: "Development starts Q1 2025, Launch Q2 2025"
     },
     {
       phase: "Phase 3",
-      title: "Community & Social",
+      title: "Community & Progress Tracking",
       timeline: "Q3 2025", 
       status: "Planned",
       completion: 5,
-      icon: "👥",
-      color: "from-primary to-secondary",
-      statusColor: "bg-purple-500",
-      statusTextColor: "text-purple-300",
+      icon: "📊",
+      color: "from-accent-green to-primary-blue",
+      statusColor: "bg-accent-green",
+      statusTextColor: "text-accent-green",
       features: [
-        "Anonymous leaderboards",
-        "Challenge sharing",
-        "Performance athlete badges",
-        "Elite community features"
+        "Athlete-specific communities",
+        "Progress comparison tools",
+        "Achievement system",
+        "Community leaderboards"
       ],
       founderBenefits: [
-        "Founder badge & recognition",
-        "Community leadership roles",
-        "Exclusive networking events",
+        "Founder community access",
+        "Leadership opportunities",
+        "Exclusive events",
         "Advanced social features"
       ],
-      devInsights: "Creating anonymous competition systems that maintain privacy while enabling meaningful performance comparisons. Social features designed for elite athletes.",
-      deliverables: ["Social platform", "Leaderboard system", "Community tools", "Badge system"],
-      risks: ["Privacy implementation", "Community moderation"],
-      timeline_details: "Research phase, Development planned Q2 2025"
+      devInsights: "Creating communities around specific athletes to build authentic training experiences and peer support.",
+      deliverables: ["Community platform", "Progress tools", "Achievement system", "Social features"],
+      timeline_details: "Planning Q2 2025, Development Q3 2025"
     },
     {
       phase: "Phase 4",
-      title: "AI Evolution",
+      title: "Mobile App & Advanced Features",
       timeline: "Q4 2025",
       status: "Future",
       completion: 0,
-      icon: "🧠",
-      color: "from-secondary to-primary",
-      statusColor: "bg-gray-500",
-      statusTextColor: "text-gray-300",
+      icon: "🚀",
+      color: "from-primary-blue to-accent-orange",
+      statusColor: "bg-primary-navy",
+      statusTextColor: "text-primary-navy",
       features: [
-        "Predictive performance modeling",
-        "Personalized recovery insights",
-        "Advanced challenge algorithms",
-        "Wellness integration"
+        "Native mobile applications",
+        "Offline workout access",
+        "Advanced analytics",
+        "Premium athlete content"
       ],
       founderBenefits: [
-        "AI coaching personalization",
-        "Predictive health insights",
-        "Advanced recovery optimization",
-        "Lifetime founder access"
+        "Lifetime premium access",
+        "Mobile app priority",
+        "Exclusive athlete content",
+        "Advanced features"
       ],
-      devInsights: "Developing next-generation AI that predicts optimal training loads, recovery periods, and breakthrough moments. Integration with wearable devices for real-time optimization.",
-      deliverables: ["Predictive AI", "Health integration", "Recovery optimization", "Advanced algorithms"],
-      risks: ["AI complexity", "Health data integration"],
-      timeline_details: "Concept phase, Research ongoing"
+      devInsights: "Full mobile experience with offline capabilities and premium features for the most dedicated athletes.",
+      deliverables: ["iOS/Android apps", "Offline features", "Premium content", "Advanced analytics"],
+      timeline_details: "Design Q3 2025, Development Q4 2025"
     }
   ]
 
   const StatusBadge = ({ status, completion, statusColor, statusTextColor }) => (
-    <div className={`inline-flex items-center gap-2 ${statusColor}/20 backdrop-blur border ${statusColor.replace('bg-', 'border-')}/30 rounded-full px-3 py-1 text-sm font-semibold ${statusTextColor}`}>
-      <div className={`w-2 h-2 ${statusColor} rounded-full ${status === 'In Progress' ? 'animate-pulse' : ''}`}></div>
-      {status}
+    <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold ${statusColor}/20 border ${statusColor}/30`}>
+      <div className={`w-2 h-2 rounded-full ${statusColor}`}></div>
+      <span className={statusTextColor}>{status} • {completion}%</span>
     </div>
   )
 
   const ProgressBar = ({ completion, color }) => (
-    <div className="w-full bg-gray-700/50 rounded-full h-2 mb-4">
+    <div className="w-full bg-border-gray rounded-full h-2 overflow-hidden">
       <motion.div
+        className={`h-full bg-gradient-to-r ${color} rounded-full`}
         initial={{ width: 0 }}
         animate={{ width: progressAnimated ? `${completion}%` : 0 }}
-        transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-        className={`h-2 rounded-full bg-gradient-to-r ${color} relative overflow-hidden`}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-      </motion.div>
-    </div>
-  )
-
-  const TimelineConnector = ({ index, isActive }) => (
-    <div className="hidden lg:block absolute left-8 top-20 w-0.5 h-32 bg-gradient-to-b from-primary/30 to-secondary/30">
-      <motion.div
-        initial={{ height: 0 }}
-        animate={{ height: isActive ? "100%" : "30%" }}
-        transition={{ duration: 0.8, delay: index * 0.2 }}
-        className="w-full bg-gradient-to-b from-primary to-secondary"
+        transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
       />
     </div>
   )
 
   const RoadmapCard = ({ item, index, isExpanded, onToggle }) => (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="relative"
+      transition={{ delay: index * 0.1 }}
+      className="feature-card relative"
     >
-      <TimelineConnector index={index} isActive={item.status === 'In Progress'} />
-      
-      <motion.div
-        whileHover={{ scale: 1.02, y: -5 }}
-        onClick={() => onToggle(index)}
-        className={`bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-300 cursor-pointer hover:border-primary/30 shadow-2xl ${
-          isExpanded ? 'ring-2 ring-primary/30' : ''
-        }`}
-        style={{
-          boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)',
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)'
-        }}
-      >
-        {/* Header */}
-        <div className="flex items-start justify-between mb-6">
-          <div className="flex items-center gap-4">
-            <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-2xl shadow-lg`}>
-              {item.icon}
-            </div>
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <h3 className="text-xl sm:text-2xl font-bold text-white">{item.phase}</h3>
-                <StatusBadge 
-                  status={item.status} 
-                  completion={item.completion}
-                  statusColor={item.statusColor}
-                  statusTextColor={item.statusTextColor}
-                />
-              </div>
-              <h4 className="text-lg sm:text-xl font-semibold text-gray-300">{item.title}</h4>
-              <p className="text-sm text-gray-400">{item.timeline}</p>
-            </div>
+      <div className="flex items-start justify-between mb-6">
+        <div className="flex items-center gap-4">
+          <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-primary-white font-bold text-2xl`}>
+            {item.icon}
           </div>
-
+          <div>
+            <div className="text-sm font-mono text-text-gray mb-1">{item.phase}</div>
+            <h3 className="text-xl font-bold text-primary-navy">{item.title}</h3>
+            <div className="text-sm text-text-gray mt-1">{item.timeline}</div>
+          </div>
         </div>
+        <StatusBadge 
+          status={item.status} 
+          completion={item.completion}
+          statusColor={item.statusColor}
+          statusTextColor={item.statusTextColor}
+        />
+      </div>
 
-        {/* Progress Bar */}
+      <div className="mb-6">
         <ProgressBar completion={item.completion} color={item.color} />
+      </div>
 
-        {/* Core Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-          {item.features.map((feature, idx) => (
-            <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-              <span className="text-green-400">✓</span>
-              {feature}
-            </div>
-          ))}
-        </div>
-
-        {/* Founder Benefits Preview */}
-        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur border border-primary/20 rounded-xl p-4 mb-4">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-yellow-400">👑</span>
-            <span className="text-yellow-300 font-semibold text-sm">Founder Access Benefits</span>
-          </div>
+      <div className="space-y-4 mb-6">
+        <div>
+          <h4 className="font-semibold text-primary-navy mb-2">Key Features</h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {item.founderBenefits.slice(0, 2).map((benefit, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
-                <span className="text-primary">•</span>
-                {benefit}
+            {item.features.map((feature, i) => (
+              <div key={i} className="flex items-center gap-2 text-sm text-text-gray">
+                <div className="w-1.5 h-1.5 bg-gradient-athletic rounded-full"></div>
+                <span>{feature}</span>
               </div>
             ))}
           </div>
-          {!isExpanded && (
-            <button className="text-primary text-xs mt-2 hover:text-primary/80 transition-colors">
-              View all benefits →
-            </button>
-          )}
         </div>
 
-        {/* Expand/Collapse Button */}
-        <button className="w-full flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors">
-          <span className="text-sm font-medium">
-            {isExpanded ? 'Show less' : 'View detailed roadmap'}
-          </span>
-          <motion.span
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+        <div>
+          <h4 className="font-semibold text-primary-navy mb-2">Founder Benefits</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {item.founderBenefits.slice(0, 2).map((benefit, i) => (
+              <div key={i} className="flex items-center gap-2 text-sm text-accent-green">
+                <span>👑</span>
+                <span>{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <button
+        onClick={() => onToggle(index)}
+        className="w-full text-left text-primary-blue font-medium text-sm hover:text-accent-orange transition-colors"
+      >
+        {isExpanded ? 'Show Less' : 'View Details'} 
+        <span className={`ml-2 transition-transform ${isExpanded ? 'rotate-180' : ''}`}>↓</span>
+      </button>
+
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="mt-4 pt-4 border-t border-border-gray space-y-4"
           >
-            ↓
-          </motion.span>
-        </button>
+            <div>
+              <h4 className="font-semibold text-primary-navy mb-2">Development Insights</h4>
+              <p className="text-sm text-text-gray leading-relaxed">{item.devInsights}</p>
+            </div>
 
-        {/* Expanded Content */}
-        <AnimatePresence>
-          {isExpanded && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="mt-6 pt-6 border-t border-white/10 space-y-6"
-            >
-              {/* Complete Founder Benefits */}
-              <div>
-                <h5 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="text-yellow-400">👑</span>
-                  Complete Founder Benefits
-                </h5>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {item.founderBenefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                      <span className="text-primary">✓</span>
-                      {benefit}
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div>
+              <h4 className="font-semibold text-primary-navy mb-2">Timeline</h4>
+              <p className="text-sm text-text-gray">{item.timeline_details}</p>
+            </div>
 
-              {/* Developer Insights */}
-              <div>
-                <h5 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="text-blue-400">🔬</span>
-                  Behind the Scenes
-                </h5>
-                <p className="text-sm text-gray-300 leading-relaxed bg-blue-500/10 border border-blue-400/20 rounded-lg p-4">
-                  {item.devInsights}
-                </p>
-              </div>
-
-              {/* Deliverables */}
-              <div>
-                <h5 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="text-green-400">📦</span>
-                  Key Deliverables
-                </h5>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {item.deliverables.map((deliverable, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                      <span className="text-green-400">□</span>
-                      {deliverable}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Timeline Details */}
-              <div>
-                <h5 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="text-purple-400">📅</span>
-                  Timeline Details
-                </h5>
-                <p className="text-sm text-gray-300 bg-purple-500/10 border border-purple-400/20 rounded-lg p-3">
-                  {item.timeline_details}
-                </p>
-              </div>
-
-              {/* Risks & Challenges */}
-              {item.risks.length > 0 && (
-                <div>
-                  <h5 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                    <span className="text-orange-400">⚠️</span>
-                    Technical Challenges
-                  </h5>
-                  <div className="space-y-2">
-                    {item.risks.map((risk, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <span className="text-orange-400">•</span>
-                        {risk}
-                      </div>
-                    ))}
+            <div>
+              <h4 className="font-semibold text-primary-navy mb-2">All Founder Benefits</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {item.founderBenefits.map((benefit, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-accent-green">
+                    <span>👑</span>
+                    <span>{benefit}</span>
                   </div>
-                </div>
-              )}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   )
 
   return (
-    <section className="py-16 sm:py-20 px-4 relative overflow-hidden">
-      {/* Enhanced background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl opacity-40 animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary/2 to-secondary/2 rounded-full blur-3xl"></div>
+    <section className="py-20 bg-primary-white relative overflow-hidden">
+      {/* Athletic Precision background elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-blue/5 via-transparent to-accent-orange/5"></div>
+        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-primary-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-accent-orange/10 rounded-full blur-3xl"></div>
       </div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        
-        {/* Enhanced Section Header */}
+
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 relative z-10">
+        {/* Athletic Precision Header */}
         <motion.div
+          variants={fadeInUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          className="text-center mb-12 sm:mb-16"
+          viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur border border-purple-400/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-purple-400 text-sm">🗺️</span>
-            <span className="text-white text-sm font-semibold">INTERACTIVE DEVELOPMENT ROADMAP</span>
-          </div>
-          
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
-            The <span className="text-gradient">AI Competition Roadmap</span>
+          <h2 className="section-header text-center mb-6">
+            Product Development Roadmap
           </h2>
-          <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-2 font-medium">
-            Transparent development timeline with{' '}
-            <span className="text-text-primary font-bold">real progress tracking, founder benefits, and behind-the-scenes insights</span>{' '}
-            from our engineering team.
+          
+          <p className="section-description text-center max-w-3xl mx-auto">
+            See how we're building the future of authentic athlete training, 
+            from live data integration to AI personalization and community features.
           </p>
         </motion.div>
 
-        {/* Interactive Timeline */}
-        <div className="space-y-8 sm:space-y-12 mb-12 sm:mb-16">
+        {/* Roadmap Timeline */}
+        <div className="space-y-8">
           {roadmapItems.map((item, index) => (
             <RoadmapCard
               key={index}
@@ -388,94 +285,35 @@ const RoadmapSection = () => {
           ))}
         </div>
 
-        {/* Enhanced Bottom CTA */}
+        {/* CTA Section */}
         <motion.div
+          variants={fadeInUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.5, ease: "easeOut" }
-            }
-          }}
-          className="text-center pt-8 sm:pt-12 border-t border-white/10"
+          viewport={{ once: true }}
+          className="text-center mt-16"
         >
-          <div className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl"
-            style={{
-              boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)'
-            }}
-          >
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-text-primary mb-6 leading-tight">
-              Get <span className="text-gradient">Founder Access</span> to Every Feature
+          <div className="feature-card max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-primary-navy mb-4">
+              Join as a Founder
             </h3>
-            
-            <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
-              As we build the future of AI-powered fitness competition, founders get{' '}
-              <span className="text-gradient font-bold">early access, exclusive features, and direct influence</span>{' '}
-              on product development.
+            <p className="text-text-gray mb-6">
+              Get early access to all features, exclusive founder benefits, 
+              and help shape the future of authentic athlete training.
             </p>
-
-            {/* Founder Benefits Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-              {[
-                { icon: "🚀", title: "Early Access", desc: "First to try new features" },
-                { icon: "👑", title: "Founder Badge", desc: "Lifetime elite status" },
-                { icon: "📊", title: "Advanced Analytics", desc: "Deep performance insights" },
-                { icon: "🎯", title: "Direct Feedback", desc: "Shape product development" }
-              ].map((benefit, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur border border-primary/20 rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-2">{benefit.icon}</div>
-                  <div className="text-sm font-bold text-white mb-1">{benefit.title}</div>
-                  <div className="text-xs text-gray-300">{benefit.desc}</div>
-                </div>
-              ))}
-            </div>
-
+            
             <motion.button
-              whileHover={{ 
-                scale: 1.05,
-                y: -2,
-                boxShadow: '0 20px 40px rgba(255, 59, 48, 0.4)'
-              }}
+              whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.location.href = '/join'}
-              className="bg-gradient-to-r from-primary to-secondary text-white font-bold px-10 sm:px-12 py-5 sm:py-6 rounded-full shadow-2xl transition-all duration-300 text-lg sm:text-xl hover:shadow-primary/40 group"
+              className="btn-primary bg-gradient-athletic text-primary-white font-bold px-8 py-4 rounded-athletic shadow-blue-glow transition-all duration-300 text-lg"
             >
               <span>Secure Founder Access</span>
-              <motion.span 
-                className="ml-3 text-2xl"
-                animate={{ x: [0, 3, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                🎯
-              </motion.span>
+              <span className="ml-2">🚀</span>
             </motion.button>
-
-            <div className="flex items-center justify-center gap-6 mt-6 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <span className="text-green-400">✅</span>
-                <span>Lifetime access</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-blue-400">🔒</span>
-                <span>Limited spots</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-purple-400">⚡</span>
-                <span>Early access</span>
-              </div>
-            </div>
           </div>
         </motion.div>
-        
       </div>
-      
-      {/* Smooth transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-background/50 pointer-events-none"></div>
     </section>
   )
 }
