@@ -22,24 +22,22 @@ const FeatureCard = ({ title, description, icon, delay = 0, features, metric, is
         onHover()
       }}
       onHoverEnd={() => setIsHovered(false)}
-      className={`bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-300 cursor-pointer group h-full relative overflow-hidden ${
-        isActive ? 'border-primary/30 bg-primary/5' : 'hover:border-white/20 hover:bg-white/10'
+      className={`feature-card cursor-pointer group h-full relative overflow-hidden ${
+        isActive ? 'border-primary-blue/30 bg-primary-blue/5' : 'hover:border-primary-blue/20'
       }`}
       style={{
         boxShadow: isActive 
-          ? '0 8px 32px rgba(255, 59, 48, 0.3)' 
-          : '0 8px 32px rgba(31, 38, 135, 0.2)',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)'
+          ? '0 8px 32px rgba(0, 212, 255, 0.3)' 
+          : '0 8px 32px rgba(26, 29, 41, 0.1)',
       }}
     >
-      {/* Animated background overlay */}
-      <div className={`absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+      {/* Athletic Precision background overlay */}
+      <div className={`absolute inset-0 bg-gradient-athletic/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
       
       <div className="relative z-10">
-        {/* Icon with enhanced animation */}
+        {/* Athletic Precision Icon */}
         <motion.div 
-          className="text-4xl sm:text-5xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300"
+          className="feature-icon mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
           animate={isActive ? { 
             scale: [1, 1.1, 1],
             rotate: [0, 5, 0]
@@ -49,21 +47,21 @@ const FeatureCard = ({ title, description, icon, delay = 0, features, metric, is
           {icon}
         </motion.div>
 
-        {/* Title */}
-        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 text-text-primary group-hover:text-gradient transition-colors duration-300">
+        {/* Athletic Precision Title */}
+        <h3 className="feature-title group-hover:text-gradient transition-colors duration-300">
           {title}
         </h3>
 
-        {/* Description */}
-        <p className="text-text-secondary leading-relaxed text-sm sm:text-base lg:text-lg mb-6">
+        {/* Athletic Precision Description */}
+        <p className="feature-description mb-6">
           {description}
         </p>
 
-        {/* Success Metric */}
-        <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur border border-green-400/30 rounded-xl p-3 mb-4">
+        {/* Athletic Precision Success Metric */}
+        <div className="bg-accent-green/20 backdrop-blur border border-accent-green/30 rounded-athletic p-3 mb-4">
           <div className="flex items-center gap-2">
-            <span className="text-green-400 text-sm">📈</span>
-            <span className="text-green-300 font-semibold text-xs sm:text-sm">
+            <span className="text-accent-green text-sm">📈</span>
+            <span className="text-accent-green font-semibold text-xs sm:text-sm font-mono">
               {metric}
             </span>
           </div>
@@ -90,8 +88,8 @@ const FeatureCard = ({ title, description, icon, delay = 0, features, metric, is
               transition={{ delay: index * 0.1 }}
               className="flex items-center gap-2"
             >
-              <div className="w-1.5 h-1.5 bg-gradient-to-r from-primary to-secondary rounded-full flex-shrink-0"></div>
-              <span className="text-text-secondary text-xs sm:text-sm">{feature}</span>
+              <div className="w-1.5 h-1.5 bg-gradient-athletic rounded-full flex-shrink-0"></div>
+              <span className="text-text-gray text-xs sm:text-sm">{feature}</span>
             </motion.div>
           ))}
         </motion.div>
@@ -101,259 +99,189 @@ const FeatureCard = ({ title, description, icon, delay = 0, features, metric, is
 }
 
 const FeatureGrid = () => {
+  const [activeCard, setActiveCard] = useState(0)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [activeFeature, setActiveFeature] = useState(0)
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  }
 
   const features = [
     {
-      title: "Live Athlete Data",
-      description: "Get real workout data straight from your favorite athletes' Garmin and Apple Watch devices. When they finish training, you get instant access to their actual workout.",
       icon: "📱",
-      metric: "100% authentic athlete data",
+      title: "Live Athlete Data",
+      description: "Get real workout data from your favorite athletes the moment they finish training. No fake programs, just authentic performance data from Garmin and Apple Watch.",
+      metric: "100% Authentic athlete data",
       features: [
-        "Real-time Garmin/Apple Watch sync",
-        "Verified athlete profiles only",
-        "Instant workout notifications",
-        "No fake or pre-recorded content"
+        "Real-time Garmin & Apple Watch integration",
+        "Verified athlete accounts only",
+        "Instant notifications when athletes finish workouts",
+        "Complete workout metrics and performance data"
       ]
     },
     {
-      title: "AI Personalization",
-      description: "Our AI takes your favorite athlete's workout and scales it perfectly to your fitness level. Same intensity, same structure, your capability.",
       icon: "🤖",
-      metric: "Personalized to your exact level",
+      title: "AI Personalization",
+      description: "Advanced AI scales every athlete workout to your exact fitness level, available equipment, and time constraints. Train with elite athletes at your pace.",
+      metric: "AI Personalized scaling",
       features: [
-        "Fitness level assessment",
-        "Workout scaling algorithms",
-        "Maintains original structure",
-        "Adaptive intensity adjustments"
+        "Fitness level analysis and adaptation",
+        "Equipment availability consideration",
+        "Time constraint optimization",
+        "Progressive difficulty adjustment"
       ]
     },
     {
-      title: "Authentic Training",
-      description: "No fake programs or marketing gimmicks. Every workout comes from verified athletes doing their actual training sessions.",
       icon: "🏆",
-      metric: "Zero fake programs guaranteed",
+      title: "Authentic Training",
+      description: "No more fake fitness influencer programs. Train with verified elite athletes using their actual workout data, not marketing content.",
+      metric: "Verified athletes only",
       features: [
-        "Verified athlete workouts only",
-        "Real training session data",
-        "No marketing content",
-        "Authentic performance tracking"
+        "Verified elite athlete accounts",
+        "Real workout data, not content",
+        "Performance-based recommendations",
+        "Authentic training experiences"
       ]
     },
     {
-      title: "Multiple Athletes",
-      description: "Train with different favorites for variety. Subscribe to David Goggins, Cameron Hanes, or any verified athlete for diverse training experiences.",
       icon: "👥",
-      metric: "Access to 100+ elite athletes",
+      title: "Multiple Athletes",
+      description: "Follow and train with multiple athletes across different sports. Get notifications when any of your favorites complete a workout.",
+      metric: "Multi-athlete following",
       features: [
-        "Multiple athlete subscriptions",
-        "Diverse training styles",
-        "Verified elite athlete network",
-        "Unlimited variety access"
+        "Follow unlimited verified athletes",
+        "Cross-sport training variety",
+        "Personalized athlete recommendations",
+        "Flexible training schedule"
       ]
     },
     {
+      icon: "📊",
       title: "Progress Tracking",
-      description: "See how you improve alongside your favorite athletes. Track your progress, celebrate victories, and build your training legacy.",
-      icon: "📈",
-      metric: "Track progress with favorites",
+      description: "Track your progress alongside your favorite athletes. See how you're improving and compare your growth with elite performance.",
+      metric: "Performance analytics",
       features: [
-        "Side-by-side comparisons",
-        "Progress visualization",
-        "Achievement tracking",
-        "Training legacy building"
+        "Side-by-side progress comparison",
+        "Performance trend analysis",
+        "Achievement milestone tracking",
+        "Detailed workout analytics"
       ]
     },
     {
+      icon: "🌟",
       title: "Community",
-      description: "Connect with others training with the same athletes. Share experiences, celebrate achievements, and build lasting fitness friendships.",
-      icon: "🤝",
-      metric: "Join 47K+ training community",
+      description: "Join athlete-specific communities where you can share your training experiences with others following the same elite athletes.",
+      metric: "Athlete communities",
       features: [
-        "Athlete-specific communities",
-        "Shared training experiences",
-        "Achievement celebrations",
-        "Fitness friendship building"
+        "Athlete-specific community groups",
+        "Training experience sharing",
+        "Peer motivation and support",
+        "Exclusive athlete interactions"
       ]
     }
   ]
 
+  // Auto-rotate active card
+  React.useEffect(() => {
+    if (!isInView) return
+    
+    const interval = setInterval(() => {
+      setActiveCard((prev) => (prev + 1) % features.length)
+    }, 4000)
+    
+    return () => clearInterval(interval)
+  }, [isInView, features.length])
+
   return (
-    <section ref={ref} className="py-16 sm:py-20 px-4 relative overflow-hidden">
-      {/* Enhanced background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-secondary/6 rounded-full blur-3xl opacity-50 animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/6 rounded-full blur-3xl opacity-40 animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary/3 to-secondary/3 rounded-full blur-3xl"></div>
+    <section ref={ref} className="py-20 bg-primary-white relative overflow-hidden">
+      {/* Athletic Precision background elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-blue/5 via-transparent to-accent-orange/5"></div>
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-primary-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-accent-orange/10 rounded-full blur-3xl"></div>
       </div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        
-        {/* Enhanced Section Header */}
+
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
+        {/* Athletic Precision Header */}
         <motion.div
-          initial="initial"
-          whileInView="animate"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur border border-purple-400/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-purple-400 text-sm">🚀</span>
-            <span className="text-white text-sm font-semibold">NEXT-GENERATION FEATURES</span>
-          </div>
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-primary-blue/20 text-primary-blue px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-primary-blue/30"
+          >
+            <span className="live-indicator">LIVE</span>
+            <span>Authentic Training Platform</span>
+          </motion.div>
           
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
-            The Future of{' '}
-            <span className="text-gradient">Authentic Training</span>
+          <h2 className="section-header text-center mb-6">
+            The Future of Authentic Training
           </h2>
-          <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-2 font-medium">
-            Forget fake fitness programs. Reppo connects you with{' '}
-            <span className="text-text-primary font-bold">your favorite athletes' actual workouts</span>{' '}
-            through live data and AI personalization.
+          
+          <p className="section-description text-center max-w-3xl mx-auto">
+            Train with verified elite athletes using their actual workout data. No fake programs, 
+            no marketing content - just authentic performance data scaled to your level.
           </p>
         </motion.div>
 
-        {/* Enhanced Features Grid with Better Visual Hierarchy */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+        {/* Athletic Precision Feature Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
               {...feature}
               delay={index}
-              isActive={activeFeature === index}
-              onHover={() => setActiveFeature(index)}
+              isActive={activeCard === index}
+              onHover={() => setActiveCard(index)}
             />
           ))}
         </div>
 
-        {/* Enhanced Stats Section */}
+        {/* Athletic Precision Stats */}
         <motion.div
-          initial="initial"
-          whileInView="animate"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
-            }
-          }}
-          className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-3xl p-8 sm:p-12 mb-12 sm:mb-16 shadow-2xl"
-          style={{
-            boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)'
-          }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
         >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-text-primary mb-4">
-              Proven Results from Elite Athletes
-            </h3>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
-              Real performance data from thousands of athletes using Reppo's AI competition system
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {[
-              { stat: "94%", label: "See improvement in first week", icon: "📈" },
-              { stat: "23%", label: "Average performance increase", icon: "💪" },
-              { stat: "89%", label: "Maintain 30+ day streaks", icon: "🔥" },
-              { stat: "47K+", label: "Elite athletes competing", icon: "👑" }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/30 transition-all duration-300"
-              >
-                <div className="text-3xl mb-2">{item.icon}</div>
-                <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">{item.stat}</div>
-                <div className="text-sm text-gray-300">{item.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Enhanced Inline CTA */}
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.5, ease: "easeOut" }
-            }
-          }}
-        >
-          <div className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-3xl p-8 sm:p-12 max-w-4xl mx-auto shadow-2xl text-center"
-            style={{
-              boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)'
-            }}
-          >
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-text-primary mb-6 leading-tight">
-              Ready to Train WITH Your Favorites?
-            </h3>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
-              Join thousands of athletes who've made the switch from fake fitness programs to{' '}
-              <span className="text-gradient font-bold">authentic athlete training</span>.
-            </p>
-            
-            <motion.button
-              whileHover={{ 
-                scale: 1.05,
-                y: -2,
-                boxShadow: '0 20px 40px rgba(255, 59, 48, 0.4)'
-              }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => window.location.href = '/join'}
-              className="bg-gradient-to-r from-primary to-secondary text-white font-bold px-10 sm:px-12 py-5 sm:py-6 rounded-full shadow-2xl transition-all duration-300 text-lg sm:text-xl hover:shadow-primary/40 group mb-6"
-            >
-              <span>Train with Your Favorites</span>
-              <motion.span 
-                className="ml-3 text-2xl"
-                animate={{ x: [0, 3, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                🚀
-              </motion.span>
-            </motion.button>
-
-            <div className="flex items-center justify-center gap-8 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <span className="text-green-400">✅</span>
-                <span>Live athlete data</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-blue-400">⚡</span>
-                <span>AI personalization</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-purple-400">👑</span>
-                <span>Authentic training</span>
-              </div>
+          <div className="text-center">
+            <div className="data-metric text-3xl font-bold text-primary-blue mb-2">
+              100%
             </div>
+            <div className="text-text-gray font-medium">Authentic Athlete Data</div>
+          </div>
+          
+          <div className="text-center">
+            <div className="data-metric text-3xl font-bold text-accent-orange mb-2">
+              Live
+            </div>
+            <div className="text-text-gray font-medium">Real-time Notifications</div>
+          </div>
+          
+          <div className="text-center">
+            <div className="data-metric text-3xl font-bold text-accent-green mb-2">
+              AI
+            </div>
+            <div className="text-text-gray font-medium">Personalized Scaling</div>
           </div>
         </motion.div>
 
+        {/* Athletic Precision CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center"
+        >
+          <InlineCTA />
+        </motion.div>
       </div>
-      
-      {/* Smooth transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-background/50 pointer-events-none"></div>
     </section>
   )
 }

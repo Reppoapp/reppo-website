@@ -41,18 +41,18 @@ const HeroSection = () => {
   }
 
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden">
-      {/* Enhanced background effects with additional layers */}
+    <section className="min-h-screen bg-gradient-navy relative overflow-hidden">
+      {/* Athletic Precision background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/6 w-96 h-96 bg-primary/4 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-secondary/4 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/2 to-secondary/2 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/6 w-96 h-96 bg-primary-blue/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-accent-orange/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-athletic/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-16 items-center min-h-screen pt-16 pb-12 lg:pt-20 lg:pb-16">
           
-          {/* LEFT SIDE: Enhanced Phone Mockup with floating animation */}
+          {/* LEFT SIDE: Athletic Precision Phone Mockup */}
           <div className="order-2 lg:order-1 lg:col-span-2 flex justify-center lg:justify-start">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -72,24 +72,24 @@ const HeroSection = () => {
                 }}
                 className="relative transform hover:rotate-0 transition-transform duration-700 phone-float"
               >
-                {/* Enhanced phone frame with premium shadows */}
-                <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-[2.5rem] p-2 shadow-2xl phone-glow relative">
-                  {/* Premium glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-[2.5rem] blur-xl opacity-50"></div>
+                {/* Athletic Precision phone frame */}
+                <div className="bg-gradient-to-b from-primary-navy to-gray-900 rounded-[2.5rem] p-2 shadow-athletic-xl relative">
+                  {/* Premium blue glow effect */}
+                  <div className="absolute inset-0 bg-gradient-athletic/20 rounded-[2.5rem] blur-xl opacity-50"></div>
                   
-                  <div className="bg-black rounded-[2rem] overflow-hidden relative z-10">
+                  <div className="bg-primary-white rounded-[2rem] overflow-hidden relative z-10">
                     {/* Status bar */}
-                    <div className="flex justify-between items-center px-4 sm:px-5 pt-3 text-white text-xs">
+                    <div className="flex justify-between items-center px-4 sm:px-5 pt-3 text-primary-navy text-xs">
                       <span className="font-medium">9:41</span>
                       <div className="flex items-center gap-1">
                         <div className="flex gap-1">
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-primary-navy rounded-full"></div>
+                          <div className="w-1 h-1 bg-primary-navy rounded-full"></div>
+                          <div className="w-1 h-1 bg-primary-navy rounded-full"></div>
                         </div>
                         <div className="text-xs">100%</div>
-                        <div className="w-5 h-2.5 border border-white rounded-sm">
-                          <div className="w-full h-full bg-green-500 rounded-sm"></div>
+                        <div className="w-5 h-2.5 border border-primary-navy rounded-sm">
+                          <div className="w-full h-full bg-accent-green rounded-sm"></div>
                         </div>
                       </div>
                     </div>
@@ -99,54 +99,54 @@ const HeroSection = () => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <img src="/Reppo-Logo.png" alt="Reppo" className="h-5 sm:h-6 w-auto" />
-                          <span className="text-white font-bold text-sm sm:text-base">Reppo</span>
+                          <span className="text-primary-navy font-bold text-sm sm:text-base">Reppo</span>
                         </div>
-                        <span className="text-gray-400 text-xs font-medium">TODAY ↓</span>
+                        <span className="text-text-gray text-xs font-medium">TODAY ↓</span>
                       </div>
                     </div>
 
-                    {/* Main content area - Performance stats */}
+                    {/* Main content area - Athletic Performance stats */}
                     <div className="px-4 sm:px-5 pb-6 space-y-4">
                       {/* Large performance indicator */}
                       <div className="text-center">
-                        <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center relative overflow-hidden">
-                          <span className="text-white text-xl sm:text-2xl font-bold relative z-10">+12%</span>
+                        <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 bg-gradient-athletic rounded-full flex items-center justify-center relative overflow-hidden">
+                          <span className="text-primary-white text-xl sm:text-2xl font-bold font-mono relative z-10">+12%</span>
                         </div>
-                        <div className="text-white">
-                          <div className="text-xl sm:text-2xl font-bold mb-1">23</div>
-                          <div className="text-xs text-gray-400 font-medium tracking-wide">VICTORIES TODAY</div>
+                        <div className="text-primary-navy">
+                          <div className="text-xl sm:text-2xl font-bold mb-1 font-mono">23</div>
+                          <div className="text-xs text-text-gray font-medium tracking-wide">VICTORIES TODAY</div>
                         </div>
                       </div>
 
                       {/* Stats grid */}
                       <div className="grid grid-cols-3 gap-2 sm:gap-3">
                         <div className="text-center">
-                          <div className="text-white font-bold text-xs mb-1">STREAK</div>
-                          <div className="text-primary text-base sm:text-lg font-bold">15</div>
+                          <div className="text-primary-navy font-bold text-xs mb-1">STREAK</div>
+                          <div className="text-primary-blue text-base sm:text-lg font-bold font-mono">15</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-white font-bold text-xs mb-1">WIN RATE</div>
-                          <div className="text-secondary text-base sm:text-lg font-bold">89%</div>
+                          <div className="text-primary-navy font-bold text-xs mb-1">WIN RATE</div>
+                          <div className="text-accent-orange text-base sm:text-lg font-bold font-mono">89%</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-white font-bold text-xs mb-1">LEVEL</div>
-                          <div className="text-gradient text-base sm:text-lg font-bold">12</div>
+                          <div className="text-primary-navy font-bold text-xs mb-1">LEVEL</div>
+                          <div className="text-gradient text-base sm:text-lg font-bold font-mono">12</div>
                         </div>
                       </div>
 
                       {/* Performance chart area */}
-                      <div className="bg-gray-800/50 rounded-lg p-3">
-                        <div className="flex justify-between text-xs text-gray-400 mb-2">
+                      <div className="bg-neutral-gray rounded-athletic p-3">
+                        <div className="flex justify-between text-xs text-text-gray mb-2">
                           <span>6AM</span>
                           <span>12PM</span>
                           <span>6PM</span>
                         </div>
                         <div className="flex items-end gap-1 h-10 sm:h-12">
-                          {/* Simplified bar chart */}
+                          {/* Athletic data visualization */}
                           {[65, 45, 80, 35, 90, 55, 75, 40, 85, 60, 95, 70].map((height, i) => (
                             <div 
                               key={i} 
-                              className="flex-1 bg-gradient-to-t from-primary to-secondary rounded-sm"
+                              className="flex-1 bg-gradient-athletic rounded-sm"
                               style={{ height: `${height}%` }}
                             />
                           ))}
@@ -154,10 +154,10 @@ const HeroSection = () => {
                       </div>
 
                       {/* Today's challenge */}
-                      <div className="text-center bg-gray-900/50 rounded-lg p-3">
-                        <div className="text-gray-400 text-xs mb-1">LIVE ATHLETE WORKOUT</div>
-                        <div className="text-white font-semibold text-sm">David Goggins' Morning Run</div>
-                        <div className="text-xs text-gray-500 mt-1">AI-scaled to your level: 3.2 miles</div>
+                      <div className="text-center bg-neutral-gray rounded-athletic p-3">
+                        <div className="text-text-gray text-xs mb-1">LIVE ATHLETE WORKOUT</div>
+                        <div className="text-primary-navy font-semibold text-sm">Elite Athlete's Morning Run</div>
+                        <div className="text-xs text-text-gray mt-1">AI-scaled to your level: 3.2 miles</div>
                       </div>
                     </div>
                   </div>
@@ -166,22 +166,17 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* RIGHT SIDE: Enhanced Content with Glassmorphism */}
+          {/* RIGHT SIDE: Athletic Precision Content */}
           <div className="order-1 lg:order-2 lg:col-span-3 space-y-6 sm:space-y-8 text-center lg:text-left px-2 sm:px-0">
             
-            {/* Glassmorphism container around hero content */}
+            {/* Athletic Precision glass container */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="relative bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-3xl p-6 sm:p-8 lg:p-10"
-              style={{
-                boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)'
-              }}
+              className="relative glass-card p-6 sm:p-8 lg:p-10"
             >
-              {/* Enhanced Social Proof with animated counters */}
+              {/* Enhanced Social Proof with athletic styling */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -190,16 +185,16 @@ const HeroSection = () => {
               >
                 <motion.div 
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur border border-green-400/30 rounded-full px-4 sm:px-5 py-2.5 shadow-lg"
+                  className="flex items-center gap-2 bg-accent-green/20 backdrop-blur border border-accent-green/30 rounded-full px-4 sm:px-5 py-2.5 shadow-athletic"
                 >
-                  <div className="text-green-400 text-base sm:text-lg">🏆</div>
-                  <span className="text-white text-sm sm:text-base font-semibold">Featured App</span>
+                  <div className="text-accent-green text-base sm:text-lg">🏆</div>
+                  <span className="text-primary-navy text-sm sm:text-base font-semibold">Featured App</span>
                 </motion.div>
                 <motion.div 
                   whileHover={{ scale: 1.05 }}
                   className="flex items-center gap-3"
                 >
-                  <div className="flex text-yellow-400">
+                  <div className="flex text-accent-orange">
                     {[...Array(5)].map((_, i) => (
                       <motion.span 
                         key={i} 
@@ -212,59 +207,41 @@ const HeroSection = () => {
                       </motion.span>
                     ))}
                   </div>
-                  <span className="text-white font-bold text-lg sm:text-xl">{featuredCount.toFixed(1)}</span>
-                  <span className="text-gray-300 text-sm sm:text-base font-medium">{Math.floor(ratingCount / 1000)}K+ ratings</span>
+                  <span className="text-primary-navy font-bold text-lg sm:text-xl font-mono">{featuredCount.toFixed(1)}</span>
+                  <span className="text-text-gray text-sm sm:text-base font-medium">{Math.floor(ratingCount / 1000)}K+ ratings</span>
                 </motion.div>
               </motion.div>
 
-              {/* Enhanced Main Headline - 20% larger with premium gradient */}
+              {/* Athletic Precision Main Headline */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="space-y-4 mb-6"
               >
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
-                  <span className="text-white">Train </span>
-                  <span 
-                    className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent"
-                    style={{
-                      backgroundImage: 'linear-gradient(135deg, #FF3B30 0%, #8B5CF6 50%, #2979FF 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent'
-                    }}
-                  >
-                    WITH
-                  </span>
-                  <span className="text-white"> Your </span>
-                  <span 
-                    className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent"
-                    style={{
-                      backgroundImage: 'linear-gradient(135deg, #FF3B30 0%, #8B5CF6 50%, #2979FF 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent'
-                    }}
-                  >
-                    Favorites
-                  </span>
+                <h1 className="hero-title">
+                  <span className="text-primary-navy">Train </span>
+                  <span className="text-gradient">WITH</span>
+                  <span className="text-primary-navy"> Your </span>
+                  <span className="text-gradient">Favorites</span>
                 </h1>
               </motion.div>
 
-              {/* Enhanced Description with new copy */}
+              {/* Athletic Precision Description */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed max-w-3xl mx-auto lg:mx-0 mb-8 font-medium"
+                className="text-xl sm:text-2xl lg:text-3xl text-text-gray leading-relaxed max-w-3xl mx-auto lg:mx-0 mb-8 font-medium"
               >
-                The first platform where you train with your favorite athletes using their actual workout data. When David Goggins finishes his run, you get the AI-personalized version. Join{' '}
-                <span className="text-white font-bold">
+                The first platform where you train with your favorite athletes using their actual workout data. When your favorite athlete finishes their workout, you get the AI-personalized version. Join{' '}
+                <span className="text-primary-navy font-bold font-mono">
                   {Math.floor(userCount / 1000)}K+
                 </span>{' '}
                 athletes who train alongside their favorites using live Garmin and Apple Watch data.
               </motion.p>
 
-              {/* Enhanced Feature Badges */}
+              {/* Athletic Precision Feature Badges */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -272,14 +249,14 @@ const HeroSection = () => {
                 className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-8"
               >
                 {[
-                  { icon: '📱', text: 'Live Athlete Data', color: 'from-red-500/20 to-orange-500/20 border-red-400/30' },
-                  { icon: '🤖', text: 'AI Personalization', color: 'from-blue-500/20 to-cyan-500/20 border-blue-400/30' },
-                  { icon: '🏆', text: 'Authentic Training', color: 'from-purple-500/20 to-pink-500/20 border-purple-400/30' }
+                  { icon: '📱', text: 'Live Athlete Data', color: 'bg-primary-blue/20 border-primary-blue/30' },
+                  { icon: '🤖', text: 'AI Personalization', color: 'bg-accent-orange/20 border-accent-orange/30' },
+                  { icon: '🏆', text: 'Authentic Training', color: 'bg-accent-green/20 border-accent-green/30' }
                 ].map((badge, index) => (
                   <motion.span
                     key={index}
                     whileHover={{ scale: 1.05, y: -2 }}
-                    className={`bg-gradient-to-r ${badge.color} backdrop-blur border rounded-full px-4 sm:px-5 py-2.5 text-sm sm:text-base font-semibold text-white shadow-lg`}
+                    className={`${badge.color} backdrop-blur border rounded-full px-4 sm:px-5 py-2.5 text-sm sm:text-base font-semibold text-primary-navy shadow-athletic`}
                   >
                     <span className="mr-2">{badge.icon}</span>
                     {badge.text}
@@ -287,7 +264,7 @@ const HeroSection = () => {
                 ))}
               </motion.div>
 
-              {/* Enhanced CTA Buttons with improved styling */}
+              {/* Athletic Precision CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -298,14 +275,11 @@ const HeroSection = () => {
                   whileHover={{ 
                     scale: 1.05,
                     y: -2,
-                    boxShadow: '0 20px 40px rgba(255, 59, 48, 0.4)'
+                    boxShadow: '0 20px 40px rgba(0, 212, 255, 0.4)'
                   }}
                   whileTap={{ scale: 0.95 }}
                   onClick={scrollToWaitlist}
-                  className="relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 text-base sm:text-lg min-h-[56px] w-full sm:w-auto group"
-                  style={{
-                    boxShadow: '0 8px 32px rgba(255, 59, 48, 0.3)',
-                  }}
+                  className="btn-primary relative overflow-hidden bg-gradient-athletic text-primary-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-athletic shadow-blue-glow transition-all duration-300 flex items-center justify-center gap-3 text-base sm:text-lg min-h-[56px] w-full sm:w-auto group"
                 >
                   <span className="relative z-10">Join the Movement</span>
                   <motion.span 
@@ -315,23 +289,18 @@ const HeroSection = () => {
                   >
                     🚀
                   </motion.span>
-                  {/* Animated background overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.button>
 
                 <motion.button
                   whileHover={{ 
                     scale: 1.05,
                     y: -2,
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    borderColor: 'rgba(255, 255, 255, 0.6)'
+                    backgroundColor: 'rgba(26, 29, 41, 0.1)',
+                    borderColor: 'rgba(26, 29, 41, 0.6)'
                   }}
                   whileTap={{ scale: 0.95 }}
                   onClick={scrollToDemo}
-                  className="border-2 border-white/30 text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-base sm:text-lg min-h-[56px] w-full sm:w-auto backdrop-blur-sm"
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                  }}
+                  className="btn-secondary border-2 border-primary-navy/30 text-primary-navy font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-athletic hover:shadow-athletic transition-all duration-300 flex items-center justify-center gap-3 text-base sm:text-lg min-h-[56px] w-full sm:w-auto backdrop-blur-sm"
                 >
                   <span>Watch Demo</span>
                   <span className="text-xl">▶️</span>
@@ -342,14 +311,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Enhanced CSS styles */}
+      {/* Athletic Precision CSS styles */}
       <style jsx>{`
         .phone-float {
           animation: phone-float 6s ease-in-out infinite;
-        }
-        
-        .phone-glow {
-          filter: drop-shadow(0 0 20px rgba(255, 59, 48, 0.3));
         }
         
         @keyframes phone-float {
@@ -358,26 +323,22 @@ const HeroSection = () => {
         }
         
         .text-gradient {
-          background: linear-gradient(135deg, #FF3B30 0%, #8B5CF6 50%, #2979FF 100%);
+          background: linear-gradient(135deg, #00d4ff 0%, #ff6b35 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
         
-        .bg-gradient-primary {
-          background: linear-gradient(135deg, #FF3B30 0%, #2979FF 100%);
-        }
-        
         /* Enhanced glassmorphism support */
         @supports (backdrop-filter: blur(20px)) {
-          .backdrop-blur-\[20px\] {
+          .glass-card {
             backdrop-filter: blur(20px);
           }
         }
         
         @supports not (backdrop-filter: blur(20px)) {
-          .backdrop-blur-\[20px\] {
-            background: rgba(255, 255, 255, 0.1);
+          .glass-card {
+            background: rgba(255, 255, 255, 0.95);
           }
         }
       `}</style>

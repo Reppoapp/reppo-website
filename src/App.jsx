@@ -18,7 +18,7 @@ const SEOHead = ({ page = 'home' }) => {
   const seoData = {
     home: {
       title: "Reppo - Train WITH Your Favorite Athletes | Live Athlete Data",
-      description: "The first platform where you train with your favorite athletes using their actual workout data. When David Goggins finishes his run, you get the AI-personalized version.",
+              description: "The first platform where you train with your favorite athletes using their actual workout data. When your favorite athlete finishes their workout, you get the AI-personalized version.",
       keywords: "live athlete data, train with athletes, authentic training, AI personalization, Garmin Apple Watch, verified athletes, real workout data",
       url: "https://reppo.app",
       image: "https://reppo.app/og-image.jpg"

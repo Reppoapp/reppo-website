@@ -7,7 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        // New Reppo Brand Colors
+        // Athletic Precision Brand Colors
+        'primary-navy': '#1a1d29',
+        'primary-blue': '#00d4ff',
+        'primary-white': '#ffffff',
+        'accent-orange': '#ff6b35',
+        'accent-green': '#00e676',
+        'neutral-gray': '#f8f9fa',
+        'border-gray': '#e9ecef',
+        'text-gray': '#6c757d',
+        
+        // Legacy Reppo Brand Colors (for compatibility)
         primary: '#FF3B30',        // Electric Coral
         secondary: '#2979FF',      // Gradient Blue
         background: '#0D0D0D',     // Charcoal Black
@@ -30,11 +40,18 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       backgroundImage: {
+        // Athletic Precision gradients
+        'gradient-athletic': 'linear-gradient(135deg, #00d4ff 0%, #ff6b35 100%)',
+        'gradient-navy': 'linear-gradient(135deg, #1a1d29 0%, #2a2d39 100%)',
+        'gradient-blue': 'linear-gradient(135deg, #00d4ff 0%, #0099cc 100%)',
+        'gradient-orange': 'linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%)',
+        
+        // Legacy gradients (for compatibility)
         'gradient-primary': 'linear-gradient(135deg, #FF3B30 0%, #2979FF 100%)',
         'gradient-coral': 'linear-gradient(135deg, #FF3B30 0%, #FF6B30 100%)',
-        'gradient-blue': 'linear-gradient(135deg, #2979FF 0%, #4A90FF 100%)',
         'gradient-radial': 'radial-gradient(circle, rgba(255,59,48,0.1) 0%, rgba(41,121,255,0.1) 100%)',
         'gradient-radial-coral': 'radial-gradient(circle, rgba(255,59,48,0.2) 0%, transparent 70%)',
         'gradient-radial-blue': 'radial-gradient(circle, rgba(41,121,255,0.2) 0%, transparent 70%)',
@@ -46,6 +63,8 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'pulse-coral': 'pulseCoral 2s ease-in-out infinite',
         'pulse-blue': 'pulseBlue 2s ease-in-out infinite',
+        'pulse-athletic': 'pulseAthletic 2s ease-in-out infinite',
+        'fade-in-up': 'fadeInUp 0.6s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -76,6 +95,35 @@ export default {
             boxShadow: '0 0 0 10px rgba(41, 121, 255, 0)' 
           },
         },
+        pulseAthletic: {
+          '0%, 100%': { 
+            boxShadow: '0 0 0 0 rgba(0, 212, 255, 0.4)' 
+          },
+          '50%': { 
+            boxShadow: '0 0 0 10px rgba(0, 212, 255, 0)' 
+          },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+      },
+      boxShadow: {
+        'athletic': '0 4px 12px rgba(26, 29, 41, 0.1)',
+        'athletic-lg': '0 8px 24px rgba(26, 29, 41, 0.15)',
+        'athletic-xl': '0 12px 32px rgba(26, 29, 41, 0.2)',
+        'blue-glow': '0 0 20px rgba(0, 212, 255, 0.3)',
+        'orange-glow': '0 0 20px rgba(255, 107, 53, 0.3)',
+      },
+      borderRadius: {
+        'athletic': '8px',
+        'athletic-lg': '12px',
+        'athletic-xl': '16px',
       },
     },
   },

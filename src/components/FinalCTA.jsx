@@ -51,7 +51,7 @@ const FinalCTA = () => {
     return () => clearInterval(timer)
   }, [])
 
-  // Animated counter effects
+  // Animated counters effect
   useEffect(() => {
     const animateCounter = (start, end, duration, setter) => {
       const increment = (end - start) / (duration / 16)
@@ -67,10 +67,9 @@ const FinalCTA = () => {
       }, 16)
     }
 
-    // Animate counters on mount
-    animateCounter(150, 127, 2000, setSpotsLeft)
-    animateCounter(2800, 2847, 1500, setJoinedThisWeek)
-    animateCounter(90, 94, 1200, setSuccessRate)
+    animateCounter(100, 127, 2000, setSpotsLeft)
+    animateCounter(2500, 2847, 3000, setJoinedThisWeek)
+    animateCounter(88, 94, 2500, setSuccessRate)
   }, [])
 
   const handleSubmit = async (e) => {
@@ -149,274 +148,244 @@ const FinalCTA = () => {
       description: "Exclusive access to premium athletes and their workout data, reserved for founders only."
     },
     {
-      icon: "🔥",
+      icon: "🤖",
       title: "Priority AI Personalization",
-      description: "Enhanced AI scaling algorithms with faster processing and more personalized workout adaptations."
+      description: "Enhanced AI algorithms that adapt faster to your performance and provide more accurate scaling."
     }
   ]
 
   const faqItems = [
     {
-      question: "What exactly do I get as a founder?",
-      answer: "Founders get lifetime early access to all new verified athletes, advanced analytics, exclusive athlete access, direct product influence, priority support, and a special founder badge. You'll also save significantly compared to regular pricing."
-    },
-
-    {
-      question: "How is this different from regular access?",
-      answer: "Founders get exclusive access to premium athletes that regular users never will, advanced analytics, direct influence on product development, and lifetime benefits. Plus, you lock in founder pricing forever."
+      question: "How do athletes share their workout data?",
+      answer: "Athletes connect their Garmin, Apple Watch, or other fitness devices to our platform. When they complete a workout, the data is automatically processed and made available to their followers within minutes."
     },
     {
-      question: "When will the platform launch?",
-      answer: "We're launching in Q1 2025. Founders get beta access 30 days before public launch, plus exclusive testing of new athlete integrations as they're developed."
+      question: "What makes the AI personalization accurate?",
+      answer: "Our AI analyzes your fitness level, past performance, and goals to scale athlete workouts appropriately. It considers factors like your current fitness level, available equipment, and time constraints."
     },
-
+    {
+      question: "Can I train with multiple athletes?",
+      answer: "Yes! You can follow multiple athletes and receive notifications when any of them complete workouts. You can choose which workouts to tackle based on your schedule and preferences."
+    },
+    {
+      question: "What if I can't complete an athlete's workout?",
+      answer: "The AI scales workouts to your level, but you can also modify them further. The platform tracks your progress and adjusts future recommendations accordingly."
+    },
+    {
+      question: "Is there a community aspect?",
+      answer: "Absolutely! Each athlete has their own community where followers can share their experiences, progress, and support each other in training alongside their favorite athletes."
+    }
   ]
 
   return (
-    <section id="waitlist" className="py-16 sm:py-20 px-4 relative overflow-hidden">
-      {/* Enhanced background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/6 rounded-full blur-3xl opacity-50 animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/6 rounded-full blur-3xl opacity-40 animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/3 to-secondary/3 rounded-full blur-3xl"></div>
+    <section className="relative bg-primary-white py-20 overflow-hidden">
+      {/* Athletic Precision background elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-blue/5 via-transparent to-accent-orange/5"></div>
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-accent-orange/10 rounded-full blur-3xl"></div>
       </div>
-      
-      <div className="max-w-5xl mx-auto text-center relative z-10">
-        
-        {/* Enhanced Section Header with Urgency */}
+
+      <div className="max-w-4xl mx-auto px-4 relative z-10">
+        {/* Athletic Precision Header */}
         <motion.div
+          variants={fadeInUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          className="mb-8 sm:mb-12"
+          viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur border border-red-400/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-red-400 text-sm">🔥</span>
-            <span className="text-white text-sm font-semibold">FOUNDER ACCESS ENDING SOON</span>
-          </div>
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-accent-orange/20 text-accent-orange px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-accent-orange/30"
+          >
+            <span className="live-indicator">LIVE</span>
+            <span>Limited Founder Access</span>
+          </motion.div>
           
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-text-primary mb-4 sm:mb-6 leading-tight px-2">
-            Only <span className="text-gradient">{spotsLeft} Founder Spots</span> Remaining
+          <h2 className="section-header text-center mb-6">
+            Train with Your Favorite Athletes
           </h2>
-          <p className="text-xl sm:text-2xl lg:text-3xl text-text-secondary leading-relaxed max-w-4xl mx-auto px-2 font-medium">
-            Secure your <span className="text-text-primary font-bold">lifetime founder status</span> with{' '}
-            <span className="text-gradient font-bold">exclusive access to verified athletes, live data, and AI personalization</span>{' '}
-            that regular users will never get.
+          
+          <p className="section-description text-center max-w-2xl mx-auto">
+            Join the elite community of athletes who train alongside their favorites using live workout data. 
+            Founder access includes exclusive athletes and priority AI personalization.
           </p>
         </motion.div>
 
-        {/* Countdown Timer */}
+        {/* Athletic Precision Stats */}
         <motion.div
+          variants={fadeInUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.1, ease: "easeOut" }
-            }
-          }}
-          className="mb-8 sm:mb-12"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
         >
-          <div className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl"
-            style={{
-              boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)'
-            }}
-          >
-            <h3 className="text-lg sm:text-xl font-bold text-white mb-4">Founder Access Closes In:</h3>
-            <div className="grid grid-cols-4 gap-4 sm:gap-6 max-w-lg mx-auto">
-              {[
-                { value: timeLeft.days, label: 'Days' },
-                { value: timeLeft.hours, label: 'Hours' },
-                { value: timeLeft.minutes, label: 'Minutes' },
-                { value: timeLeft.seconds, label: 'Seconds' }
-              ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-gradient-to-br from-primary to-secondary rounded-xl p-3 sm:p-4 mb-2 shadow-lg">
-                    <span className="text-2xl sm:text-3xl font-black text-white">
-                      {item.value.toString().padStart(2, '0')}
-                    </span>
-                  </div>
-                  <span className="text-xs sm:text-sm text-gray-300 font-medium">{item.label}</span>
-                </div>
-              ))}
+          <div className="waitlist-stats">
+            <div className="data-metric font-mono text-2xl font-bold text-primary-blue mb-2">
+              {spotsLeft}
             </div>
+            <div className="text-sm text-text-gray">Founder Spots Left</div>
+          </div>
+          
+          <div className="waitlist-stats">
+            <div className="data-metric font-mono text-2xl font-bold text-accent-orange mb-2">
+              {joinedThisWeek.toLocaleString()}
+            </div>
+            <div className="text-sm text-text-gray">Joined This Week</div>
+          </div>
+          
+          <div className="waitlist-stats">
+            <div className="data-metric font-mono text-2xl font-bold text-accent-green mb-2">
+              {successRate}%
+            </div>
+            <div className="text-sm text-text-gray">Success Rate</div>
           </div>
         </motion.div>
 
-        {/* Founder Benefits Section */}
+        {/* Athletic Precision Waitlist Form */}
         <motion.div
+          variants={fadeInUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.2, ease: "easeOut" }
-            }
-          }}
-          className="mb-12"
+          viewport={{ once: true }}
+          className="waitlist-form max-w-2xl mx-auto mb-16"
         >
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8">
-            What You Get as a <span className="text-gradient">Founder</span>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-primary-navy mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email to join the elite"
+                className="waitlist-input"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="waitlist-submit w-full"
+            >
+              {isSubmitting ? (
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-4 h-4 border-2 border-primary-white border-t-transparent rounded-full animate-spin"></div>
+                  <span>Joining the Elite...</span>
+                </div>
+              ) : (
+                <div className="flex items-center justify-center gap-2">
+                  <span>Train with Your Favorites</span>
+                  <span>🚀</span>
+                </div>
+              )}
+            </button>
+
+            <AnimatePresence>
+              {message && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className={isSuccess ? 'form-success' : 'form-error'}
+                >
+                  {message}
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <div className="text-center">
+              <p className="text-sm text-text-gray">
+                <span className="font-semibold">100% Authentic</span> athlete data • 
+                <span className="font-semibold"> AI Personalization</span> • 
+                <span className="font-semibold"> Live Training</span>
+              </p>
+            </div>
+          </form>
+        </motion.div>
+
+        {/* Athletic Precision Founder Benefits */}
+        <motion.div
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <h3 className="text-2xl font-bold text-primary-navy text-center mb-8">
+            Founder Benefits
           </h3>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {founderBenefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.02, y: -5 }}
-                className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 shadow-lg"
-                style={{
-                  boxShadow: '0 8px 32px rgba(31, 38, 135, 0.2)',
-                  backdropFilter: 'blur(20px)',
-                  WebkitBackdropFilter: 'blur(20px)'
-                }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="feature-card"
               >
-                <div className="text-3xl mb-4">{benefit.icon}</div>
-                <h4 className="text-lg font-bold text-white mb-2">{benefit.title}</h4>
-                <p className="text-sm text-gray-300">{benefit.description}</p>
+                <div className="feature-icon">
+                  <span className="text-2xl">{benefit.icon}</span>
+                </div>
+                <h4 className="feature-title">{benefit.title}</h4>
+                <p className="feature-description">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-
-
-        {/* Enhanced Waitlist Form */}
+        {/* Athletic Precision FAQ */}
         <motion.div
+          variants={fadeInUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.4, ease: "easeOut" }
-            }
-          }}
-          className="mb-12"
+          viewport={{ once: true }}
+          className="mb-16"
         >
-          <div className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl hover:border-white/20 hover:bg-white/10 transition-all duration-300"
-            style={{
-              boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)'
-            }}
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <div className="flex-1 relative">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email to secure founder status"
-                    className="w-full px-6 sm:px-8 py-4 sm:py-5 lg:py-6 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-300 focus:outline-none focus:border-transparent transition-all duration-300 text-base sm:text-lg font-medium min-h-[56px] backdrop-blur-sm"
-                    disabled={isSubmitting}
-                  />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                </div>
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  whileHover={{ 
-                    scale: 1.05,
-                    y: -2,
-                    boxShadow: '0 20px 40px rgba(255, 59, 48, 0.4)'
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white font-bold px-8 sm:px-10 py-4 sm:py-5 lg:py-6 rounded-full shadow-2xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-base sm:text-lg min-h-[56px] w-full sm:w-auto group"
-                  style={{
-                    boxShadow: '0 8px 32px rgba(255, 59, 48, 0.3)',
-                  }}
-                >
-                  <span className="relative z-10">
-                    {isSubmitting ? 'Securing Your Founder Status...' : 'Secure My Founder Status'}
-                  </span>
-                  <motion.span 
-                    className="text-xl relative z-10 ml-2"
-                    animate={{ x: [0, 3, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    👑
-                  </motion.span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </motion.button>
-              </div>
-              
-              {message && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={`text-center text-base sm:text-lg p-4 sm:p-5 rounded-2xl font-medium backdrop-blur-sm ${
-                    isSuccess 
-                      ? 'bg-green-500/20 text-green-300 border border-green-500/30' 
-                      : 'bg-red-500/20 text-red-300 border border-red-500/30'
-                  }`}
-                >
-                  {message}
-                </motion.div>
-              )}
-            </form>
-          </div>
-        </motion.div>
-
-        {/* FAQ Section */}
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.5, ease: "easeOut" }
-            }
-          }}
-          className="mb-12"
-        >
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8">
+          <h3 className="text-2xl font-bold text-primary-navy text-center mb-8">
             Frequently Asked Questions
           </h3>
-          <div className="space-y-4 max-w-3xl mx-auto">
+          
+          <div className="space-y-4">
             {faqItems.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300"
-                style={{
-                  boxShadow: '0 8px 32px rgba(31, 38, 135, 0.2)',
-                  backdropFilter: 'blur(20px)',
-                  WebkitBackdropFilter: 'blur(20px)'
-                }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="card"
               >
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-all duration-300"
+                  className="w-full text-left p-6 flex items-center justify-between"
                 >
-                  <span className="font-semibold text-white">{item.question}</span>
-                  <motion.span
-                    animate={{ rotate: expandedFAQ === index ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="text-primary text-xl"
-                  >
-                    ↓
-                  </motion.span>
+                  <span className="font-semibold text-primary-navy">{item.question}</span>
+                  <span className={`text-primary-blue transition-transform ${expandedFAQ === index ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
                 </button>
+                
                 <AnimatePresence>
                   {expandedFAQ === index && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="px-6 pb-4"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
                     >
-                      <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+                      <div className="px-6 pb-6 text-text-gray">
+                        {item.answer}
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -425,73 +394,41 @@ const FinalCTA = () => {
           </div>
         </motion.div>
 
-        {/* Enhanced Social Proof with Real-time Counters */}
+        {/* Athletic Precision Final CTA */}
         <motion.div
+          variants={fadeInUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            ...fadeInUp,
-            animate: {
-              ...fadeInUp.animate,
-              transition: { duration: 0.6, delay: 0.6, ease: "easeOut" }
-            }
-          }}
-          className="space-y-8 sm:space-y-10"
+          viewport={{ once: true }}
+          className="text-center"
         >
-          {/* Real-time Stats Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
-            <motion.div 
-              whileHover={{ scale: 1.02, y: -2 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:border-white/20 transition-all duration-300"
-            >
-              <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">
-                {joinedThisWeek.toLocaleString()}
-              </div>
-              <div className="text-sm sm:text-base text-gray-300 font-medium">
-                <span className="text-green-400">⚡</span> Athletes joined this week
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ scale: 1.02, y: -2 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:border-white/20 transition-all duration-300"
-            >
-              <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">
-                {successRate}%
-              </div>
-              <div className="text-sm sm:text-base text-gray-300 font-medium">
-                <span className="text-blue-400">💪</span> Success rate with challenges
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ scale: 1.02, y: -2 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:border-white/20 transition-all duration-300"
-            >
-              <div className="text-3xl sm:text-4xl font-black text-gradient mb-2">
-                {spotsLeft}
-              </div>
-              <div className="text-sm sm:text-base text-gray-300 font-medium">
-                <span className="text-red-400">🔥</span> Founder spots remaining
-              </div>
-            </motion.div>
-          </div>
-          
-
-          
-          <div className="pt-6 sm:pt-8 border-t border-white/10">
-            <p className="text-text-secondary text-sm sm:text-base max-w-3xl mx-auto leading-relaxed px-2">
-              By joining, you agree to receive founder updates about Reppo. 
-              <span className="text-text-primary font-semibold"> No spam, just exclusive access and early feature previews.</span>
+          <div className="waitlist-form max-w-lg mx-auto">
+            <h3 className="text-xl font-bold text-primary-navy mb-4">
+              Ready to Train with the Elite?
+            </h3>
+            <p className="text-text-gray mb-6">
+              Join {Math.floor(joinedThisWeek / 100) * 100}+ athletes who are already training with their favorites.
             </p>
+            <form onSubmit={handleSubmit} className="flex gap-4">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email"
+                className="waitlist-input flex-1"
+                required
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="waitlist-submit px-8"
+              >
+                {isSubmitting ? 'Joining...' : 'Join Now'}
+              </button>
+            </form>
           </div>
         </motion.div>
-        
       </div>
-      
-      {/* Smooth transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-background/50 pointer-events-none"></div>
     </section>
   )
 }

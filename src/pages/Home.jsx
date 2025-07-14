@@ -36,20 +36,15 @@ const Home = () => {
   }, [])
 
   return (
-    <div>
-      {/* Hero Section - First impression and main value proposition */}
+    <div className="bg-primary-white">
+      {/* Hero Section - Train WITH Your Favorites value proposition */}
       <HeroSection />
       
-      {/* Problem Section - Establish the problem and solution */}
+      {/* Problem Section - Fake fitness programs problem and authentic training solution */}
       <ProblemSection />
       
-      {/* Inline CTA - Convert visitors to explore more or join waitlist */}
-      <InlineCTA 
-        title="Ready to Outperform Yesterday?"
-        subtitle="Join 47,000+ athletes already transforming their fitness journey"
-        size="large"
-        className="my-16"
-      />
+      {/* Inline CTA - Convert visitors to join the elite athlete training platform */}
+      <InlineCTA />
     </div>
   )
 }

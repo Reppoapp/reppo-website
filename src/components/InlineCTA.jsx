@@ -2,15 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { supabase } from '../lib/supabase'
 
-const InlineCTA = ({ 
-  title, 
-  description, 
-  buttonText = "Join Competition", 
-  showEmailInput = true,
-  redirectToWaitlist = false,
-  className = "",
-  size = "medium" // small, medium, large
-}) => {
+const InlineCTA = () => {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [message, setMessage] = useState('')
@@ -19,11 +11,6 @@ const InlineCTA = ({
   const handleSubmit = async (e) => {
     e.preventDefault()
     
-    if (redirectToWaitlist) {
-      window.location.href = '/join'
-      return
-    }
-
     if (!email || !email.includes('@')) {
       setMessage('Please enter a valid email address')
       setIsSuccess(false)
@@ -36,7 +23,7 @@ const InlineCTA = ({
     try {
       const { error } = await supabase
         .from('waitlist')
-        .insert([{ email: email.toLowerCase().trim() }])
+        .insert([{ email: email.toLowerCase() }])
 
       if (error) {
         if (error.code === '23505') {
@@ -46,7 +33,7 @@ const InlineCTA = ({
           throw error
         }
       } else {
-        setMessage('You\'re on the list! Welcome to the performance athlete circle. 👑')
+        setMessage('Welcome to the elite! Check your email for next steps. 🚀')
         setIsSuccess(true)
         setEmail('')
       }
@@ -59,104 +46,89 @@ const InlineCTA = ({
     }
   }
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  }
-
-  const sizeClasses = {
-    small: {
-      container: "p-6",
-      title: "text-xl sm:text-2xl",
-      description: "text-base",
-      input: "px-4 py-3 text-sm",
-      button: "px-6 py-3 text-sm"
-    },
-    medium: {
-      container: "p-8",
-      title: "text-2xl sm:text-3xl",
-      description: "text-lg",
-      input: "px-6 py-4 text-base",
-      button: "px-8 py-4 text-base"
-    },
-    large: {
-      container: "p-8 sm:p-12",
-      title: "text-3xl sm:text-4xl lg:text-5xl",
-      description: "text-xl",
-      input: "px-6 py-5 text-lg",
-      button: "px-10 py-5 text-lg"
-    }
-  }
-
-  const currentSize = sizeClasses[size]
-
   return (
-    <motion.div
-      initial="initial"
-      whileInView="animate"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={fadeInUp}
-      className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 text-center ${currentSize.container} ${className}`}
-    >
-      <h3 className={`font-bold text-text-primary mb-4 ${currentSize.title}`}>
-        {title}
-      </h3>
-      
-      {description && (
-        <p className={`text-text-secondary leading-relaxed mb-6 max-w-2xl mx-auto ${currentSize.description}`}>
-          {description}
-        </p>
-      )}
+    <section className="py-16 bg-primary-white relative overflow-hidden">
+      {/* Athletic Precision background elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-blue/5 via-transparent to-accent-orange/5"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-athletic/10 rounded-full blur-3xl"></div>
+      </div>
 
-      {showEmailInput && !redirectToWaitlist ? (
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              className={`flex-1 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/60 focus:outline-none focus:bg-white/15 transition-all duration-300 ${currentSize.input}`}
-              disabled={isSubmitting}
-            />
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              type="submit"
-              disabled={isSubmitting}
-              className={`bg-gradient-primary text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap ${currentSize.button}`}
-            >
-              {isSubmitting ? 'Joining...' : buttonText}
-            </motion.button>
-          </div>
+      <div className="max-w-4xl mx-auto px-4 lg:px-8 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="waitlist-form text-center"
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-primary-blue/20 text-primary-blue px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-primary-blue/30"
+          >
+            <span className="text-primary-blue">🚀</span>
+            <span>Join the Elite</span>
+          </motion.div>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-4">
+            Ready to Train WITH Your Favorites?
+          </h2>
           
+          <p className="text-lg text-text-gray mb-8 max-w-2xl mx-auto">
+            Join thousands of athletes who train alongside their favorite elite athletes 
+            using live workout data and AI personalization.
+          </p>
+
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-6">
+            <div className="flex gap-4">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                className="waitlist-input flex-1"
+                required
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="waitlist-submit px-8"
+              >
+                {isSubmitting ? 'Joining...' : 'Join Now'}
+              </button>
+            </div>
+          </form>
+
           {message && (
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className={`text-center font-medium ${
-                isSuccess ? 'text-green-400' : 'text-red-400'
-              }`}
+              className={isSuccess ? 'form-success max-w-md mx-auto' : 'form-error max-w-md mx-auto'}
             >
               {message}
-            </motion.p>
+            </motion.div>
           )}
-        </form>
-      ) : (
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={handleSubmit}
-          className={`bg-gradient-primary text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ${currentSize.button}`}
-        >
-          {buttonText}
-        </motion.button>
-      )}
-    </motion.div>
+
+          <div className="flex items-center justify-center gap-6 text-sm text-text-gray mt-6">
+            <div className="flex items-center gap-2">
+              <span className="text-accent-green">✅</span>
+              <span>Live athlete data</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-primary-blue">🤖</span>
+              <span>AI personalization</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-accent-orange">🏆</span>
+              <span>Authentic training</span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   )
 }
 
